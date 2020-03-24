@@ -1,5 +1,6 @@
 @media (max-width: 550px) {
   /* Navigation Container */
+
   .left-nav {
     position: fixed;
     left: 0;
@@ -10,12 +11,26 @@
     font-size: 1.7em;
     overflow-y: scroll;
   }
+
   /* Links */
   .left-nav a {
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
   }
-  .fade-background {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+}
+.navbar {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+}
+.logo {
+  grid-column: 2 !important;
+  display: flex;
+  justify-content: center;
+  padding-left: 4%;
+}
+.navbar-toggler {
+  grid-column: 3 !important;
+  width: 40%;
+  position: absolute;
+  right: 15%;
 }
