@@ -1,0 +1,17 @@
+@media (max-width: 450px) {
+  .featured-products-slide {
+    padding: 40%;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .card-image {
+    width: 80%;
+  }
+  .featured-products-slider h3 {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 300px;
+  }
+}
+@media (min-width: 450px) {
+}

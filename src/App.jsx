@@ -19,11 +19,13 @@ const App = () => {
       />
 
       <Switch>
-        <Route
-          exact
-          path="/dolcenadaa"
-          render={props => <Home {...props} nav={nav} fade={fade} />}
-        />
+        {fade !== "fade-background" && (
+          <Route
+            exact
+            path="/dolcenadaa"
+            render={props => <Home {...props} nav={nav} fade={fade} />}
+          />
+        )}
       </Switch>
       <Footer />
     </React.Fragment>

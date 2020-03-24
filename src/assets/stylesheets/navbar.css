@@ -1,21 +1,16 @@
-@media (max-width: 550px) {
+@media (max-width: 450px) {
   /* Navigation Container */
 
   .left-nav {
     position: fixed;
     left: 0;
     top: 0;
-    width: 60%;
+    width: 50%;
     height: 100%;
     background: #fff;
     font-size: 1.7em;
     overflow-y: scroll;
     animation-name: fadeInLeft;
-    animation-iteration-count: 1;
-    animation-duration: 1s;
-  }
-  .fade-out {
-    animation-name: fadeOutLeft;
     animation-iteration-count: 1;
     animation-duration: 1s;
   }
@@ -25,15 +20,7 @@
       width: 1%;
     }
     to {
-      width: 60%;
-    }
-  }
-  @keyframes fadeOutLeft {
-    from {
-      width: 60%;
-    }
-    to {
-      width: 1%;
+      width: 50%;
     }
   }
 
@@ -50,6 +37,7 @@
 }
 
 .navbar {
+  background: #ef60a1;
   display: grid !important;
   grid-template-columns: 1fr 1fr 1fr !important;
 }

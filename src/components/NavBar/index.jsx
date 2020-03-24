@@ -19,7 +19,7 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
           <div className={`nav-collapse left-nav`}>
             <Link
               className="nav-item nav-link active"
-              to="/"
+              to="/dolcenadaa"
               onClick={() => {
                 showNav(!nav);
                 fadeBackground("");
@@ -30,7 +30,7 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
           </div>
         )}
         <div className="logo">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/dolcenadaa">
             {fade !== "fade-background" && (
               <img
                 src={logo}

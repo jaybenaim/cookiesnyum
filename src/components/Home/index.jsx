@@ -12,7 +12,7 @@ const Home = ({ fade }) => {
           <br />
           <hr />
         </section>
-        <section className="featured-products">
+        <section className="featured-products-slider">
           <FeaturedProductsSlider />
         </section>
       </div>

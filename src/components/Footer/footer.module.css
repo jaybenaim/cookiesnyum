@@ -2,6 +2,8 @@
   background-color: #1d1d1d;
   padding-top: 2rem;
   padding-bottom: 4rem;
+  position: fixed;
+  bottom: 0;
 }
 
 .title {
