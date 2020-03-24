@@ -1,10 +1,16 @@
 ﻿import React from "react";
 import "../../assets/stylesheets/home.css";
 
+import FeaturedSlider from "./FeaturedSlider";
+
 const Home = ({ fade }) => {
   return (
     <main id="mainContent">
-      <div className={fade}>Content</div>
+      <div className={fade}>
+        <section className="featured-slider">
+          <FeaturedSlider />
+        </section>
+      </div>
     </main>
   );
 };
