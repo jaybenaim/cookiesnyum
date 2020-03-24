@@ -37,7 +37,7 @@
 }
 
 .navbar {
-  background: #ef60a1;
+  background: #ef60a1 !important;
   display: grid !important;
   grid-template-columns: 1fr 1fr 1fr !important;
 }

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5e41eeeacaa23455e50ef0be1e091568",
+    "revision": "75398b7907e0e98002604f7a542a6376",
     "url": "/dolcenadaa/index.html"
   },
   {
-    "revision": "4dbd9fe3746dab577ed3",
+    "revision": "c33837b4a68bc1733ba6",
     "url": "/dolcenadaa/static/css/2.70f73db9.chunk.css"
   },
   {
-    "revision": "24d45756ae4b311d4da3",
-    "url": "/dolcenadaa/static/css/main.55d6be7b.chunk.css"
+    "revision": "ff9fee33e35b9336e428",
+    "url": "/dolcenadaa/static/css/main.3587067b.chunk.css"
   },
   {
-    "revision": "4dbd9fe3746dab577ed3",
-    "url": "/dolcenadaa/static/js/2.2d4e121e.chunk.js"
+    "revision": "c33837b4a68bc1733ba6",
+    "url": "/dolcenadaa/static/js/2.f9ab2117.chunk.js"
   },
   {
-    "revision": "24d45756ae4b311d4da3",
-    "url": "/dolcenadaa/static/js/main.16c232a5.chunk.js"
+    "revision": "ff9fee33e35b9336e428",
+    "url": "/dolcenadaa/static/js/main.30bf01a8.chunk.js"
   },
   {
     "revision": "61f04d16aab85170b62e",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/media/cookie3.6a835dc1.jpg"
   },
   {
-    "revision": "26fb561841c2a6a433fdd0087e5f720a",
-    "url": "/dolcenadaa/static/media/logo.26fb5618.JPG"
+    "revision": "cdc733652ac29da8d2aaede477a7a815",
+    "url": "/dolcenadaa/static/media/logo.cdc73365.JPG"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
