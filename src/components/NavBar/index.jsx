@@ -35,8 +35,8 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
               <img
                 src={logo}
                 alt="logo cookie with a bite"
-                height={130}
-                width={130}
+                height={180}
+                width={180}
               />
             )}
           </Link>

@@ -27,7 +27,6 @@ const App = () => {
           />
         )}
       </Switch>
-      <Footer />
     </React.Fragment>
   );
 };

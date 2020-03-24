@@ -34,12 +34,19 @@
   .nav-link {
     margin-left: 10%;
   }
+  .navbar-brand img {
+    position: fixed;
+    z-index: 9;
+    left: 22%;
+    top: 0%;
+  }
 }
 
 .navbar {
   background: #ef60a1 !important;
   display: grid !important;
   grid-template-columns: 1fr 1fr 1fr !important;
+  height: 7em;
 }
 .logo {
   grid-column: 2 !important;
@@ -55,12 +62,11 @@
   right: 15%;
 }
 @media (min-width: 451px) {
-  /* .hidden-nav {
-    min-height: 300px;
-    background: blue;
-    position: fixed;
-    top: 0;
-    z-index: 9;
-    width: 100%;
-  } */
+  .navbar {
+    height: 12em;
+  }
+  .navbar-brand img {
+    height: 11em;
+    width: 11em;
+  }
 }
