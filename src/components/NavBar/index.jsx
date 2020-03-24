@@ -1,4 +1,4 @@
-﻿import React from "react";
+﻿import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 import "../../assets/stylesheets/navbar.css";
@@ -51,7 +51,6 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
             }}
           ></span>
         </button>
-        {/* If nav is expanded */}
       </nav>
     </React.Fragment>
   );

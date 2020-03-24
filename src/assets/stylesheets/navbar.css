@@ -36,6 +36,7 @@
       width: 1%;
     }
   }
+
   /* Links */
 
   .left-nav a {
@@ -47,6 +48,7 @@
     margin-left: 10%;
   }
 }
+
 .navbar {
   display: grid !important;
   grid-template-columns: 1fr 1fr 1fr !important;
@@ -63,4 +65,14 @@
   width: 40%;
   position: absolute;
   right: 15%;
+}
+@media (min-width: 451px) {
+  /* .hidden-nav {
+    min-height: 300px;
+    background: blue;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+  } */
 }
