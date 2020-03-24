@@ -1,0 +1,10 @@
+@media (max-width: 550px) {
+  /* Fade background when navbar clicked */
+  .fade-background {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    min-height: 500px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 import "../../assets/stylesheets/navbar.css";
 // A skip link is included as an accessibility best practice. For more information visit https://www.w3.org/WAI/WCAG21/Techniques/general/G1.
-const NavBar = () => {
-  const [nav, showNav] = useState(false);
-
+const NavBar = ({ showNav, nav, fadeBackground }) => {
   return (
     <React.Fragment>
       <div className={styles.skipLink}>
@@ -16,7 +14,16 @@ const NavBar = () => {
         <Link className="navbar-brand" to="/">
           dolcenadaa
         </Link>
-
+        <button class="navbar-toggler" type="button">
+          <span
+            class="navbar-toggler-icon"
+            onClick={() => {
+              showNav(!nav);
+              fadeBackground(!nav ? "fade-background" : "");
+            }}
+          ></span>
+        </button>
+        {/* If nav is expanded */}
         {nav && (
           <div className="nav-collapse left-nav">
             <Link
@@ -28,13 +35,6 @@ const NavBar = () => {
             </Link>
           </div>
         )}
-
-        <button class="navbar-toggler" type="button">
-          <span
-            class="navbar-toggler-icon"
-            onClick={() => showNav(!nav)}
-          ></span>
-        </button>
       </nav>
     </React.Fragment>
   );
