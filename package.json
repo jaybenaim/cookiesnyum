@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "4.4.1",
     "classnames": "2.2.6",
+    "concurrently": "^5.1.0",
     "cookie-parser": "1.4.4",
     "debug": "4.1.1",
     "express": "4.17.1",
@@ -18,15 +19,12 @@
     "react-scripts": "3.2.0",
     "react-slick": "^0.25.2",
     "redux-logger": "^3.0.6",
-    "slick-carousel": "^1.8.1",
-    "concurrently": "5.0.2"
+    "slick-carousel": "^1.8.1"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "devDependencies": {
-    "concurrently": "5.0.2"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "concurrently \"yarn start-frontend || npm run start-frontend\" \"yarn start-backend || npm run start-backend\"",
     "start-backend": "node server/server.js",
@@ -36,7 +34,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx"
   },
-  "proxy": "http://localhost:3001",
   "browserslist": [
     ">0.2%",
     "not dead",
