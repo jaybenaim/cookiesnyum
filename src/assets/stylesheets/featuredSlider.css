@@ -15,6 +15,11 @@
     font-weight: 600;
     text-transform: uppercase;
   }
+  .slick-dots {
+    position: relative;
+    left: 30%;
+    top: 92%;
+  }
 }
 @media (min-width: 451px) {
   .featured-slide img {
@@ -32,5 +37,13 @@
     padding: 3%;
     font-weight: 600;
     text-transform: uppercase;
+  }
+  .slick-dots {
+    position: relative;
+    left: 30%;
+    top: 93%;
+  }
+  .slick-dots li button:before {
+    font-size: 18px !important;
   }
 }
