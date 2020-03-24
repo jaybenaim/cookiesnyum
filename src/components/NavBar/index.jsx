@@ -1,26 +1,42 @@
-﻿import React from "react";
+﻿import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
-
-//TODO Web Template Studio: Add a new link in the NavBar for your page here.
+import "../../assets/stylesheets/navbar.css";
 // A skip link is included as an accessibility best practice. For more information visit https://www.w3.org/WAI/WCAG21/Techniques/general/G1.
 const NavBar = () => {
+  const [nav, showNav] = useState(false);
+
   return (
     <React.Fragment>
       <div className={styles.skipLink}>
         <a href="#mainContent">Skip to Main Content</a>
       </div>
+
       <nav className="navbar navbar-expand-sm navbar-light border-bottom justify-content-between">
         <Link className="navbar-brand" to="/">
           dolcenadaa
         </Link>
-        <div className="navbar-nav">
-          <Link className="nav-item nav-link active" to="/">
-            Home
-          </Link>
-        </div>
+
+        {nav && (
+          <div className="nav-collapse left-nav">
+            <Link
+              className="nav-item nav-link active"
+              to="/"
+              onClick={() => showNav(!nav)}
+            >
+              Home
+            </Link>
+          </div>
+        )}
+
+        <button class="navbar-toggler" type="button">
+          <span
+            class="navbar-toggler-icon"
+            onClick={() => showNav(!nav)}
+          ></span>
+        </button>
       </nav>
     </React.Fragment>
   );
-}
+};
 export default NavBar;
