@@ -14,7 +14,12 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <NavBar showNav={showNav} fadeBackground={fadeBackground} nav={nav} />
+      <NavBar
+        showNav={showNav}
+        fadeBackground={fadeBackground}
+        nav={nav}
+        fade={fade}
+      />
       <Switch>
         <Route
           exact

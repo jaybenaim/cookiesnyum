@@ -17,6 +17,9 @@
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
   }
+  .nav-link {
+    margin-left: 10%;
+  }
 }
 .navbar {
   display: grid !important;
@@ -27,6 +30,7 @@
   display: flex;
   justify-content: center;
   padding-left: 4%;
+  min-height: 3rem;
 }
 .navbar-toggler {
   grid-column: 3 !important;
