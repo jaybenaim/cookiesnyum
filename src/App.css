@@ -4,14 +4,15 @@
 }
 
 body {
-  margin-bottom: 160px !important; /* Height of the footer */
+  margin-bottom: 140px !important; /* Height of the footer */
   padding: 0;
+  overflow-x: hidden;
 }
 
 footer {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 76%;
   height: 140px; /* Set the fixed height of the footer here */
 }
 

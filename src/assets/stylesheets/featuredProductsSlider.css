@@ -1,19 +1,29 @@
 @media (max-width: 450px) {
-  .card-image {
-    width: 80%;
-  }
   .card {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding-top: 20%;
     border: none !important;
+    background: #ef60a1;
   }
   .card-img {
     grid-column: 2 / span 3;
   }
+  .show-for-mobile h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+  }
   .card-body {
     grid-column: 1 / span 5;
+    display: inline-block;
+    margin: -5% auto;
+  }
+  .card-text {
+    grid-column: 3;
+    margin: 0 auto;
+    font-size: 0.8em;
+    text-align: center;
   }
   /* Nav btns */
   .round {

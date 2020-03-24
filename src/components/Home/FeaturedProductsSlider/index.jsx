@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import cookie1 from "../../../assets/images/cookie1.jpg";
-import cookie2 from "../../../assets/images/cookie2.jpg";
-import cookie3 from "../../../assets/images/cookie3.jpg";
+import React, { useState } from "react";
+import cookieBox from "../../../assets/images/cookieBox.png";
+import scones from "../../../assets/images/scones.png";
+import biscotti from "../../../assets/images/biscotti.png";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
 
 const FeaturedSlider = () => {
@@ -9,17 +9,17 @@ const FeaturedSlider = () => {
     {
       cookies: {
         text: "cookies",
-        src: cookie1,
+        src: cookieBox,
         alt: "cookies"
       },
       scones: {
         text: "scones",
-        src: cookie2,
+        src: scones,
         alt: "scones"
       },
       biscotti: {
         text: "biscotti",
-        src: cookie3,
+        src: biscotti,
         alt: "biscotti"
       }
     }
@@ -34,7 +34,7 @@ const FeaturedSlider = () => {
     }
     if (direction === "prev") {
       setShowCardValue(showCardValue - 1);
-      if (showCardValue == 0) {
+      if (showCardValue === 0) {
         setShowCardValue(2);
       }
     }
@@ -94,10 +94,7 @@ const FeaturedSlider = () => {
 
         <div className="card-body">
           <h3>{text}</h3>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+          <p className="card-text">From $33.00</p>
         </div>
       </div>
     );
