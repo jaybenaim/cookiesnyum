@@ -16,11 +16,14 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
         className={`navbar navbar-expand-sm navbar-light border-bottom ${fade}`}
       >
         {nav && (
-          <div className="nav-collapse left-nav">
+          <div className={`nav-collapse left-nav`}>
             <Link
               className="nav-item nav-link active"
               to="/"
-              onClick={() => showNav(!nav)}
+              onClick={() => {
+                showNav(!nav);
+                fadeBackground("");
+              }}
             >
               Home
             </Link>
@@ -39,9 +42,9 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
           </Link>
         </div>
 
-        <button class="navbar-toggler" type="button">
+        <button className="navbar-toggler" type="button">
           <span
-            class="navbar-toggler-icon"
+            className="navbar-toggler-icon"
             onClick={() => {
               showNav(!nav);
               fadeBackground(!nav ? "fade-background" : "");

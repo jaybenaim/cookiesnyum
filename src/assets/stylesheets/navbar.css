@@ -5,17 +5,43 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 50%;
+    width: 60%;
     height: 100%;
     background: #fff;
     font-size: 1.7em;
     overflow-y: scroll;
+    animation-name: fadeInLeft;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+  }
+  .fade-out {
+    animation-name: fadeOutLeft;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
   }
 
+  @keyframes fadeInLeft {
+    from {
+      width: 1%;
+    }
+    to {
+      width: 60%;
+    }
+  }
+  @keyframes fadeOutLeft {
+    from {
+      width: 60%;
+    }
+    to {
+      width: 1%;
+    }
+  }
   /* Links */
+
   .left-nav a {
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    margin-left: 0;
   }
   .nav-link {
     margin-left: 10%;
