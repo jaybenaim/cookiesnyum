@@ -7,7 +7,8 @@
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding-top: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     border: 40px solid #fff !important;
     overflow: hidden;
     height: 650px;
@@ -24,6 +25,7 @@
   .show-for-mobile h3 {
     text-transform: uppercase;
     font-weight: 300;
+    font-size: 3em;
   }
   .show-for-mobile .card-body {
     grid-column: 1 / span 5;
@@ -33,8 +35,9 @@
   .show-for-mobile .card-text {
     grid-column: 3;
     margin: 0 auto;
-    font-size: 0.8em;
+    font-size: 1.1em;
     text-align: center;
+    font-weight: 200;
   }
   /* Nav btns */
   .round {

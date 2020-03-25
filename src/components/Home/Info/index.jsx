@@ -37,12 +37,7 @@ const Info = () => {
           </div>
         </p>
       </div>
-      <img
-        src={cookie2}
-        alt="profile photo of owner"
-        height="100%"
-        width="100%"
-      />
+      <img src={cookie2} alt="profile of owner" height="100%" width="100%" />
     </div>
   );
 };
