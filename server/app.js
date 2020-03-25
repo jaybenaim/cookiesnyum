@@ -1,12 +1,62 @@
 ﻿const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
-const cookieParser = require("cookie-parser");	
+const cookieParser = require("cookie-parser");
 const logger = require("morgan");
-
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 const indexRouter = require("./routes/index");
+const cors = require("cors");
+
+require("dotenv").config();
 
 const app = express();
+
+// Bodyparser middleware
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
+app.use(bodyParser.json());
+
+//  Connect to DB
+const db = process.env.MONGO_URI;
+
+// Mongo whitelist
+
+var dbOptions = {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+  useUnifiedTopology: false,
+  useCreateIndex: true
+};
+// Connect to MongoDB
+mongoose
+  .connect(db, dbOptions)
+  .then(() => console.log("MongoDB successfully connected"))
+  .catch(err => console.log(err));
+
+// Cors
+const whitelist = [
+  "https://jaybenaim.github.io",
+  "http://localhost:3000",
+  "http://localhost:5000",
+  "http://localhost:5000"
+];
+
+const corsOptions = {
+  credentials: true,
+  origin: function(origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  }
+};
+
+// app.use(cors(corsOptions));
 
 app.use(logger("dev"));
 app.use(express.json());
