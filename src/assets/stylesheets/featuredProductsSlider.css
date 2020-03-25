@@ -1,4 +1,7 @@
 @media (max-width: 450px) {
+  html {
+    overflow-x: hidden;
+  }
   .card {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -6,6 +9,7 @@
     padding-top: 20%;
     border: none !important;
     background: #ef60a1;
+    overflow-x: hidden;
   }
   .card-img {
     grid-column: 2 / span 3;
