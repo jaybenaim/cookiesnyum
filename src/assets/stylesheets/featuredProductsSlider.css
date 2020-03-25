@@ -48,21 +48,32 @@
   }
 }
 @media (min-width: 451px) {
-  .show-for-desktop.card-img {
-    width: 80%;
-    height: 400px;
-  }
   .show-for-desktop {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    /* display: inline-block;
-    width: 50%; */
+    grid-gap: 2%;
+    padding: 0 4%;
   }
-  .show-for-desktop.card img {
-    /* grid-row: 1; */
+  .show-for-desktop .card {
+    border: none !important;
   }
-  .show-for-desktop.card-body {
+  .show-for-desktop h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+  }
+  .show-for-desktop .card-text {
+    grid-column: 3;
+    margin: 0 auto;
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .show-for-desktop .card-img {
+  }
+
+  .show-for-desktop .card-body {
     /* grid-row: 2; */
   }
   .show-for-mobile {
