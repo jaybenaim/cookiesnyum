@@ -22,7 +22,6 @@ app.use(bodyParser.json());
 
 //  Connect to DB
 const db = process.env.MONGO_URI;
-
 // Mongo whitelist
 
 var dbOptions = {

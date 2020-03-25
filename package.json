@@ -16,7 +16,7 @@
     "react-dom": "16.12.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "4.3.1",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.4.1",
     "react-slick": "^0.25.2",
     "redux-logger": "^3.0.6",
     "slick-carousel": "^1.8.1"
@@ -25,10 +25,11 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "gh-pages": "^2.2.0"
   },
   "scripts": {
-    "start": "concurrently \"yarn start-frontend || npm run start-frontend\" \"yarn start-backend || npm run start-backend\"",
+    "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
     "start-backend": "node server/server.js",
     "start-frontend": "react-scripts start",
     "build": "react-scripts build",
