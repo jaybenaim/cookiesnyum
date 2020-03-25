@@ -43,7 +43,7 @@
 }
 
 .navbar {
-  background: #ef60a1 !important;
+  background: #f6406f !important;
   display: grid !important;
   grid-template-columns: 1fr 1fr 1fr !important;
   height: 7em;
