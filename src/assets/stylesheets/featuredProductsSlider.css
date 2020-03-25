@@ -2,14 +2,15 @@
   html {
     overflow-x: hidden;
   }
-  .card {
+
+  .show-for-mobile .card {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding-top: 20%;
-    border: none !important;
-    background: #ef60a1;
-    overflow-x: hidden;
+    border: 40px solid #fff !important;
+    overflow: hidden;
+    height: 650px;
   }
   .card-img {
     grid-column: 2 / span 3;
