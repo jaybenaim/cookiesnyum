@@ -56,12 +56,14 @@
   .show-for-desktop {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 2%;
     padding: 0 4%;
   }
   .show-for-desktop .card {
     border: none !important;
+    max-width: 350px;
+    padding: 20% 0;
   }
   .show-for-desktop h3 {
     text-transform: uppercase;
@@ -76,6 +78,7 @@
     text-align: center;
   }
   .show-for-desktop .card-img {
+    max-width: 350px;
   }
 
   .show-for-desktop .card-body {
