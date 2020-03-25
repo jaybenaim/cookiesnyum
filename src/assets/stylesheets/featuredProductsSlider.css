@@ -14,17 +14,23 @@
   }
   .card-img {
     grid-column: 2 / span 3;
+    margin-left: -33%;
+    min-width: 277px;
+  }
+  [alt="scones"] {
+    margin-left: -4%;
+    min-width: 230px;
   }
   .show-for-mobile h3 {
     text-transform: uppercase;
     font-weight: 300;
   }
-  .card-body {
+  .show-for-mobile .card-body {
     grid-column: 1 / span 5;
     display: inline-block;
     margin: -5% auto;
   }
-  .card-text {
+  .show-for-mobile .card-text {
     grid-column: 3;
     margin: 0 auto;
     font-size: 0.8em;
@@ -40,6 +46,7 @@
     height: 20%;
     font-size: 2.5em;
     margin: 150% auto;
+    position: relative;
   }
 
   .prev {
