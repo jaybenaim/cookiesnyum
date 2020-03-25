@@ -40,6 +40,16 @@
     left: 27.5%;
     top: 0%;
   }
+  /* Expanded nav brand */
+  .expanded-logo {
+    min-height: 3rem;
+  }
+  .expanded-navbar-brand img {
+    position: fixed;
+    right: 0%;
+    top: 2%;
+    z-index: 99;
+  }
 }
 
 .navbar {
