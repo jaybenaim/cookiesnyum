@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dcd7d51788e6465a62bbe9c48c954a1",
+    "revision": "f99dae21badae016122deec01e39210d",
     "url": "/dolcenadaa/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/css/2.70f73db9.chunk.css"
   },
   {
-    "revision": "9b63b78bd84eb50bc1b4",
-    "url": "/dolcenadaa/static/css/main.59105c5e.chunk.css"
+    "revision": "33af131fcf517ab72e8e",
+    "url": "/dolcenadaa/static/css/main.b8f0542b.chunk.css"
   },
   {
     "revision": "6e68b425d1b10002b3f4",
     "url": "/dolcenadaa/static/js/2.9bbfa11c.chunk.js"
   },
   {
-    "revision": "9b63b78bd84eb50bc1b4",
-    "url": "/dolcenadaa/static/js/main.dcaa17de.chunk.js"
+    "revision": "33af131fcf517ab72e8e",
+    "url": "/dolcenadaa/static/js/main.3debf9fe.chunk.js"
   },
   {
     "revision": "61f04d16aab85170b62e",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/media/logo.cdc73365.JPG"
   },
   {
-    "revision": "e4c4ecb0d46fba4c6ca82c1bc6990bb7",
-    "url": "/dolcenadaa/static/media/scones.e4c4ecb0.png"
+    "revision": "084273cd7c356b948ebcafb18a6eee2b",
+    "url": "/dolcenadaa/static/media/scones.084273cd.png"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
