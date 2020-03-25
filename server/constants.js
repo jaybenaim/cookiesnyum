@@ -1,5 +1,5 @@
 ﻿const CONSTANTS = {};
 
-CONSTANTS.PORT = process.env.PORT || "3001";
+CONSTANTS.PORT = process.env.PORT || "5000";
 
 module.exports = CONSTANTS;
