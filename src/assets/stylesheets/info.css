@@ -1,0 +1,29 @@
+@media (max-width: 450px) {
+  .business-info-grid img {
+    height: 400px;
+  }
+  .info-content {
+    text-align: center;
+    padding: 10% 4%;
+  }
+  .info-content a {
+    color: black;
+  }
+  [alt="instagram-link"] {
+    margin-top: 4%;
+  }
+  [alt="phone"] {
+    width: 40px;
+    max-height: 40px;
+    margin-left: -4%;
+  }
+  .social-icons a img {
+    width: 40px;
+    height: 40px;
+    margin-right: 2%;
+    margin-bottom: 4%;
+  }
+}
+
+@media (min-width: 451px) {
+}
