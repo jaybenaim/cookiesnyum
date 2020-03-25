@@ -29,8 +29,7 @@
     "gh-pages": "^2.2.0"
   },
   "scripts": {
-    "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
-    "start-backend": "node server/server.js",
+    "start": "concurrently \"npm run start-frontend\" ",
     "start-frontend": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
