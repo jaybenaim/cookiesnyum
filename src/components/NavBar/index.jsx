@@ -1,15 +1,31 @@
 ﻿import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import styles from "./navbar.module.css";
 import "../../assets/stylesheets/navbar.css";
 import logo from "../../assets/images/logo.JPG";
+import { connect } from "react-redux";
+import { logoutUser } from "../../redux/actions/authActions";
 
 // A skip link is included as an accessibility best practice. For more information visit https://www.w3.org/WAI/WCAG21/Techniques/general/G1.
-const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
+const NavBar = ({
+  showNav,
+  nav,
+  fadeBackground,
+  fade,
+  auth: {
+    user: { name },
+    isAuthenticated
+  },
+  logoutUser: handleLogoutUser
+}) => {
   const navLinkStyle = {
     width: "140px",
     borderRadius: "3px",
     letterSpacing: "1.5px"
+  };
+  const onLogoutClick = e => {
+    e.preventDefault();
+    handleLogoutUser();
   };
   return (
     <React.Fragment>
@@ -20,6 +36,8 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
       <nav
         className={`navbar navbar-expand-sm navbar-light border-bottom ${fade}`}
       >
+        <div> {isAuthenticated && "Hi, " + name}</div>
+
         {nav && (
           <>
             <div className={`nav-collapse left-nav`}>
@@ -29,33 +47,50 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
                 style={navLinkStyle}
                 onClick={() => {
                   showNav(!nav);
-                  fadeBackground("");
+                  fadeBackground("home");
                 }}
               >
                 Home
               </Link>
-              <Link
-                to="/login"
-                style={navLinkStyle}
-                className="btn btn-large btn-flat waves-effect white black-text"
-                onClick={() => {
-                  showNav(!nav);
-                  fadeBackground("");
-                }}
-              >
-                Log In
-              </Link>
-              <Link
-                to="/register"
-                style={navLinkStyle}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                onClick={() => {
-                  showNav(!nav);
-                  fadeBackground("");
-                }}
-              >
-                Register
-              </Link>
+              {!isAuthenticated ? (
+                <>
+                  <Link
+                    to="/login"
+                    style={navLinkStyle}
+                    onClick={() => {
+                      showNav(false);
+                      fadeBackground("");
+                    }}
+                    className="btn btn-large btn-flat waves-effect white black-text"
+                  >
+                    Log In
+                  </Link>
+                  <Link
+                    to="/register"
+                    style={navLinkStyle}
+                    onClick={() => {
+                      showNav(false);
+                      fadeBackground("");
+                    }}
+                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  >
+                    Register
+                  </Link>
+                </>
+              ) : (
+                <button
+                  style={{
+                    width: "150px",
+                    borderRadius: "3px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem"
+                  }}
+                  onClick={e => onLogoutClick(e)}
+                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                >
+                  Logout
+                </button>
+              )}
             </div>
             <div className="expanded-logo">
               <Link className="expanded-navbar-brand" to="/">
@@ -97,4 +132,9 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
     </React.Fragment>
   );
 };
-export default NavBar;
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default connect(mapStateToProps, { logoutUser })(withRouter(NavBar));

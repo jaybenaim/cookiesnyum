@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/dolcenadaa/static/css/main.938ea9ce.chunk.css",
-    "main.js": "/dolcenadaa/static/js/main.9a8a032b.chunk.js",
-    "main.js.map": "/dolcenadaa/static/js/main.9a8a032b.chunk.js.map",
-    "runtime-main.js": "/dolcenadaa/static/js/runtime-main.c7b0d618.js",
-    "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.c7b0d618.js.map",
-    "static/css/2.70f73db9.chunk.css": "/dolcenadaa/static/css/2.70f73db9.chunk.css",
-    "static/js/2.adcd1102.chunk.js": "/dolcenadaa/static/js/2.adcd1102.chunk.js",
-    "static/js/2.adcd1102.chunk.js.map": "/dolcenadaa/static/js/2.adcd1102.chunk.js.map",
+    "main.css": "/dolcenadaa/static/css/main.fd659bb1.chunk.css",
+    "main.js": "/dolcenadaa/static/js/main.6ab37076.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.6ab37076.chunk.js.map",
+    "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
+    "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
+    "static/css/2.25118874.chunk.css": "/dolcenadaa/static/css/2.25118874.chunk.css",
+    "static/js/2.607255fe.chunk.js": "/dolcenadaa/static/js/2.607255fe.chunk.js",
+    "static/js/2.607255fe.chunk.js.map": "/dolcenadaa/static/js/2.607255fe.chunk.js.map",
     "index.html": "/dolcenadaa/index.html",
-    "precache-manifest.0ffdb8995641505417c6922e013da11b.js": "/dolcenadaa/precache-manifest.0ffdb8995641505417c6922e013da11b.js",
+    "precache-manifest.edca738904db8f715850149b7bf61f84.js": "/dolcenadaa/precache-manifest.edca738904db8f715850149b7bf61f84.js",
     "service-worker.js": "/dolcenadaa/service-worker.js",
-    "static/css/2.70f73db9.chunk.css.map": "/dolcenadaa/static/css/2.70f73db9.chunk.css.map",
-    "static/css/main.938ea9ce.chunk.css.map": "/dolcenadaa/static/css/main.938ea9ce.chunk.css.map",
+    "static/css/2.25118874.chunk.css.map": "/dolcenadaa/static/css/2.25118874.chunk.css.map",
+    "static/css/main.fd659bb1.chunk.css.map": "/dolcenadaa/static/css/main.fd659bb1.chunk.css.map",
+    "static/js/2.607255fe.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.607255fe.chunk.js.LICENSE.txt",
     "static/media/biscotti.png": "/dolcenadaa/static/media/biscotti.1c5d3f03.png",
     "static/media/cookie1.jpg": "/dolcenadaa/static/media/cookie1.5b74caf3.jpg",
     "static/media/cookie2.jpg": "/dolcenadaa/static/media/cookie2.e88097fd.jpg",
@@ -24,10 +25,10 @@
     "static/media/slick-theme.css": "/dolcenadaa/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c7b0d618.js",
-    "static/css/2.70f73db9.chunk.css",
-    "static/js/2.adcd1102.chunk.js",
-    "static/css/main.938ea9ce.chunk.css",
-    "static/js/main.9a8a032b.chunk.js"
+    "static/js/runtime-main.0baa157b.js",
+    "static/css/2.25118874.chunk.css",
+    "static/js/2.607255fe.chunk.js",
+    "static/css/main.fd659bb1.chunk.css",
+    "static/js/main.6ab37076.chunk.js"
   ]
 }
