@@ -17,7 +17,7 @@ const Info = () => {
         </p>
         <em>Rushed orders available for additional charge</em>
 
-        <p>
+        <div>
           <strong>Hours:</strong>
           <p>
             Monday - Friday <br />
@@ -27,15 +27,14 @@ const Info = () => {
             <img src={pinkPhone} alt="phone" className="phone-icon" /> 647 000
             0000
           </a>
-        </p>
-        <p>
-          <div className="social-icons">
-            <a href="https://www.instagram.com/dolcenadaa/">
-              <img src={instagram} alt="instagram-link"></img>
-              <span>Follow us on Instagram @dolcenadaa</span>{" "}
-            </a>
-          </div>
-        </p>
+        </div>
+
+        <div className="social-icons">
+          <a href="https://www.instagram.com/dolcenadaa/">
+            <img src={instagram} alt="instagram-link"></img>
+            <span>Follow us on Instagram @dolcenadaa</span>{" "}
+          </a>
+        </div>
       </div>
       <img src={cookie2} alt="profile of owner" height="100%" width="100%" />
     </div>

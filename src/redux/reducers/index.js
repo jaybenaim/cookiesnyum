@@ -1,5 +1,8 @@
 import { combineReducers } from "redux";
+import authReducer from "./authReducers";
+import errorReducer from "./errorReducers";
 
-const rootReducer = combineReducers({});
-
-export default rootReducer;
+export default combineReducers({
+  auth: authReducer,
+  errors: errorReducer
+});

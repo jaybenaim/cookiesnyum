@@ -49,7 +49,7 @@ const FeaturedSlider = () => {
       const keyCode = key[keyValue];
 
       return (
-        <div class="card" key={i}>
+        <div className="card" key={i}>
           <img
             className="card-img"
             src={card[keyCode].src}
@@ -74,7 +74,7 @@ const FeaturedSlider = () => {
     const keyCode = key[showCardValue];
     const { text, src, alt } = defaultDisplay[0][keyCode];
     return (
-      <div class="card">
+      <div className="card">
         <span className="prev round" onClick={() => getCard("prev")}>
           &#8249;
         </span>

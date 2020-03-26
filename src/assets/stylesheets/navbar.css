@@ -6,15 +6,24 @@
     left: 0;
     top: 0;
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     background: #fff;
     font-size: 1.7em;
-    overflow-y: scroll;
+    overflow-y: hidden;
     animation-name: fadeInLeft;
     animation-iteration-count: 1;
     animation-duration: 1s;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
   }
-
+  .left-nav .home-link {
+    grid-row: 1;
+    position: fixed;
+    top: 0;
+    left: -12%;
+    text-decoration: underline;
+    border: none;
+  }
   @keyframes fadeInLeft {
     from {
       width: 1%;
@@ -27,12 +36,36 @@
   /* Links */
 
   .left-nav a {
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border: 1px solid #eee;
     margin-left: 0;
+    width: 50% !important;
+    position: fixed;
+    bottom: 14%;
+    animation-name: fadeInLeft;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
   }
+  .left-nav a:last-of-type {
+    position: fixed;
+    bottom: 5%;
+  }
+
   .nav-link {
     margin-left: 10%;
+  }
+  /* Expanded nav bar */
+  .fade-background .navbar-toggler {
+    top: 2%;
+    left: -90%;
+    z-index: 99;
+  }
+
+  .navbar-expand-sm {
+    background: #f6406f !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr;
+    height: 7em;
   }
   .navbar-brand img {
     position: absolute;
@@ -40,7 +73,6 @@
     left: 27.5%;
     top: 0%;
   }
-  /* Expanded nav brand */
   .expanded-logo {
     min-height: 3rem;
   }
@@ -52,12 +84,6 @@
   }
 }
 
-.navbar {
-  background: #f6406f !important;
-  display: grid !important;
-  grid-template-columns: 1fr 1fr 1fr !important;
-  height: 7em;
-}
 .logo {
   grid-column: 2 !important;
   display: flex;
@@ -70,9 +96,13 @@
   width: 40%;
   position: absolute;
   right: 15%;
+  background: #f6406f !important;
 }
 @media (min-width: 451px) {
   .navbar {
+    background: #f6406f !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
     height: 12em;
   }
   .navbar-brand img {

@@ -24,8 +24,8 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
           <>
             <div className={`nav-collapse left-nav`}>
               <Link
-                className="col s5  center black-text"
-                to="/dolcenadaa"
+                className="col s5  center black-text home-link"
+                to="/"
                 style={navLinkStyle}
                 onClick={() => {
                   showNav(!nav);
@@ -35,23 +35,30 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
                 Home
               </Link>
               <Link
-                to="/register"
-                style={navLinkStyle}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-              >
-                Register
-              </Link>
-
-              <Link
                 to="/login"
                 style={navLinkStyle}
                 className="btn btn-large btn-flat waves-effect white black-text"
+                onClick={() => {
+                  showNav(!nav);
+                  fadeBackground("");
+                }}
               >
                 Log In
               </Link>
+              <Link
+                to="/register"
+                style={navLinkStyle}
+                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                onClick={() => {
+                  showNav(!nav);
+                  fadeBackground("");
+                }}
+              >
+                Register
+              </Link>
             </div>
             <div className="expanded-logo">
-              <Link className="expanded-navbar-brand" to="/dolcenadaa">
+              <Link className="expanded-navbar-brand" to="/">
                 {fade === "fade-background" && (
                   <img
                     src={logo}
@@ -65,7 +72,7 @@ const NavBar = ({ showNav, nav, fadeBackground, fade }) => {
           </>
         )}
         <div className="logo">
-          <Link className="navbar-brand" to="/dolcenadaa">
+          <Link className="navbar-brand" to="/">
             {fade !== "fade-background" && (
               <img
                 src={logo}
