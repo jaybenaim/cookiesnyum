@@ -5,40 +5,39 @@ import "../../assets/stylesheets/navbar.css";
 import logo from "../../assets/images/logo.JPG";
 import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/authActions";
-
+import DesktopNav from "./DesktopNav";
+const navLinkStyle = {
+  width: "140px",
+  borderRadius: "3px",
+  letterSpacing: "1.5px"
+};
 // A skip link is included as an accessibility best practice. For more information visit https://www.w3.org/WAI/WCAG21/Techniques/general/G1.
-const NavBar = ({
-  showNav,
-  nav,
-  fadeBackground,
-  fade,
-  auth: {
-    user: { name },
-    isAuthenticated
-  },
-  logoutUser: handleLogoutUser
-}) => {
-  const navLinkStyle = {
-    width: "140px",
-    borderRadius: "3px",
-    letterSpacing: "1.5px"
-  };
+const NavBar = props => {
   const onLogoutClick = e => {
     e.preventDefault();
     handleLogoutUser();
   };
+  const {
+    showNav,
+    nav,
+    fadeBackground,
+    fade,
+    auth: {
+      user: { name },
+      isAuthenticated
+    },
+    logoutUser: handleLogoutUser
+  } = props;
   return (
     <React.Fragment>
       <div className={styles.skipLink}>
         <a href="#mainContent">Skip to Main Content</a>
       </div>
 
-      <nav
-        className={`navbar navbar-expand-sm navbar-light border-bottom ${fade}`}
-      >
+      <nav className={`navbar navbar-expand-sm navbar-light border-bottom`}>
         <div> {isAuthenticated && "Hi, " + name}</div>
 
-        {nav && (
+        {nav ? (
           <>
             <div className={`nav-collapse left-nav`}>
               <Link
@@ -105,6 +104,8 @@ const NavBar = ({
               </Link>
             </div>
           </>
+        ) : (
+          <DesktopNav {...props} />
         )}
         <div className="logo">
           <Link className="navbar-brand" to="/">

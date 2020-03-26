@@ -109,4 +109,9 @@
     height: 11em;
     width: 11em;
   }
+  .left-nav {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+  }
 }
