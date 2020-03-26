@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/authActions";
 import classnames from "classnames";
+import "../../assets/stylesheets/login.css";
+
 class Login extends Component {
   state = {
     email: "",
