@@ -5,6 +5,12 @@
   .business-info-grid img {
     height: 400px;
   }
+  .info-content {
+    font-size: 1.2em;
+  }
+  .info-content h3 {
+    font-size: 2em;
+  }
 }
 
 @media (min-width: 451px) {
@@ -13,6 +19,13 @@
   }
   .business-info-grid img {
     height: 600px;
+  }
+  .info-content {
+    font-size: 2em;
+  }
+  .info-content .primary-font {
+    font-size: 1.8em;
+    padding-bottom: 4%;
   }
 }
 

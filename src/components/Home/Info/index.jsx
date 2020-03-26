@@ -8,25 +8,27 @@ const Info = () => {
   return (
     <div className="business-info-grid">
       <div className="info-content">
-        <h3>Business Info</h3>
-        <p>Based in Toronto, ON</p>
-        <p>
-          <strong>
-            Please give at least 7 days notice for any order placed
-          </strong>
-        </p>
-        <em>Rushed orders available for additional charge</em>
-
-        <div>
-          <strong>Hours:</strong>
+        <h3 className="primary-font">Business Info</h3>
+        <div className="secondary-font">
+          <p>Based in Toronto, ON</p>
           <p>
-            Monday - Friday <br />
-            9am - 6pm
+            <strong>
+              Please give at least 7 days notice for any order placed
+            </strong>
           </p>
-          <a href="tel:6476404714">
-            <img src={pinkPhone} alt="phone" className="phone-icon" /> 647 000
-            0000
-          </a>
+          <em>Rushed orders available for additional charge</em>
+
+          <div>
+            <strong>Hours:</strong>
+            <p>
+              Monday - Friday <br />
+              9am - 6pm
+            </p>
+            <a href="tel:6476404714">
+              <img src={pinkPhone} alt="phone" className="phone-icon" /> 647 000
+              0000
+            </a>
+          </div>
         </div>
 
         <div className="social-icons">

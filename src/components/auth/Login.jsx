@@ -109,7 +109,7 @@ class Login extends Component {
                     }}
                     type="submit"
                     id="login"
-                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                    className="btn btn-large waves-effect waves-light hoverable blue accent-3 "
                   >
                     Login
                   </button>

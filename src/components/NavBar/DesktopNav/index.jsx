@@ -35,14 +35,16 @@ const DesktopNav = ({
         onMouseLeave={() => toggleDesktopNav(!displayDesktopNav)}
       >
         {" "}
-        {isAuthenticated ? "Hi, " + name : "Login"}
+        <div className="seconday-font">
+          {isAuthenticated ? "Hi, " + name : "Login"}
+        </div>
         {!isAuthenticated ? (
           <div className={navClass}>
             <a
               href="/login"
               id="login"
               style={navLinkStyle}
-              className="btn btn-large  waves-effect waves-light hoverable"
+              className="btn btn-large  waves-effect waves-light hoverable "
             >
               Log In
             </a>

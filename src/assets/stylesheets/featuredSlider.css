@@ -15,6 +15,9 @@
     font-weight: 600;
     text-transform: uppercase;
   }
+  .featured-slide h3 {
+    font-family: "Baloo 2", cursive;
+  }
   .slick-dots {
     position: relative;
     left: 30%;
@@ -22,15 +25,20 @@
   }
 }
 @media (min-width: 451px) {
-  .featured-slider {
-    padding-bottom: 10%;
+  .featured-slide h3 {
+    font-size: 1.8em;
   }
   .featured-slide img {
     width: 100%;
     min-height: 600px;
   }
+
   .featured-slide .text-box {
     padding: 4%;
+    font-size: 1.2em;
+  }
+  .featured-slide p {
+    padding: 3% 5% 5% 1%;
   }
   .featured-slide button {
     background: #f6406f;
@@ -44,7 +52,7 @@
   .slick-dots {
     position: relative;
     left: 30%;
-    top: 88%;
+    top: 91%;
   }
   .slick-dots li button:before {
     font-size: 18px !important;

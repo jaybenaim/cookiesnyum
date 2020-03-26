@@ -57,9 +57,9 @@ const FeaturedSlider = ({ fade }) => {
             height={220}
             width={120}
           />
-          <div className="card-body">
+          <div className="card-body primary-font">
             <h3>{card[keyCode].text}</h3>
-            <p className="card-text">From $33.00</p>
+            <p className="card-text secondary-font">From $33.00</p>
           </div>
         </div>
       );
@@ -89,9 +89,9 @@ const FeaturedSlider = ({ fade }) => {
           &#8250;
         </span>
 
-        <div className="card-body">
+        <div className="card-body primary-font">
           <h3>{text}</h3>
-          <p className="card-text">From $33.00</p>
+          <p className="card-text secondary-font">From $33.00</p>
         </div>
       </div>
     );
@@ -99,8 +99,13 @@ const FeaturedSlider = ({ fade }) => {
   return (
     <>
       <div>
-        <div className="show-for-mobile">{displayCard()}</div>
+        <div className="show-for-mobile">
+          <p className="heading">What we sell</p>
+          {displayCard()}
+        </div>
         <div className="show-for-desktop">
+          <p className="heading">What we sell</p>
+
           {displayAllCards(0)}
           {displayAllCards(1)}
           {displayAllCards(2)}

@@ -70,32 +70,41 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 2%;
-    padding: 0 4%;
+    padding: 10% 4%;
+  }
+  .show-for-desktop .heading {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    font-size: 4em;
+    padding: 4% 0;
+    margin: 0 auto;
+    font-family: "Liu Jian Mao Cao", cursive;
+    text-transform: capitalize;
   }
   .show-for-desktop .card {
+    grid-row: 2;
     border: none !important;
     max-width: 350px;
     padding: 20% 0;
   }
   .show-for-desktop h3 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 300;
     display: flex;
     justify-content: center;
+    letter-spacing: 2px;
+    font-size: 3em;
   }
   .show-for-desktop .card-text {
     grid-column: 3;
     margin: 0 auto;
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: center;
   }
   .show-for-desktop .card-img {
     max-width: 350px;
   }
 
-  .show-for-desktop .card-body {
-    /* grid-row: 2; */
-  }
   .show-for-mobile {
     display: none;
   }

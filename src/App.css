@@ -33,3 +33,11 @@ button:active {
 .hide {
   display: none;
 }
+
+.primary-font {
+  font-family: "Liu Jian Mao Cao", cursive;
+}
+
+.secondary-font {
+  font-family: "Baloo 2", cursive;
+}

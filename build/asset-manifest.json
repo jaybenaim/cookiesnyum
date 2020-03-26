@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/dolcenadaa/static/css/main.8326dbf8.chunk.css",
-    "main.js": "/dolcenadaa/static/js/main.adba21cf.chunk.js",
-    "main.js.map": "/dolcenadaa/static/js/main.adba21cf.chunk.js.map",
+    "main.css": "/dolcenadaa/static/css/main.423c0ede.chunk.css",
+    "main.js": "/dolcenadaa/static/js/main.255b37c5.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.255b37c5.chunk.js.map",
     "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
     "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
     "static/css/2.25118874.chunk.css": "/dolcenadaa/static/css/2.25118874.chunk.css",
     "static/js/2.b70c7a62.chunk.js": "/dolcenadaa/static/js/2.b70c7a62.chunk.js",
     "static/js/2.b70c7a62.chunk.js.map": "/dolcenadaa/static/js/2.b70c7a62.chunk.js.map",
     "index.html": "/dolcenadaa/index.html",
-    "precache-manifest.ff45837608901e208694e140f780e340.js": "/dolcenadaa/precache-manifest.ff45837608901e208694e140f780e340.js",
+    "precache-manifest.602e0d1b181ef7ca341bbd73a7543a89.js": "/dolcenadaa/precache-manifest.602e0d1b181ef7ca341bbd73a7543a89.js",
     "service-worker.js": "/dolcenadaa/service-worker.js",
     "static/css/2.25118874.chunk.css.map": "/dolcenadaa/static/css/2.25118874.chunk.css.map",
-    "static/css/main.8326dbf8.chunk.css.map": "/dolcenadaa/static/css/main.8326dbf8.chunk.css.map",
+    "static/css/main.423c0ede.chunk.css.map": "/dolcenadaa/static/css/main.423c0ede.chunk.css.map",
     "static/js/2.b70c7a62.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.b70c7a62.chunk.js.LICENSE.txt",
     "static/media/biscotti.png": "/dolcenadaa/static/media/biscotti.1c5d3f03.png",
-    "static/media/cookie1.jpg": "/dolcenadaa/static/media/cookie1.5b74caf3.jpg",
-    "static/media/cookie2.jpg": "/dolcenadaa/static/media/cookie2.e88097fd.jpg",
-    "static/media/cookie3.jpg": "/dolcenadaa/static/media/cookie3.6a835dc1.jpg",
+    "static/media/cookie1.jpg": "/dolcenadaa/static/media/cookie1.4c08163b.jpg",
+    "static/media/cookie2.jpg": "/dolcenadaa/static/media/cookie2.18e12e7a.jpg",
+    "static/media/cookie3.jpg": "/dolcenadaa/static/media/cookie3.06a8e1ad.jpg",
     "static/media/cookieBox.png": "/dolcenadaa/static/media/cookieBox.fe5a60e6.png",
     "static/media/instagram.png": "/dolcenadaa/static/media/instagram.e01d8c49.png",
     "static/media/logo.JPG": "/dolcenadaa/static/media/logo.cdc73365.JPG",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.0baa157b.js",
     "static/css/2.25118874.chunk.css",
     "static/js/2.b70c7a62.chunk.js",
-    "static/css/main.8326dbf8.chunk.css",
-    "static/js/main.adba21cf.chunk.js"
+    "static/css/main.423c0ede.chunk.css",
+    "static/js/main.255b37c5.chunk.js"
   ]
 }

@@ -9,7 +9,7 @@ const AboutUs = ({ fade }) => {
         <div className="right-side top">
           <img src={cookie1} alt="cookie" height={350} width={"100%"} />
         </div>
-        <div className="left-side bottom">
+        <div className="left-side bottom secondary-font">
           <h3>
             Your favourite dolce girls <br />
             Nada + Ashley
