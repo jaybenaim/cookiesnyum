@@ -38,28 +38,20 @@ const DesktopNav = ({
         {isAuthenticated ? "Hi, " + name : "Login"}
         {!isAuthenticated ? (
           <div className={navClass}>
-            <Link
-              to="/login"
+            <a
+              href="/login"
               style={navLinkStyle}
-              onClick={() => {
-                showNav(false);
-                fadeBackground("");
-              }}
               className="btn btn-large btn-flat waves-effect white black-text"
             >
               Log In
-            </Link>
-            <Link
-              to="/register"
+            </a>
+            <a
+              href="/register"
               style={navLinkStyle}
-              onClick={() => {
-                showNav(false);
-                fadeBackground("");
-              }}
               className="btn btn-large waves-effect waves-light hoverable blue accent-3"
             >
               Register
-            </Link>
+            </a>
           </div>
         ) : (
           <div className={navClass}>
