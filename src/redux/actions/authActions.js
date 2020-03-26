@@ -1,29 +1,30 @@
-import setAuthToken from "../utils/setAuthToken";
+import setAuthToken from "../../utils/setAuthToken";
 import jwt_decode from "jwt-decode";
 import { GET_ERRORS, SET_CURRENT_USER, USER_LOADING } from "./types";
-import local from "../../api/local";
+import backend from "../../api/backend";
 // Register User
 export const registerUser = (userData, history) => dispatch => {
-  local
-    .post("/api/users/register", userData)
-    .then(res => history.push("/login")) // re-direct to login on successful register
-    .catch(err =>
+  backend
+    .post("/users/register", userData)
+    .then(res => history.push("/")) // re-direct to login on successful register
+    .catch(err => {
       dispatch({
         type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
+        payload: err
+      });
+    });
 };
 
 // Login - get user token
 export const loginUser = userData => dispatch => {
-  local
-    .post("/api/users/login", userData)
+  backend
+    .post("/users/login", userData)
     .then(res => {
       // Save to localStorage
       // Set token to localStorage
       const { token } = res.data;
       localStorage.setItem("jwtToken", token);
+
       // Set token to Auth header
       setAuthToken(token);
       // Decode token to get user data
@@ -31,12 +32,12 @@ export const loginUser = userData => dispatch => {
       // Set current user
       dispatch(setCurrentUser(decoded));
     })
-    .catch(err =>
+    .catch(err => {
       dispatch({
         type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
+        payload: err
+      });
+    });
 };
 
 // Set logged in user

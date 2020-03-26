@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.2",
     "bootstrap": "4.4.1",
     "classnames": "2.2.6",
     "concurrently": "^5.1.0",
@@ -12,7 +13,9 @@
     "fs-extra": "8.1.0",
     "http-errors": "1.7.3",
     "is-empty": "^1.2.0",
+    "jwt-decode": "^2.2.0",
     "morgan": "1.9.1",
+    "prop-types": "^15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-redux": "^7.2.0",
