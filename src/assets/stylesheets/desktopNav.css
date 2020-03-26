@@ -1,0 +1,26 @@
+@media (max-width: 450px) {
+  .desktop-nav {
+    display: none;
+  }
+  .welcome-container {
+    display: none;
+  }
+}
+@media (min-width: 451px) {
+  .desktop-nav-hide {
+    display: none;
+  }
+  .desktop-nav-show {
+    position: fixed;
+    left: 0;
+    top: 2%;
+  }
+  .desktop-nav .btn {
+    height: 50%;
+    max-width: 60%;
+  }
+  .welcome-container {
+    position: relative;
+    top: -40%;
+  }
+}

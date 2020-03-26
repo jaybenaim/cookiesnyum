@@ -35,8 +35,6 @@ const NavBar = props => {
       </div>
 
       <nav className={`navbar navbar-expand-sm navbar-light border-bottom`}>
-        <div> {isAuthenticated && "Hi, " + name}</div>
-
         {nav ? (
           <>
             <div className={`nav-collapse left-nav`}>
