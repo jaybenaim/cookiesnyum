@@ -4,7 +4,7 @@ import scones from "../../../assets/images/scones.png";
 import biscotti from "../../../assets/images/biscotti.png";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
 
-const FeaturedSlider = () => {
+const FeaturedSlider = ({ fade }) => {
   const defaultDisplay = [
     {
       cookies: {

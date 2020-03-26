@@ -34,17 +34,19 @@ const NavBar = props => {
         <a href="#mainContent">Skip to Main Content</a>
       </div>
 
-      <nav className={`navbar navbar-expand-sm navbar-light border-bottom`}>
+      <nav
+        className={`navbar navbar-expand-sm navbar-light border-bottom ${fade} `}
+      >
         {nav ? (
           <>
-            <div className={`nav-collapse left-nav`}>
+            <div className={`nav-collapse left-nav fade-in-left`}>
               <Link
                 className="col s5  center black-text home-link"
                 to="/"
                 style={navLinkStyle}
                 onClick={() => {
                   showNav(!nav);
-                  fadeBackground("home");
+                  fadeBackground("");
                 }}
               >
                 Home

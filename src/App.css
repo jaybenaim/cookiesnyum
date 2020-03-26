@@ -27,3 +27,9 @@ button:active {
   outline: none !important;
   box-shadow: none !important;
 }
+
+/* helpers */
+
+.hide {
+  display: none;
+}

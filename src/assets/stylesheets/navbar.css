@@ -15,7 +15,9 @@
     animation-duration: 1s;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    z-index: 99;
   }
+
   .left-nav .home-link {
     grid-row: 1;
     position: fixed;
@@ -23,6 +25,11 @@
     left: -12%;
     text-decoration: underline;
     border: none;
+  }
+  .fade-in-left {
+    animation-name: fadeInLeft;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
   }
   @keyframes fadeInLeft {
     from {
@@ -57,7 +64,7 @@
   .fade-background .navbar-toggler {
     top: 2%;
     left: -90%;
-    z-index: 99;
+    z-index: 993;
   }
 
   .navbar-expand-sm {

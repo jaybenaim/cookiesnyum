@@ -1,11 +1,11 @@
 @media (max-width: 450px) {
   /* Fade background when navbar clicked */
   .fade-background {
-    background: rgba(0, 0, 0, 0.2);
-    height: 668px;
-    max-height: 100%;
+    height: 700px;
+    min-height: 100%;
     overflow: hidden;
     position: fixed !important;
+    z-index: 99;
   }
   .featured-slider {
     margin: 0 auto;

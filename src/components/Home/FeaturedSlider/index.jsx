@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 
-const FeaturedSlider = () => {
+const FeaturedSlider = ({ fade }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -26,8 +26,8 @@ const FeaturedSlider = () => {
           <img
             src={cookie1}
             alt="chocolate-cookie"
-            height={250}
-            width={250}
+            height={50}
+            width={50}
           ></img>
           <div className="text-box">
             <h3>Chocolate love</h3>
@@ -41,7 +41,7 @@ const FeaturedSlider = () => {
             </button>
           </div>
         </div>
-        <div className="featured-slide">
+        <div className="featured-slide ">
           <img
             src={cookie2}
             alt="chocolate-cookie"
