@@ -35,8 +35,9 @@
     "gh-pages": "^2.2.0"
   },
   "scripts": {
-    "start": "concurrently \"npm run start-frontend\" ",
+    "start": "npm run start-frontend",
     "start-frontend": "react-scripts start",
+    "start-backend": "cd ../dolcenadaabackend && npm run start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
