@@ -37,7 +37,10 @@ class Register extends Component {
   };
   render() {
     const { errors } = this.state;
-    const { fade } = this.props;
+    const {
+      fade,
+      auth: { loading }
+    } = this.props;
     return (
       fade !== "fade-background" && (
         <div className="container register-container">
@@ -55,6 +58,13 @@ class Register extends Component {
                   Already have an account? <a href="/login">Log in</a>
                 </p>
               </div>
+              {loading && (
+                <div className="d-flex justify-content-center">
+                  <div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                  </div>
+                </div>
+              )}
               <form noValidate onSubmit={this.onSubmit}>
                 <div className="input-field col s12">
                   <input
