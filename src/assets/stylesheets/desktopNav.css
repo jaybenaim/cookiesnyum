@@ -13,7 +13,8 @@
   .desktop-nav-show {
     position: fixed;
     left: 0;
-    top: 2%;
+    top: 4%;
+    width: 25%;
   }
   .desktop-nav .btn {
     height: 50%;
@@ -22,5 +23,19 @@
   .welcome-container {
     position: relative;
     top: -40%;
+  }
+  .welcome-container #register {
+    margin-top: -30%;
+  }
+  /* override material ui btn */
+  #login {
+    background-color: #663a16 !important;
+    padding: 3% !important;
+    color: #eee !important;
+  }
+  #register {
+    background-color: #663a16 !important;
+    padding: 3% !important;
+    color: #eee !important;
   }
 }

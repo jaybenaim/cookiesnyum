@@ -2,7 +2,9 @@
   html {
     overflow-x: hidden;
   }
-
+  .show-for-mobile {
+    border: none !important;
+  }
   .show-for-mobile .card {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
