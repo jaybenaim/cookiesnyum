@@ -62,7 +62,6 @@ const DesktopNav = ({
           </button>
         </div>
       )}
-      ))
     </>
   );
 };

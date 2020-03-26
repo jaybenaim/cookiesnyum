@@ -8,28 +8,26 @@ import Info from "./Info";
 const Home = ({ fade }) => {
   return (
     <>
-      {fade !== "fade-background" && (
-        <main id="mainContent">
-          <div className={fade}>
-            <section className="featured-slider">
-              <FeaturedSlider />
-              <br />
-            </section>
-            <hr />
-            <section className="featured-products-slider">
-              <FeaturedProductsSlider />
-            </section>
-            <hr />
-            <section className="about-us">
-              <AboutUs />
-            </section>
-            <hr />
-            <section className="info">
-              <Info />
-            </section>
-          </div>
-        </main>
-      )}
+      <main id="mainContent">
+        <div className={fade}>
+          <section className="featured-slider">
+            <FeaturedSlider />
+            <br />
+          </section>
+          <hr />
+          <section className="featured-products-slider">
+            <FeaturedProductsSlider />
+          </section>
+          <hr />
+          <section className="about-us">
+            <AboutUs />
+          </section>
+          <hr />
+          <section className="info">
+            <Info />
+          </section>
+        </div>
+      </main>
     </>
   );
 };
