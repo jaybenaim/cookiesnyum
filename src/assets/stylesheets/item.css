@@ -1,6 +1,52 @@
 @media (max-width: 450px) {
   .item--card {
     display: grid !important;
+    border: none !important;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 6%;
+    margin-top: 10%;
+    padding: 2%;
+  }
+  .item--card-body {
+    grid-column: 2 / span 3 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .item--card--img {
+    grid-column: 1;
+  }
+  .item--card-body {
+    grid-column: 2;
+  }
+  .item--card-body p {
+    padding: 2%;
+  }
+  .item--card-body--name {
+    grid-column: 1;
+  }
+  .item--card-body--price {
+    display: none;
+  }
+  .item--card-body--description {
+    grid-column: 1 / span 3;
+  }
+  .item--card-body--add-to-cart-btn {
+    grid-row: 3;
+    grid-column: 2 / span 3;
+    margin-left: 10%;
+  }
+  .item--card-body--add-to-cart-btn button {
+    background: #f6406f;
+    color: white;
+    font-weight: 600;
+    padding: 7% 9%;
+    width: 120%;
+  }
+}
+@media (min-width: 451px) {
+  .item--card {
+    display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 6%;
     margin-top: 10%;
@@ -39,6 +85,4 @@
     color: white;
     font-weight: 600;
   }
-}
-@media (min-width: 451px) {
 }

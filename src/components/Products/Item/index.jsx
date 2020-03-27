@@ -5,7 +5,7 @@ import "../../../assets/stylesheets/item.css";
 
 const Item = ({ item, id, name, price, image, quantity, sku }) => {
   return (
-    <div className="card item--card">
+    <div className=" item--card">
       <img
         className="item--card--img"
         src={image}
@@ -17,10 +17,13 @@ const Item = ({ item, id, name, price, image, quantity, sku }) => {
         <h3 className="item--card-body--name">{name}</h3>
         <p className="item--card-body--description">Short Description</p>
         <p className="item--card-body--price">
-          CAD {formatPrice(price, "CAD")}
+          <strong> CAD</strong> {formatPrice(price, "CAD")}
         </p>
         <span className="item--card-body--add-to-cart-btn">
-          <AddCartButton product={item} />
+          <AddCartButton
+            product={item}
+            addLabel={"CAD " + formatPrice(price, "CAD")}
+          />
         </span>
       </div>
     </div>
