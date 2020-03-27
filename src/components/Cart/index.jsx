@@ -124,7 +124,7 @@ export class Cart extends Component {
       cartProducts.map(product => {
         return (
           <CartProduct
-            product={product[0]}
+            product={product}
             removeProduct={removeProduct}
             currencySymbol={currencySymbol}
             key={product.id}

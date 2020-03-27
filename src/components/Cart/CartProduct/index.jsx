@@ -45,6 +45,7 @@ class CartProduct extends Component {
           onMouseOut={() => this.handleMouseOut()}
           onClick={() => removeProduct(product)}
         />
+        {console.log(product)}
         <Thumb
           classes="shelf-item__thumb"
           src={product.image || "https://via.placeholder.com/150"}

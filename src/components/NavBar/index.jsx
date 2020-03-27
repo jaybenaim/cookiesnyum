@@ -35,15 +35,13 @@ const NavBar = props => {
   const handleCheckout = data => {
     console.log(data);
   };
-  const product = [
-    {
-      id: "23ee",
-      name: "tester",
-      sku: "123er",
-      price: 3999,
-      image: logo
-    }
-  ];
+  const product = {
+    id: "23dae",
+    name: "tedast",
+    sku: "123de",
+    price: 3999,
+    image: `${logo}`
+  };
   const cartOptions = {
     currencySymbol: "CAD",
     checkoutTextLabel: "Confirm",
