@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/authActions";
 import DesktopNav from "./DesktopNav";
 import Cart from "../Cart";
+import { AddCartButton } from "../Cart/AddCartButton";
 const navLinkStyle = {
   width: "140px",
   borderRadius: "3px",
@@ -29,12 +30,34 @@ const NavBar = props => {
     },
     logoutUser: handleLogoutUser
   } = props;
+
+  const handleCheckout = data => {
+    console.log(data);
+  };
+  const product = [
+    {
+      id: "23",
+      name: "test",
+      sku: "123",
+      price: 300.0,
+      image: logo
+    }
+  ];
+  const cartOptions = {
+    currencySymbol: "CAD",
+    checkoutTextLabel: "Confirm",
+    subTotalTextLabel: "Total",
+    cartTextLabel: "Cart",
+    quantityTextLabel: "Quantity"
+  };
+
   return (
     <React.Fragment>
       <div className={styles.skipLink}>
         <a href="#mainContent">Skip to Main Content</a>
       </div>
-      <Cart currency="CAD" />
+      <Cart {...cartOptions} handleCheckout={handleCheckout} />;
+      <AddCartButton product={product} />
       <nav className={`navbar navbar-expand-sm navbar-light  ${fade} `}>
         {nav ? (
           <>
