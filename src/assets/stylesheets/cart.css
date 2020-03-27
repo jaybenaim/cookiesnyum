@@ -14,6 +14,7 @@
 
 .float-open {
   right: 0 !important;
+  width: 82%;
 }
 
 .float-close-btn {
@@ -161,6 +162,7 @@
   color: #eabf00;
   text-align: right;
   width: 25%;
+  margin-left: -8%;
 }
 
 .float-cart__footer {
