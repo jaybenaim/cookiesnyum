@@ -6,6 +6,7 @@ import logo from "../../assets/images/logo.JPG";
 import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/authActions";
 import DesktopNav from "./DesktopNav";
+import Cart from "../Cart";
 const navLinkStyle = {
   width: "140px",
   borderRadius: "3px",
@@ -33,7 +34,7 @@ const NavBar = props => {
       <div className={styles.skipLink}>
         <a href="#mainContent">Skip to Main Content</a>
       </div>
-
+      <Cart currency="CAD" />
       <nav className={`navbar navbar-expand-sm navbar-light  ${fade} `}>
         {nav ? (
           <>
