@@ -55,12 +55,8 @@ const NavBar = props => {
       <div className={styles.skipLink}>
         <a href="#mainContent">Skip to Main Content</a>
       </div>
-
       <Cart {...cartOptions} handleCheckout={handleCheckout} />
-      <AddCartButton
-        product={product}
-        styles={{ backgroundColor: "#009688", color: "white", border: "0" }}
-      />
+
       <nav className={`navbar navbar-expand-sm navbar-light  ${fade} `}>
         {nav ? (
           <>
@@ -76,6 +72,7 @@ const NavBar = props => {
               >
                 Home
               </Link>
+
               {!isAuthenticated ? (
                 <>
                   <Link
