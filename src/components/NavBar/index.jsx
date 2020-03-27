@@ -113,8 +113,8 @@ const NavBar = props => {
               <img
                 src={logo}
                 alt="logo cookie with a bite"
-                height={180}
-                width={180}
+                height={160}
+                width={160}
               />
             )}
           </Link>

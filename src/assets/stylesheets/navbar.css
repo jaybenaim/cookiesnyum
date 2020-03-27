@@ -77,8 +77,8 @@
   .navbar-brand img {
     position: absolute;
     z-index: 9;
-    left: 25.95%;
-    top: 0%;
+    left: 29%;
+    top: -14%;
   }
   .expanded-logo {
     min-height: 3rem;
