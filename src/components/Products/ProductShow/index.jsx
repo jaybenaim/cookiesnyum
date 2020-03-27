@@ -4,7 +4,7 @@ import { AddCartButton } from "../../Cart/AddCartButton";
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { addProduct } from "../../../redux/actions/cartActions";
-
+import { formatPrice } from "../../../helpers";
 class ProductShow extends Component {
   render() {
     const {
@@ -29,17 +29,23 @@ class ProductShow extends Component {
           />
           <div className="product-show--card-body secondary-font">
             <h3 className="product-show--card-body--name">{name}</h3>
-            <p className="product-show--card-body--description">
-              Short Description
+            <p className="product-show--card-body--price">
+              {formatPrice(price, "CAD")}
             </p>
-
-            <span className="product-show--card-body--add-to-cart-btn">
-              <AddCartButton
-                product={item}
-                addLabel={"Add to Cart"}
-                addProduct={this.props.addProduct}
-              />
-            </span>
+            <p className="product-show--card-body--description">
+              Nulla dolore laborum officia incididunt commodo ut velit aliqua ut
+              aliquip. Sit do exercitation eu nisi commodo culpa laboris ipsum
+              irure dolor velit qui duis deserunt.
+            </p>
+            <p className="product-show--card-body--add-to-cart-btn">
+              <span>
+                <AddCartButton
+                  product={item}
+                  addLabel={"Add to Cart"}
+                  addProduct={this.props.addProduct}
+                />
+              </span>
+            </p>
           </div>
         </div>
       </div>
