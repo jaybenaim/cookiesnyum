@@ -1,0 +1,20 @@
+@media (max-width: 450px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15%;
+  }
+  footer ul li {
+    padding: 0 2%;
+    color: #fff;
+  }
+}
+@media (min-width: 450px) {
+}
+.footer {
+  background-color: #f6406f;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  position: absolute;
+  bottom: 0;
+}

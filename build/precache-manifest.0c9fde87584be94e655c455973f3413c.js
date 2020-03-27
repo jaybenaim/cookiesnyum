@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "609ea279729fc415bd756da408826bb2",
+    "revision": "ae8de468d0ad7a3340781e24300fd6b0",
     "url": "/dolcenadaa/index.html"
   },
   {
-    "revision": "fbbad0e45c0dd4baeeac",
+    "revision": "90434bdcce0ab0ade810",
     "url": "/dolcenadaa/static/css/2.25118874.chunk.css"
   },
   {
-    "revision": "eb4b22f9783d675fa3d3",
-    "url": "/dolcenadaa/static/css/main.9dfa682b.chunk.css"
+    "revision": "57f93b0cd0fd71e26f3e",
+    "url": "/dolcenadaa/static/css/main.a9b04e44.chunk.css"
   },
   {
-    "revision": "fbbad0e45c0dd4baeeac",
-    "url": "/dolcenadaa/static/js/2.b70c7a62.chunk.js"
+    "revision": "90434bdcce0ab0ade810",
+    "url": "/dolcenadaa/static/js/2.a417db12.chunk.js"
   },
   {
     "revision": "9a2cf355ca348d84eedb0129142dc576",
-    "url": "/dolcenadaa/static/js/2.b70c7a62.chunk.js.LICENSE.txt"
+    "url": "/dolcenadaa/static/js/2.a417db12.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "eb4b22f9783d675fa3d3",
-    "url": "/dolcenadaa/static/js/main.6bc968e6.chunk.js"
+    "revision": "57f93b0cd0fd71e26f3e",
+    "url": "/dolcenadaa/static/js/main.bd790951.chunk.js"
   },
   {
     "revision": "09b1ed9f15cf7a4a0879",
@@ -56,6 +56,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/media/logo.cdc73365.JPG"
   },
   {
+    "revision": "adcbf3ad4f0ee4ac3e3b1fd07ae2de3e",
+    "url": "/dolcenadaa/static/media/profile.adcbf3ad.jpg"
+  },
+  {
     "revision": "084273cd7c356b948ebcafb18a6eee2b",
     "url": "/dolcenadaa/static/media/scones.084273cd.png"
   },
@@ -74,5 +78,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/dolcenadaa/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "bb30843c6ba26cca04f782eb003738f6",
+    "url": "/dolcenadaa/static/media/xoxo.bb30843c.png"
   }
 ]);

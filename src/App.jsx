@@ -2,7 +2,7 @@
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Home from "./components/Home";
@@ -65,6 +65,7 @@ const App = () => {
           />
         </>
       </Switch>
+      <Footer />
     </React.Fragment>
   );
 };
