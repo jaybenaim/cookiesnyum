@@ -76,7 +76,7 @@ const NavBar = props => {
               {!isAuthenticated ? (
                 <>
                   <Link
-                    to="/login"
+                    to="/dolcenadaa/login"
                     style={navLinkStyle}
                     onClick={() => {
                       showNav(false);
