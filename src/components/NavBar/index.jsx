@@ -6,7 +6,13 @@ import logo from "../../assets/images/logo.JPG";
 import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/authActions";
 import DesktopNav from "./DesktopNav";
+<<<<<<< HEAD
 import { Cart, AddCartButton } from "react-cart-components";
+=======
+import Cart from "../Cart";
+import AddCartButton from "../Cart/AddCartButton";
+
+>>>>>>> 27922822caa3a190b566351cc7b4c2227e80093a
 const navLinkStyle = {
   width: "140px",
   borderRadius: "3px",
@@ -29,6 +35,7 @@ const NavBar = props => {
     },
     logoutUser: handleLogoutUser
   } = props;
+<<<<<<< HEAD
   const product = [
     {
       id: "23",
@@ -38,6 +45,19 @@ const NavBar = props => {
       image: logo
     }
   ];
+=======
+
+  const handleCheckout = data => {
+    console.log(data);
+  };
+  const product = {
+    id: "23dae",
+    name: "tedast",
+    sku: "123de",
+    price: 3999,
+    image: `${logo}`
+  };
+>>>>>>> 27922822caa3a190b566351cc7b4c2227e80093a
   const cartOptions = {
     currencySymbol: "CAD",
     checkoutTextLabel: "Confirm",
@@ -46,17 +66,25 @@ const NavBar = props => {
     quantityTextLabel: "Quantity"
   };
 
+<<<<<<< HEAD
   const handleCheckout = data => {
     console.log(data);
   };
 
+=======
+>>>>>>> 27922822caa3a190b566351cc7b4c2227e80093a
   return (
     <React.Fragment>
       <div className={styles.skipLink}>
         <a href="#mainContent">Skip to Main Content</a>
       </div>
+<<<<<<< HEAD
       <Cart {...cartOptions} handleCheckout={handleCheckout} />
 
+=======
+      <Cart {...cartOptions} handleCheckout={handleCheckout} />;
+      <AddCartButton product={product} />
+>>>>>>> 27922822caa3a190b566351cc7b4c2227e80093a
       <nav className={`navbar navbar-expand-sm navbar-light  ${fade} `}>
         {nav ? (
           <>
