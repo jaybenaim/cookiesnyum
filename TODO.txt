@@ -2,5 +2,4 @@ set show nav with redux and use onMouseEnter to hide or display navbar
 hover show nav-link desktop 
 
 
-1. create products page 
-- create grid 
+1. style product show 
