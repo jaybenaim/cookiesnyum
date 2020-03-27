@@ -38,6 +38,10 @@
   .bottom p {
     width: 100%;
   }
+  [alt="slogan"] {
+    position: absolute;
+    left: 0;
+  }
 }
 @media (min-width: 451px) {
   .desktop-grid {

@@ -74,7 +74,7 @@ const FeaturedSlider = ({ fade }) => {
     const keyCode = key[showCardValue];
     const { text, src, alt } = defaultDisplay[0][keyCode];
     return (
-      <div className="card">
+      <div className="cards">
         <span className="prev round" onClick={() => getCard("prev")}>
           &#8249;
         </span>
@@ -82,7 +82,7 @@ const FeaturedSlider = ({ fade }) => {
           className="card-img"
           src={src}
           alt={alt}
-          height={320}
+          height={420}
           width={"80%"}
         />
         <span className="next round" onClick={() => getCard("next")}>

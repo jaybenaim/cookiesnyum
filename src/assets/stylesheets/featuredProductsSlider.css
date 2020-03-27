@@ -5,21 +5,35 @@
   .show-for-mobile {
     border: none !important;
   }
-  .show-for-mobile .card {
+  .show-for-mobile .heading {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    font-size: 4em;
+    padding: 4% 13%;
+    margin: 0 auto;
+    font-family: "Liu Jian Mao Cao", cursive;
+    text-transform: capitalize;
+  }
+  .show-for-mobile .cards {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding-top: 10%;
     padding-bottom: 10%;
     border: 40px solid #fff !important;
     overflow: hidden;
     height: 650px;
   }
-  .card-img {
+  .cards .card-img {
     grid-column: 2 / span 3;
     margin-left: -33%;
     min-width: 277px;
   }
+  [alt="biscotti"] {
+    width: 377px !important;
+    position: relative;
+    left: -40%;
+  }
+
   [alt="scones"] {
     margin-left: -4%;
     min-width: 230px;
@@ -41,7 +55,7 @@
     text-align: center;
     font-weight: 200;
   }
-  /* Nav btns */
+  /* Nav arrows */
   .round {
     border-radius: 50%;
     text-decoration: none;
@@ -52,6 +66,7 @@
     font-size: 2.5em;
     margin: 150% auto;
     position: relative;
+    bottom: -80%;
   }
 
   .prev {
