@@ -55,7 +55,8 @@ class Register extends Component {
                   <b>Register</b> below
                 </h4>
                 <p className="grey-text text-darken-1">
-                  Already have an account? <a href="/login">Log in</a>
+                  Already have an account?{" "}
+                  <a href="/dolcenadaa/login">Log in</a>
                 </p>
               </div>
               {loading && (
