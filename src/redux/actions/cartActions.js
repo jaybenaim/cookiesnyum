@@ -1,4 +1,4 @@
-import { LOAD_CART, ADD_PRODUCT, UPDATE_CART, REMOVE_PRODUCT } from "./types";
+import { LOAD_CART, ADD_PRODUCT, UPDATE_CART, REMOVE_PRODUCT } from "../types";
 
 import storage from "../storage";
 

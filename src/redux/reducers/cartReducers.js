@@ -1,9 +1,4 @@
-import {
-  LOAD_CART,
-  ADD_PRODUCT,
-  UPDATE_CART,
-  REMOVE_PRODUCT
-} from "./actionTypes";
+import { LOAD_CART, ADD_PRODUCT, UPDATE_CART, REMOVE_PRODUCT } from "../types";
 
 const initialState = {
   products: [],
