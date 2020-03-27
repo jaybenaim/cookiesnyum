@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "../../../assets/stylesheets/addCartButton.css";
-
 import { connect } from "react-redux";
 import { addProduct } from "../../../redux/actions/cartActions";
-import { formatPrice } from "../../../helpers";
+import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 
 export class AddCartButton extends Component {
   static propTypes = {
@@ -31,7 +30,7 @@ export class AddCartButton extends Component {
           style={{ ...styles }}
           onClick={event => this.addProductToCart(event, product)}
         >
-          {addLabel}
+          <AddCircleOutlineIcon /> {addLabel}
         </button>
       </div>
     );

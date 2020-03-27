@@ -26,6 +26,14 @@
     text-decoration: underline;
     border: none;
   }
+  .left-nav .products-link {
+    grid-row: 1;
+    position: fixed;
+    top: 10%;
+    left: -8%;
+    border: none;
+  }
+
   .fade-in-left {
     animation-name: fadeInLeft;
     animation-iteration-count: 1;
@@ -62,7 +70,7 @@
   }
   /* Expanded nav bar */
   .fade-background .navbar-toggler {
-    top: 2%;
+    top: 6%;
     left: -90%;
     z-index: 993;
   }

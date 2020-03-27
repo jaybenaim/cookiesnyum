@@ -8,7 +8,18 @@ import { connect } from "react-redux";
 import PRODUCTS from "./products";
 
 const Products = ({ cart }) => {
-  return PRODUCTS.map(item => <Item {...item} item={item} />);
+  const products = PRODUCTS.map((item, i) => (
+    <Item {...item} item={item} key={i} />
+  ));
+  return (
+    <div className="products-container">
+      <div className="products--nav">
+        <a href="/dolcenadaa/">Home</a> /
+        <a href="/dolcenadaa/products"> Products</a>
+      </div>
+      {products}
+    </div>
+  );
 };
 
 const mapStateToProps = state => ({

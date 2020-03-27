@@ -1,7 +1,15 @@
 ﻿import React, { useState } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./App.css";
-import { NavBar, Footer, Register, Login, Home, Products } from "./components";
+import {
+  NavBar,
+  Footer,
+  Register,
+  Login,
+  Home,
+  Products,
+  ProductShow
+} from "./components";
 import { connect } from "react-redux";
 import store from "./redux/store";
 import jwt_decode from "jwt-decode";
@@ -62,7 +70,12 @@ const App = () => {
           <Route
             exact
             path="/products"
-            render={props => <Products {...props} fade={fade} />}
+            render={props => <Products {...props} />}
+          />
+          <Route
+            exact
+            path="/products/:id"
+            render={props => <ProductShow {...props} />}
           />
         </>
       </Switch>

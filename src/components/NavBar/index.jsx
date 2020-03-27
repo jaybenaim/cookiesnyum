@@ -55,7 +55,7 @@ const NavBar = props => {
             <div className={`nav-collapse left-nav fade-in-left`}>
               <Link
                 className="col s5  center black-text home-link"
-                to="/"
+                to="/dolcenadaa"
                 style={navLinkStyle}
                 onClick={() => {
                   showNav(!nav);
@@ -64,7 +64,17 @@ const NavBar = props => {
               >
                 Home
               </Link>
-
+              <Link
+                className="col s5  center black-text products-link"
+                to="/products"
+                style={navLinkStyle}
+                onClick={() => {
+                  showNav(!nav);
+                  fadeBackground("");
+                }}
+              >
+                Products
+              </Link>
               {!isAuthenticated ? (
                 <>
                   <Link
