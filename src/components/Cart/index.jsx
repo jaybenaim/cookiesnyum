@@ -84,6 +84,7 @@ export class Cart extends Component {
     }
 
     updateCart(cartProducts);
+
     this.openFloatCart();
   };
 
@@ -123,7 +124,7 @@ export class Cart extends Component {
       cartProducts.map(product => {
         return (
           <CartProduct
-            product={product}
+            product={product[0]}
             removeProduct={removeProduct}
             currencySymbol={currencySymbol}
             key={product.id}

@@ -7,7 +7,8 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/authActions";
 import DesktopNav from "./DesktopNav";
 import Cart from "../Cart";
-import { AddCartButton } from "../Cart/AddCartButton";
+import AddCartButton from "../Cart/AddCartButton";
+
 const navLinkStyle = {
   width: "140px",
   borderRadius: "3px",
@@ -36,10 +37,10 @@ const NavBar = props => {
   };
   const product = [
     {
-      id: "23",
-      name: "test",
-      sku: "123",
-      price: 300.0,
+      id: "23ee",
+      name: "tester",
+      sku: "123er",
+      price: 3999,
       image: logo
     }
   ];
