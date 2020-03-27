@@ -104,11 +104,15 @@
   min-height: 3rem;
 }
 .navbar-toggler {
+  grid-column: 1 !important;
+  width: 20%;
+  position: absolute;
+  left: 0;
+  background: #f6406f !important;
+}
+.navbar-toggler-expanded {
   grid-column: 3 !important;
   width: 40%;
-  position: absolute;
-  right: 15%;
-  background: #f6406f !important;
 }
 @media (min-width: 451px) {
   .navbar {

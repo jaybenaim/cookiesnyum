@@ -49,14 +49,13 @@ const NavBar = props => {
     cartTextLabel: "Cart",
     quantityTextLabel: "Quantity"
   };
-
+  const navbarTogglerClass = fade ? "navbar-toggler-expanded" : "";
   return (
     <React.Fragment>
       <div className={styles.skipLink}>
         <a href="#mainContent">Skip to Main Content</a>
       </div>
-      <Cart {...cartOptions} handleCheckout={handleCheckout} />;
-      <AddCartButton product={product} />
+      <Cart {...cartOptions} handleCheckout={handleCheckout} />
       <nav className={`navbar navbar-expand-sm navbar-light  ${fade} `}>
         {nav ? (
           <>
@@ -142,7 +141,10 @@ const NavBar = props => {
           </Link>
         </div>
 
-        <button className="navbar-toggler" type="button">
+        <button
+          className={`navbar-toggler ${navbarTogglerClass}`}
+          type="button"
+        >
           <span
             className="navbar-toggler-icon"
             onClick={() => {
