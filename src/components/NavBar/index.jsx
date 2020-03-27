@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/authActions";
 import DesktopNav from "./DesktopNav";
 import Cart from "../Cart";
-import AddCartButton from "../Cart/AddCartButton";
 
 const navLinkStyle = {
   width: "140px",
@@ -35,6 +34,7 @@ const NavBar = props => {
   const handleCheckout = data => {
     console.log(data);
   };
+  // @props for addToCart()
   const product = {
     id: "23dae",
     name: "tedast",

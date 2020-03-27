@@ -1,11 +1,7 @@
 ﻿import React, { useState } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./App.css";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import Register from "./components/auth/Register";
-import Login from "./components/auth/Login";
-import Home from "./components/Home";
+import { NavBar, Footer, Register, Login, Home, Products } from "./components";
 import { connect } from "react-redux";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -62,6 +58,11 @@ const App = () => {
             exact
             path="/login"
             render={props => <Login {...props} fade={fade} />}
+          />
+          <Route
+            exact
+            path="/products"
+            render={props => <Products {...props} fade={fade} />}
           />
         </>
       </Switch>
