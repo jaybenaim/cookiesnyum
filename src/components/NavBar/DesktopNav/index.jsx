@@ -41,7 +41,7 @@ const DesktopNav = ({
         {!isAuthenticated ? (
           <div className={navClass}>
             <a
-              href="/login"
+              href="/dolcenadaa/login"
               id="login"
               style={navLinkStyle}
               className="btn btn-large  waves-effect waves-light hoverable "
@@ -49,7 +49,7 @@ const DesktopNav = ({
               Log In
             </a>
             <a
-              href="/register"
+              href="/dolcenadaa/register"
               id="register"
               style={navLinkStyle}
               className="btn btn-large waves-effect waves-light hoverable accent-3"
