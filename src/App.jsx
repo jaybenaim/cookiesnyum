@@ -3,10 +3,10 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import "./App.css";
 import { NavBar, Footer, Register, Login, Home, Products } from "./components";
 import { connect } from "react-redux";
+import store from "./redux/store";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
-import store from "./redux/store";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {

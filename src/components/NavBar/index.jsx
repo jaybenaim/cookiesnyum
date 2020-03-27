@@ -34,14 +34,7 @@ const NavBar = props => {
   const handleCheckout = data => {
     console.log(data);
   };
-  // @props for addToCart()
-  const product = {
-    id: "23dae",
-    name: "tedast",
-    sku: "123de",
-    price: 3999,
-    image: `${logo}`
-  };
+
   const cartOptions = {
     currencySymbol: "CAD",
     checkoutTextLabel: "Confirm",
