@@ -30,6 +30,7 @@
   }
   .product-show--card-body--price {
     grid-column: 4;
+    font-size: 1.3em;
   }
   .product-show--card-body--description {
     grid-column: 1 / span 4;
