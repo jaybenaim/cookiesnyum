@@ -10,7 +10,7 @@ import {
   removeProduct,
   updateCart
 } from "../../redux/actions/cartActions";
-import { formatPrice } from "../../helpers/index.js";
+import { formatPrice } from "../../helpers/";
 import storage from "../../redux/storage";
 
 export class Cart extends Component {
