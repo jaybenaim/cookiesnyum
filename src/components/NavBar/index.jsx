@@ -34,9 +34,7 @@ const NavBar = props => {
         <a href="#mainContent">Skip to Main Content</a>
       </div>
 
-      <nav
-        className={`navbar navbar-expand-sm navbar-light border-bottom ${fade} `}
-      >
+      <nav className={`navbar navbar-expand-sm navbar-light  ${fade} `}>
         {nav ? (
           <>
             <div className={`nav-collapse left-nav fade-in-left`}>
