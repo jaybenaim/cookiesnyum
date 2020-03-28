@@ -35,11 +35,16 @@ const NavBar = props => {
   } = props;
 
   const handleCheckoutCart = data => {
-    console.log(data);
-    const email = { data, message: "success" };
+    const email = {
+      //@props TODO: create onchange
+      name: name || "name",
+      email: "jacob.benaim@icloud.com",
+      message: "order-text",
+      html: "component"
+    };
+
+    // @post to /email
     props.sendEmail(email);
-    // redux checkout(data, auth)
-    // ss { email : sent }
   };
 
   const cartOptions = {

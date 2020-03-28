@@ -6,7 +6,7 @@ export const sendEmail = data => dispatch => {
   backend
     .post("/email", data)
     .then(res => {
-      const { message } = res.data;
+      let message = "success";
       dispatch(setMessageStatus(message));
     })
     .catch(err => {
