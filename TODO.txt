@@ -6,3 +6,5 @@ hover show nav-link desktop
 2. create buy now component 
 3. action for buy 
 USE TV FOR MONITOR 
+
+

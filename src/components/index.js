@@ -5,5 +5,15 @@ import Login from "./auth/Login";
 import Home from "./Home";
 import Products from "./Products";
 import ProductShow from "./Products/ProductShow";
+import ErrorPage from "./ErrorPage";
 
-export { NavBar, Footer, Register, Login, Home, Products, ProductShow };
+export {
+  NavBar,
+  Footer,
+  Register,
+  Login,
+  Home,
+  Products,
+  ProductShow,
+  ErrorPage
+};

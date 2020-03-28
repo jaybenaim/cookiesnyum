@@ -1,0 +1,21 @@
+@media (max-width: 450px) {
+  .error-page {
+    min-width: 400px;
+    min-height: 800px;
+    position: fixed;
+    top: 50%;
+    z-index: 999;
+    background: #fff;
+    margin-top: -50px;
+  }
+  .error-page .contianer {
+    color: #000;
+    font-size: 40em;
+  }
+  .error-page .heading,
+  .error-page .text,
+  .error-page a {
+    display: flex;
+    justify-content: center;
+  }
+}

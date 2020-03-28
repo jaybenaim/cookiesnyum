@@ -5,8 +5,10 @@ import "../../assets/stylesheets/navbar.css";
 import logo from "../../assets/images/logo.JPG";
 import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/authActions";
+import { sendEmail } from "../../redux/actions/checkoutActions";
 import DesktopNav from "./DesktopNav";
 import Cart from "../Cart";
+import { useState } from "react";
 
 const navLinkStyle = {
   width: "140px",
@@ -24,6 +26,7 @@ const NavBar = props => {
     nav,
     fadeBackground,
     fade,
+    auth,
     auth: {
       user: { name },
       isAuthenticated
@@ -31,8 +34,12 @@ const NavBar = props => {
     logoutUser: handleLogoutUser
   } = props;
 
-  const handleCheckout = data => {
+  const handleCheckoutCart = data => {
     console.log(data);
+    const email = { data, message: "success" };
+    props.sendEmail(email);
+    // redux checkout(data, auth)
+    // ss { email : sent }
   };
 
   const cartOptions = {
@@ -48,7 +55,7 @@ const NavBar = props => {
       <div className={styles.skipLink}>
         <a href="#mainContent">Skip to Main Content</a>
       </div>
-      <Cart {...cartOptions} handleCheckout={handleCheckout} />
+      <Cart {...cartOptions} handleCheckout={handleCheckoutCart} />
       <nav className={`navbar navbar-expand-sm navbar-light  ${fade} `}>
         {nav ? (
           <>
@@ -165,4 +172,7 @@ const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
-export default connect(mapStateToProps, { logoutUser })(withRouter(NavBar));
+
+export default connect(mapStateToProps, { logoutUser, sendEmail })(
+  withRouter(NavBar)
+);

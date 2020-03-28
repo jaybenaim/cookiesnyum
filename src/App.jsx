@@ -1,5 +1,5 @@
 ﻿import React, { useState } from "react";
-import { Switch, Route, withRouter } from "react-router-dom";
+import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import "./App.css";
 import {
   NavBar,
@@ -8,7 +8,8 @@ import {
   Login,
   Home,
   Products,
-  ProductShow
+  ProductShow,
+  ErrorPage
 } from "./components";
 import { connect } from "react-redux";
 import store from "./redux/store";
@@ -36,19 +37,24 @@ if (localStorage.jwtToken) {
 }
 
 //TODO Web Template Studio: Adrsd routes for your new pages here.
-const App = () => {
+const App = ({ errors, history }) => {
   const [nav, showNav] = useState(false);
   const [fade, fadeBackground] = useState("");
 
+  errors.response && errors.response.status === 404 && history.push("/404");
+  console.log(errors.length);
   return (
     <React.Fragment>
-      <NavBar
-        showNav={showNav}
-        fadeBackground={fadeBackground}
-        nav={nav}
-        fade={fade}
-      />
-
+      {errors.response && errors.response.status === 404 ? (
+        ""
+      ) : (
+        <NavBar
+          showNav={showNav}
+          fadeBackground={fadeBackground}
+          nav={nav}
+          fade={fade}
+        />
+      )}
       <Switch>
         <>
           <Route
@@ -56,7 +62,6 @@ const App = () => {
             path="/"
             render={props => <Home {...props} nav={nav} fade={fade} />}
           />
-
           <Route
             exact
             path="/register"
@@ -77,6 +82,7 @@ const App = () => {
             path="/products/:id"
             render={props => <ProductShow {...props} />}
           />
+          <Route exact path="/404" render={props => <ErrorPage {...props} />} />
         </>
       </Switch>
       <Footer />

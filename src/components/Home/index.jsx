@@ -4,8 +4,9 @@ import FeaturedProductsSlider from "./FeaturedProductsSlider";
 import FeaturedSlider from "./FeaturedSlider";
 import AboutUs from "./AboutUs";
 import Info from "./Info";
+import { Redirect } from "react-router-dom";
 
-const Home = ({ fade }) => {
+const Home = ({ fade, errors }) => {
   return (
     <>
       <main id="mainContent">
