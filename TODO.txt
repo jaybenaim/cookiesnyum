@@ -2,6 +2,8 @@ set show nav with redux and use onMouseEnter to hide or display navbar
 hover show nav-link desktop 
 
 
+login logo
+
 1. style product show 
 2. create buy now component 
 3. action for buy 

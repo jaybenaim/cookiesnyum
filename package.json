@@ -10,6 +10,7 @@
     "classnames": "2.2.6",
     "concurrently": "^5.1.0",
     "cookie-parser": "1.4.4",
+    "create-react-class": "^15.6.3",
     "debug": "4.1.1",
     "express": "4.17.1",
     "fs-extra": "8.1.0",
@@ -40,7 +41,7 @@
   "scripts": {
     "start": "npm run start-frontend",
     "start-frontend": "react-scripts start",
-    "start-backend": "cd ../dolcenadaabackend && npm run start",
+    "start-backend": "cd ../dolcenadaabackend && nodemon app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
