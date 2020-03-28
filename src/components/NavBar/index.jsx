@@ -9,7 +9,14 @@ import { sendEmail } from "../../redux/actions/checkoutActions";
 import DesktopNav from "./DesktopNav";
 import Cart from "../Cart";
 import { useState } from "react";
-
+import {
+  emailTemplateHead,
+  emailTemplateFoot,
+  emailStyles,
+  emailBody
+} from "../EmailTemplate";
+import Email from "../EmailTemplate/comp";
+import ReactDOMServer from "react-dom/server";
 const navLinkStyle = {
   width: "140px",
   borderRadius: "3px",
@@ -33,16 +40,18 @@ const NavBar = props => {
     },
     logoutUser: handleLogoutUser
   } = props;
+  // const template = emailTemplateHead.props;
 
   const handleCheckoutCart = data => {
+    // const html = <EmailTemplate {...data} />;
     const email = {
       //@props TODO: create onchange
       name: name || "name",
       email: "jacob.benaim@icloud.com",
-      message: "order-text",
-      html: "component"
+      message: `Error with the order contact - `,
+      html: "create and copy section with inline styles "
     };
-
+    console.log(email);
     // @post to /email
     props.sendEmail(email);
   };

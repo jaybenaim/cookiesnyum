@@ -13,6 +13,7 @@ const ErrorPage = () => {
           <span class="arrow"></span>Return To Homepage
         </a>
       </div>
+      {/* <!-- This templates was made by Colorlib (https://colorlib.com) --> */}
     </div>
   );
 };
