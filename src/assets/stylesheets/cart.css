@@ -25,7 +25,7 @@
   text-align: center;
   line-height: 50px;
   position: absolute;
-  top: 0;
+  top: 2%;
   left: -50px;
   cursor: pointer;
 }
@@ -52,10 +52,8 @@
   height: 60px;
   cursor: pointer;
 }
-
-.bag__quantity {
-  bottom: 5px;
-  right: 10px;
+.bag__quantity,
+.bag__quantity-expanded {
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -66,9 +64,16 @@
   line-height: 18px;
   border-radius: 50%;
   background-color: #eabf00;
-  position: absolute;
-  bottom: -5px;
-  right: 0px;
+}
+.bag__quantity {
+  position: relative;
+  bottom: -35px;
+  right: -45px;
+}
+.bag__quantity-expanded {
+  position: relative;
+  bottom: -25px;
+  right: -45px;
 }
 .float-cart__header {
   box-sizing: border-box;
@@ -80,6 +85,9 @@
   font-weight: bold;
   font-size: 1.2em;
   vertical-align: middle;
+  position: relative;
+  left: -10%;
+  bottom: -5%;
 }
 
 .float-cart__shelf-container {
@@ -91,6 +99,11 @@
 .shelf-empty {
   text-align: center;
   line-height: 40px;
+  font-size: 1.2em;
+}
+.shelf-empty div {
+  text-decoration: underline;
+  color: #039be5;
 }
 .shelf-item {
   position: relative;
@@ -206,4 +219,10 @@
 .float-cart__content {
   height: 100%;
   overflow-y: scroll;
+  height: 100%;
+}
+
+.float-cart__content,
+.float-cart__footer {
+  border-left: 0.5px solid rgba(0, 0, 0, 0.3);
 }

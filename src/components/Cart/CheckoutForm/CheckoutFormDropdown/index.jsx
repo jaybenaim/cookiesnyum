@@ -2,7 +2,7 @@ import React from "react";
 import { Dropdown } from "react-materialize";
 import { TextInput, Button, Icon } from "react-materialize/lib";
 
-const CheckoutFormDropdown = () => {
+const CheckoutFormDropdown = ({ id, onChange: setDate }) => {
   return (
     <Dropdown
       id="Dropdown_5"
@@ -19,14 +19,15 @@ const CheckoutFormDropdown = () => {
       trigger={
         <div className="row">
           <div class="input-field col s4">
-            <input
-              disabled
-              id="paymentMethod"
+            <TextInput
+              disabled="true"
+              id={id}
               type="text"
               className="validate"
-              name="paymentMethod"
+              label="Payment Method"
+              onChange={e => setDate(e.target.value)}
             />
-            <label htmlFor="paymentMethod">Payment Method</label>
+
             <div class=" ">
               <Icon down-arrow className="down-arrow">
                 arrow_downward

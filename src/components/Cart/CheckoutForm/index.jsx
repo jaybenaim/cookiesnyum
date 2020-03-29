@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../../redux/actions/checkoutActions";
@@ -13,24 +13,25 @@ const CheckoutForm = ({
     user: { name }
   }
 }) => {
-  const handleSendEmail = data => {
-    const { products } = data;
-    const productSkus = products.map(product => product.sku);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [addressNumber, setAddressNumber] = useState("");
+  const [street, setStreet] = useState("");
+  const [city, setCity] = useState("");
+  const [province, setProvince] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState("");
+  const [date, setDate] = useState("");
 
-    const emailBody = `<div> <div className="email-template" style="display: grid;grid-template-columns: 1fr 1fr 1fr;" > <h1 style="grid-column: 1 / span 3;margin: 0 auto;margin-top: 10%;"> Order </h1><table style="width: 100%;margin-top: 10%;"><tr><th style="grid-column: 2">${name}</th><th style="grid-column: 2">$Email</th></tr> <tr> <td>$paymentMethod</td> <td>$address</td><td>$needBy</td></tr> </table> <div className="email-template--info"> <p className="email-template--info-name">${"name"}</p><p className="email-template--info-email">${"email"}</p> </div> </div></div>`;
-
-    const email = {
-      //@props TODO: create onchange
-      name: name || "name",
-      email: "jacob.benaim@icloud.com",
-      message: `Error with the order contact - `,
-      html: emailBody
-    };
-    // @post to /email
-    sendEmail(email);
+  const handleSetDate = value => {
+    setDate(value);
   };
   return (
     <div className="checkout-form">
+      <div className="row">
+        <h4>Full Name</h4>
+      </div>
       <div className="row">
         <form className="col s12">
           <div className="row">
@@ -41,36 +42,82 @@ const CheckoutForm = ({
                 className="validate"
                 defaultValue={name || ""}
                 label="First Name"
+                onChange={e => setFirstName(e.target.value)}
               />
             </div>
             <div className="input-field col s6">
-              <TextInput id="lastName" type="text" label="Last Name" />
-            </div>
-          </div>
-          <h4 className="row">Address</h4>
-          <div className="row">
-            <div className="input-field col s3">
-              <TextInput id="addressNumber" type="text" label="#" />
+              <TextInput
+                id="lastName"
+                type="text"
+                label="Last Name"
+                onChange={e => setLastName(e.target.value)}
+              />
             </div>
           </div>
 
           <div className="row">
             <div className="input-field col s12">
-              <TextInput id="street" type="text" label="Street" />
+              <TextInput
+                email
+                id="email"
+                label="Email"
+                validate
+                onChange={e => setEmail(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="row">
+            <h4>Address</h4>
+          </div>
+
+          <div className="row">
+            <div className="input-field col s3">
+              <TextInput
+                id="addressNumber"
+                type="text"
+                label="#"
+                onChange={e => setAddressNumber(e.target.value)}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="input-field col s12">
+              <TextInput
+                id="street"
+                type="text"
+                label="Street"
+                onChange={e => setStreet(e.target.value)}
+              />
             </div>
           </div>
           <div className="row">
             <div className="input-field col s6">
-              <TextInput id="city" type="text" label="City" />
+              <TextInput
+                id="city"
+                type="text"
+                label="City"
+                onChange={e => setCity(e.target.value)}
+              />
             </div>
 
             <div className="input-field col s6">
-              <TextInput id="province" type="text" label="Province" />
+              <TextInput
+                id="province"
+                type="text"
+                label="Province"
+                onChange={e => setProvince(e.target.value)}
+              />
             </div>
           </div>
           <div className="row">
             <div className="input-field col s6">
-              <TextInput id="postalCode" type="text" label="Postal Code" />
+              <TextInput
+                id="postalCode"
+                type="text"
+                label="Postal Code"
+                onChange={e => setPostalCode(e.target.value)}
+              />
             </div>
             <div className="input-field col s6"></div>
           </div>
@@ -78,13 +125,13 @@ const CheckoutForm = ({
             <h3>Payment Method</h3>
           </div>
           <div className="row">
-            <CheckoutFormDropdown />
+            <CheckoutFormDropdown id="paymentMethod" onChange={setDate} />
           </div>
           <div className="row">
             <h3>When do you need it by?</h3>
           </div>
           <div className="row">
-            <CheckoutFormDatePicker />
+            <CheckoutFormDatePicker id="date" />
           </div>
           <div className="row">
             <div className="col s12 checkout-form--submit">
@@ -109,3 +156,20 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, { sendEmail })(
   withRouter(CheckoutForm)
 );
+
+//   const handleSendEmail = data => {
+//     const { products } = data;
+//     const productSkus = products.map(product => product.sku);
+
+//     const emailBody = `<div> <div className="email-template" style="display: grid;grid-template-columns: 1fr 1fr 1fr;" > <h1 style="grid-column: 1 / span 3;margin: 0 auto;margin-top: 10%;"> Order </h1><table style="width: 100%;margin-top: 10%;"><tr><th style="grid-column: 2">${name}</th><th style="grid-column: 2">$Email</th></tr> <tr> <td>$paymentMethod</td> <td>$address</td><td>$needBy</td></tr> </table> <div className="email-template--info"> <p className="email-template--info-name">${"name"}</p><p className="email-template--info-email">${"email"}</p> </div> </div></div>`;
+
+//     const email = {
+//       //@props TODO: create onchange
+//       name: name || "name",
+//       email: "jacob.benaim@icloud.com",
+//       message: `Error with the order contact - `,
+//       html: emailBody
+//     };
+//     // @post to /email
+//     sendEmail(email);
+//   };

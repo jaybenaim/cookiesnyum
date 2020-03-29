@@ -112,7 +112,7 @@ const NavBar = props => {
                     marginTop: "1rem"
                   }}
                   onClick={e => onLogoutClick(e)}
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large waves-effect waves-light hoverable blue accent-3 logout-btn"
                 >
                   Logout
                 </button>

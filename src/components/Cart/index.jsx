@@ -116,6 +116,7 @@ export class Cart extends Component {
       checkoutStatus,
       checkoutForm
     } = this.props;
+    const { isOpen } = this.state;
     const checkoutFormData = { cartProducts, cartTotal };
     const products =
       cartProducts &&
@@ -159,7 +160,15 @@ export class Cart extends Component {
         <div className="float-cart__content">
           <div className="float-cart__header">
             <span className="bag">
-              <span className="bag__quantity">{cartTotal.productQuantity}</span>
+              {isOpen ? (
+                <span className="bag__quantity-expanded">
+                  {cartTotal.productQuantity}
+                </span>
+              ) : (
+                <span className="bag__quantity">
+                  {cartTotal.productQuantity}
+                </span>
+              )}
             </span>
             <span className="header-title">{cartTextLabel}</span>
           </div>
@@ -170,8 +179,10 @@ export class Cart extends Component {
             {cartProducts === undefined ||
               (cartProducts.length === 0 && (
                 <p className="shelf-empty">
-                  Add some products in the cart <br />
-                  :)
+                  Your cart is empty. <br />
+                  <div onClick={() => this.closeFloatCart()}>
+                    Continue Shopping
+                  </div>
                 </p>
               ))}
           </div>

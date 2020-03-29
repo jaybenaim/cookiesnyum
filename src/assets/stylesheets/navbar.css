@@ -29,7 +29,7 @@
   .left-nav .products-link {
     grid-row: 1;
     position: fixed;
-    top: 10%;
+    top: 8%;
     left: -8%;
     border: none;
   }
@@ -97,6 +97,17 @@
     top: 2%;
     z-index: 99;
   }
+  .logout-btn {
+    border-radius: 3px;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    bottom: 0;
+    position: fixed;
+    animation-name: fadeInLeft;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    width: 50% !important;
+  }
   /* Cart */
   span .bag .bag--float-cart-closed {
     border: 40px solid black;
@@ -121,6 +132,8 @@
 .navbar-toggler-expanded {
   grid-column: 3 !important;
   width: 40%;
+  position: absolute;
+  top: 1% !important;
 }
 @media (min-width: 451px) {
   .navbar {
