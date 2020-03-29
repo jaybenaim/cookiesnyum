@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { sendEmail } from "../../../redux/actions/checkoutActions";
+import {
+  sendEmail,
+  handleCheckoutData
+} from "../../../redux/actions/checkoutActions";
 import ConfirmationModal from "./ConfirmationModal";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
@@ -12,11 +15,9 @@ import {
   Dropdown,
   DatePicker
 } from "react-materialize";
-// import { Dropdown } from "react-bootstrap";
 
 import "../../../assets/stylesheets/checkoutForm.css";
-import { useEffect } from "react";
-import { string } from "prop-types";
+
 const CheckoutForm = ({
   cart: {
     data: { productQuantity, totalPrice },
@@ -73,13 +74,13 @@ const CheckoutForm = ({
     const seperatedDate = stringValue.split(" ");
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
-  const [confirmationModal, showConfirmationModal] = useState(false);
 
   const onSubmit = data => {
     // display confirm modal with checkoutData
-    showConfirmationModal(!confirmationModal);
     // sendCheckoutData to store in redux
+    handleCheckoutData(checkoutData);
   };
+
   return (
     <div className="checkout-form">
       <ConfirmationModal checkoutData={checkoutData} />
@@ -108,7 +109,6 @@ const CheckoutForm = ({
               />
             </div>
           </div>
-
           <div className="row">
             <div className="input-field col s12">
               <TextInput
@@ -123,7 +123,6 @@ const CheckoutForm = ({
           <div className="row">
             <h4>Address</h4>
           </div>
-
           <div className="row">
             <div className="input-field col s3">
               <TextInput
@@ -134,7 +133,6 @@ const CheckoutForm = ({
               />
             </div>
           </div>
-
           <div className="row">
             <div className="input-field col s12">
               <TextInput
@@ -243,10 +241,11 @@ const CheckoutForm = ({
 const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors,
-  cart: state.cart
+  cart: state.cart,
+  checkout: state.checkout
 });
 
-export default connect(mapStateToProps, { sendEmail })(
+export default connect(mapStateToProps, { sendEmail, handleCheckoutData })(
   withRouter(CheckoutForm)
 );
 

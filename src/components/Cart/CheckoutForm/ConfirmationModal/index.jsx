@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Modal, Button } from "react-materialize";
-const ConfirmationModal = () => {
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import {
+  sendEmail,
+  handleCheckoutData
+} from "../../../../redux/actions/checkoutActions";
+const ConfirmationModal = ({ checkoutData }) => {
+  useEffect(() => {
+    handleCheckoutData(checkoutData);
+  });
   return (
     <div>
       <Modal
@@ -31,5 +40,13 @@ const ConfirmationModal = () => {
     </div>
   );
 };
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors,
+  cart: state.cart,
+  checkout: state.checkout
+});
 
-export default ConfirmationModal;
+export default connect(mapStateToProps, { sendEmail, handleCheckoutData })(
+  withRouter(ConfirmationModal)
+);

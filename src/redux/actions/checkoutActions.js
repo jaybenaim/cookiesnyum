@@ -1,4 +1,4 @@
-import { GET_ERRORS, SET_CHECKOUT_STATUS } from "../types";
+import { GET_ERRORS, SET_CHECKOUT_STATUS, SET_CHECKOUT_DATA } from "../types";
 import backend from "../../api/backend";
 
 // Send message for checkout
@@ -22,5 +22,13 @@ export const setCheckoutStatus = message => {
   return {
     type: SET_CHECKOUT_STATUS,
     payload: message
+  };
+};
+
+// Set checkout Data
+export const handleCheckoutData = checkoutData => {
+  return {
+    type: SET_CHECKOUT_DATA,
+    payload: checkoutData
   };
 };
