@@ -174,7 +174,8 @@ const NavBar = props => {
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  messageStatus: state.checkout.messageStatus
 });
 
 export default connect(mapStateToProps, { logoutUser, sendEmail })(

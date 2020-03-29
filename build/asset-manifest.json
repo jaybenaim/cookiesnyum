@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dolcenadaa/static/css/main.c399a7fc.chunk.css",
-    "main.js": "/dolcenadaa/static/js/main.ba06826c.chunk.js",
-    "main.js.map": "/dolcenadaa/static/js/main.ba06826c.chunk.js.map",
+    "main.css": "/dolcenadaa/static/css/main.c17168a5.chunk.css",
+    "main.js": "/dolcenadaa/static/js/main.4fdbfa5c.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.4fdbfa5c.chunk.js.map",
     "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
     "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
     "static/css/2.25118874.chunk.css": "/dolcenadaa/static/css/2.25118874.chunk.css",
-    "static/js/2.162935c4.chunk.js": "/dolcenadaa/static/js/2.162935c4.chunk.js",
-    "static/js/2.162935c4.chunk.js.map": "/dolcenadaa/static/js/2.162935c4.chunk.js.map",
+    "static/js/2.5a111d8b.chunk.js": "/dolcenadaa/static/js/2.5a111d8b.chunk.js",
+    "static/js/2.5a111d8b.chunk.js.map": "/dolcenadaa/static/js/2.5a111d8b.chunk.js.map",
     "index.html": "/dolcenadaa/index.html",
-    "precache-manifest.192a2c71ca7e7e92858bb6db2cb74c7c.js": "/dolcenadaa/precache-manifest.192a2c71ca7e7e92858bb6db2cb74c7c.js",
+    "precache-manifest.6eaf3037c833228edb9262d5d36d647c.js": "/dolcenadaa/precache-manifest.6eaf3037c833228edb9262d5d36d647c.js",
     "service-worker.js": "/dolcenadaa/service-worker.js",
     "static/css/2.25118874.chunk.css.map": "/dolcenadaa/static/css/2.25118874.chunk.css.map",
-    "static/css/main.c399a7fc.chunk.css.map": "/dolcenadaa/static/css/main.c399a7fc.chunk.css.map",
-    "static/js/2.162935c4.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.162935c4.chunk.js.LICENSE.txt",
+    "static/css/main.c17168a5.chunk.css.map": "/dolcenadaa/static/css/main.c17168a5.chunk.css.map",
+    "static/js/2.5a111d8b.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.5a111d8b.chunk.js.LICENSE.txt",
     "static/media/biscotti.png": "/dolcenadaa/static/media/biscotti.1c5d3f03.png",
     "static/media/cookie1.jpg": "/dolcenadaa/static/media/cookie1.4c08163b.jpg",
     "static/media/cookie2.jpg": "/dolcenadaa/static/media/cookie2.18e12e7a.jpg",
@@ -29,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.0baa157b.js",
     "static/css/2.25118874.chunk.css",
-    "static/js/2.162935c4.chunk.js",
-    "static/css/main.c399a7fc.chunk.css",
-    "static/js/main.ba06826c.chunk.js"
+    "static/js/2.5a111d8b.chunk.js",
+    "static/css/main.c17168a5.chunk.css",
+    "static/js/main.4fdbfa5c.chunk.js"
   ]
 }

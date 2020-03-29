@@ -41,11 +41,11 @@ const App = ({ errors, history }) => {
   const [nav, showNav] = useState(false);
   const [fade, fadeBackground] = useState("");
 
-  errors.response && errors.response.status === 404 && history.push("/404");
+  errors.response && errors.response.status && history.push("/404");
   console.log(errors.length);
   return (
     <React.Fragment>
-      {errors.response && errors.response.status === 404 ? (
+      {errors.response && errors.response.status ? (
         ""
       ) : (
         <NavBar

@@ -7,7 +7,7 @@ const handleCheckout = (state = initialState, action) => {
     case SET_MESSAGE_STATUS:
       const { payload } = action;
       return Object.assign({}, state, {
-        payload
+        messageStatus: payload
       });
     default:
       return state;
