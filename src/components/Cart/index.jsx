@@ -41,7 +41,7 @@ export class Cart extends Component {
     isOpen: false
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.props.loadCart(JSON.parse(storage().get()) || []);
   }
 
@@ -51,7 +51,7 @@ export class Cart extends Component {
     }, 0);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.productToAdd !== this.props.productToAdd) {
       this.addProduct(nextProps.productToAdd);
     }
