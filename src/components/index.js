@@ -6,7 +6,7 @@ import Home from "./Home";
 import Products from "./Products";
 import ProductShow from "./Products/ProductShow";
 import ErrorPage from "./ErrorPage";
-
+import CheckoutForm from "./Cart/CheckoutForm";
 export {
   NavBar,
   Footer,
@@ -15,5 +15,6 @@ export {
   Home,
   Products,
   ProductShow,
-  ErrorPage
+  ErrorPage,
+  CheckoutForm
 };

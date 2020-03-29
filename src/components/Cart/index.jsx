@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "../../assets/stylesheets/cart.css";
 import CartProduct from "./CartProduct";
-
+import CheckoutForm from "./CheckoutForm";
 import { connect } from "react-redux";
 import {
   loadCart,
@@ -12,6 +12,7 @@ import {
 } from "../../redux/actions/cartActions";
 import { formatPrice } from "../../helpers/";
 import storage from "../../redux/storage";
+import { Link, withRouter, Redirect } from "react-router-dom";
 
 export class Cart extends Component {
   static propTypes = {
@@ -99,12 +100,13 @@ export class Cart extends Component {
   };
 
   clickCheckout = () => {
-    const { cartProducts, cartTotal, handleCheckout } = this.props;
+    const { cartProducts, cartTotal, handleCheckout, history } = this.props;
     const data = {
       products: cartProducts,
       total: cartTotal
     };
-    handleCheckout(data);
+
+    window.location.href = "/dolcenadaa/checkout";
   };
 
   render() {
@@ -116,9 +118,11 @@ export class Cart extends Component {
       checkoutTextLabel,
       cartTextLabel,
       subTotalTextLabel,
-      quantityTextLabel
+      quantityTextLabel,
+      checkoutStatus,
+      checkoutForm
     } = this.props;
-
+    const checkoutFormData = { cartProducts, cartTotal };
     const products =
       cartProducts &&
       cartProducts.map(product => {
@@ -167,7 +171,8 @@ export class Cart extends Component {
           </div>
 
           <div className="float-cart__shelf-container">
-            {products}
+            {checkoutStatus === "success" ? <div>Message sent</div> : products}
+            {checkoutForm && <CheckoutForm data={checkoutFormData} />}
             {cartProducts === undefined ||
               (cartProducts.length === 0 && (
                 <p className="shelf-empty">
@@ -199,7 +204,8 @@ const mapStateToProps = state => {
     cartProducts: state.cart.products,
     productToAdd: state.cart.productToAdd,
     productToRemove: state.cart.productToRemove,
-    cartTotal: state.cart.data
+    cartTotal: state.cart.data,
+    checkoutStatus: state.checkout.checkoutStatus
   };
 };
 
@@ -211,4 +217,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Cart));

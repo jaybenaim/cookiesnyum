@@ -10,3 +10,4 @@ login logo
 USE TV FOR MONITOR 
 
 
+use external stylesheet for inline styles 

@@ -1,0 +1,23 @@
+@media (max-width: 450px) {
+  .checkout-form #addressNumber {
+    width: 20%;
+  }
+  .checkout-form--submit {
+  }
+  .checkout-form .down-arrow {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+  }
+  .checkout-form #paymentMethod {
+  }
+}
+@media (min-width: 451px) {
+  #addressNumber {
+    width: 20%;
+  }
+}
+.checkout-form {
+  width: 100%;
+  padding: 10%;
+}

@@ -9,7 +9,8 @@ import {
   Home,
   Products,
   ProductShow,
-  ErrorPage
+  ErrorPage,
+  CheckoutForm
 } from "./components";
 import { connect } from "react-redux";
 import store from "./redux/store";
@@ -81,6 +82,11 @@ const App = ({ errors, history }) => {
             exact
             path="/products/:id"
             render={props => <ProductShow {...props} />}
+          />
+          <Route
+            exact
+            path="/checkout"
+            render={props => <CheckoutForm {...props} />}
           />
           <Route exact path="/404" render={props => <ErrorPage {...props} />} />
         </>

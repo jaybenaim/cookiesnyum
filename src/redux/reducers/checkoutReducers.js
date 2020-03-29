@@ -1,13 +1,13 @@
-import { SET_MESSAGE_STATUS } from "../types";
+import { SET_CHECKOUT_STATUS } from "../types";
 const initialState = {
-  messageStatus: "pending"
+  checkoutStatus: "pending"
 };
 const handleCheckout = (state = initialState, action) => {
   switch (action.type) {
-    case SET_MESSAGE_STATUS:
+    case SET_CHECKOUT_STATUS:
       const { payload } = action;
       return Object.assign({}, state, {
-        messageStatus: payload
+        checkoutStatus: payload
       });
     default:
       return state;
