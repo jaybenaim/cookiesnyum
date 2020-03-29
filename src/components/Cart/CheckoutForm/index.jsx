@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../../redux/actions/checkoutActions";
 import ConfirmationModal from "./ConfirmationModal";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+
 import {
   TextInput,
   Button,
@@ -76,6 +78,7 @@ const CheckoutForm = ({
   const onSubmit = data => {
     // display confirm modal with checkoutData
     showConfirmationModal(!confirmationModal);
+    // sendCheckoutData to store in redux
   };
   return (
     <div className="checkout-form">
@@ -220,14 +223,14 @@ const CheckoutForm = ({
               {/* onClick show confirmation form  */}
               <Button
                 node="button"
-                type="submit"
                 waves="light"
+                type="submit"
                 className="modal-trigger"
-                href="#modal1"
+                href="#confirmModal"
                 node="button"
               >
-                Submit
-                <Icon right>send</Icon>
+                Go to Confirmation
+                <ArrowRightAltIcon />
               </Button>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Button } from "react-materialize";
-const ConfirmationModal = ({}) => {
+const ConfirmationModal = () => {
   return (
     <div>
       <Modal
@@ -11,8 +11,8 @@ const ConfirmationModal = ({}) => {
         ]}
         bottomSheet={false}
         fixedFooter={false}
-        header="Modal Header"
-        id="modal1"
+        header="Confirm"
+        id="confirmModal"
         open={false}
         options={{
           dismissible: true,
@@ -27,9 +27,7 @@ const ConfirmationModal = ({}) => {
           preventScrolling: true,
           startingTop: "4%"
         }}
-      >
-        Lorem ipsum dolor sit amet
-      </Modal>
+      ></Modal>
     </div>
   );
 };
