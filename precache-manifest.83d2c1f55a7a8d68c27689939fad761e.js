@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "748b5cc8839c8e6687c71ad640fd26ab",
+    "revision": "b0af57f3f3ab7383f4be7a2464ba497f",
     "url": "/dolcenadaa/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/css/2.25118874.chunk.css"
   },
   {
-    "revision": "f2ea731f72ffb2d95943",
+    "revision": "7268d124ce089d848098",
     "url": "/dolcenadaa/static/css/main.c17168a5.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/js/2.5a111d8b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f2ea731f72ffb2d95943",
-    "url": "/dolcenadaa/static/js/main.4fdbfa5c.chunk.js"
+    "revision": "7268d124ce089d848098",
+    "url": "/dolcenadaa/static/js/main.a12e179e.chunk.js"
   },
   {
     "revision": "09b1ed9f15cf7a4a0879",
