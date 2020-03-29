@@ -1,4 +1,4 @@
-import { SEND_EMAIL, SET_MESSAGE_STATUS } from "../types";
+import { SET_MESSAGE_STATUS } from "../types";
 const initialState = {
   messageStatus: "pending"
 };

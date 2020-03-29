@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import "../../../assets/stylesheets/productShow.css";
 import { AddCartButton } from "../../Cart/AddCartButton";
 import { connect } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { addProduct } from "../../../redux/actions/cartActions";
 import { formatPrice } from "../../../helpers";
 class ProductShow extends Component {
   render() {
     const {
       item,
-      item: { id, name, price, image, quantity, sku }
+      item: { name, price, image, sku }
     } = this.props.location.state;
     return (
       <div className="product-show-container">

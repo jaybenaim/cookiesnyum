@@ -25,7 +25,6 @@ const NavBar = props => {
     nav,
     fadeBackground,
     fade,
-    auth,
     auth: {
       user: { name },
       isAuthenticated

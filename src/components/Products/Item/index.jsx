@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import AddCartButton from "../../Cart/AddCartButton";
-import { formatPrice } from "../../../helpers/";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -8,7 +6,7 @@ import "../../../assets/stylesheets/item.css";
 
 class Item extends Component {
   render() {
-    const { item, id, name, price, image, quantity, sku } = this.props;
+    const { item, name, image, quantity, sku } = this.props;
     return (
       <div className=" item--card">
         <img

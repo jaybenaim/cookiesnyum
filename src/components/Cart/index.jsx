@@ -91,7 +91,7 @@ export class Cart extends Component {
   removeProduct = product => {
     const { cartProducts, updateCart } = this.props;
 
-    const index = cartProducts.findIndex(product => product.id === product.id);
+    const index = cartProducts.findIndex(p => p.id === product.id);
     if (index >= 0) {
       cartProducts.splice(index, 1);
       updateCart(cartProducts);
@@ -169,7 +169,7 @@ export class Cart extends Component {
           <div className="float-cart__shelf-container">
             {products}
             {cartProducts === undefined ||
-              (cartProducts.length == 0 && (
+              (cartProducts.length === 0 && (
                 <p className="shelf-empty">
                   Add some products in the cart <br />
                   :)

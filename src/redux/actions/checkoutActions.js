@@ -1,4 +1,4 @@
-import { GET_ERRORS, SEND_EMAIL, SET_MESSAGE_STATUS } from "../types";
+import { GET_ERRORS, SET_MESSAGE_STATUS } from "../types";
 import backend from "../../api/backend";
 
 // Send message for checkout
