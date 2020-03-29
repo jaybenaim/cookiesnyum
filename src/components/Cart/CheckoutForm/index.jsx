@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../../redux/actions/checkoutActions";
-
+import ConfirmationModal from "./ConfirmationModal";
 import {
   TextInput,
   Button,
@@ -16,7 +16,10 @@ import "../../../assets/stylesheets/checkoutForm.css";
 import { useEffect } from "react";
 import { string } from "prop-types";
 const CheckoutForm = ({
-  data,
+  cart: {
+    data: { productQuantity, totalPrice },
+    products
+  },
   auth: {
     user: { name }
   }
@@ -32,6 +35,32 @@ const CheckoutForm = ({
   const [paymentMethod, setPaymentMethod] = useState("");
   const [date, setDate] = useState("");
 
+  const checkoutData = {
+    name: {
+      firstName,
+      lastName
+    },
+    email: {
+      email
+    },
+    address: {
+      addressNumber,
+      street,
+      city,
+      province,
+      postalCode
+    },
+    paymentMethod: {
+      paymentMethod
+    },
+    dateNeededBy: {
+      date
+    },
+    order: {
+      products: products.map(product => `${product.sku}-${product.name}`)
+    }
+  };
+
   const handleSetPaymentMethod = value => {
     setPaymentMethod(value);
   };
@@ -42,8 +71,15 @@ const CheckoutForm = ({
     const seperatedDate = stringValue.split(" ");
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
+  const [confirmationModal, showConfirmationModal] = useState(false);
+
+  const onSubmit = data => {
+    // display confirm modal with checkoutData
+    showConfirmationModal(!confirmationModal);
+  };
   return (
     <div className="checkout-form">
+      <ConfirmationModal checkoutData={checkoutData} />
       <div className="row">
         <h4>Full Name</h4>
       </div>
@@ -182,7 +218,14 @@ const CheckoutForm = ({
           <div className="row">
             <div className="col s12 checkout-form--submit">
               {/* onClick show confirmation form  */}
-              <Button node="button" type="submit" waves="light">
+              <Button
+                node="button"
+                type="submit"
+                waves="light"
+                className="modal-trigger"
+                href="#modal1"
+                node="button"
+              >
                 Submit
                 <Icon right>send</Icon>
               </Button>
@@ -196,7 +239,8 @@ const CheckoutForm = ({
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  cart: state.cart
 });
 
 export default connect(mapStateToProps, { sendEmail })(
