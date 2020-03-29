@@ -4,9 +4,18 @@ import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../../redux/actions/checkoutActions";
 import CheckoutFormDropdown from "./CheckoutFormDropdown";
 import CheckoutFormDatePicker from "./CheckoutDatePicker";
-import { TextInput, Button, Icon } from "react-materialize/lib";
+import {
+  TextInput,
+  Button,
+  Icon,
+  Dropdown,
+  DatePicker
+} from "react-materialize";
+// import { Dropdown } from "react-bootstrap";
 
 import "../../../assets/stylesheets/checkoutForm.css";
+import { useEffect } from "react";
+import { string } from "prop-types";
 const CheckoutForm = ({
   data,
   auth: {
@@ -24,8 +33,15 @@ const CheckoutForm = ({
   const [paymentMethod, setPaymentMethod] = useState("");
   const [date, setDate] = useState("");
 
+  const handleSetPaymentMethod = value => {
+    setPaymentMethod(value);
+  };
+
   const handleSetDate = value => {
-    setDate(value);
+    console.log(value);
+    const stringValue = String(value);
+    const seperatedDate = stringValue.split(" ");
+    setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
   return (
     <div className="checkout-form">
@@ -125,13 +141,42 @@ const CheckoutForm = ({
             <h3>Payment Method</h3>
           </div>
           <div className="row">
-            <CheckoutFormDropdown id="paymentMethod" onChange={setDate} />
+            <Dropdown
+              trigger={
+                <div class="input-field col s4">
+                  <TextInput
+                    type="text"
+                    id="paymentMethod"
+                    label="Payment Method"
+                    name="paymentMethod"
+                    value={paymentMethod}
+                    onCloseStart={e => handleSetPaymentMethod(e.target.value)}
+                  />
+
+                  <div class="">
+                    <Icon down-arrow className="down-arrow">
+                      arrow_downward
+                    </Icon>
+                  </div>
+                </div>
+              }
+            >
+              <a onClick={e => handleSetPaymentMethod("E-transfer")}>
+                E-transfer
+              </a>
+              <a onClick={e => handleSetPaymentMethod("Cash")}>Cash</a>
+            </Dropdown>
           </div>
           <div className="row">
             <h3>When do you need it by?</h3>
           </div>
           <div className="row">
-            <CheckoutFormDatePicker id="date" />
+            <DatePicker
+              id="date"
+              options={{ defaultDate: date }}
+              value={date}
+              onChange={e => handleSetDate(e)}
+            />
           </div>
           <div className="row">
             <div className="col s12 checkout-form--submit">

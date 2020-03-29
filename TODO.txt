@@ -11,3 +11,5 @@ USE TV FOR MONITOR
 
 
 use external stylesheet for inline styles 
+
+change checkout link to use browserRouter <Link /> instead of <a> 

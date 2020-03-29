@@ -1,46 +1,21 @@
-import React from "react";
-import { Dropdown } from "react-materialize";
-import { TextInput, Button, Icon } from "react-materialize/lib";
+// import React from "react";
+// import { Dropdown } from "react-boostrap";
+// // import { TextInput, Button, Icon } from "react-materialize/lib";
 
-const CheckoutFormDropdown = ({ id, onChange: setDate }) => {
-  return (
-    <Dropdown
-      id="Dropdown_5"
-      options={{
-        alignment: "center",
-        autoTrigger: true,
-        closeOnClick: true,
-        constrainWidth: true,
-        container: null,
-        coverTrigger: true,
-        inDuration: 150,
-        outDuration: 250
-      }}
-      trigger={
-        <div className="row">
-          <div class="input-field col s4">
-            <TextInput
-              disabled="true"
-              id={id}
-              type="text"
-              className="validate"
-              label="Payment Method"
-              onChange={e => setDate(e.target.value)}
-            />
+// const CheckoutFormDropdown = ({ id, handleSetPaymentMethod }) => {
+//   return (
+//     <Dropdown>
+//       <Dropdown.Toggle variant="success" id="dropdown-basic">
+//         Dropdown Button
+//       </Dropdown.Toggle>
 
-            <div class=" ">
-              <Icon down-arrow className="down-arrow">
-                arrow_downward
-              </Icon>
-            </div>
-          </div>
-        </div>
-      }
-    >
-      <a>E-transfer</a>
-      <a>Cash</a>
-    </Dropdown>
-  );
-};
+//       <Dropdown.Menu>
+//         <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+//         <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+//         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+//       </Dropdown.Menu>
+//     </Dropdown>
+//   );
+// };
 
-export default CheckoutFormDropdown;
+// export default CheckoutFormDropdown;
