@@ -25,11 +25,10 @@ const CheckoutFormDropdown = () => {
               type="text"
               className="validate"
               name="paymentMethod"
-              value="Choose a method"
             />
             <label htmlFor="paymentMethod">Payment Method</label>
             <div class=" ">
-              <Icon down-arrow className={"down-arrow"}>
+              <Icon down-arrow className="down-arrow">
                 arrow_downward
               </Icon>
             </div>

@@ -12,7 +12,7 @@ import {
 } from "../../redux/actions/cartActions";
 import { formatPrice } from "../../helpers/";
 import storage from "../../redux/storage";
-import { Link, withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 export class Cart extends Component {
   static propTypes = {
@@ -100,12 +100,6 @@ export class Cart extends Component {
   };
 
   clickCheckout = () => {
-    const { cartProducts, cartTotal, handleCheckout, history } = this.props;
-    const data = {
-      products: cartProducts,
-      total: cartTotal
-    };
-
     window.location.href = "/dolcenadaa/checkout";
   };
 

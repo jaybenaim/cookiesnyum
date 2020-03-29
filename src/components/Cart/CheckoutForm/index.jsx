@@ -13,7 +13,7 @@ const CheckoutForm = ({
     user: { name }
   }
 }) => {
-  const sendEmail = data => {
+  const handleSendEmail = data => {
     const { products } = data;
     const productSkus = products.map(product => product.sku);
 
@@ -39,7 +39,7 @@ const CheckoutForm = ({
                 id="firstName"
                 type="text"
                 className="validate"
-                value={name || ""}
+                defaultValue={name || ""}
                 label="First Name"
               />
             </div>
@@ -88,6 +88,7 @@ const CheckoutForm = ({
           </div>
           <div className="row">
             <div className="col s12 checkout-form--submit">
+              {/* onClick show confirmation form  */}
               <Button node="button" type="submit" waves="light">
                 Submit
                 <Icon right>send</Icon>

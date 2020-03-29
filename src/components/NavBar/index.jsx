@@ -25,10 +25,7 @@ const NavBar = props => {
     nav,
     fadeBackground,
     fade,
-    auth: {
-      user: { name },
-      isAuthenticated
-    },
+    auth: { isAuthenticated },
     logoutUser: handleLogoutUser
   } = props;
   const [checkoutForm, showCheckoutForm] = useState(false);
