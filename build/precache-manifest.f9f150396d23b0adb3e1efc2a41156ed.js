@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "afeee32f0edd9a6c9352e7191712048f",
+    "revision": "0e129071df2552a330fe78fef6c50e0a",
     "url": "/dolcenadaa/index.html"
   },
   {
-    "revision": "9277db5903dfc23223ea",
+    "revision": "542a404a1c5d37cc81a9",
     "url": "/dolcenadaa/static/css/2.25118874.chunk.css"
   },
   {
-    "revision": "0a0d5e866674db215c4f",
-    "url": "/dolcenadaa/static/css/main.8916317b.chunk.css"
+    "revision": "28ebf79bd62093eed79f",
+    "url": "/dolcenadaa/static/css/main.b32f31dc.chunk.css"
   },
   {
-    "revision": "9277db5903dfc23223ea",
-    "url": "/dolcenadaa/static/js/2.5f770686.chunk.js"
+    "revision": "542a404a1c5d37cc81a9",
+    "url": "/dolcenadaa/static/js/2.f1e896ad.chunk.js"
   },
   {
     "revision": "2a0b20e1d02e77e8b582ff21a215748a",
-    "url": "/dolcenadaa/static/js/2.5f770686.chunk.js.LICENSE.txt"
+    "url": "/dolcenadaa/static/js/2.f1e896ad.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0a0d5e866674db215c4f",
-    "url": "/dolcenadaa/static/js/main.119409e0.chunk.js"
+    "revision": "28ebf79bd62093eed79f",
+    "url": "/dolcenadaa/static/js/main.d47bd217.chunk.js"
   },
   {
     "revision": "09b1ed9f15cf7a4a0879",

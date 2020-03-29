@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../../redux/actions/checkoutActions";
-import CheckoutFormDropdown from "./CheckoutFormDropdown";
-import CheckoutFormDatePicker from "./CheckoutDatePicker";
+
 import {
   TextInput,
   Button,
@@ -22,7 +21,7 @@ const CheckoutForm = ({
     user: { name }
   }
 }) => {
-  const [firstName, setFirstName] = useState("");
+  const [firstName, setFirstName] = useState(name || "");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [addressNumber, setAddressNumber] = useState("");
@@ -153,11 +152,9 @@ const CheckoutForm = ({
                     onCloseStart={e => handleSetPaymentMethod(e.target.value)}
                   />
 
-                  <div class="">
-                    <Icon down-arrow className="down-arrow">
-                      arrow_downward
-                    </Icon>
-                  </div>
+                  <Icon down-arrow className="down-arrow">
+                    arrow_downward
+                  </Icon>
                 </div>
               }
             >
@@ -171,12 +168,16 @@ const CheckoutForm = ({
             <h3>When do you need it by?</h3>
           </div>
           <div className="row">
-            <DatePicker
-              id="date"
-              options={{ defaultDate: date }}
-              value={date}
-              onChange={e => handleSetDate(e)}
-            />
+            <div class="input-field col s4">
+              <DatePicker
+                id="date"
+                options={{ defaultDate: date }}
+                value={date}
+                onChange={e => handleSetDate(e)}
+              />
+            </div>
+
+            <div class="input-field col s8"></div>
           </div>
           <div className="row">
             <div className="col s12 checkout-form--submit">
