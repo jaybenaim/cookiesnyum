@@ -13,3 +13,10 @@ USE TV FOR MONITOR
 use external stylesheet for inline styles 
 
 change checkout link to use browserRouter <Link /> instead of <a> 
+
+
+clean up checkout compoenet 
+    remove sendEmail from compoennt 
+    check handleCheckOut if useEffect needed 
+    
+blank out first 7 days for datepicker 

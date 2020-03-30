@@ -3,22 +3,22 @@ import logo from "../../assets/images/logo.JPG";
 const PRODUCTS = [
   {
     id: "23daejd",
-    name: "tedast",
-    sku: "cookie-123de",
+    name: "test1",
+    sku: "cookie-",
     price: 39,
     image: `${logo}`
   },
   {
     id: "23dae3s",
-    name: "tedast",
-    sku: "scone-123dde",
+    name: "test2",
+    sku: "scone-",
     price: 99,
     image: `${logo}`
   },
   {
     id: "23daeda",
-    name: "tedast",
-    sku: "biscuit-123deda",
+    name: "test3",
+    sku: "biscuit-",
     price: 399,
     image: `${logo}`
   }

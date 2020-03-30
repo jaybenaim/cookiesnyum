@@ -180,9 +180,9 @@ export class Cart extends Component {
               (cartProducts.length === 0 && (
                 <p className="shelf-empty">
                   Your cart is empty. <br />
-                  <div onClick={() => this.closeFloatCart()}>
+                  <span onClick={() => this.closeFloatCart()}>
                     Continue Shopping
-                  </div>
+                  </span>
                 </p>
               ))}
           </div>

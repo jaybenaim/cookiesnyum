@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import {
-  sendEmail,
-  handleCheckoutData
-} from "../../../redux/actions/checkoutActions";
 import ConfirmationModal from "./ConfirmationModal";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
@@ -43,9 +39,7 @@ const CheckoutForm = ({
       firstName,
       lastName
     },
-    email: {
-      email
-    },
+    email,
     address: {
       addressNumber,
       street,
@@ -53,14 +47,12 @@ const CheckoutForm = ({
       province,
       postalCode
     },
-    paymentMethod: {
-      paymentMethod
-    },
-    dateNeededBy: {
-      date
-    },
+    paymentMethod,
+    dateNeededBy: date,
     order: {
-      products: products.map(product => `${product.sku}-${product.name}`)
+      products: products.map(
+        product => `${product.sku}${product.name}-${product.quantity}`
+      )
     }
   };
 
@@ -75,10 +67,12 @@ const CheckoutForm = ({
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
 
-  const onSubmit = data => {
+  const onSubmit = e => {
     // display confirm modal with checkoutData
     // sendCheckoutData to store in redux
-    handleCheckoutData(checkoutData);
+    // e.preventDefault();
+    // setCheckoutData(checkoutData);
+    // console.log("hello");
   };
 
   return (
@@ -245,23 +239,4 @@ const mapStateToProps = state => ({
   checkout: state.checkout
 });
 
-export default connect(mapStateToProps, { sendEmail, handleCheckoutData })(
-  withRouter(CheckoutForm)
-);
-
-//   const handleSendEmail = data => {
-//     const { products } = data;
-//     const productSkus = products.map(product => product.sku);
-
-//     const emailBody = `<div> <div className="email-template" style="display: grid;grid-template-columns: 1fr 1fr 1fr;" > <h1 style="grid-column: 1 / span 3;margin: 0 auto;margin-top: 10%;"> Order </h1><table style="width: 100%;margin-top: 10%;"><tr><th style="grid-column: 2">${name}</th><th style="grid-column: 2">$Email</th></tr> <tr> <td>$paymentMethod</td> <td>$address</td><td>$needBy</td></tr> </table> <div className="email-template--info"> <p className="email-template--info-name">${"name"}</p><p className="email-template--info-email">${"email"}</p> </div> </div></div>`;
-
-//     const email = {
-//       //@props TODO: create onchange
-//       name: name || "name",
-//       email: "jacob.benaim@icloud.com",
-//       message: `Error with the order contact - `,
-//       html: emailBody
-//     };
-//     // @post to /email
-//     sendEmail(email);
-//   };
+export default connect(mapStateToProps, {})(withRouter(CheckoutForm));
