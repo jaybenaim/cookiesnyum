@@ -68,12 +68,6 @@
   .nav-link {
     margin-left: 10%;
   }
-  /* Expanded nav bar */
-  .fade-background .navbar-toggler {
-    top: 6%;
-    left: -90%;
-    z-index: 993;
-  }
 
   .navbar-expand-sm {
     background: #f6406f !important;
@@ -133,7 +127,9 @@
   grid-column: 3 !important;
   width: 40%;
   position: absolute;
-  top: 1% !important;
+  top: 6% !important;
+  left: -90%;
+  z-index: 993;
 }
 @media (min-width: 451px) {
   .navbar {
