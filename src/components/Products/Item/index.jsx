@@ -29,7 +29,7 @@ class Item extends Component {
               className="show-product-btn"
               onClick={() => this.forceUpdate()}
             >
-              Add to cart
+              Show More
             </Link>
           </span>
         </div>

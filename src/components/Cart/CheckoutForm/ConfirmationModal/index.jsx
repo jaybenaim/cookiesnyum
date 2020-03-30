@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Modal, Button } from "react-materialize";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { sendEmail } from "../../../../redux/actions/checkoutActions";
 import SendIcon from "@material-ui/icons/Send";
-// import jsxToString from "jsx-to-string";
+import ConfirmationModalContent from "./ConfirmationModalContent";
+
 const ConfirmationModal = props => {
   const {
     checkoutData,
@@ -109,17 +110,17 @@ const ConfirmationModal = props => {
       <Modal
         actions={[
           <Button flat modal="close" node="button" waves="green">
-            Close
+            Cancel
           </Button>
         ]}
         bottomSheet={false}
         fixedFooter={false}
-        header="Confirm"
+        header="Confirm Order"
         id="confirmModal"
         open={false}
         options={{
           dismissible: true,
-          endingTop: "10%",
+          endingTop: "",
           inDuration: 250,
           onCloseEnd: null,
           onCloseStart: null,
@@ -128,10 +129,13 @@ const ConfirmationModal = props => {
           opacity: 0.5,
           outDuration: 250,
           preventScrolling: true,
-          startingTop: "4%"
+          startingTop: "0%"
         }}
       >
         <div>
+          <div>
+            <ConfirmationModalContent checkoutData={checkoutData} />
+          </div>
           <Button
             node="button"
             waves="light"
@@ -153,6 +157,6 @@ const mapStateToProps = state => ({
   checkout: state.checkout
 });
 
-export default connect(mapStateToProps, { sendEmail })(
-  withRouter(ConfirmationModal)
+export default withRouter(
+  connect(mapStateToProps, { sendEmail })(ConfirmationModal)
 );

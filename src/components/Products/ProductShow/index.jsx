@@ -37,7 +37,7 @@ class ProductShow extends Component {
               aliquip. Sit do exercitation eu nisi commodo culpa laboris ipsum
               irure dolor velit qui duis deserunt.
             </p>
-            <p className="product-show--card-body--add-to-cart-btn">
+            <div className="product-show--card-body--add-to-cart-btn">
               <span>
                 <AddCartButton
                   product={item}
@@ -45,7 +45,7 @@ class ProductShow extends Component {
                   addProduct={this.props.addProduct}
                 />
               </span>
-            </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,81 @@
+@media (max-width: 450px) {
+  #confirmModal {
+    min-height: 100% !important;
+  }
+
+  #confirmModal .modal-content h4 {
+    text-decoration: underline;
+    margin-top: 3%;
+  }
+  .confirmation-modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .confirmation-modal-content--name-container {
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+    margin-top: 3%;
+  }
+  .confirmation-modal-content--name-container--firstName {
+    grid-column: 1;
+    padding: 2%;
+  }
+  .confirmation-modal-content--name-container--lastName {
+    grid-column: 2;
+  }
+  .confirmation-modal-content--order-details {
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: -10px;
+  }
+  .confirmation-modal-content--order-details h4 {
+    grid-column: 1 / span 3;
+  }
+  .confirmation-modal-content--order-details-need-by-date {
+    grid-column: 3;
+    margin-top: 6%;
+  }
+  .confirmation-modal-content--products {
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 10%;
+  }
+  .confirmation-modal-content--products h3 {
+    grid-column: 1 / span 3;
+  }
+  .confirmation-modal-content--products ol {
+    grid-column: 1 / span 3;
+    overflow: scroll;
+    min-height: 146px;
+  }
+  .confirmation-modal-content--products ol li {
+    grid-column: 1 / span 3;
+    font-size: 1.2em;
+  }
+  #confirmModal .modal-footer button {
+    font-size: 1.2em;
+    margin-top: -2%;
+  }
+
+  .confirmation-modal-content--order-details-payment-method {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    width: 110%;
+    margin-top: 4%;
+  }
+
+  .confirmation-modal-content--products--qty {
+    font-size: 1.4em;
+    grid-column: 1;
+  }
+  .confirmation-modal-content--products--subTotal {
+    font-size: 1.4em;
+    grid-column: 3;
+  }
+}
+@media (min-width: 451px) {
+}
