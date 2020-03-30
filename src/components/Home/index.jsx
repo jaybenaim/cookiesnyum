@@ -4,7 +4,7 @@ import FeaturedProductsSlider from "./FeaturedProductsSlider";
 import FeaturedSlider from "./FeaturedSlider";
 import AboutUs from "./AboutUs";
 import Info from "./Info";
-
+import { withRouter } from "react-router-dom";
 const Home = ({ fade, errors }) => {
   return (
     <>
@@ -36,4 +36,4 @@ const Home = ({ fade, errors }) => {
     </>
   );
 };
-export default Home;
+export default withRouter(Home);

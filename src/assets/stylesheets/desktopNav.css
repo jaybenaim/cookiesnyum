@@ -38,4 +38,10 @@
     padding: 3% !important;
     color: #eee !important;
   }
+
+  .desktop-nav--products-link {
+    position: absolute;
+    top: -3%;
+    left: 70%;
+  }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logoutUser } from "../../../redux/actions/authActions";
 import "../../../assets/stylesheets/navbar.css";
@@ -74,6 +74,13 @@ const DesktopNav = ({
           </div>
         )}
       </div>
+      <Link
+        className="center white-text desktop-nav--products-link"
+        to="/products"
+        style={navLinkStyle}
+      >
+        Products
+      </Link>
     </>
   );
 };

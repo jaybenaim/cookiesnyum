@@ -119,7 +119,7 @@ const NavBar = props => {
               )}
             </div>
             <div className="expanded-logo">
-              <Link className="expanded-navbar-brand" to="/">
+              <a className="expanded-navbar-brand" href="/dolcenadaa">
                 {fade === "fade-background" && (
                   <img
                     src={logo}
@@ -128,14 +128,14 @@ const NavBar = props => {
                     width={180}
                   />
                 )}
-              </Link>
+              </a>
             </div>
           </>
         ) : (
           <DesktopNav {...props} />
         )}
         <div className="logo">
-          <Link className="navbar-brand" to="/">
+          <a className="navbar-brand" href="/dolcenadaa">
             {fade !== "fade-background" && (
               <img
                 src={logo}
@@ -144,7 +144,7 @@ const NavBar = props => {
                 width={160}
               />
             )}
-          </Link>
+          </a>
         </div>
 
         <button

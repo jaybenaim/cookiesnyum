@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dolcenadaa/static/css/main.7941b2a8.chunk.css",
-    "main.js": "/dolcenadaa/static/js/main.824188aa.chunk.js",
-    "main.js.map": "/dolcenadaa/static/js/main.824188aa.chunk.js.map",
+    "main.js": "/dolcenadaa/static/js/main.04ed7299.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.04ed7299.chunk.js.map",
     "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
     "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
     "static/css/2.25118874.chunk.css": "/dolcenadaa/static/css/2.25118874.chunk.css",
     "static/js/2.7c8e9fd6.chunk.js": "/dolcenadaa/static/js/2.7c8e9fd6.chunk.js",
     "static/js/2.7c8e9fd6.chunk.js.map": "/dolcenadaa/static/js/2.7c8e9fd6.chunk.js.map",
     "index.html": "/dolcenadaa/index.html",
-    "precache-manifest.0602bbbfeee66cf8f76d94b18ab7d69b.js": "/dolcenadaa/precache-manifest.0602bbbfeee66cf8f76d94b18ab7d69b.js",
+    "precache-manifest.5b144bb32b7b43945d2c9ab18d1beaed.js": "/dolcenadaa/precache-manifest.5b144bb32b7b43945d2c9ab18d1beaed.js",
     "service-worker.js": "/dolcenadaa/service-worker.js",
     "static/css/2.25118874.chunk.css.map": "/dolcenadaa/static/css/2.25118874.chunk.css.map",
     "static/css/main.7941b2a8.chunk.css.map": "/dolcenadaa/static/css/main.7941b2a8.chunk.css.map",
@@ -31,6 +31,6 @@
     "static/css/2.25118874.chunk.css",
     "static/js/2.7c8e9fd6.chunk.js",
     "static/css/main.7941b2a8.chunk.css",
-    "static/js/main.824188aa.chunk.js"
+    "static/js/main.04ed7299.chunk.js"
   ]
 }
