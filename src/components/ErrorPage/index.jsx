@@ -9,7 +9,7 @@ const ErrorPage = () => {
         </div>
         <h2>Oops, The Page you are looking for can't be found!</h2>
 
-        <a href="/">
+        <a href="/dolcenadaa">
           <span class="arrow"></span>Return To Homepage
         </a>
       </div>
