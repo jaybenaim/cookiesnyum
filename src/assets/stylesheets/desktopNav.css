@@ -5,6 +5,9 @@
   .welcome-container {
     display: none;
   }
+  .desktop-nav--products-link {
+    display: none;
+  }
 }
 @media (min-width: 451px) {
   .desktop-nav-hide {

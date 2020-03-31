@@ -48,12 +48,18 @@
     display: inline-block;
     margin: -5% auto;
   }
+  .show-for-mobile .card-body a {
+    color: #212529;
+  }
+
   .show-for-mobile .card-text {
     grid-column: 3;
     margin: 0 auto;
     font-size: 1.1em;
     text-align: center;
     font-weight: 200;
+    text-transform: capitalize;
+    color: #212529;
   }
   /* Nav arrows */
   .round {

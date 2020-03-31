@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { Link, withRouter } from "react-router-dom";
 import cookieBox from "../../../assets/images/cookieBox.png";
 import scones from "../../../assets/images/scones.png";
 import biscotti from "../../../assets/images/biscotti.png";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
+import { filterGallery } from "../../../redux/actions/galleryActions";
 
-const FeaturedSlider = ({ fade }) => {
+import { connect } from "react-redux";
+const FeaturedProductsSlider = props => {
   const defaultDisplay = [
     {
       cookies: {
@@ -73,11 +76,13 @@ const FeaturedSlider = ({ fade }) => {
     };
     const keyCode = key[showCardValue];
     const { text, src, alt } = defaultDisplay[0][keyCode];
+    console.log(keyCode);
     return (
       <div className="cards">
         <span className="prev round" onClick={() => getCard("prev")}>
           &#8249;
         </span>
+
         <img
           className="card-img"
           src={src}
@@ -88,10 +93,14 @@ const FeaturedSlider = ({ fade }) => {
         <span className="next round" onClick={() => getCard("next")}>
           &#8250;
         </span>
-
         <div className="card-body primary-font">
-          <h3>{text}</h3>
-          <p className="card-text secondary-font">From $33.00</p>
+          <Link to="/products" onClick={() => props.filterGallery(keyCode)}>
+            <h3>{text}</h3>
+            <p className="card-text secondary-font">
+              From $33.00
+              <br />
+            </p>
+          </Link>
         </div>
       </div>
     );
@@ -114,4 +123,11 @@ const FeaturedSlider = ({ fade }) => {
     </>
   );
 };
-export default FeaturedSlider;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors,
+  gallery: state.gallery
+});
+export default withRouter(
+  connect(mapStateToProps, { filterGallery })(FeaturedProductsSlider)
+);
