@@ -2,9 +2,16 @@ import React from "react";
 import { connect } from "react-redux";
 import { Button } from "react-materialize";
 import { withRouter } from "react-router-dom";
+import { filterGallery } from "../../../redux/actions/galleryActions";
 
 import "../../../assets/stylesheets/galleryFilter.css";
-const GalleryFilter = ({ handleClick }) => {
+const GalleryFilter = props => {
+  const handleFilterClick = e => {
+    e.preventDefault();
+    const { name } = e.target;
+    props.filterGallery(name);
+  };
+
   return (
     <div className="filter-container">
       <Button
@@ -12,7 +19,7 @@ const GalleryFilter = ({ handleClick }) => {
         waves="light"
         className="all-filter-link"
         name="all"
-        onClick={e => handleClick(e)}
+        onClick={e => handleFilterClick(e)}
       >
         All
       </Button>
@@ -21,7 +28,7 @@ const GalleryFilter = ({ handleClick }) => {
         waves="light"
         className="cookie-filter-link"
         name="cookies"
-        onClick={e => handleClick(e)}
+        onClick={e => handleFilterClick(e)}
       >
         Cookies
       </Button>
@@ -30,7 +37,7 @@ const GalleryFilter = ({ handleClick }) => {
         waves="light"
         className="scone-filter-link"
         name="scones"
-        onClick={e => handleClick(e)}
+        onClick={e => handleFilterClick(e)}
       >
         Scones
       </Button>
@@ -39,7 +46,7 @@ const GalleryFilter = ({ handleClick }) => {
         waves="light"
         className="biscotti-filter-link"
         name="biscotti"
-        onClick={e => handleClick(e)}
+        onClick={e => handleFilterClick(e)}
       >
         Biscotti
       </Button>
@@ -49,6 +56,9 @@ const GalleryFilter = ({ handleClick }) => {
 
 const mapStateToProps = state => ({
   errors: state.errors,
-  cart: state.cart
+  cart: state.cart,
+  gallery: state.gallery
 });
-export default withRouter(connect(mapStateToProps, {})(GalleryFilter));
+export default withRouter(
+  connect(mapStateToProps, { filterGallery })(GalleryFilter)
+);

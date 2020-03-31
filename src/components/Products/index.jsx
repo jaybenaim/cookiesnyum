@@ -8,16 +8,6 @@ import PRODUCTS from "./products";
 import GalleryFilter from "./GalleryFilter";
 
 const Products = ({ cart }) => {
-  const [filter, setFilter] = useState("");
-
-  const handleClick = e => {
-    e.preventDefault();
-    // set state [e.target.name] : e.target.value
-    const { name } = e.target;
-    console.log(name);
-    setFilter(name);
-  };
-
   const products = PRODUCTS.map((item, i) => (
     <Item {...item} item={item} key={i} />
   ));
@@ -28,7 +18,7 @@ const Products = ({ cart }) => {
         <a href="/dolcenadaa/">Home</a> /
         <a href="/dolcenadaa/products"> Products</a>
       </div>
-      <GalleryFilter handleClick={handleClick} />
+      <GalleryFilter />
 
       {products}
     </div>
