@@ -1,0 +1,7 @@
+@media (max-width: 450px) {
+}
+@media (min-width: 450px) {
+  .products-container {
+    margin-top: 2% !important;
+  }
+}

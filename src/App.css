@@ -21,7 +21,9 @@ footer {
 .btn-primary {
   background-color: #025fce !important;
 }
-
+.btn::before {
+  background-color: #f6406f !important;
+}
 button:focus,
 button:active {
   outline: none !important;

@@ -1,0 +1,29 @@
+@media (max-width: 450px) {
+  .filter-container {
+    width: 100%;
+    padding: 0 2%;
+    grid-column: 1 / span 3;
+  }
+  .filter-container button {
+    margin-left: 3%;
+  }
+}
+@media (min-width: 451px) {
+  .filter-container {
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+  .filter-container button {
+    margin-left: 2%;
+  }
+  .filter-container .btn:focus {
+    background-color: #f6406f;
+    color: #fff;
+  }
+}
+.filter-container .btn:hover {
+  background-color: #f6406f !important;
+  color: white;
+}

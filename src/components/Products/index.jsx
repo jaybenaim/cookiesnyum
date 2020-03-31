@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import PRODUCTS from "./products";
 import GalleryFilter from "./GalleryFilter";
 
-const Products = ({ cart, gallery: { filter } }) => {
+const Products = ({ gallery: { filter } }) => {
   const products = PRODUCTS.map((item, i) => {
     return (
       item.class.includes(filter) && (
