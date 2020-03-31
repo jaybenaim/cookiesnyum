@@ -6,7 +6,7 @@ import "../../../assets/stylesheets/item.css";
 
 class Item extends Component {
   render() {
-    const { item, name, image, quantity, sku, filter } = this.props;
+    const { item, name, image, quantity, sku } = this.props;
     return (
       <div className="item--card ">
         <img

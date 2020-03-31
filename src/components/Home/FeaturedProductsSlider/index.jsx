@@ -1,32 +1,10 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
-import cookieBox from "../../../assets/images/cookieBox.png";
-import scones from "../../../assets/images/scones.png";
-import biscotti from "../../../assets/images/biscotti.png";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
 import { filterGallery } from "../../../redux/actions/galleryActions";
-
+import { defaultDisplay } from "./featuredProducts";
 import { connect } from "react-redux";
 const FeaturedProductsSlider = props => {
-  const defaultDisplay = [
-    {
-      cookies: {
-        text: "cookies",
-        src: cookieBox,
-        alt: "cookies"
-      },
-      scones: {
-        text: "scones",
-        src: scones,
-        alt: "scones"
-      },
-      biscotti: {
-        text: "biscotti",
-        src: biscotti,
-        alt: "biscotti"
-      }
-    }
-  ];
   const [showCardValue, setShowCardValue] = useState(0);
   const getCard = direction => {
     if (direction === "next") {
@@ -76,7 +54,6 @@ const FeaturedProductsSlider = props => {
     };
     const keyCode = key[showCardValue];
     const { text, src, alt } = defaultDisplay[0][keyCode];
-    console.log(keyCode);
     return (
       <div className="cards">
         <span className="prev round" onClick={() => getCard("prev")}>
