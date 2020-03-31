@@ -89,4 +89,4 @@ const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
-export default connect(mapStateToProps, { logoutUser })(withRouter(DesktopNav));
+export default withRouter(connect(mapStateToProps, { logoutUser })(DesktopNav));

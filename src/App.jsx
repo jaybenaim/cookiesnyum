@@ -100,4 +100,4 @@ const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
-export default connect(mapStateToProps, {})(withRouter(App));
+export default withRouter(connect(mapStateToProps, {})(App));
