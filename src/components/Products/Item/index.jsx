@@ -6,9 +6,9 @@ import "../../../assets/stylesheets/item.css";
 
 class Item extends Component {
   render() {
-    const { item, name, image, quantity, sku } = this.props;
+    const { item, name, image, quantity, sku, filter } = this.props;
     return (
-      <div className=" item--card">
+      <div className="item--card ">
         <img
           className="item--card--img"
           src={image}
@@ -39,6 +39,7 @@ class Item extends Component {
 }
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  gallery: state.gallery
 });
 export default connect(mapStateToProps, {})(withRouter(Item));

@@ -7,10 +7,14 @@ import { connect } from "react-redux";
 import PRODUCTS from "./products";
 import GalleryFilter from "./GalleryFilter";
 
-const Products = ({ cart }) => {
-  const products = PRODUCTS.map((item, i) => (
-    <Item {...item} item={item} key={i} />
-  ));
+const Products = ({ cart, gallery: { filter } }) => {
+  const products = PRODUCTS.map((item, i) => {
+    return (
+      item.class.includes(filter) && (
+        <Item {...item} item={item} key={i} filter={filter} />
+      )
+    );
+  });
 
   return (
     <div className="products-container">
@@ -28,6 +32,7 @@ const Products = ({ cart }) => {
 const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors,
-  cart: state.cart
+  cart: state.cart,
+  gallery: state.gallery
 });
 export default connect(mapStateToProps, {})(withRouter(Products));
