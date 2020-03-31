@@ -115,3 +115,6 @@
 .item--card-body--add-to-cart-btn button svg {
   margin-right: 8%;
 }
+.products--nav a {
+  text-transform: capitalize;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "../../assets/stylesheets/products.css";
 import Item from "./Item";
 import { connect } from "react-redux";
@@ -21,6 +21,22 @@ const Products = ({ gallery: { filter } }) => {
       <div className="products--nav">
         <a href="/dolcenadaa/">Home</a> /
         <a href="/dolcenadaa/products"> Products</a>
+        {filter && (
+          <>
+            {" "}
+            /{" "}
+            <Link
+              to={{
+                pathname: "/products",
+                state: {
+                  filter
+                }
+              }}
+            >
+              {filter}
+            </Link>
+          </>
+        )}
       </div>
       <GalleryFilter />
 
