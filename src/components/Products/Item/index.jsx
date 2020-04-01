@@ -12,32 +12,32 @@ class Item extends Component {
 
     return (
       <div className="item--card ">
-        <img
-          className="item--card--img"
-          src={image}
-          alt={name}
-          height={120}
-          width={120}
-        />
+        <Link
+          to={{
+            pathname: `/products/${sku}`,
+            state: { item, quantity }
+          }}
+          className="show-product-btn"
+          onClick={() => this.forceUpdate()}
+        >
+          <img
+            className="item--card--img"
+            src={image}
+            alt={name}
+            height={120}
+            width={120}
+          />
+        </Link>
         <div className="item--card-body secondary-font">
           <h3 className="item--card-body--name">{name}</h3>
           <p className="item--card-body--description">{description}</p>
 
-          <span className="item--card-body--add-to-cart-btn">
-            <Link
-              to={{
-                pathname: `/products/${sku}`,
-                state: { item, quantity }
-              }}
-              className="show-product-btn"
-              onClick={() => this.forceUpdate()}
-            >
-              Show More
-            </Link>
+          <span className="item--card-body--links">
             <AddCartButton
               product={item}
               addLabel={"Add to Cart"}
               addProduct={this.props.addProduct}
+              className="add-to-cart"
             />
           </span>
         </div>

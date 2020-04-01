@@ -35,12 +35,12 @@
   .item--card-body--description {
     grid-column: 1 / span 3;
   }
-  .item--card-body--add-to-cart-btn {
+  .item--card-body--links {
     grid-row: 3;
     grid-column: 2 / span 3;
     margin-left: 10%;
   }
-  .item--card-body--add-to-cart-btn button {
+  .item--card-body--links button {
     background: #f6406f;
     color: white;
     font-weight: 600;
@@ -69,52 +69,70 @@
   .item--card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 15%;
   }
   .item--card-body {
+    grid-column: 1 / span 3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .item--card--img {
-    grid-column: 2;
+  .show-product-btn {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
   }
-  .item--card-body {
-    grid-column: 2;
+  .item--card--img {
+    margin-bottom: 4%;
   }
   .item--card-body p {
     padding: 2%;
   }
   .item--card-body--name {
-    grid-column: 2;
+    grid-column: 1 / span 3;
     text-transform: capitalize;
+    margin: 0 auto;
+    font-size: 2.3em;
   }
 
   .item--card-body--description {
-    grid-column: 2;
-  }
-  .item--card-body--add-to-cart-btn {
-    grid-row: 3;
     grid-column: 1 / span 3;
     margin: 0 auto;
   }
-  .item--card-body--add-to-cart-btn button {
-    background: #f6406f;
-    color: white;
+  .item--card-body--links {
+    grid-row: 3;
+    grid-column: 1 / span 3;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  .item--card-body--links .add-to-cart-btn {
+    grid-column: 1 / span 3;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.2em;
+  }
+  .item--card-body--links .add-to-cart-btn button {
+    grid-column: 1 / span 3;
+    color: #000;
     font-weight: 600;
-    padding: 10% 20%;
-    font-size: 1.1em;
-    max-width: 100%;
+    padding: 5% 10%;
+    position: relative;
+  }
+  .item--card-body--links .add-to-cart-btn button svg {
+    color: #f6406f;
+    width: 1.7em;
+    height: 1.7em;
   }
 }
 .item--card-body--name {
   text-transform: capitalize;
 }
-.item--card-body--add-to-cart-btn button {
-  display: flex;
-  justify-content: center;
-}
-.item--card-body--add-to-cart-btn button svg {
-  margin-right: 8%;
-}
+
 .products--nav a {
   text-transform: capitalize;
 }
