@@ -6,7 +6,8 @@ import "../../../assets/stylesheets/item.css";
 
 class Item extends Component {
   render() {
-    const { item, name, image, quantity, sku } = this.props;
+    let { item, name, image, quantity, sku, description } = this.props;
+
     return (
       <div className="item--card ">
         <img
@@ -18,7 +19,7 @@ class Item extends Component {
         />
         <div className="item--card-body secondary-font">
           <h3 className="item--card-body--name">{name}</h3>
-          <p className="item--card-body--description">Short Description</p>
+          <p className="item--card-body--description">{description}</p>
 
           <span className="item--card-body--add-to-cart-btn">
             <Link

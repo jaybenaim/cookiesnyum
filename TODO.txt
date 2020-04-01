@@ -21,3 +21,5 @@ clean up checkout compoenet
     
 blank out first 7 days for datepicker 
 if signed in save cart to profile 
+
+addToCart move to product/Item.js

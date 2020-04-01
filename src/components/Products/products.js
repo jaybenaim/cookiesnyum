@@ -1,7 +1,17 @@
+// scones
 import blueberry from "../../assets/images/scones/blueberry/blueberry.png";
 import chocolate from "../../assets/images/scones/chocolate/chocolate.png";
 import cinnamonbun from "../../assets/images/scones/cinnamonbun/cinnamonbun.png";
 import cranberryorange from "../../assets/images/scones/cranberryorange/cranberryorange.png";
+
+// cookies
+import mars from "../../assets/images/cookies/mars/mars.png";
+import miniegg from "../../assets/images/cookies/miniegg/miniegg.png";
+import reese from "../../assets/images/cookies/reese/reese.png";
+
+// biscotti
+import amertti from "../../assets/images/biscotti/amertti/amertti.png";
+import pastaschio from "../../assets/images/biscotti/pastaschio/pastaschio.png";
 
 const PRODUCTS = [
   {
@@ -11,7 +21,8 @@ const PRODUCTS = [
     price: 5.5,
     image: `${blueberry}`,
     class: "all scones",
-    size: "reg"
+    size: "reg",
+    description: "scone"
   },
   {
     id: "23dae3s",
@@ -20,61 +31,78 @@ const PRODUCTS = [
     price: 5.5,
     image: `${chocolate}`,
     class: "all scones",
-    size: "reg"
+    size: "reg",
+    description: "scone"
   },
   {
     id: "23dae3s",
-    name: "cinnamonbun",
+    name: "cinnamon bun",
     sku: "scone-",
     price: 5.5,
     image: `${cinnamonbun}`,
     class: "all scones",
-    size: "reg"
+    size: "reg",
+    description: "scone"
   },
   {
     id: "23daeda",
-    name: "cranberryorange",
+    name: "cranberry orange",
     sku: "scone-",
     price: 5.5,
     image: `${cranberryorange}`,
     class: "all scones",
-    size: "reg"
+    size: "reg",
+    description: "scone"
   },
   {
     id: "23daejd",
-    name: "blueberry",
-    sku: "scone-",
+    name: "mars",
+    sku: "cookies-",
     price: 5.5,
-    image: `${blueberry}`,
-    class: "all scones",
-    size: "reg"
+    image: `${mars}`,
+    class: "all cookies",
+    size: "reg",
+    description: "cookie"
   },
   {
     id: "23dae3s",
-    name: "chocolate",
-    sku: "scone-",
+    name: "mini egg",
+    sku: "cookies-",
     price: 5.5,
-    image: `${chocolate}`,
-    class: "all scones",
-    size: "reg"
+    image: `${miniegg}`,
+    class: "all cookies",
+    size: "reg",
+    description: "cookie"
   },
   {
     id: "23dae3s",
-    name: "cinnamonbun",
-    sku: "scone-",
+    name: "reese",
+    sku: "cookies-",
     price: 5.5,
-    image: `${cinnamonbun}`,
-    class: "all scones",
-    size: "reg"
+    image: `${reese}`,
+    class: "all cookies",
+    size: "reg",
+    description: "cookie"
   },
   {
-    id: "23daeda",
-    name: "cranberryorange",
-    sku: "scone-",
+    id: "23dae3s",
+    name: "amertti",
+    sku: "biscotti-",
     price: 5.5,
-    image: `${cranberryorange}`,
-    class: "all scones",
-    size: "reg"
+    image: `${amertti}`,
+    class: "all biscotti",
+    size: "reg",
+    description: "biscotti"
+  },
+  {
+    id: "23dae3s",
+    name: "pastaschio",
+    sku: "biscotti-",
+    price: 5.5,
+    image: `${pastaschio}`,
+    class: "all biscotti",
+    size: "reg",
+    description: "pastaschio"
   }
 ];
 
