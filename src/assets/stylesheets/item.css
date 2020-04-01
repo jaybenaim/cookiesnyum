@@ -70,6 +70,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 15%;
+    padding: 10%;
   }
   .item--card-body {
     grid-column: 1 / span 3;
@@ -83,25 +84,29 @@
     justify-content: center;
   }
   .item--card--img {
-    margin-bottom: 4%;
+    margin-bottom: 12%;
   }
   .item--card-body p {
     padding: 2%;
   }
   .item--card-body--name {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 2;
     text-transform: capitalize;
-    margin: 0 auto;
-    font-size: 2.3em;
+    font-size: 1.3em;
   }
-
   .item--card-body--description {
-    grid-column: 1 / span 3;
-    margin: 0 auto;
+    grid-column: 1;
+    text-transform: capitalize;
+  }
+  .item--card-body--price {
+    grid-column: 3;
+    font-weight: 900;
+    font-size: 1.2em;
+    text-align: right;
   }
   .item--card-body--links {
-    grid-row: 3;
-    grid-column: 1 / span 3;
+    grid-row: 1;
+    grid-column: 3;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -109,24 +114,34 @@
   }
 
   .item--card-body--links .add-to-cart-btn {
-    grid-column: 1 / span 3;
+    grid-column: 3;
+    grid-row: 1;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
     width: 100%;
     font-size: 1.2em;
   }
   .item--card-body--links .add-to-cart-btn button {
     grid-column: 1 / span 3;
     color: #000;
-    font-weight: 600;
+    font-weight: 400;
     padding: 5% 10%;
-    position: relative;
   }
   .item--card-body--links .add-to-cart-btn button svg {
     color: #f6406f;
-    width: 1.7em;
-    height: 1.7em;
+    width: 1.3em;
+    height: 1.3em;
+  }
+}
+@media (min-width: 789px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .products--nav {
+    grid-column: 1 / span 5;
+  }
+  .filter-container {
+    grid-column: 1 / span 5 !important;
   }
 }
 .item--card-body--name {

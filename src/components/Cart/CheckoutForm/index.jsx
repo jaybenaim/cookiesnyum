@@ -67,14 +67,6 @@ const CheckoutForm = ({
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
 
-  const onSubmit = e => {
-    // display confirm modal with checkoutData
-    // sendCheckoutData to store in redux
-    // e.preventDefault();
-    // setCheckoutData(checkoutData);
-    // console.log("hello");
-  };
-
   return (
     <div className="checkout-form">
       <ConfirmationModal checkoutData={checkoutData} />
@@ -189,10 +181,18 @@ const CheckoutForm = ({
                 </div>
               }
             >
-              <a onClick={e => handleSetPaymentMethod("E-transfer")}>
+              <span
+                className="checkout-form--payment-method--dropdown-a"
+                onClick={e => handleSetPaymentMethod("E-transfer")}
+              >
                 E-transfer
-              </a>
-              <a onClick={e => handleSetPaymentMethod("Cash")}>Cash</a>
+              </span>
+              <span
+                className="checkout-form--payment-method--dropdown-a"
+                onClick={e => handleSetPaymentMethod("Cash")}
+              >
+                Cash
+              </span>
             </Dropdown>
           </div>
           <div className="row">

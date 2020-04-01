@@ -3,12 +3,12 @@ import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { AddCartButton } from "../../Cart/AddCartButton";
 import { addProduct } from "../../../redux/actions/cartActions";
-
+import { formatPrice } from "../../../helpers/index";
 import "../../../assets/stylesheets/item.css";
 
 class Item extends Component {
   render() {
-    let { item, name, image, quantity, sku, description } = this.props;
+    let { item, name, image, quantity, sku, description, price } = this.props;
 
     return (
       <div className="item--card ">
@@ -31,11 +31,12 @@ class Item extends Component {
         <div className="item--card-body secondary-font">
           <h3 className="item--card-body--name">{name}</h3>
           <p className="item--card-body--description">{description}</p>
+          <p className="item--card-body--price">{formatPrice(price, "CAD")}</p>
 
           <span className="item--card-body--links">
             <AddCartButton
               product={item}
-              addLabel={"Add to Cart"}
+              addLabel={``}
               addProduct={this.props.addProduct}
               className="add-to-cart"
             />

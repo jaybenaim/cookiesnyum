@@ -18,6 +18,20 @@
   #addressNumber {
     width: 20%;
   }
+  .checkout-form .down-arrow {
+    position: absolute;
+    right: 65%;
+    top: 74.1%;
+    color: #9e9e9e;
+    font-size: 1.7em;
+  }
+}
+@media (min-width: 751px) {
+  .checkout-form .down-arrow {
+    position: absolute;
+    right: 82%;
+    top: 74.1%;
+  }
 }
 .checkout-form {
   width: 100%;
