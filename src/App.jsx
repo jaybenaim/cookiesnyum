@@ -43,7 +43,6 @@ const App = ({ errors, history }) => {
   const [fade, fadeBackground] = useState("");
 
   errors.response && errors.response.status && history.push("/404");
-  console.log(errors.length);
   return (
     <React.Fragment>
       {errors.response && errors.response.status ? (

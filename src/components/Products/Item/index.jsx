@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { AddCartButton } from "../../Cart/AddCartButton";
+import { addProduct } from "../../../redux/actions/cartActions";
 
 import "../../../assets/stylesheets/item.css";
 
@@ -32,6 +34,11 @@ class Item extends Component {
             >
               Show More
             </Link>
+            <AddCartButton
+              product={item}
+              addLabel={"Add to Cart"}
+              addProduct={this.props.addProduct}
+            />
           </span>
         </div>
       </div>
@@ -39,8 +46,6 @@ class Item extends Component {
   }
 }
 const mapStateToProps = state => ({
-  auth: state.auth,
-  errors: state.errors,
   gallery: state.gallery
 });
-export default connect(mapStateToProps, {})(withRouter(Item));
+export default connect(mapStateToProps, { addProduct })(withRouter(Item));
