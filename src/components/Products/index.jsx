@@ -6,8 +6,12 @@ import { connect } from "react-redux";
 // @props recieve products from api
 import PRODUCTS from "./products";
 import GalleryFilter from "./GalleryFilter";
+import { filterGallery } from "../../redux/actions/galleryActions";
 
-const Products = ({ gallery: { filter } }) => {
+const Products = props => {
+  const {
+    gallery: { filter }
+  } = props;
   const products = PRODUCTS.map((item, i) => {
     return (
       item.class.includes(filter) && (
@@ -25,16 +29,13 @@ const Products = ({ gallery: { filter } }) => {
           <>
             {" "}
             /{" "}
-            <Link
-              to={{
-                pathname: "/products",
-                state: {
-                  filter
-                }
-              }}
+            <a
+              href="/dolcenadaa/products"
+              onClick={() => props.filterGallery(filter)}
             >
+              {" "}
               {filter}
-            </Link>
+            </a>
           </>
         )}
       </div>
@@ -51,4 +52,6 @@ const mapStateToProps = state => ({
   cart: state.cart,
   gallery: state.gallery
 });
-export default connect(mapStateToProps, {})(withRouter(Products));
+export default connect(mapStateToProps, { filterGallery })(
+  withRouter(Products)
+);

@@ -5,18 +5,25 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { addProduct } from "../../../redux/actions/cartActions";
 import { formatPrice } from "../../../helpers";
+import PRODUCTS from "../products";
+import { Carousel } from "react-materialize";
 class ProductShow extends Component {
   render() {
     const {
       item,
       item: { name, price, image, sku }
     } = this.props.location.state;
+    const relatedProducts = PRODUCTS.filter(p => p.sku.includes(sku));
+    let carouselImages = relatedProducts.map(p => p.image);
+    carouselImages.join(", ");
+
     return (
       <div className="product-show-container">
         <div className="products--nav">
           <a href="/dolcenadaa/">Home</a> /
           <a href="/dolcenadaa/products"> Products</a> /{" "}
-          <a href={`/dolcenadaa/products/${sku}`}>{name}</a>
+          <a href="/dolcenadaa/products"> {sku.replace("-", "")}</a> /{" "}
+          <a href={`/dolcenadaa/products/${sku}`}> {name}</a>
         </div>
 
         <div className=" product-show--card">
@@ -46,6 +53,24 @@ class ProductShow extends Component {
                 />
               </span>
             </div>
+          </div>
+          <div className="product-show--card-body--related-items">
+            <p>Related Items</p>
+            <Carousel
+              carouselId="product-show--card-body--carousel"
+              children={carouselImages}
+              options={{
+                dist: -100,
+                duration: 200,
+                fullWidth: false,
+                indicators: true,
+                noWrap: true,
+                numVisible: 2,
+                onCycleTo: null,
+                padding: 0,
+                shift: 0
+              }}
+            />
           </div>
         </div>
       </div>
