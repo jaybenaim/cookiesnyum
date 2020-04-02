@@ -24,6 +24,7 @@
     "react-dom": "16.12.0",
     "react-materialize": "^3.6.1",
     "react-redux": "^7.2.0",
+    "react-responsive-carousel": "^3.1.51",
     "react-router-dom": "4.3.1",
     "react-scripts": "^3.4.1",
     "react-slick": "^0.25.2",

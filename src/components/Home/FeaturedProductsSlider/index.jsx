@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
 import { filterGallery } from "../../../redux/actions/galleryActions";
-import { defaultDisplay } from "./featuredProducts";
+// import { defaultDisplay } from "./featuredProducts";
 import { connect } from "react-redux";
 const FeaturedProductsSlider = props => {
+  const { defaultDisplay } = props;
   const [showCardValue, setShowCardValue] = useState(0);
   const getCard = direction => {
     if (direction === "next") {
