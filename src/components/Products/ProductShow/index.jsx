@@ -11,7 +11,7 @@ import FeaturedProductsSlider from "../../Home/FeaturedProductsSlider";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { defaultDisplay } from "../../Home/FeaturedProductsSlider/featuredProducts";
-
+import Slider from "react-slick";
 const ProductShow = props => {
   const {
     item,
@@ -20,7 +20,15 @@ const ProductShow = props => {
 
   // get related products
   const relatedProducts = PRODUCTS.filter((p, i) => p.sku.includes(sku));
-
+  const RelatedProductsElements = relatedProducts.map((product, i) => (
+    <RelatedProductsSlider key={i} product={product} width={80} height={80} />
+  ));
+  const settings = {
+    arrows: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
   return (
     <div className="product-show-container">
       <div className="products--nav">
@@ -57,19 +65,9 @@ const ProductShow = props => {
               />
             </span>
           </div>
-        </div>
-        <div className="product-show--card-body--related-products">
-          <Carousel>
-            <div className="related-product">
-              <img src={image} alt={name} />
-            </div>
-            <div className="related-product">
-              <img src={image} alt={name} />
-            </div>
-            <div className="related-product">
-              <img src={image} alt={name} />
-            </div>
-          </Carousel>
+          <div className="product-show--card-body--related-products">
+            <Slider {...settings}>{RelatedProductsElements}</Slider>
+          </div>
         </div>
       </div>
     </div>
