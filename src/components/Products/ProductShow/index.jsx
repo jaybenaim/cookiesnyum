@@ -7,15 +7,12 @@ import { addProduct } from "../../../redux/actions/cartActions";
 import { formatPrice } from "../../../helpers";
 import PRODUCTS from "../products";
 import RelatedProductsSlider from "../RelatedProductsSlider";
-import FeaturedProductsSlider from "../../Home/FeaturedProductsSlider";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import { defaultDisplay } from "../../Home/FeaturedProductsSlider/featuredProducts";
 import Slider from "react-slick";
 const ProductShow = props => {
   const {
     item,
-    item: { name, price, image, sku, description }
+    item: { name, price, image, sku }
   } = props.location.state;
 
   // get related products

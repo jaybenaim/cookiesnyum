@@ -1,10 +1,12 @@
 // scones
+import scones from "./featured/scones.png";
 import blueberry from "./scones/blueberry.png";
 import chocolate from "./scones/chocolate.png";
 import cinnamonbun from "./scones/cinnamonbun.png";
 import cranberryorange from "./scones/cranberryorange.png";
 
 // cookies
+import cookies from "./featured/cookies.png";
 import mars from "./cookies/mars/mars.png";
 import miniegg from "./cookies/miniegg/miniegg.png";
 import reese from "./cookies/reese/reese.png";
@@ -22,6 +24,7 @@ import strawberryPoptart from "./cookies/strawberryPoptart.png";
 import walnutChocolateChip from "./cookies/walnutChocolateChip.png";
 
 // biscotti
+import biscotti from "./featured/biscotti.png";
 import amertti from "./biscotti/amertti/amertti.png";
 import pastaschio from "./biscotti/pastaschio/pastaschio.png";
 
@@ -46,5 +49,8 @@ export {
   oreoBdayCake,
   storytime,
   strawberryPoptart,
-  walnutChocolateChip
+  walnutChocolateChip,
+  scones,
+  cookies,
+  biscotti
 };

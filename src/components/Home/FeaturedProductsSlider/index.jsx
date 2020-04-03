@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
-import { filterGallery } from "../../../redux/actions/galleryActions";
 import Slider from "react-slick";
 import { connect } from "react-redux";
-import { defaultDisplay, settings } from "./featuredProductsSliderConfig";
+import { featuredProducts, settings } from "./featuredProductsSliderConfig";
 import FeaturedProduct from "./FeaturedProduct";
 
 const FeaturedProductsSlider = props => {
-  const featuredProductElements = defaultDisplay.map((product, i) => (
+  const featuredProductElements = featuredProducts.map((product, i) => (
     <FeaturedProduct key={i} {...product} />
   ));
 
   return (
     <>
       <div className="featured-products-slider">
+        <h3 className="primary-font">What We Offer</h3>
         <Slider {...settings}>{featuredProductElements}</Slider>
       </div>
     </>
@@ -22,9 +22,6 @@ const FeaturedProductsSlider = props => {
 };
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors,
-  gallery: state.gallery
+  errors: state.errors
 });
-export default withRouter(
-  connect(mapStateToProps, { filterGallery })(FeaturedProductsSlider)
-);
+export default withRouter(connect(mapStateToProps, {})(FeaturedProductsSlider));

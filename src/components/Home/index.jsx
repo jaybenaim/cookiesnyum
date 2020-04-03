@@ -5,7 +5,7 @@ import FeaturedSlider from "./FeaturedSlider";
 import AboutUs from "./AboutUs";
 import Info from "./Info";
 import { withRouter } from "react-router-dom";
-import { defaultDisplay } from "./FeaturedProductsSlider/featuredProducts";
+import { featuredProducts } from "./FeaturedProductsSlider/featuredProductsSliderConfig";
 const Home = ({ fade, errors }) => {
   return (
     <>
@@ -19,7 +19,7 @@ const Home = ({ fade, errors }) => {
               </section>
               {window.innerHeight > 400 && <hr />}
               <section className="featured-products-slider">
-                <FeaturedProductsSlider defaultDisplay={defaultDisplay} />
+                <FeaturedProductsSlider featuredProducts={featuredProducts} />
               </section>
               {window.innerHeight > 400 && <hr />}
 
