@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dolcenadaa/static/css/main.996c04a6.chunk.css",
-    "main.js": "/dolcenadaa/static/js/main.ead20205.chunk.js",
-    "main.js.map": "/dolcenadaa/static/js/main.ead20205.chunk.js.map",
+    "main.css": "/dolcenadaa/static/css/main.813e74e1.chunk.css",
+    "main.js": "/dolcenadaa/static/js/main.a5cdf841.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.a5cdf841.chunk.js.map",
     "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
     "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
-    "static/css/2.25118874.chunk.css": "/dolcenadaa/static/css/2.25118874.chunk.css",
-    "static/js/2.1ffd20d8.chunk.js": "/dolcenadaa/static/js/2.1ffd20d8.chunk.js",
-    "static/js/2.1ffd20d8.chunk.js.map": "/dolcenadaa/static/js/2.1ffd20d8.chunk.js.map",
+    "static/css/2.0d4493d6.chunk.css": "/dolcenadaa/static/css/2.0d4493d6.chunk.css",
+    "static/js/2.2c564035.chunk.js": "/dolcenadaa/static/js/2.2c564035.chunk.js",
+    "static/js/2.2c564035.chunk.js.map": "/dolcenadaa/static/js/2.2c564035.chunk.js.map",
     "index.html": "/dolcenadaa/index.html",
-    "precache-manifest.17f1413cbfc5b2a0f5db1b6bafead877.js": "/dolcenadaa/precache-manifest.17f1413cbfc5b2a0f5db1b6bafead877.js",
+    "precache-manifest.09d1dc2a1633aa724db3224fd89c1e15.js": "/dolcenadaa/precache-manifest.09d1dc2a1633aa724db3224fd89c1e15.js",
     "service-worker.js": "/dolcenadaa/service-worker.js",
-    "static/css/2.25118874.chunk.css.map": "/dolcenadaa/static/css/2.25118874.chunk.css.map",
-    "static/css/main.996c04a6.chunk.css.map": "/dolcenadaa/static/css/main.996c04a6.chunk.css.map",
-    "static/js/2.1ffd20d8.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.1ffd20d8.chunk.js.LICENSE.txt",
+    "static/css/2.0d4493d6.chunk.css.map": "/dolcenadaa/static/css/2.0d4493d6.chunk.css.map",
+    "static/css/main.813e74e1.chunk.css.map": "/dolcenadaa/static/css/main.813e74e1.chunk.css.map",
+    "static/js/2.2c564035.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.2c564035.chunk.js.LICENSE.txt",
     "static/media/amertti.png": "/dolcenadaa/static/media/amertti.fac9e2fe.png",
     "static/media/blueberry.png": "/dolcenadaa/static/media/blueberry.fd796233.png",
     "static/media/chocolate.png": "/dolcenadaa/static/media/chocolate.2db80bb0.png",
@@ -37,9 +37,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0baa157b.js",
-    "static/css/2.25118874.chunk.css",
-    "static/js/2.1ffd20d8.chunk.js",
-    "static/css/main.996c04a6.chunk.css",
-    "static/js/main.ead20205.chunk.js"
+    "static/css/2.0d4493d6.chunk.css",
+    "static/js/2.2c564035.chunk.js",
+    "static/css/main.813e74e1.chunk.css",
+    "static/js/main.a5cdf841.chunk.js"
   ]
 }
