@@ -6,12 +6,10 @@ import AboutUs from "./AboutUs";
 import Info from "./Info";
 import { withRouter } from "react-router-dom";
 import { defaultDisplay } from "./FeaturedProductsSlider/featuredProducts";
-import strawberryPoptart from "../../assets/images/strawberryPoptart.png";
 const Home = ({ fade, errors }) => {
   return (
     <>
       <main id="mainContent">
-        <img src={strawberryPoptart} alt="test" />
         <div className={fade}>
           {fade !== "fade-background" && (
             <>
