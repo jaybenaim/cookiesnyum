@@ -1,5 +1,5 @@
 import React from "react";
-import cookie2 from "../../../assets/images/cookie2.jpg";
+import { everythingCookie } from "../../../assets/images";
 import instagram from "../../../assets/images/instagram.png";
 import pinkPhone from "../../../assets/images/pinkPhone.png";
 import "../../../assets/stylesheets/info.css";
@@ -38,7 +38,12 @@ const Info = () => {
           </a>
         </div>
       </div>
-      <img src={cookie2} alt="profile of owner" height="100%" width="100%" />
+      <img
+        src={everythingCookie}
+        alt="profile of owner"
+        height="100%"
+        width="100%"
+      />
     </div>
   );
 };

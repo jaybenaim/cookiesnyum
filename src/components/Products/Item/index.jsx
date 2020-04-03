@@ -5,11 +5,13 @@ import { AddCartButton } from "../../Cart/AddCartButton";
 import { addProduct } from "../../../redux/actions/cartActions";
 import { formatPrice } from "../../../helpers/index";
 import "../../../assets/stylesheets/item.css";
-
+import PRODUCTS from "../products";
 class Item extends Component {
   render() {
-    let { item, name, image, quantity, sku, description, price } = this.props;
-
+    let { item, name, quantity, sku, description, price } = this.props;
+    const image = PRODUCTS.filter(product => {
+      return product.name === name && product.image;
+    });
     return (
       <div className="item--card ">
         <Link
@@ -22,7 +24,7 @@ class Item extends Component {
         >
           <img
             className="item--card--img"
-            src={image}
+            src={image[0]["image"]}
             alt={name}
             height={120}
             width={120}
