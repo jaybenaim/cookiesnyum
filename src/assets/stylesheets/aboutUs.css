@@ -1,7 +1,6 @@
 .about-us-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   padding: 5%;
   margin-top: 5%;
 }
@@ -16,17 +15,15 @@
     width: 100%;
   }
   .top {
-    grid-row: 1;
     grid-column: 1 / span 2;
     padding: 5%;
     margin: 0 auto;
     padding-bottom: 0;
   }
   .bottom {
-    grid-row: 2;
     grid-column: 1 / span 2;
     padding: 5%;
-    padding-top: 1%;
+    padding-top: 15%;
     margin: 0 auto;
     color: #fff;
     text-align: center;
