@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1be6967652a0e13cb9c7dde286468d53",
+    "revision": "e47c057560a76e0b17d0fcd0dba14de2",
     "url": "/dolcenadaa/index.html"
   },
   {
-    "revision": "7b40c38fd011247e8f45",
+    "revision": "f6d377784616470560ec",
     "url": "/dolcenadaa/static/css/2.0d4493d6.chunk.css"
   },
   {
-    "revision": "e46810c2b902318e6849",
-    "url": "/dolcenadaa/static/css/main.25e35c69.chunk.css"
+    "revision": "4c375d82e8f1a688a006",
+    "url": "/dolcenadaa/static/css/main.8ebc6c51.chunk.css"
   },
   {
-    "revision": "7b40c38fd011247e8f45",
-    "url": "/dolcenadaa/static/js/2.f2ba55cf.chunk.js"
+    "revision": "f6d377784616470560ec",
+    "url": "/dolcenadaa/static/js/2.208d7187.chunk.js"
   },
   {
     "revision": "2a0b20e1d02e77e8b582ff21a215748a",
-    "url": "/dolcenadaa/static/js/2.f2ba55cf.chunk.js.LICENSE.txt"
+    "url": "/dolcenadaa/static/js/2.208d7187.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e46810c2b902318e6849",
-    "url": "/dolcenadaa/static/js/main.4f8152a5.chunk.js"
+    "revision": "4c375d82e8f1a688a006",
+    "url": "/dolcenadaa/static/js/main.9bfc6826.chunk.js"
   },
   {
     "revision": "09b1ed9f15cf7a4a0879",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3291cbec4afbe557d4e987f47f0f120b",
     "url": "/dolcenadaa/static/media/assorted.3291cbec.jpg"
+  },
+  {
+    "revision": "56e572873c0722687877461c67da969c",
+    "url": "/dolcenadaa/static/media/bananaBread.56e57287.png"
   },
   {
     "revision": "fd7962331b3943daf8706dd12241f539",
@@ -52,8 +56,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/media/cookie2.18e12e7a.jpg"
   },
   {
+    "revision": "e383d778ce55f026a7e2f50de0991752",
+    "url": "/dolcenadaa/static/media/cookieButter.e383d778.png"
+  },
+  {
     "revision": "b2b7b050913dfcf01643a1c8597edde6",
     "url": "/dolcenadaa/static/media/cranberryorange.b2b7b050.png"
+  },
+  {
+    "revision": "9b4de89e4e230f7b2ed6ba57a85765a2",
+    "url": "/dolcenadaa/static/media/doubleDolceDelight.9b4de89e.png"
   },
   {
     "revision": "2d7a5cac12f138fcedc440224d6a3777",
@@ -62,6 +74,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "093464a2cd077df3087b5260a5d954e5",
     "url": "/dolcenadaa/static/media/easter.093464a2.JPG"
+  },
+  {
+    "revision": "e355476c682e48a5a9fc2d9cd6d0142e",
+    "url": "/dolcenadaa/static/media/everythingCookie.e355476c.png"
+  },
+  {
+    "revision": "fe76112c934a777e143fd0a0c5e58c66",
+    "url": "/dolcenadaa/static/media/ferrero.fe76112c.png"
   },
   {
     "revision": "e01d8c49f51153d39658826fade567ad",
@@ -92,6 +112,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/media/miniegg.2b73f965.png"
   },
   {
+    "revision": "ad7f57cdf6d08a0dfb67366b0b2b77c9",
+    "url": "/dolcenadaa/static/media/nutella.ad7f57cd.png"
+  },
+  {
+    "revision": "632683e4e09fd4e43181ddb11dd1cd9d",
+    "url": "/dolcenadaa/static/media/nutellaGodess.632683e4.png"
+  },
+  {
+    "revision": "e13461be5f363b1a47839933361dc412",
+    "url": "/dolcenadaa/static/media/oreo.e13461be.png"
+  },
+  {
+    "revision": "aa018ba6a858bd6029289366dfcfddec",
+    "url": "/dolcenadaa/static/media/oreoBdayCake.aa018ba6.png"
+  },
+  {
     "revision": "7de5aa72c04767233f3ef1047adf6cab",
     "url": "/dolcenadaa/static/media/pastaschio.7de5aa72.png"
   },
@@ -118,6 +154,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/dolcenadaa/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "2ac058dc0f0890c3434c27a595947c68",
+    "url": "/dolcenadaa/static/media/storytime.2ac058dc.png"
+  },
+  {
+    "revision": "f84995578f3385960e233438e74a769a",
+    "url": "/dolcenadaa/static/media/strawberryPoptart.f8499557.png"
+  },
+  {
+    "revision": "4aa1e3b0fc46b146331c5a9530b7dd3c",
+    "url": "/dolcenadaa/static/media/walnutChocolateChip.4aa1e3b0.png"
   },
   {
     "revision": "bb30843c6ba26cca04f782eb003738f6",
