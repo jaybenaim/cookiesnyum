@@ -30,15 +30,17 @@
   }
   .featured-slide img {
     width: 100%;
-    min-height: 600px;
+    min-height: 400px;
+    object-fit: cover;
   }
 
   .featured-slide .text-box {
     padding: 4%;
     font-size: 1.2em;
+    max-height: 300px;
   }
   .featured-slide p {
-    padding: 3% 5% 5% 1%;
+    padding: 2% 5% 2% 1%;
   }
   .featured-slide .btn {
     background: #f6406f;
@@ -52,7 +54,7 @@
   .slick-dots {
     position: relative;
     left: 30%;
-    top: 91%;
+    top: 87%;
   }
 }
 

@@ -11,8 +11,6 @@ const navLinkStyle = {
   letterSpacing: "1.5px"
 };
 const DesktopNav = ({
-  showNav,
-  fadeBackground,
   auth: {
     user: { name },
     isAuthenticated
