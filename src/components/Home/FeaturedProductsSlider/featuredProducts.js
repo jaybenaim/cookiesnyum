@@ -4,20 +4,21 @@ import scones from "../../../assets/images/categories/mainScones.JPG";
 
 export const defaultDisplay = [
   {
-    cookies: {
-      text: "cookies",
-      src: cookies,
-      alt: "cookies"
-    },
-    scones: {
-      text: "scones",
-      src: scones,
-      alt: "scones"
-    },
-    biscotti: {
-      text: "biscotti",
-      src: biscotti,
-      alt: "biscotti"
-    }
+    text: "cookies",
+    src: cookies,
+    alt: "cookies",
+    sku: "cookies"
+  },
+  {
+    text: "scones",
+    src: scones,
+    alt: "scones",
+    sku: "scone"
+  },
+  {
+    text: "biscotti",
+    src: biscotti,
+    alt: "biscotti",
+    sku: "biscotti"
   }
 ];

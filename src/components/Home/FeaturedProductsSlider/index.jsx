@@ -2,101 +2,20 @@ import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
 import { filterGallery } from "../../../redux/actions/galleryActions";
-// import { defaultDisplay } from "./featuredProducts";
+import Slider from "react-slick";
 import { connect } from "react-redux";
+import { defaultDisplay, settings } from "./featuredProductsSliderConfig";
+import FeaturedProduct from "./FeaturedProduct";
+
 const FeaturedProductsSlider = props => {
-  const { defaultDisplay } = props;
-  const [showCardValue, setShowCardValue] = useState(0);
-  const getCard = direction => {
-    if (direction === "next") {
-      setShowCardValue(showCardValue + 1);
-      if (showCardValue >= 2) {
-        setShowCardValue(0);
-      }
-    }
-    if (direction === "prev") {
-      setShowCardValue(showCardValue - 1);
-      if (showCardValue === 0) {
-        setShowCardValue(2);
-      }
-    }
-  };
-  const displayAllCards = keyValue => {
-    return defaultDisplay.map((card, i) => {
-      const key = {
-        0: "cookies",
-        1: "scones",
-        2: "biscotti"
-      };
-      const keyCode = key[keyValue];
+  const featuredProductElements = defaultDisplay.map((product, i) => (
+    <FeaturedProduct key={i} {...product} />
+  ));
 
-      return (
-        <div className="card" key={i}>
-          <img
-            className="card-img"
-            src={card[keyCode].src}
-            alt={card[keyCode].alt}
-            height={220}
-            width={120}
-          />
-          <div className="card-body primary-font">
-            <h3>{card[keyCode].text}</h3>
-            <p className="card-text secondary-font">From $33.00</p>
-          </div>
-        </div>
-      );
-    });
-  };
-  const displayCard = () => {
-    const key = {
-      0: "cookies",
-      1: "scones",
-      2: "biscotti"
-    };
-    const keyCode = key[showCardValue];
-    const { text, src, alt } = defaultDisplay[0][keyCode];
-    return (
-      <div className="cards">
-        <span className="prev round" onClick={() => getCard("prev")}>
-          &#8249;
-        </span>
-
-        <img
-          className="card-img"
-          src={src}
-          alt={alt}
-          height={420}
-          width={"80%"}
-        />
-        <span className="next round" onClick={() => getCard("next")}>
-          &#8250;
-        </span>
-        <div className="card-body primary-font">
-          <Link to="/products" onClick={() => props.filterGallery(keyCode)}>
-            <h3>{text}</h3>
-            <p className="card-text secondary-font">
-              From $33.00
-              <br />
-            </p>
-          </Link>
-        </div>
-      </div>
-    );
-  };
   return (
     <>
-      <div>
-        <div className="show-for-mobile">
-          <p className="heading">What we sell</p>
-          {displayCard()}
-        </div>
-        <div className="show-for-desktop">
-          <p className="heading">What we sell</p>
-
-          {displayAllCards(0)}
-          {displayAllCards(1)}
-          {displayAllCards(2)}
-        </div>
+      <div className="featured-products-slider">
+        <Slider {...settings}>{featuredProductElements}</Slider>
       </div>
     </>
   );
