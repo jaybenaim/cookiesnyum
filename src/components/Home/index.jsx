@@ -7,7 +7,7 @@ import Info from "./Info";
 import { withRouter } from "react-router-dom";
 import { featuredProducts } from "./FeaturedProductsSlider/featuredProductsSliderConfig";
 
-const Home = ({ fade, errors }) => {
+const Home = ({ fade }) => {
   return (
     <>
       <main id="mainContent">

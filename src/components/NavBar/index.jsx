@@ -41,7 +41,7 @@ const NavBar = props => {
     cartTextLabel: "Cart",
     quantityTextLabel: "Quantity"
   };
-  const navbarTogglerClass = fade ? "navbar-toggler-expanded" : "";
+  const navbarTogglerClass = fade ? "navbar-toggler-expanded " : "";
   return (
     <React.Fragment>
       <div className={styles.skipLink}>

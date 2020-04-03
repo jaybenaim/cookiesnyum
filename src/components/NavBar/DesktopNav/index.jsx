@@ -26,7 +26,7 @@ const DesktopNav = ({
     ? "desktop-nav desktop-nav-show"
     : "desktop-nav desktop-nav-hide";
   return (
-    <>
+    <div className="desktop-nav-container">
       <div
         className="welcome-container"
         onMouseEnter={() => toggleDesktopNav(!displayDesktopNav)}
@@ -79,7 +79,7 @@ const DesktopNav = ({
       >
         Products
       </Link>
-    </>
+    </div>
   );
 };
 

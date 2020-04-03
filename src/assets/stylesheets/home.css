@@ -19,5 +19,20 @@
     padding-bottom: 10%;
     margin: 0 auto;
     width: 100%;
+    margin-top: -170px;
+  }
+  .slideIn {
+    animation-name: slideIn;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slideIn {
+    from {
+      margin-top: 1em;
+    }
+    to {
+      margin-top: 170px;
+    }
   }
 }

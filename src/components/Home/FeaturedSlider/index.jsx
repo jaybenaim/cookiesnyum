@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import assorted from "../../../assets/images/promotions/assorted.jpg";
 import dozen from "../../../assets/images/promotions/dozen.jpg";
 import easter from "../../../assets/images/promotions/easter.JPG";
@@ -17,13 +17,20 @@ const FeaturedSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    cssEase: "linear"
+    cssEase: "linear",
+    pauseOnDotsHover: true
   };
+  const [navClass, setNavClass] = useState("");
 
   return (
     <>
       <Slider {...settings} id="featured">
-        <div className="featured-slide ">
+        <div className={`featured-slide ${navClass}`}>
+          <div
+            className="featured-slide--hidden-nav-trigger"
+            onMouseEnter={() => setNavClass("slideIn")}
+            onMouseLeave={() => setNavClass("")}
+          ></div>
           <img
             src={assorted}
             alt="chocolate-cookie"

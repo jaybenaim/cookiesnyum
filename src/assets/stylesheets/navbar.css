@@ -137,6 +137,8 @@
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr !important;
     height: 12em;
+    position: fixed;
+    top: -500px !important;
   }
 
   .navbar-brand img {
