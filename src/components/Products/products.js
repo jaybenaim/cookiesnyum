@@ -72,7 +72,7 @@ const PRODUCTS = [
     sku: "cookie-",
     price: 5.5,
     image:
-      "https://jaybenaim.github.io/http:/dolcenadaa/static/media/miniegg.2b73f965.png",
+      "https://jaybenaim.github.io/dolcenadaa/static/media/miniegg.2b73f965.png",
     class: "all cookies",
     description: "cookie"
   },
@@ -81,7 +81,7 @@ const PRODUCTS = [
     sku: "cookies-",
     price: 2.85,
     image:
-      "https://jaybenaim.github.io/http:/dolcenadaa/static/media/reese.d027f80c.png",
+      "https://jaybenaim.github.io/dolcenadaa/static/media/reese.d027f80c.png",
     class: "all cookies",
     description:
       "Basic $2.85 PB DREAM CUP Dough: Brown Butter Dough.Mix-ins- chocolate chips Stuffed with: Peanut butter cup Topped with: Reeces pieces"
@@ -140,7 +140,7 @@ const PRODUCTS = [
     sku: "cookie-",
     price: 3.35,
     image:
-      "https://jaybenaim.github.io/http:/dolcenadaa/static/media/nutella.ad7f57cd.pngg",
+      "https://jaybenaim.github.io/dolcenadaa/static/media/nutella.ad7f57cd.pngg",
     class: "all cookie",
     description: "NUTELLA GODESS"
   },
@@ -169,7 +169,7 @@ const PRODUCTS = [
     sku: "cookie-",
     price: 3.35,
     image:
-      "https://jaybenaim.github.io/http:/dolcenadaa/static/media/doubleDolceDelight.9b4de89e.png",
+      "https://jaybenaim.github.io/dolcenadaa/static/media/doubleDolceDelight.9b4de89e.png",
     class: "all cookie",
     description: "Premium Double Dolce Delight"
   },
@@ -207,7 +207,7 @@ const PRODUCTS = [
     sku: "cookie-",
     price: 2.85,
     image:
-      "https://jaybenaim.github.io/http:/dolcenadaa/static/media/everythingCookie.e355476c.png",
+      "https://jaybenaim.github.io/dolcenadaa/static/media/everythingCookie.e355476c.png",
     class: "all cookie",
     description:
       "Basic COOKIES AND CREAM Dough: Brown Butter Mix-Ins: Chocolate Chips. Stuffed with: Cookies and cream Toppings: Cookies and cream candy bar"
@@ -217,7 +217,7 @@ const PRODUCTS = [
     sku: "cookie-",
     price: 2.85,
     image:
-      "https://jaybenaim.github.io/http:/dolcenadaa/static/media/cookieButter.e383d778.png",
+      "https://jaybenaim.github.io/dolcenadaa/static/media/cookieButter.e383d778.png",
     class: "all cookie",
     description:
       "Basic COOKIE BUTTER Dough: Brown butter Dough Mix-ins: Chocolate chips Stuffed with: Cookie butter"
