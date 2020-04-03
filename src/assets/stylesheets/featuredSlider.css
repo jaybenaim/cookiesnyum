@@ -30,7 +30,7 @@
   }
   .featured-slide img {
     width: 100%;
-    min-height: 400px;
+    min-height: 600px;
     object-fit: cover;
   }
 
