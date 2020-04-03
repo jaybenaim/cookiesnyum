@@ -27,6 +27,7 @@
     grid-column: 1 / span 2;
     padding: 5%;
     padding-top: 15%;
+    padding-bottom: 40%;
     margin: 0 auto;
     color: #fff;
     text-align: center;
@@ -37,6 +38,23 @@
   }
   .bottom p {
     width: 100%;
+  }
+  .bottom button {
+    margin-top: 10%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+      0 3px 1px -1px rgba(0, 0, 0, 0.2) !important;
+    background: #f6406f;
+    color: #fff;
+  }
+
+  .bottom button:focus {
+    background: #f6406f;
+    color: white;
   }
   [alt="slogan"] {
     position: absolute;
