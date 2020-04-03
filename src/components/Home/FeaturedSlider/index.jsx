@@ -6,9 +6,11 @@ import "../../../assets/stylesheets/featuredSlider.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import { toggleNavbar } from "../../../redux/actions/navbarActions";
+import { connect } from "react-redux";
 
-const FeaturedSlider = () => {
+const FeaturedSlider = props => {
   const settings = {
     dots: true,
     infinite: true,
@@ -29,6 +31,8 @@ const FeaturedSlider = () => {
             alt="chocolate-cookie"
             height={50}
             width={50}
+            onMouseEnter={() => props.toggleNavbar()}
+            onMouseLeave={() => props.toggleNavbar()}
           ></img>
           <div className="text-box secondary-font">
             <h3>Assortment of Stuffed Cookies, Scones and Biscotti</h3>
@@ -68,4 +72,12 @@ const FeaturedSlider = () => {
     </>
   );
 };
-export default FeaturedSlider;
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors,
+  navbar: state.navbar
+});
+export default withRouter(
+  connect(mapStateToProps, { toggleNavbar })(FeaturedSlider)
+);

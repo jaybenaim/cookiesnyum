@@ -38,16 +38,24 @@ if (localStorage.jwtToken) {
 }
 
 //TODO Web Template Studio: Adrsd routes for your new pages here.
-const App = ({ errors, history }) => {
+const App = ({ errors, history, navbar: { showDesktopNavbar } }) => {
   const [nav, showNav] = useState(false);
   const [fade, fadeBackground] = useState("");
 
   errors.response && errors.response.status && history.push("/404");
   return (
     <React.Fragment>
-      {errors.response && errors.response.status ? (
-        ""
-      ) : (
+      {errors.response && errors.response.status
+        ? ""
+        : showDesktopNavbar && (
+            <NavBar
+              showNav={showNav}
+              fadeBackground={fadeBackground}
+              nav={nav}
+              fade={fade}
+            />
+          )}
+      {window.innerWidth < 451 && (
         <NavBar
           showNav={showNav}
           fadeBackground={fadeBackground}
@@ -97,6 +105,7 @@ const App = ({ errors, history }) => {
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  navbar: state.navbar
 });
 export default withRouter(connect(mapStateToProps, {})(App));

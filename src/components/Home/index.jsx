@@ -6,16 +6,27 @@ import AboutUs from "./AboutUs";
 import Info from "./Info";
 import { withRouter } from "react-router-dom";
 import { featuredProducts } from "./FeaturedProductsSlider/featuredProductsSliderConfig";
-
-const Home = ({ fade, errors }) => {
+import { connect } from "react-redux";
+import { toggleNavbar } from "../../redux/actions/navbarActions";
+const Home = props => {
+  const {
+    fade,
+    errors,
+    navbar: { showDesktopNavbar }
+  } = props;
   return (
     <>
       <main id="mainContent">
         <div className={fade}>
           {fade !== "fade-background" && (
             <>
-              <section className="featured-slider">
+              <section
+                className="featured-slider"
+                onMouseEnter={() => props.toggleNavbar(showDesktopNavbar)}
+                onMouseLeave={() => props.toggleNavbar(showDesktopNavbar)}
+              >
                 <FeaturedSlider />
+
                 <br />
               </section>
               {window.innerHeight > 400 && <hr />}
@@ -38,4 +49,9 @@ const Home = ({ fade, errors }) => {
     </>
   );
 };
-export default withRouter(Home);
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors,
+  navbar: state.navbar
+});
+export default withRouter(connect(mapStateToProps, { toggleNavbar })(Home));
