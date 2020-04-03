@@ -27,7 +27,7 @@ const GalleryFilter = props => {
         node="button"
         waves="light"
         className="cookie-filter-link"
-        name="cookies"
+        name="cookie"
         onClick={e => handleFilterClick(e)}
       >
         Cookies
@@ -36,7 +36,7 @@ const GalleryFilter = props => {
         node="button"
         waves="light"
         className="scone-filter-link"
-        name="scones"
+        name="scone"
         onClick={e => handleFilterClick(e)}
       >
         Scones
