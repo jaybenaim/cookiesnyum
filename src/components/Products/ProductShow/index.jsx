@@ -66,6 +66,7 @@ const ProductShow = props => {
             </span>
           </div>
           <div className="product-show--card-body--related-products">
+            <h3>Related Products</h3>
             <Slider {...settings}>{RelatedProductsElements}</Slider>
           </div>
         </div>

@@ -8,8 +8,9 @@ const RelatedProductsSlider = ({
 }) => {
   return (
     <div className="related-product">
-      <Link to={{ pathname: `/products/${id}` }}>
+      <Link to={`/products/${id}`}>
         <img src={image} alt={name} width={width} height={height} />
+        <strong>{name}</strong>
       </Link>
     </div>
   );
