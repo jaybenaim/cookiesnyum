@@ -54,7 +54,8 @@
     left: 30%;
     top: 91%;
   }
-  .slick-dots li button:before {
-    font-size: 18px !important;
-  }
+}
+
+.slick-dots li button:before {
+  font-size: 18px !important;
 }
