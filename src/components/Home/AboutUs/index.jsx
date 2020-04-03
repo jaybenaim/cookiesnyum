@@ -1,14 +1,14 @@
 import React from "react";
 import "../../../assets/stylesheets/aboutUs.css";
-import profile from "../../../assets/images/profile.jpg";
+import profile from "../../../assets/images/aboutUs/profile.png";
 import xoxo from "../../../assets/images/xoxo.png";
 
-const AboutUs = ({ fade }) => {
+const AboutUs = () => {
   return (
     <>
       <div className="about-us-grid desktop-grid mobile-grid">
         <div className="right-side top">
-          <img src={profile} alt="profile" height={350} width={"100%"} />
+          <img src={profile} alt="profile" height={330} width={"100%"} />
         </div>
         <div className="left-side bottom secondary-font">
           <h3>

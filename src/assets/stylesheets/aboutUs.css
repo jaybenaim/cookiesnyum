@@ -9,6 +9,9 @@
     margin-top: 20%;
     margin-bottom: 20%;
   }
+  .about-us-grid img {
+    zoom: 1.4;
+  }
   .mobile-grid {
     background: #f6406f;
     height: 100%;
