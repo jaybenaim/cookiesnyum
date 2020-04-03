@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "../../assets/stylesheets/products.css";
 import Item from "./Item";
@@ -7,12 +7,20 @@ import { connect } from "react-redux";
 import PRODUCTS from "./products";
 import GalleryFilter from "./GalleryFilter";
 import { filterGallery } from "../../redux/actions/galleryActions";
-
+import backend from "../../api/backend";
 const Products = props => {
   const {
     gallery: { filter }
   } = props;
-  const products = PRODUCTS.map((item, i) => {
+  const [productsFromApi, setProductsFromApi] = useState([]);
+  useEffect(() => {
+    backend.get("/products").then(res => {
+      console.log(res);
+      setProductsFromApi(res.data);
+    });
+  }, []);
+
+  const products = productsFromApi.map((item, i) => {
     return (
       item.class.includes(filter) && (
         <Item {...item} item={item} key={i} filter={filter} />
