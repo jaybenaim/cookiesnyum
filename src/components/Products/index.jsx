@@ -3,24 +3,21 @@ import { Link, withRouter } from "react-router-dom";
 import "../../assets/stylesheets/products.css";
 import Item from "./Item";
 import { connect } from "react-redux";
-// @props recieve products from api
-import PRODUCTS from "./products";
 import GalleryFilter from "./GalleryFilter";
 import { filterGallery } from "../../redux/actions/galleryActions";
-import backend from "../../api/backend";
+import { getProducts } from "../../redux/actions/productActions";
 const Products = props => {
   const {
-    gallery: { filter }
+    gallery: { filter },
+    products
   } = props;
-  const [productsFromApi, setProductsFromApi] = useState([]);
+
+  // Component did mount (empty array sets method to run once)
   useEffect(() => {
-    backend.get("/products").then(res => {
-      console.log(res);
-      setProductsFromApi(res.data);
-    });
+    props.getProducts();
   }, []);
 
-  const products = productsFromApi.map((item, i) => {
+  const productElements = products.map((item, i) => {
     return (
       item.class.includes(filter) && (
         <Item {...item} item={item} key={i} filter={filter} />
@@ -49,7 +46,7 @@ const Products = props => {
       </div>
       <GalleryFilter />
 
-      {products}
+      {productElements}
     </div>
   );
 };
@@ -58,8 +55,9 @@ const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors,
   cart: state.cart,
-  gallery: state.gallery
+  gallery: state.gallery,
+  products: state.products.products
 });
-export default connect(mapStateToProps, { filterGallery })(
+export default connect(mapStateToProps, { filterGallery, getProducts })(
   withRouter(Products)
 );
