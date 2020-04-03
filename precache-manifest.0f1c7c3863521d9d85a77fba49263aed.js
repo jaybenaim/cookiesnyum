@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "51c2bbb8aeb84ddf1515c9fe77b9d702",
+    "revision": "24ba9e7caa02fe2bccc149a99fc1abef",
     "url": "/dolcenadaa/index.html"
   },
   {
-    "revision": "ce3c07703bd2da827f86",
+    "revision": "845dd8710ef6e80e59cb",
     "url": "/dolcenadaa/static/css/2.0d4493d6.chunk.css"
   },
   {
-    "revision": "81cfe444c5416f1aa47c",
-    "url": "/dolcenadaa/static/css/main.813e74e1.chunk.css"
+    "revision": "e280af0d9a9448fb0d52",
+    "url": "/dolcenadaa/static/css/main.b20e15ff.chunk.css"
   },
   {
-    "revision": "ce3c07703bd2da827f86",
-    "url": "/dolcenadaa/static/js/2.2c564035.chunk.js"
+    "revision": "845dd8710ef6e80e59cb",
+    "url": "/dolcenadaa/static/js/2.4bf56cf4.chunk.js"
   },
   {
     "revision": "2a0b20e1d02e77e8b582ff21a215748a",
-    "url": "/dolcenadaa/static/js/2.2c564035.chunk.js.LICENSE.txt"
+    "url": "/dolcenadaa/static/js/2.4bf56cf4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "81cfe444c5416f1aa47c",
-    "url": "/dolcenadaa/static/js/main.a5cdf841.chunk.js"
+    "revision": "e280af0d9a9448fb0d52",
+    "url": "/dolcenadaa/static/js/main.8c46c017.chunk.js"
   },
   {
     "revision": "09b1ed9f15cf7a4a0879",
@@ -92,8 +92,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/media/pastaschio.7de5aa72.png"
   },
   {
-    "revision": "adcbf3ad4f0ee4ac3e3b1fd07ae2de3e",
-    "url": "/dolcenadaa/static/media/profile.adcbf3ad.jpg"
+    "revision": "1184d4c9ac4ca5e18739974246461a4b",
+    "url": "/dolcenadaa/static/media/profile.1184d4c9.png"
   },
   {
     "revision": "d027f80c6af0cb2a61c3da5cacca9e08",

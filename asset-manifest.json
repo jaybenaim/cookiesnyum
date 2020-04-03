@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dolcenadaa/static/css/main.813e74e1.chunk.css",
-    "main.js": "/dolcenadaa/static/js/main.a5cdf841.chunk.js",
-    "main.js.map": "/dolcenadaa/static/js/main.a5cdf841.chunk.js.map",
+    "main.css": "/dolcenadaa/static/css/main.b20e15ff.chunk.css",
+    "main.js": "/dolcenadaa/static/js/main.8c46c017.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.8c46c017.chunk.js.map",
     "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
     "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
     "static/css/2.0d4493d6.chunk.css": "/dolcenadaa/static/css/2.0d4493d6.chunk.css",
-    "static/js/2.2c564035.chunk.js": "/dolcenadaa/static/js/2.2c564035.chunk.js",
-    "static/js/2.2c564035.chunk.js.map": "/dolcenadaa/static/js/2.2c564035.chunk.js.map",
+    "static/js/2.4bf56cf4.chunk.js": "/dolcenadaa/static/js/2.4bf56cf4.chunk.js",
+    "static/js/2.4bf56cf4.chunk.js.map": "/dolcenadaa/static/js/2.4bf56cf4.chunk.js.map",
     "index.html": "/dolcenadaa/index.html",
-    "precache-manifest.09d1dc2a1633aa724db3224fd89c1e15.js": "/dolcenadaa/precache-manifest.09d1dc2a1633aa724db3224fd89c1e15.js",
+    "precache-manifest.0f1c7c3863521d9d85a77fba49263aed.js": "/dolcenadaa/precache-manifest.0f1c7c3863521d9d85a77fba49263aed.js",
     "service-worker.js": "/dolcenadaa/service-worker.js",
     "static/css/2.0d4493d6.chunk.css.map": "/dolcenadaa/static/css/2.0d4493d6.chunk.css.map",
-    "static/css/main.813e74e1.chunk.css.map": "/dolcenadaa/static/css/main.813e74e1.chunk.css.map",
-    "static/js/2.2c564035.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.2c564035.chunk.js.LICENSE.txt",
+    "static/css/main.b20e15ff.chunk.css.map": "/dolcenadaa/static/css/main.b20e15ff.chunk.css.map",
+    "static/js/2.4bf56cf4.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.4bf56cf4.chunk.js.LICENSE.txt",
     "static/media/amertti.png": "/dolcenadaa/static/media/amertti.fac9e2fe.png",
     "static/media/blueberry.png": "/dolcenadaa/static/media/blueberry.fd796233.png",
     "static/media/chocolate.png": "/dolcenadaa/static/media/chocolate.2db80bb0.png",
@@ -30,7 +30,7 @@
     "static/media/mars.png": "/dolcenadaa/static/media/mars.712c801e.png",
     "static/media/miniegg.png": "/dolcenadaa/static/media/miniegg.2b73f965.png",
     "static/media/pastaschio.png": "/dolcenadaa/static/media/pastaschio.7de5aa72.png",
-    "static/media/profile.jpg": "/dolcenadaa/static/media/profile.adcbf3ad.jpg",
+    "static/media/profile.png": "/dolcenadaa/static/media/profile.1184d4c9.png",
     "static/media/reese.png": "/dolcenadaa/static/media/reese.d027f80c.png",
     "static/media/slick-theme.css": "/dolcenadaa/static/media/slick.f97e3bbf.svg",
     "static/media/xoxo.png": "/dolcenadaa/static/media/xoxo.bb30843c.png"
@@ -38,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.0baa157b.js",
     "static/css/2.0d4493d6.chunk.css",
-    "static/js/2.2c564035.chunk.js",
-    "static/css/main.813e74e1.chunk.css",
-    "static/js/main.a5cdf841.chunk.js"
+    "static/js/2.4bf56cf4.chunk.js",
+    "static/css/main.b20e15ff.chunk.css",
+    "static/js/main.8c46c017.chunk.js"
   ]
 }
