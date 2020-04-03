@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/dolcenadaa/static/css/main.8ebc6c51.chunk.css",
+    "main.js": "/dolcenadaa/static/js/main.055f8ee6.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.055f8ee6.chunk.js.map",
+    "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
+    "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
+    "static/css/2.0d4493d6.chunk.css": "/dolcenadaa/static/css/2.0d4493d6.chunk.css",
+    "static/js/2.f6cfefed.chunk.js": "/dolcenadaa/static/js/2.f6cfefed.chunk.js",
+    "static/js/2.f6cfefed.chunk.js.map": "/dolcenadaa/static/js/2.f6cfefed.chunk.js.map",
+    "index.html": "/dolcenadaa/index.html",
+    "precache-manifest.738c8e12fad0208be960a94635eb1d3b.js": "/dolcenadaa/precache-manifest.738c8e12fad0208be960a94635eb1d3b.js",
+    "service-worker.js": "/dolcenadaa/service-worker.js",
+    "static/css/2.0d4493d6.chunk.css.map": "/dolcenadaa/static/css/2.0d4493d6.chunk.css.map",
+    "static/css/main.8ebc6c51.chunk.css.map": "/dolcenadaa/static/css/main.8ebc6c51.chunk.css.map",
+    "static/js/2.f6cfefed.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.f6cfefed.chunk.js.LICENSE.txt",
+    "static/media/assorted.jpg": "/dolcenadaa/static/media/assorted.3291cbec.jpg",
+    "static/media/cookie2.jpg": "/dolcenadaa/static/media/cookie2.18e12e7a.jpg",
+    "static/media/dozen.jpg": "/dolcenadaa/static/media/dozen.2d7a5cac.jpg",
+    "static/media/easter.JPG": "/dolcenadaa/static/media/easter.093464a2.JPG",
+    "static/media/instagram.png": "/dolcenadaa/static/media/instagram.e01d8c49.png",
+    "static/media/logo.JPG": "/dolcenadaa/static/media/logo.cdc73365.JPG",
+    "static/media/mainBiscotti.png": "/dolcenadaa/static/media/mainBiscotti.eb798d28.png",
+    "static/media/mainCookies.JPG": "/dolcenadaa/static/media/mainCookies.903b3285.JPG",
+    "static/media/mainScones.JPG": "/dolcenadaa/static/media/mainScones.2efae9b8.JPG",
+    "static/media/profile.png": "/dolcenadaa/static/media/profile.1184d4c9.png",
+    "static/media/slick-theme.css": "/dolcenadaa/static/media/slick.f97e3bbf.svg",
+    "static/media/xoxo.png": "/dolcenadaa/static/media/xoxo.bb30843c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0baa157b.js",
+    "static/css/2.0d4493d6.chunk.css",
+    "static/js/2.f6cfefed.chunk.js",
+    "static/css/main.8ebc6c51.chunk.css",
+    "static/js/main.055f8ee6.chunk.js"
+  ]
+}
