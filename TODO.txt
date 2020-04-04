@@ -29,3 +29,5 @@ replace console.log errors with error function in redux (in catch)
 
 /products page 
 - fix nav to show only one name on a line 
+
+cart minimum 12 items or amertti biscotti which is min dozen 

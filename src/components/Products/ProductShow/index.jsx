@@ -18,6 +18,7 @@ const ProductShow = props => {
   } = props.location.state;
   const { products } = props;
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     setIsLoading(true);
     props.getProducts();
@@ -25,7 +26,7 @@ const ProductShow = props => {
 
   setTimeout(() => {
     products.length > 0 && setIsLoading(false);
-  }, 1500);
+  }, 500);
 
   // get related products
   const relatedProducts = products.filter((p, i) => p.sku.includes(sku));
@@ -33,6 +34,7 @@ const ProductShow = props => {
     <RelatedProductsSlider key={i} product={product} width={80} height={80} />
   ));
   const formattedSku = sku.replace("-", "");
+
   const settings = {
     arrows: true,
     dots: true,

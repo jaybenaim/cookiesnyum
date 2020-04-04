@@ -79,7 +79,7 @@ const App = ({ errors, history }) => {
           />
           <Route
             exact
-            path="/products/:id"
+            path="/products/:name"
             render={props => <ProductShow {...props} />}
           />
           <Route

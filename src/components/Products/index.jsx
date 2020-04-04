@@ -29,9 +29,10 @@ const Products = props => {
   useEffect(() => {
     setIsLoading(true);
     props.getProducts();
-
     setTimeout(() => {
-      products.length > 0 && setIsLoading(false);
+      products
+        ? setIsLoading(false)
+        : setTimeout(() => setIsLoading(false), 5000);
     }, 1500);
   }, []);
 
