@@ -5,27 +5,28 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { addProduct } from "../../../redux/actions/cartActions";
 import { formatPrice } from "../../../helpers";
-import PRODUCTS from "../products";
 import RelatedProductsSlider from "../RelatedProductsSlider";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
 import { getProducts } from "../../../redux/actions/productActions";
-
+import { Preloader } from "react-materialize";
 const ProductShow = props => {
   const {
     item,
-    item: { name, price, image, sku }
+    item: { name, price, image, sku, description }
   } = props.location.state;
   const { products } = props;
-
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
+    setIsLoading(true);
     props.getProducts();
   }, []);
+  useEffect(() => {
+    products.length > 0 && setIsLoading(false);
+  }, [{}]);
 
   // get related products
-
   const relatedProducts = products.filter((p, i) => p.sku.includes(sku));
-
   const RelatedProductsElements = relatedProducts.map((product, i) => (
     <RelatedProductsSlider key={i} product={product} width={80} height={80} />
   ));
@@ -58,11 +59,7 @@ const ProductShow = props => {
           <p className="product-show--card-body--price">
             {formatPrice(price, "CAD")}
           </p>
-          <p className="product-show--card-body--description">
-            Nulla dolore laborum officia incididunt commodo ut velit aliqua ut
-            aliquip. Sit do exercitation eu nisi commodo culpa laboris ipsum
-            irure dolor velit qui duis deserunt.
-          </p>
+          <p className="product-show--card-body--description">{description}</p>
           <div className="product-show--card-body--add-to-cart-btn">
             <span>
               <AddCartButton
@@ -74,7 +71,15 @@ const ProductShow = props => {
           </div>
           <div className="product-show--card-body--related-products">
             <h3>Related Products</h3>
-            <Slider {...settings}>{RelatedProductsElements}</Slider>
+            <Slider {...settings}>
+              {isLoading ? (
+                <div>
+                  <Preloader active color="green" />
+                </div>
+              ) : (
+                RelatedProductsElements
+              )}
+            </Slider>
           </div>
         </div>
       </div>

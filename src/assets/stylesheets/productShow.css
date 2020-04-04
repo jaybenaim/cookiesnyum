@@ -28,6 +28,7 @@
   .product-show--card-body--name {
     grid-column: 1 / span 4;
     text-transform: capitalize;
+    margin-top: 15%;
   }
   .product-show--card-body--price {
     grid-column: 4;
@@ -44,6 +45,7 @@
     color: white;
     padding: 5%;
     border-radius: 2%;
+    float: right;
   }
   .product-show--card-body--related-products {
     grid-column: 1 / span 4;

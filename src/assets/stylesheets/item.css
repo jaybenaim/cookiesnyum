@@ -21,6 +21,7 @@
   }
   .item--card--img {
     grid-column: 1;
+    object-fit: contain;
   }
   .item--card-body {
     grid-column: 2;
@@ -30,23 +31,29 @@
   }
   .item--card-body--name {
     grid-column: 1;
+    color: #000;
   }
   .item--card-body--price {
+    grid-row: 2;
+    grid-column: 3;
     font-weight: 900;
     font-size: 1.7em;
+    position: absolute;
+    right: 7%;
   }
 
   .item--card-body--description {
     grid-column: 1 / span 3;
+    grid-row: 4;
   }
   .item--card-body--links {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2 / span 3;
     margin-left: 10%;
   }
   .item--card-body--links button {
-    background: #f6406f;
-    color: white;
+    background: transparent;
+    color: #f6406f;
     font-weight: 600;
     padding: 7% 9%;
     width: 120%;
@@ -64,7 +71,7 @@
     padding: 5% 1%;
   }
   .item--card-body--links .add-to-cart-btn button svg {
-    color: #fff;
+    color: #f6406f;
     width: 1.3em;
     height: 1.3em;
   }

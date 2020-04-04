@@ -7,6 +7,13 @@ import { formatPrice } from "../../../helpers/index";
 import "../../../assets/stylesheets/item.css";
 import PRODUCTS from "../products";
 class Item extends Component {
+  shortDescription = description => {
+    return !description
+      ? ""
+      : description.length <= 15
+      ? description
+      : description.slice(0, 15) + "...";
+  };
   render() {
     let { item, name, quantity, sku, description, price } = this.props;
     const image = PRODUCTS.filter(product => {
@@ -31,8 +38,18 @@ class Item extends Component {
           />
         </Link>
         <div className="item--card-body secondary-font">
-          <h3 className="item--card-body--name">{name}</h3>
-          <p className="item--card-body--description">{description}</p>
+          <Link
+            to={{
+              pathname: `/products/${sku}`,
+              state: { item, quantity }
+            }}
+            className="show-product-btn"
+          >
+            <h3 className="item--card-body--name">{name}</h3>
+          </Link>
+          <p className="item--card-body--description">
+            {this.shortDescription(description)}
+          </p>
           <p className="item--card-body--price">{formatPrice(price, "CAD")}</p>
 
           <span className="item--card-body--links">
