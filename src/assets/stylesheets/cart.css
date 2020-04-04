@@ -52,6 +52,11 @@
   height: 60px;
   cursor: pointer;
 }
+@media (max-width: 450px) {
+  .bag--float-cart-closed {
+    left: -190px;
+  }
+}
 .bag__quantity,
 .bag__quantity-expanded {
   display: inline-block;
