@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dolcenadaa/static/css/main.0a8cb58f.chunk.css",
-    "main.js": "/dolcenadaa/static/js/main.6f1857d2.chunk.js",
-    "main.js.map": "/dolcenadaa/static/js/main.6f1857d2.chunk.js.map",
+    "main.css": "/dolcenadaa/static/css/main.8dfb7dd5.chunk.css",
+    "main.js": "/dolcenadaa/static/js/main.f7c4e7e2.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.f7c4e7e2.chunk.js.map",
     "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
     "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
     "static/css/2.0d4493d6.chunk.css": "/dolcenadaa/static/css/2.0d4493d6.chunk.css",
     "static/js/2.5b1ad942.chunk.js": "/dolcenadaa/static/js/2.5b1ad942.chunk.js",
     "static/js/2.5b1ad942.chunk.js.map": "/dolcenadaa/static/js/2.5b1ad942.chunk.js.map",
     "index.html": "/dolcenadaa/index.html",
-    "precache-manifest.d12d6a6edf80c6dd63d852067ed64c45.js": "/dolcenadaa/precache-manifest.d12d6a6edf80c6dd63d852067ed64c45.js",
+    "precache-manifest.1ace159dff8e18725a8e4da5ed7826f7.js": "/dolcenadaa/precache-manifest.1ace159dff8e18725a8e4da5ed7826f7.js",
     "service-worker.js": "/dolcenadaa/service-worker.js",
     "static/css/2.0d4493d6.chunk.css.map": "/dolcenadaa/static/css/2.0d4493d6.chunk.css.map",
-    "static/css/main.0a8cb58f.chunk.css.map": "/dolcenadaa/static/css/main.0a8cb58f.chunk.css.map",
+    "static/css/main.8dfb7dd5.chunk.css.map": "/dolcenadaa/static/css/main.8dfb7dd5.chunk.css.map",
     "static/js/2.5b1ad942.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.5b1ad942.chunk.js.LICENSE.txt",
     "static/media/amertti.png": "/dolcenadaa/static/media/amertti.fac9e2fe.png",
     "static/media/assorted.jpg": "/dolcenadaa/static/media/assorted.3291cbec.jpg",
@@ -51,7 +51,7 @@
     "static/js/runtime-main.0baa157b.js",
     "static/css/2.0d4493d6.chunk.css",
     "static/js/2.5b1ad942.chunk.js",
-    "static/css/main.0a8cb58f.chunk.css",
-    "static/js/main.6f1857d2.chunk.js"
+    "static/css/main.8dfb7dd5.chunk.css",
+    "static/js/main.f7c4e7e2.chunk.js"
   ]
 }

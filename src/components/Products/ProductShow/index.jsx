@@ -22,9 +22,10 @@ const ProductShow = props => {
     setIsLoading(true);
     props.getProducts();
   }, []);
-  useEffect(() => {
+
+  setTimeout(() => {
     products.length > 0 && setIsLoading(false);
-  }, [{}]);
+  }, 1500);
 
   // get related products
   const relatedProducts = products.filter((p, i) => p.sku.includes(sku));
@@ -38,7 +39,6 @@ const ProductShow = props => {
     slidesToShow: 3,
     slidesToScroll: 3
   };
-  console.log(formattedSku);
   return (
     <div className="product-show-container">
       <div className="products--nav">

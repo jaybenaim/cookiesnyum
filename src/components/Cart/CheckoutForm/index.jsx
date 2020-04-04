@@ -58,7 +58,6 @@ const CheckoutForm = ({
   };
 
   const handleSetDate = value => {
-    console.log(value);
     const stringValue = String(value);
     const seperatedDate = stringValue.split(" ");
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);

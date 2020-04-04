@@ -29,11 +29,10 @@ const Products = props => {
   useEffect(() => {
     setIsLoading(true);
     props.getProducts();
-    products && setIsLoading(false);
 
-    // setTimeout(() => {
-    //   products.length > 0 && setIsLoading(false);
-    // }, 1500);
+    setTimeout(() => {
+      products.length > 0 && setIsLoading(false);
+    }, 1500);
   }, []);
 
   const productElements = products.map((item, i) => {
