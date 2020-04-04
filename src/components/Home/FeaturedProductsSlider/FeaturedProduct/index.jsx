@@ -10,13 +10,10 @@ const FeaturedProduct = props => {
     switch (sku) {
       case "cookies":
         return "From $34.12";
-        break;
       case "scone":
         return "From $30.00";
-        break;
       case "biscotti":
         return "From $30.00";
-        break;
       default:
         return "From $30.00";
     }

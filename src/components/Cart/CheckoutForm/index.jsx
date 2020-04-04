@@ -15,10 +15,7 @@ import {
 import "../../../assets/stylesheets/checkoutForm.css";
 
 const CheckoutForm = ({
-  cart: {
-    data: { productQuantity, totalPrice },
-    products
-  },
+  cart: { products },
   auth: {
     user: { name }
   }
@@ -219,7 +216,6 @@ const CheckoutForm = ({
                 type="submit"
                 className="modal-trigger"
                 href="#confirmModal"
-                node="button"
               >
                 Go to Confirmation
                 <ArrowRightAltIcon />

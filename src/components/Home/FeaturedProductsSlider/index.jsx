@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, withRouter } from "react-router-dom";
+import React from "react";
+import { withRouter } from "react-router-dom";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
 import Slider from "react-slick";
 import { connect } from "react-redux";

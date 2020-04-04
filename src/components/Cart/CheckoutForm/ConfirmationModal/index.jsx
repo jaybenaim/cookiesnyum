@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Button } from "react-materialize";
 import { connect } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../../../redux/actions/checkoutActions";
 import SendIcon from "@material-ui/icons/Send";
 import ConfirmationModalContent from "./ConfirmationModalContent";

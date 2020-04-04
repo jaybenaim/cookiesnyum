@@ -1,4 +1,7 @@
 @media (max-width: 450px) {
+  .featured-products-slider {
+    overflow: hidden;
+  }
   .featured-products-slider--cards {
     padding: 8% 10% 10% 10%;
     display: grid;
@@ -58,11 +61,6 @@
   }
 }
 @media (min-width: 451px) {
-  .featured-products-slider {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 5%;
-  }
   .featured-products-slider h3 {
     font-size: 4.5em;
     text-align: center;

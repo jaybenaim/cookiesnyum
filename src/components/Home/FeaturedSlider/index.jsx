@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import assorted from "../../../assets/images/promotions/assorted.jpg";
 import dozen from "../../../assets/images/promotions/dozen.jpg";
 import easter from "../../../assets/images/promotions/easter.JPG";
@@ -46,7 +46,7 @@ const FeaturedSlider = props => {
             <p>Our products are uniquely hand crafted and simply delicious </p>
             <Link className="featured-products-link btn" to="/products">
               {" "}
-              See Our Featured Items{" "}
+              See All Of Our Products{" "}
             </Link>
           </div>
         </div>
@@ -60,7 +60,7 @@ const FeaturedSlider = props => {
             </p>
             <Link className="featured-products-link btn" to="/products">
               {" "}
-              See Our Featured Items{" "}
+              See Our Featured Products{" "}
             </Link>
           </div>
         </div>
@@ -69,7 +69,13 @@ const FeaturedSlider = props => {
           <div className="text-box secondary-font">
             <h3>Happy Easter!</h3>
             <p>Check out our Mini Egg Easter Feature</p>
-            <Link className="featured-products-link btn" to="/products/23dae3s">
+            <Link
+              className="featured-products-link btn"
+              to={{
+                pathname: "/products",
+                state: { gallery: { filter: "featured" } }
+              }}
+            >
               {" "}
               See Our Featured Items{" "}
             </Link>

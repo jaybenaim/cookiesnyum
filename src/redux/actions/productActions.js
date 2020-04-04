@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, SET_PRODUCTS, GET_ERRORS } from "../types";
+import { SET_PRODUCTS, GET_ERRORS } from "../types";
 import backend from "../../api/backend";
 
 export const getProducts = () => dispatch => {

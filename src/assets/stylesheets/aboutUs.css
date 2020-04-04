@@ -10,7 +10,8 @@
     margin-bottom: 20%;
   }
   .about-us-grid img {
-    zoom: 1.4;
+    object-fit: contain;
+    zoom: 1.7;
   }
   .mobile-grid {
     background: #f6406f;

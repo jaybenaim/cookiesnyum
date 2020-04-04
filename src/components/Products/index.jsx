@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import "../../assets/stylesheets/products.css";
 import Item from "./Item";
 import { connect } from "react-redux";
@@ -20,12 +20,10 @@ const Products = props => {
   useEffect(() => {
     setIsLoading(true);
     props.getProducts();
+    return setIsLoading(false);
   }, []);
-
-  useEffect(() => {
-    products.length > 0 && setIsLoading(false);
-  }, [{}]);
-
+  // setTimeout(() => {
+  // }, 1000);
   const productElements = products.map((item, i) => {
     return (
       item.class.includes(filter) && (
