@@ -1,11 +1,16 @@
 @media (max-width: 450px) {
   .filter-container {
     width: 100%;
-    padding: 0 2%;
+    padding: 0 7%;
     grid-column: 1 / span 3;
   }
   .filter-container button {
     margin-left: 3%;
+  }
+  .preloader-wrapper {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10%;
   }
 }
 @media (min-width: 451px) {

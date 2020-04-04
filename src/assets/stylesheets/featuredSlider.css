@@ -10,7 +10,7 @@
     background: #f6406f;
     border: 1px solid #ef60a1;
     border-radius: 3px;
-    padding: 3%;
+    padding: 4% 4% 8% 4%;
     color: #fff;
     font-weight: 600;
     text-transform: uppercase;
@@ -18,10 +18,10 @@
   .featured-slide h3 {
     font-family: "Baloo 2", cursive;
   }
-  .slick-dots {
+  .featured-slider .slick-dots {
     position: relative;
     left: 30%;
-    top: 92%;
+    bottom: 10%;
   }
 }
 @media (min-width: 451px) {
@@ -66,6 +66,6 @@
   }
 }
 
-.slick-dots li button:before {
-  font-size: 24px !important;
+.featured-slider .slick-dots li button:before {
+  font-size: 22px !important;
 }

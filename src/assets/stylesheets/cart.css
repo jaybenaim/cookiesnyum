@@ -54,7 +54,7 @@
 }
 @media (max-width: 450px) {
   .bag--float-cart-closed {
-    left: -190px;
+    left: -70px;
   }
 }
 .bag__quantity,

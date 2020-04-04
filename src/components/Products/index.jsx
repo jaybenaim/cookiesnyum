@@ -6,17 +6,25 @@ import { connect } from "react-redux";
 import GalleryFilter from "./GalleryFilter";
 import { filterGallery } from "../../redux/actions/galleryActions";
 import { getProducts } from "../../redux/actions/productActions";
+import { Preloader } from "react-materialize";
+
 const Products = props => {
   const {
     gallery: { filter },
     products,
     navbar: { showDesktopNavbar }
   } = props;
+  const [isLoading, setIsLoading] = useState(false);
 
   // Component did mount (empty array sets method to run once)
   useEffect(() => {
+    setIsLoading(true);
     props.getProducts();
   }, []);
+
+  useEffect(() => {
+    products.length > 0 && setIsLoading(false);
+  }, [{}]);
 
   const productElements = products.map((item, i) => {
     return (
@@ -25,10 +33,9 @@ const Products = props => {
       )
     );
   });
-
   return (
     <div className="products-container">
-      {showDesktopNavbar === "" && (
+      {showDesktopNavbar === "" && window.innerWidth > 450 && (
         <h1 className="primary-font hidden-navbar-replacement">Dolcenada</h1>
       )}
       <div className="products--nav">
@@ -49,6 +56,7 @@ const Products = props => {
         )}
       </div>
       <GalleryFilter />
+      {isLoading && <Preloader active color="green" size="big" />}
 
       {productElements}
     </div>

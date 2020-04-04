@@ -31,6 +31,10 @@
   .item--card-body--name {
     grid-column: 1;
   }
+  .item--card-body--price {
+    font-weight: 900;
+    font-size: 1.7em;
+  }
 
   .item--card-body--description {
     grid-column: 1 / span 3;
@@ -46,6 +50,23 @@
     font-weight: 600;
     padding: 7% 9%;
     width: 120%;
+  }
+  .item--card-body--links .add-to-cart-btn {
+    grid-column: 4;
+    float: right;
+    width: 40%;
+    font-size: 1.2em;
+    right: 0;
+  }
+  .item--card-body--links .add-to-cart-btn button {
+    color: #000;
+    font-weight: 400;
+    padding: 5% 1%;
+  }
+  .item--card-body--links .add-to-cart-btn button svg {
+    color: #fff;
+    width: 1.3em;
+    height: 1.3em;
   }
 }
 @media (min-width: 451px) {

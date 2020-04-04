@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../../assets/stylesheets/productShow.css";
 import { AddCartButton } from "../../Cart/AddCartButton";
 import { connect } from "react-redux";
@@ -9,17 +9,27 @@ import PRODUCTS from "../products";
 import RelatedProductsSlider from "../RelatedProductsSlider";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
+import { getProducts } from "../../../redux/actions/productActions";
+
 const ProductShow = props => {
   const {
     item,
     item: { name, price, image, sku }
   } = props.location.state;
+  const { products } = props;
+
+  useEffect(() => {
+    props.getProducts();
+  }, []);
 
   // get related products
-  const relatedProducts = PRODUCTS.filter((p, i) => p.sku.includes(sku));
+
+  const relatedProducts = products.filter((p, i) => p.sku.includes(sku));
+
   const RelatedProductsElements = relatedProducts.map((product, i) => (
     <RelatedProductsSlider key={i} product={product} width={80} height={80} />
   ));
+
   const settings = {
     arrows: true,
     dots: true,
@@ -74,8 +84,9 @@ const ProductShow = props => {
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  products: state.products.products
 });
-export default connect(mapStateToProps, { addProduct })(
+export default connect(mapStateToProps, { addProduct, getProducts })(
   withRouter(ProductShow)
 );
