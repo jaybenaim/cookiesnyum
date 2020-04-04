@@ -14,6 +14,9 @@ const Products = props => {
     products,
     navbar: { showDesktopNavbar }
   } = props;
+  const {
+    gallery: { filter: linkFilter }
+  } = props.location.state;
   const [isLoading, setIsLoading] = useState(false);
 
   // Component did mount (empty array sets method to run once)
@@ -26,8 +29,8 @@ const Products = props => {
   // }, 1000);
   const productElements = products.map((item, i) => {
     return (
-      item.class.includes(filter) && (
-        <Item {...item} item={item} key={i} filter={filter} />
+      item.class.includes(filter || linkFilter) && (
+        <Item {...item} item={item} key={i} filter={filter || linkFilter} />
       )
     );
   });

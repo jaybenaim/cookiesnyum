@@ -3,14 +3,28 @@
     width: 100%;
     padding: 0 7%;
     grid-column: 1 / span 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
   }
-  .filter-container button {
+  .filter-container .all-filter-link,
+  .filter-container .cookie-filter-link,
+  .filter-container .scone-filter-link,
+  .filter-container .biscotti-filter-link {
     margin-left: 3%;
+    grid-row: 1;
   }
   .preloader-wrapper {
     display: flex;
     margin: 0 auto;
     margin-top: 10%;
+  }
+  .featured-filter-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    grid-column: 2;
+    width: 200%;
+    margin-left: 15%;
   }
 }
 @media (min-width: 451px) {

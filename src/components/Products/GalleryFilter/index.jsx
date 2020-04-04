@@ -50,6 +50,15 @@ const GalleryFilter = props => {
       >
         Biscotti
       </Button>
+      <Button
+        node="button"
+        waves="light"
+        className="featured-filter-link"
+        name="featured"
+        onClick={e => handleFilterClick(e)}
+      >
+        Featured
+      </Button>
     </div>
   );
 };
