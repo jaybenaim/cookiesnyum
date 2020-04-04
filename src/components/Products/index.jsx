@@ -9,14 +9,20 @@ import { getProducts } from "../../redux/actions/productActions";
 import { Preloader } from "react-materialize";
 
 const Products = props => {
-  const {
+  let {
+    gallery,
     gallery: { filter },
     products,
     navbar: { showDesktopNavbar }
   } = props;
-  const {
-    gallery: { filter: linkFilter }
-  } = props.location.state;
+
+  if (!gallery) {
+    const {
+      gallery: { filter: linkFilter }
+    } = props.location.state;
+    gallery.filter = linkFilter;
+  }
+
   const [isLoading, setIsLoading] = useState(false);
 
   // Component did mount (empty array sets method to run once)
@@ -25,37 +31,35 @@ const Products = props => {
     props.getProducts();
     return setIsLoading(false);
   }, []);
-  // setTimeout(() => {
-  // }, 1000);
+
   const productElements = products.map((item, i) => {
     return (
-      item.class.includes(filter || linkFilter) && (
-        <Item {...item} item={item} key={i} filter={filter || linkFilter} />
+      item.class.includes(filter) && (
+        <Item {...item} item={item} key={i} filter={filter} />
       )
     );
   });
+  const width = window.innerWidth;
   return (
     <div className="products-container">
-      {showDesktopNavbar === "" && window.innerWidth > 450 && (
+      {showDesktopNavbar === "" && width > 450 && (
         <h1 className="primary-font hidden-navbar-replacement">Dolcenada</h1>
       )}
-      <div className="products--nav">
-        <a href="/dolcenadaa/">Home</a> /
-        <a href="/dolcenadaa/products"> Products</a>
-        {filter && (
-          <>
-            {" "}
-            /{" "}
+      <div className="products-container--products-nav-container">
+        <div className="products--nav">
+          <a href="/dolcenadaa/">Home</a> /
+          <a href="/dolcenadaa/products"> Products</a> <br />
+          {filter && (
             <a
               href="/dolcenadaa/products"
               onClick={() => props.filterGallery(filter)}
             >
-              {" "}
-              {filter}
+              / {filter}
             </a>
-          </>
-        )}
+          )}
+        </div>
       </div>
+
       <GalleryFilter />
       {isLoading && <Preloader active color="green" size="big" />}
 

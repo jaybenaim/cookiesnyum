@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../../assets/stylesheets/productShow.css";
 import { AddCartButton } from "../../Cart/AddCartButton";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { addProduct } from "../../../redux/actions/cartActions";
 import { formatPrice } from "../../../helpers";
 import RelatedProductsSlider from "../RelatedProductsSlider";
@@ -10,6 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
 import { getProducts } from "../../../redux/actions/productActions";
 import { Preloader } from "react-materialize";
+import { filterGallery } from "../../../redux/actions/galleryActions";
 const ProductShow = props => {
   const {
     item,
@@ -30,20 +31,29 @@ const ProductShow = props => {
   const RelatedProductsElements = relatedProducts.map((product, i) => (
     <RelatedProductsSlider key={i} product={product} width={80} height={80} />
   ));
-
+  const formattedSku = sku.replace("-", "");
   const settings = {
     arrows: true,
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 3
   };
+  console.log(formattedSku);
   return (
     <div className="product-show-container">
       <div className="products--nav">
-        <a href="/dolcenadaa/">Home</a> /
-        <a href="/dolcenadaa/products"> Products</a> /{" "}
-        <a href="/dolcenadaa/products"> {sku.replace("-", "")}</a> /{" "}
-        <a href={`/dolcenadaa/products/${sku}`}> {name}</a>
+        <a href="/dolcenadaa/">Home /</a>
+        <a href="/dolcenadaa/products"> Products /</a>{" "}
+        <Link
+          to={{
+            pathname: "/products",
+            state: { filter: formattedSku }
+          }}
+          onClick={() => props.filterGallery(formattedSku)}
+        >
+          {formattedSku}
+        </Link>
+        <a href={`/dolcenadaa/products/${sku}`}> / {name}</a>
       </div>
 
       <div className=" product-show--card">
@@ -92,6 +102,8 @@ const mapStateToProps = state => ({
   errors: state.errors,
   products: state.products.products
 });
-export default connect(mapStateToProps, { addProduct, getProducts })(
-  withRouter(ProductShow)
-);
+export default connect(mapStateToProps, {
+  addProduct,
+  getProducts,
+  filterGallery
+})(withRouter(ProductShow));

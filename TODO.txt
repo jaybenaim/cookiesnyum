@@ -26,3 +26,6 @@ addToCart move to product/Item.js
 
 
 replace console.log errors with error function in redux (in catch) 
+
+/products page 
+- fix nav to show only one name on a line 

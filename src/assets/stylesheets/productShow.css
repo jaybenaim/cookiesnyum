@@ -4,9 +4,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 40%;
   }
-  .product-show-container .products--nav {
-    grid-column: 1;
-  }
+
   .product-show--card {
     grid-column: 1 / span 3;
     min-width: 100%;

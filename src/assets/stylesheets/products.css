@@ -1,4 +1,13 @@
 @media (max-width: 450px) {
+  .products-container--products-nav-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1% 2%;
+  }
+  .products--nav {
+    grid-column: 1;
+    width: 50%;
+  }
 }
 @media (min-width: 450px) {
   .products-container {
