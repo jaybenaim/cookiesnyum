@@ -45,3 +45,8 @@ button:active {
 .secondary-font {
   font-family: "Baloo 2", cursive;
 }
+
+/* loader */
+.circle-clipper {
+  border-color: #f6406f;
+}

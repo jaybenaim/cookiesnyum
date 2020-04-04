@@ -29,7 +29,11 @@ const Products = props => {
   useEffect(() => {
     setIsLoading(true);
     props.getProducts();
-    return setIsLoading(false);
+    products && setIsLoading(false);
+
+    // setTimeout(() => {
+    //   products.length > 0 && setIsLoading(false);
+    // }, 1500);
   }, []);
 
   const productElements = products.map((item, i) => {
@@ -39,6 +43,7 @@ const Products = props => {
       )
     );
   });
+
   const width = window.innerWidth;
   return (
     <div className="products-container">
