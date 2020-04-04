@@ -26,7 +26,8 @@ const NavBar = props => {
     fadeBackground,
     fade,
     auth: { isAuthenticated },
-    logoutUser: handleLogoutUser
+    logoutUser: handleLogoutUser,
+    navbar: { showDesktopNavbar }
   } = props;
   const [checkoutForm, showCheckoutForm] = useState(false);
 
@@ -52,7 +53,9 @@ const NavBar = props => {
         handleCheckout={handleCheckoutCart}
         checkoutForm={checkoutForm}
       />
-      <nav className={`navbar navbar-expand-sm navbar-light  ${fade} `}>
+      <nav
+        className={`navbar navbar-expand-sm navbar-light  ${fade} ${showDesktopNavbar}`}
+      >
         {nav ? (
           <>
             <div className={`nav-collapse left-nav fade-in-left`}>
@@ -166,7 +169,8 @@ const NavBar = props => {
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  navbar: state.navbar
 });
 
 export default connect(mapStateToProps, { logoutUser, sendEmail })(

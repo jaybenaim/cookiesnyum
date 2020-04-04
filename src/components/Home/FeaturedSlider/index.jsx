@@ -6,9 +6,10 @@ import "../../../assets/stylesheets/featuredSlider.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
-
-const FeaturedSlider = () => {
+import { Link, withRouter } from "react-router-dom";
+import { toggleNavbar } from "../../../redux/actions/navbarActions";
+import { connect } from "react-redux";
+const FeaturedSlider = props => {
   const settings = {
     dots: true,
     infinite: true,
@@ -20,16 +21,19 @@ const FeaturedSlider = () => {
     cssEase: "linear",
     pauseOnDotsHover: true
   };
-  const [navClass, setNavClass] = useState("");
-
+  let {
+    navbar: { dropMainContent }
+  } = props;
   return (
     <>
       <Slider {...settings} id="featured">
-        <div className={`featured-slide ${navClass}`}>
+        <div className={`featured-slide ${dropMainContent}`}>
           <div
             className="featured-slide--hidden-nav-trigger"
-            onMouseEnter={() => setNavClass("slideIn")}
-            onMouseLeave={() => setNavClass("")}
+            onMouseEnter={() =>
+              props.toggleNavbar({ content: "slideDown", nav: "dropDown" })
+            }
+            onMouseLeave={() => props.toggleNavbar({ content: "", nav: "" })}
           ></div>
           <img
             src={assorted}
@@ -75,4 +79,11 @@ const FeaturedSlider = () => {
     </>
   );
 };
-export default FeaturedSlider;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors,
+  navbar: state.navbar
+});
+export default withRouter(
+  connect(mapStateToProps, { toggleNavbar })(FeaturedSlider)
+);

@@ -4,4 +4,11 @@
   .products-container {
     margin-top: 2% !important;
   }
+  .hidden-navbar-replacement {
+    text-align: center;
+    grid-column: 1 / span 5;
+    margin-top: -10%;
+    font-size: 5em;
+    color: #000;
+  }
 }

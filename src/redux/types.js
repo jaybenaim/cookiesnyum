@@ -11,3 +11,4 @@ export const SEND_EMAIL = "SEND_EMAIL";
 export const FILTER_GALLERY = "FILTER_GALLERY";
 export const GET_PRODUCTS = "GET_PRODUCTS";
 export const SET_PRODUCTS = "SET_PRODUCTS";
+export const TOGGLE_NAVBAR = "TOGGLE_NAVBAR";

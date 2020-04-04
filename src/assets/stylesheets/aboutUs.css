@@ -56,6 +56,13 @@
     background: #f6406f;
     color: white;
   }
+  .bottom .btn:active,
+  .bottom button,
+  .bottom .btn:focus,
+  .bottom .btn:hover {
+    background: #f6406f;
+    color: #fff;
+  }
   [alt="slogan"] {
     position: absolute;
     left: 0;

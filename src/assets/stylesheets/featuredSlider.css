@@ -27,7 +27,7 @@
 @media (min-width: 451px) {
   .featured-slide--hidden-nav-trigger {
     width: 100%;
-    min-height: 100px;
+    min-height: 140px;
     position: fixed;
     top: 0;
     z-index: 9999999;

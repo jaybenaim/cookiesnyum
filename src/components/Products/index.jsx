@@ -9,7 +9,8 @@ import { getProducts } from "../../redux/actions/productActions";
 const Products = props => {
   const {
     gallery: { filter },
-    products
+    products,
+    navbar: { showDesktopNavbar }
   } = props;
 
   // Component did mount (empty array sets method to run once)
@@ -27,6 +28,9 @@ const Products = props => {
 
   return (
     <div className="products-container">
+      {showDesktopNavbar === "" && (
+        <h1 className="primary-font hidden-navbar-replacement">Dolcenada</h1>
+      )}
       <div className="products--nav">
         <a href="/dolcenadaa/">Home</a> /
         <a href="/dolcenadaa/products"> Products</a>
@@ -56,7 +60,8 @@ const mapStateToProps = state => ({
   errors: state.errors,
   cart: state.cart,
   gallery: state.gallery,
-  products: state.products.products
+  products: state.products.products,
+  navbar: state.navbar
 });
 export default connect(mapStateToProps, { filterGallery, getProducts })(
   withRouter(Products)

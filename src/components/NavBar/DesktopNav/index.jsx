@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { logoutUser } from "../../../redux/actions/authActions";
+import { toggleNavbar } from "../../../redux/actions/navbarActions";
 import "../../../assets/stylesheets/navbar.css";
 import "../../../assets/stylesheets/desktopNav.css";
 
@@ -10,13 +11,14 @@ const navLinkStyle = {
   borderRadius: "3px",
   letterSpacing: "1.5px"
 };
-const DesktopNav = ({
-  auth: {
-    user: { name },
-    isAuthenticated
-  },
-  logoutUser: handleLogoutUser
-}) => {
+const DesktopNav = props => {
+  const {
+    auth: {
+      user: { name },
+      isAuthenticated
+    },
+    logoutUser: handleLogoutUser
+  } = props;
   const onLogoutClick = e => {
     e.preventDefault();
     handleLogoutUser();
@@ -26,11 +28,24 @@ const DesktopNav = ({
     ? "desktop-nav desktop-nav-show"
     : "desktop-nav desktop-nav-hide";
   return (
-    <div className="desktop-nav-container">
+    <div
+      className="desktop-nav-container "
+      onMouseLeave={() => props.toggleNavbar({ content: "", nav: "" })}
+    >
+      <div
+        className="desktop-nav--hidden-nav-trigger"
+        onMouseEnter={() =>
+          props.toggleNavbar({ content: "slideDown", nav: "dropDown" })
+        }
+      ></div>
       <div
         className="welcome-container"
-        onMouseEnter={() => toggleDesktopNav(!displayDesktopNav)}
-        onMouseLeave={() => toggleDesktopNav(!displayDesktopNav)}
+        onMouseEnter={() => {
+          toggleDesktopNav(!displayDesktopNav);
+        }}
+        onMouseLeave={() => {
+          toggleDesktopNav(!displayDesktopNav);
+        }}
       >
         {" "}
         <div className="seconday-font">
@@ -73,6 +88,13 @@ const DesktopNav = ({
         )}
       </div>
       <Link
+        className="center white-text desktop-nav--home-link"
+        to="/"
+        style={navLinkStyle}
+      >
+        Home
+      </Link>
+      <Link
         className="center white-text desktop-nav--products-link"
         to="/products"
         style={navLinkStyle}
@@ -87,4 +109,6 @@ const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
-export default withRouter(connect(mapStateToProps, { logoutUser })(DesktopNav));
+export default withRouter(
+  connect(mapStateToProps, { logoutUser, toggleNavbar })(DesktopNav)
+);
