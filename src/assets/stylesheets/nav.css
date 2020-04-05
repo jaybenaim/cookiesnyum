@@ -9,12 +9,6 @@
   }
 }
 @media (min-width: 451px) {
-  .sidenav {
-    z-index: 9999999;
-  }
-  .sidenav-overlay {
-    z-index: 999999;
-  }
   .sidenav-trigger {
     margin-left: -55px;
   }
@@ -46,6 +40,12 @@
 }
 nav {
   background: #f6406f !important;
+}
+.sidenav {
+  z-index: 99999999;
+}
+.sidenav-overlay {
+  z-index: 999999;
 }
 .brand-logo {
   z-index: 999999;

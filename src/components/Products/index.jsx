@@ -29,9 +29,9 @@ const Products = props => {
     setIsLoading(true);
     props.getProducts();
   }, []);
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
+  setTimeout(() => {
+    products.length > 0 && setIsLoading(false);
+  }, 1000);
 
   const productElements = products.map((item, i) => {
     return (

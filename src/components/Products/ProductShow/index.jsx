@@ -34,12 +34,14 @@ const ProductShow = props => {
     <RelatedProductsSlider key={i} product={product} width={80} height={80} />
   ));
   const formattedSku = sku.replace("-", "");
-
+  const slides = relatedProducts.length > 3 ? 3 : relatedProducts.length;
   const settings = {
     arrows: true,
     dots: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToShow: slides,
+    slidesToScroll: slides,
+    focusOnSelect: false,
+    swipe: true
   };
   return (
     <div className="product-show-container">
@@ -48,8 +50,7 @@ const ProductShow = props => {
         <a href="/dolcenadaa/products"> Products /</a>{" "}
         <Link
           to={{
-            pathname: "/products",
-            state: { filter: formattedSku }
+            pathname: "/products"
           }}
           onClick={() => props.filterGallery(formattedSku)}
         >
@@ -83,15 +84,20 @@ const ProductShow = props => {
           </div>
           <div className="product-show--card-body--related-products">
             <h3>Related Products</h3>
-            <Slider {...settings}>
-              {isLoading ? (
-                <div>
-                  <Preloader active color="green" />
-                </div>
-              ) : (
-                RelatedProductsElements
-              )}
-            </Slider>
+            {isLoading ? (
+              <div>
+                <Preloader active color="green" />
+              </div>
+            ) : (
+              <Link
+                to={{
+                  pathname: "/products"
+                }}
+                onClick={() => props.filterGallery(formattedSku)}
+              >
+                <Slider {...settings}>{RelatedProductsElements}</Slider>
+              </Link>
+            )}
           </div>
         </div>
       </div>

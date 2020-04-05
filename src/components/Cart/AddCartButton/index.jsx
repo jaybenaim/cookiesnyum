@@ -25,14 +25,14 @@ export class AddCartButton extends Component {
   render() {
     const { product, styles, addLabel } = this.props;
     return (
-      <div className="add-to-cart-btn">
+      <p className="add-to-cart-btn">
         <button
           style={{ ...styles }}
           onClick={event => this.addProductToCart(event, product)}
         >
           <AddCircleOutlineIcon /> {addLabel}
         </button>
-      </div>
+      </p>
     );
   }
 }

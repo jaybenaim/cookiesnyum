@@ -51,13 +51,13 @@ class Item extends Component {
             {this.shortDescription(description)}
           </p>
           {/* <p className="item--card-body--price">{formatPrice(price, "CAD")}</p> */}
-          <p className="item--card-body--add-to-cart">
+          <div className="item--card-body--add-to-cart">
             <AddCartButton
               product={item}
               addLabel={formatPrice(price, "CAD")}
               addProduct={this.props.addProduct}
             />
-          </p>
+          </div>
         </div>
       </div>
     );

@@ -2,7 +2,6 @@
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./App.css";
 import {
-  NavBar,
   Footer,
   Register,
   Login,
@@ -41,9 +40,6 @@ if (localStorage.jwtToken) {
 
 //TODO Web Template Studio: Adrsd routes for your new pages here.
 const App = ({ errors, history }) => {
-  const [nav, showNav] = useState(false);
-  const [fade, fadeBackground] = useState("");
-
   const [checkoutForm, showCheckoutForm] = useState(false);
 
   const handleCheckoutCart = data => {
@@ -75,21 +71,13 @@ const App = ({ errors, history }) => {
       )}
       <Switch>
         <>
-          <Route
-            exact
-            path="/"
-            render={props => <Home {...props} nav={nav} fade={fade} />}
-          />
+          <Route exact path="/" render={props => <Home {...props} />} />
           <Route
             exact
             path="/register"
-            render={props => <Register {...props} fade={fade} />}
+            render={props => <Register {...props} />}
           />
-          <Route
-            exact
-            path="/login"
-            render={props => <Login {...props} fade={fade} />}
-          />
+          <Route exact path="/login" render={props => <Login {...props} />} />
           <Route
             exact
             path="/products"

@@ -1,6 +1,6 @@
 import React from "react";
 import { logoutUser } from "../../redux/actions/authActions";
-import { withRouter, NavLink } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 const Auth = props => {
   const {
