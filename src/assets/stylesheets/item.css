@@ -10,11 +10,11 @@
   .item--card {
     display: grid !important;
     border: none !important;
-
     grid-template-columns: 1fr 1fr 1fr;
     margin: 6%;
     margin-top: 10%;
     padding: 2%;
+    margin-bottom: 16%;
   }
   .item--card-body {
     grid-column: 2 / span 3 !important;
@@ -32,50 +32,40 @@
     padding: 2%;
   }
   .item--card-body--name {
-    grid-column: 1;
+    grid-column: 1 / span 3;
     color: #000;
   }
   .item--card-body--price {
-    grid-row: 2;
-    grid-column: 3;
+    grid-row: 3;
+    grid-column: 1;
     font-weight: 900;
     font-size: 1.7em;
-    position: absolute;
-    right: 7%;
+    position: relative;
+    top: 20%;
+    left: 4%;
   }
 
   .item--card-body--description {
     grid-column: 1 / span 3;
-    grid-row: 4;
+    grid-row: 2;
   }
-  .item--card-body--links {
+  .item--card-body--add-to-cart {
     grid-row: 4;
-    grid-column: 2 / span 3;
-    margin-left: 10%;
+    position: relative;
   }
-  .item--card-body--links button {
+  .item--card-body--add-to-cart {
+    grid-column: 1 / span 3;
+  }
+  .item--card-body--add-to-cart button {
     background: transparent;
+    font-weight: 900;
+    font-size: 1.7em;
+  }
+
+  .item--card-body--add-to-cart button svg {
+    width: 1.6em;
+    height: 1.6em;
     color: #f6406f;
-    font-weight: 600;
-    padding: 7% 9%;
-    width: 120%;
-  }
-  .item--card-body--links .add-to-cart-btn {
-    grid-column: 4;
-    float: right;
-    width: 40%;
-    font-size: 1.2em;
-    right: 0;
-  }
-  .item--card-body--links .add-to-cart-btn button {
-    color: #000;
-    font-weight: 400;
-    padding: 5% 1%;
-  }
-  .item--card-body--links .add-to-cart-btn button svg {
-    color: #f6406f;
-    width: 1.3em;
-    height: 1.3em;
   }
 }
 @media (min-width: 451px) {
@@ -135,34 +125,6 @@
     font-weight: 900;
     font-size: 1.2em;
     text-align: right;
-  }
-  .item--card-body--links {
-    grid-row: 1;
-    grid-column: 3;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-  }
-
-  .item--card-body--links .add-to-cart-btn {
-    grid-column: 3;
-    grid-row: 1;
-    margin: 0 auto;
-    margin-top: -90%;
-    width: 100%;
-    font-size: 1.2em;
-  }
-  .item--card-body--links .add-to-cart-btn button {
-    grid-column: 1 / span 3;
-    color: #000;
-    font-weight: 400;
-    padding: 5% 10%;
-  }
-  .item--card-body--links .add-to-cart-btn button svg {
-    color: #f6406f;
-    width: 1.3em;
-    height: 1.3em;
   }
 }
 @media (min-width: 789px) {

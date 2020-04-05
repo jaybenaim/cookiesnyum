@@ -126,7 +126,7 @@ export class Cart extends Component {
             product={product}
             removeProduct={removeProduct}
             currencySymbol={currencySymbol}
-            key={product.id}
+            key={product._id}
             quantityTextLabel={quantityTextLabel}
           />
         );

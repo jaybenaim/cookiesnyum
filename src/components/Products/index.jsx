@@ -26,7 +26,11 @@ const Products = props => {
 
   // Component did mount (empty array sets method to run once)
   useEffect(() => {
+    setIsLoading(true);
     props.getProducts();
+  }, []);
+  useEffect(() => {
+    setIsLoading(false);
   }, []);
 
   const productElements = products.map((item, i) => {
@@ -56,7 +60,6 @@ const Products = props => {
 
       <GalleryFilter />
       {isLoading && <Preloader active color="green" size="big" />}
-
       {productElements}
     </div>
   );

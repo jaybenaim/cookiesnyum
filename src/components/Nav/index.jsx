@@ -3,7 +3,6 @@ import { Icon, Navbar, NavItem } from "react-materialize";
 import { logo } from "../../assets/images";
 import "../../assets/stylesheets/nav.css";
 import Auth from "../Auth";
-
 const Nav = () => {
   return (
     <Navbar

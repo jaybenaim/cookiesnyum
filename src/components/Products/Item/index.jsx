@@ -10,9 +10,9 @@ class Item extends Component {
   shortDescription = description => {
     return !description
       ? ""
-      : description.length <= 15
+      : description.length <= 25
       ? description
-      : description.slice(0, 15) + "...";
+      : description.slice(0, 25) + "...";
   };
   render() {
     let { item, name, quantity, sku, description, price } = this.props;
@@ -50,16 +50,14 @@ class Item extends Component {
           <p className="item--card-body--description">
             {this.shortDescription(description)}
           </p>
-          <p className="item--card-body--price">{formatPrice(price, "CAD")}</p>
-
-          <span className="item--card-body--links">
+          {/* <p className="item--card-body--price">{formatPrice(price, "CAD")}</p> */}
+          <p className="item--card-body--add-to-cart">
             <AddCartButton
               product={item}
-              addLabel={``}
+              addLabel={formatPrice(price, "CAD")}
               addProduct={this.props.addProduct}
-              className="add-to-cart"
             />
-          </span>
+          </p>
         </div>
       </div>
     );
