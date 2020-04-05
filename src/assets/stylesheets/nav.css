@@ -1,0 +1,56 @@
+@media (max-width: 450px) {
+}
+@media (min-width: 451px) {
+  .sidenav {
+    z-index: 9999999;
+  }
+  .sidenav-overlay {
+    z-index: 999999;
+  }
+  .sidenav-trigger {
+    margin-left: -55px;
+  }
+  .sidenav-logo {
+    position: absolute;
+    bottom: 27%;
+    width: 100%;
+    margin: 0 16%;
+  }
+  .auth-content {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+  }
+}
+@media (min-width: 601px) {
+  .auth-content a {
+    width: 10px !important;
+  }
+  .auth-link {
+    width: 5%;
+    background: transparent;
+    padding: 0;
+  }
+  #register {
+    display: none;
+  }
+}
+nav {
+  background: #f6406f !important;
+}
+.brand-logo {
+  z-index: 999999;
+}
+.auth-link {
+  width: 100%;
+  color: #fff;
+  border-radius: 3px;
+  letter-spacing: "1.5px";
+  margin-top: "1rem";
+  background: "#f6406f";
+  background: #f6406f !important;
+  color: white !important;
+}
+.auth-content a {
+  padding-top: 5%;
+}

@@ -19,7 +19,6 @@
     padding-bottom: 10%;
     margin: 0 auto;
     width: 100%;
-    margin-top: -170px;
   }
   .slideDown {
     animation-name: slideDown;

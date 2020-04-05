@@ -17,6 +17,7 @@ import store from "./redux/store";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
+import Nav from "./components/Nav";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -48,12 +49,13 @@ const App = ({ errors, history }) => {
       {errors.response && errors.response.status ? (
         ""
       ) : (
-        <NavBar
-          showNav={showNav}
-          fadeBackground={fadeBackground}
-          nav={nav}
-          fade={fade}
-        />
+        // <NavBar
+        //   showNav={showNav}
+        //   fadeBackground={fadeBackground}
+        //   nav={nav}
+        //   fade={fade}
+        // />
+        <Nav />
       )}
       <Switch>
         <>

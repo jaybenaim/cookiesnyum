@@ -12,8 +12,7 @@ const Products = props => {
   let {
     gallery,
     gallery: { filter },
-    products,
-    navbar: { showDesktopNavbar }
+    products
   } = props;
 
   if (!gallery) {
@@ -47,9 +46,6 @@ const Products = props => {
   const width = window.innerWidth;
   return (
     <div className="products-container">
-      {showDesktopNavbar === "" && width > 450 && (
-        <h1 className="primary-font hidden-navbar-replacement">Dolcenada</h1>
-      )}
       <div className="products-container--products-nav-container">
         <div className="products--nav">
           <a href="/dolcenadaa/">Home</a> /
@@ -78,8 +74,7 @@ const mapStateToProps = state => ({
   errors: state.errors,
   cart: state.cart,
   gallery: state.gallery,
-  products: state.products.products,
-  navbar: state.navbar
+  products: state.products.products
 });
 export default connect(mapStateToProps, { filterGallery, getProducts })(
   withRouter(Products)

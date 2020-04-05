@@ -36,7 +36,7 @@
     min-height: 140px;
     position: fixed;
     top: 0;
-    z-index: 9999999;
+    z-index: 9999;
   }
 
   .featured-slide h3 {

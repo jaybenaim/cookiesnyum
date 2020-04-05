@@ -28,13 +28,6 @@ const FeaturedSlider = props => {
     <>
       <Slider {...settings} id="featured">
         <div className={`featured-slide ${dropMainContent}`}>
-          <div
-            className="featured-slide--hidden-nav-trigger"
-            onMouseEnter={() =>
-              props.toggleNavbar({ content: "slideDown", nav: "dropDown" })
-            }
-            onMouseLeave={() => props.toggleNavbar({ content: "", nav: "" })}
-          ></div>
           <img
             src={assorted}
             alt="chocolate-cookie"

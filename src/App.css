@@ -1,4 +1,7 @@
-﻿html {
+﻿#root > div > div {
+  z-index: 999999 !important;
+}
+html {
   position: relative;
   min-height: 100%;
   max-width: 100%;
