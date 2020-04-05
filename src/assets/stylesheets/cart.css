@@ -9,7 +9,7 @@
   background-color: #fff;
   box-sizing: border-box;
   transition: right 0.2s;
-  z-index: 9999;
+  z-index: 9999999;
 }
 
 .float-open {
@@ -41,7 +41,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  z-index: 99999999;
 }
 
 .bag--float-cart-closed {
@@ -52,6 +51,7 @@
   width: 60px;
   height: 60px;
   cursor: pointer;
+  top: -4px;
 }
 @media (max-width: 450px) {
   .bag--float-cart-closed {

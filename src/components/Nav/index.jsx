@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon, Navbar, NavItem } from "react-materialize";
-import { Link } from "react-router-dom";
 import { logo } from "../../assets/images";
 import "../../assets/stylesheets/nav.css";
 import Auth from "../Auth";
+
 const Nav = () => {
   return (
     <Navbar

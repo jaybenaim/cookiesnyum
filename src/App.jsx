@@ -18,6 +18,7 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
 import Nav from "./components/Nav";
+import Cart from "./components/Cart";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -43,19 +44,34 @@ const App = ({ errors, history }) => {
   const [nav, showNav] = useState(false);
   const [fade, fadeBackground] = useState("");
 
+  const [checkoutForm, showCheckoutForm] = useState(false);
+
+  const handleCheckoutCart = data => {
+    showCheckoutForm(!checkoutForm);
+  };
+
+  const cartOptions = {
+    currencySymbol: "CAD",
+    checkoutTextLabel: "Confirm",
+    subTotalTextLabel: "Total",
+    cartTextLabel: "Cart",
+    quantityTextLabel: "Quantity"
+  };
+
   errors.response && errors.response.status && history.push("/404");
   return (
     <React.Fragment>
       {errors.response && errors.response.status ? (
         ""
       ) : (
-        // <NavBar
-        //   showNav={showNav}
-        //   fadeBackground={fadeBackground}
-        //   nav={nav}
-        //   fade={fade}
-        // />
-        <Nav />
+        <>
+          <Nav />
+          <Cart
+            {...cartOptions}
+            handleCheckout={handleCheckoutCart}
+            checkoutForm={checkoutForm}
+          />
+        </>
       )}
       <Switch>
         <>
