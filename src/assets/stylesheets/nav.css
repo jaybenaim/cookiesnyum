@@ -12,7 +12,7 @@
   }
   .sidenav-logo {
     position: absolute;
-    bottom: 27%;
+    bottom: 35%;
     width: 100%;
     margin: 0 16%;
   }
@@ -22,14 +22,26 @@
     width: 100%;
   }
 }
-@media (min-width: 601px) {
+.auth-content a {
+  padding-top: 5%;
+  width: 100% !important;
+}
+@media (min-width: 989px) {
   .auth-content a {
     width: 10px !important;
   }
   .auth-link {
-    width: 5%;
     background: transparent;
     padding: 0;
+  }
+  #login {
+    width: 9% !important;
+    position: absolute;
+    padding: 1% !important;
+    padding-top: 1.5% !important;
+    margin: 0 !important;
+    top: -53px !important;
+    box-shadow: none !important;
   }
   #register {
     display: none;
@@ -50,7 +62,4 @@ nav {
   background: "#f6406f";
   background: #f6406f !important;
   color: white !important;
-}
-.auth-content a {
-  padding-top: 5%;
 }

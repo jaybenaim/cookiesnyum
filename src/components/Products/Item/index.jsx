@@ -33,8 +33,8 @@ class Item extends Component {
             className="item--card--img"
             src={image[0]["image"]}
             alt={name}
-            height={120}
-            width={120}
+            height={220}
+            width={220}
           />
         </Link>
         <div className="item--card-body secondary-font">

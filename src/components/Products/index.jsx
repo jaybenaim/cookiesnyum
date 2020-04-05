@@ -26,13 +26,7 @@ const Products = props => {
 
   // Component did mount (empty array sets method to run once)
   useEffect(() => {
-    setIsLoading(true);
     props.getProducts();
-    setTimeout(() => {
-      products
-        ? setIsLoading(false)
-        : setTimeout(() => setIsLoading(false), 5000);
-    }, 1500);
   }, []);
 
   const productElements = products.map((item, i) => {
@@ -43,7 +37,6 @@ const Products = props => {
     );
   });
 
-  const width = window.innerWidth;
   return (
     <div className="products-container">
       <div className="products-container--products-nav-container">

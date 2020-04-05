@@ -104,10 +104,10 @@ class Login extends Component {
                       width: "150px",
                       borderRadius: "3px",
                       letterSpacing: "1.5px",
-                      marginTop: "1rem"
+                      marginTop: "1rem",
+                      background: "#f6406f"
                     }}
                     type="submit"
-                    id="login"
                     className="btn btn-large waves-effect waves-light hoverable blue accent-3 "
                   >
                     Login
