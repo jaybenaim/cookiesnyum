@@ -1,4 +1,12 @@
 @media (max-width: 450px) {
+  .brand-logo img {
+    position: relative;
+    z-index: 1;
+  }
+  nav {
+    position: relative;
+    z-index: 2;
+  }
 }
 @media (min-width: 451px) {
   .sidenav {
@@ -9,17 +17,6 @@
   }
   .sidenav-trigger {
     margin-left: -55px;
-  }
-  .sidenav-logo {
-    position: absolute;
-    bottom: 35%;
-    width: 100%;
-    margin: 0 16%;
-  }
-  .auth-content {
-    position: absolute;
-    bottom: 10%;
-    width: 100%;
   }
 }
 .auth-content a {
@@ -53,6 +50,11 @@ nav {
 .brand-logo {
   z-index: 999999;
 }
+.auth-content {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
 .auth-link {
   width: 100%;
   color: #fff;
@@ -62,4 +64,13 @@ nav {
   background: "#f6406f";
   background: #f6406f !important;
   color: white !important;
+}
+#login {
+  margin-bottom: 4%;
+}
+.sidenav-logo {
+  position: absolute;
+  bottom: 35%;
+  width: 100%;
+  margin: 0 16%;
 }
