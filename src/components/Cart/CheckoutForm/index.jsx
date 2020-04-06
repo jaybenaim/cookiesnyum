@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import ConfirmationModal from "./ConfirmationModal";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
-
+import { Input } from "@material-ui/core";
 import {
   TextInput,
   Button,
@@ -29,7 +29,12 @@ const CheckoutForm = ({
   const [province, setProvince] = useState("");
   const [postalCode, setPostalCode] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
-  const [date, setDate] = useState("");
+
+  let numWeeks = 1;
+  let now = new Date();
+  now.setDate(now.getDate() + numWeeks * 7);
+  let firstAvailableDateForPickup = now;
+  const [date, setDate] = useState(firstAvailableDateForPickup.toDateString());
 
   const checkoutData = {
     name: {
@@ -57,12 +62,23 @@ const CheckoutForm = ({
     setPaymentMethod(value);
   };
 
-  const handleSetDate = value => {
+  const handleSetDate = (e, value) => {
     const stringValue = String(value);
     const seperatedDate = stringValue.split(" ");
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
 
+  // console.log(firstAvailableDateForPickup.toDateString());
+  const handleDisabledDays = () => {
+    // get every day in between
+    // let disableListDate = [firstAvailableDateForPickup.toDateString()];
+    // if (now.includes(date.toDateString())) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    return firstAvailableDateForPickup.toDateString();
+  };
   return (
     <div className="checkout-form">
       <ConfirmationModal checkoutData={checkoutData} />
@@ -199,10 +215,22 @@ const CheckoutForm = ({
               <DatePicker
                 id="date"
                 options={{
-                  defaultDate: date
+                  defaultDate: date,
+                  defaultValue: firstAvailableDateForPickup.toDateString(),
+                  onChange: e => handleSetDate(e),
+                  minDate: firstAvailableDateForPickup
                 }}
-                value={date}
+                value={firstAvailableDateForPickup.toDateString()}
                 onChange={e => handleSetDate(e)}
+                children={
+                  <span
+                    class="helper-text"
+                    data-error="wrong"
+                    data-success="right"
+                  >
+                    Min 7 day waiting period
+                  </span>
+                }
               />
             </div>
 
