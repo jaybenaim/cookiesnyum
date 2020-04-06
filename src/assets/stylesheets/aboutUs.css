@@ -77,10 +77,15 @@
     margin: 0 auto;
     background: #f6406f;
     color: white;
-    font-size: 1.1em;
+    font-size: 1.5em;
+    font-weight: 200 !important ;
+  }
+  .left-side p span {
+    font-weight: 200 !important ;
   }
   .left-side h3 {
     margin-bottom: 4%;
+    font-size: 1.5em;
   }
 
   .right-side {
@@ -88,10 +93,9 @@
     grid-row: 1 / span 2;
     margin: 0 auto;
     background: #f6406f;
-    margin-top: 0%;
   }
   .right-side img {
-    height: 710px;
+    height: 725px;
   }
   .right-side p {
     letter-spacing: 2px;

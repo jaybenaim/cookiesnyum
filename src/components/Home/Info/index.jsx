@@ -3,7 +3,7 @@ import multiCookie from "../../../assets/images/footerImg/multiCookie.JPG";
 import instagram from "../../../assets/images/instagram.png";
 import pinkPhone from "../../../assets/images/pinkPhone.png";
 import { connect } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import "../../../assets/stylesheets/info.css";
 
 const Info = () => {
@@ -26,9 +26,9 @@ const Info = () => {
               Monday - Friday <br />
               9am - 6pm
             </p>
-            <a href="tel:6476404714">
-              <img src={pinkPhone} alt="phone" className="phone-icon" /> 647 000
-              0000
+            <a href="tel:4162743820">
+              <img src={pinkPhone} alt="phone" className="phone-icon" />
+              416 274 3820
             </a>
           </div>
         </div>

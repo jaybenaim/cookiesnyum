@@ -42,11 +42,13 @@ button:active {
 }
 
 .primary-font {
-  font-family: "Liu Jian Mao Cao", cursive;
+  /* font-family: "Liu Jian Mao Cao", cursive; */
+  font-family: "Handlee", cursive;
 }
 
 .secondary-font {
-  font-family: "Baloo 2", cursive;
+  /* font-family: "Baloo 2", cursive; */
+  font-family: "Handlee", cursive;
 }
 
 /* loader */

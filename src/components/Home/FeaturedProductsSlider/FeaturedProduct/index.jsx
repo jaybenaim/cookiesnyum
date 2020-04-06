@@ -28,7 +28,7 @@ const FeaturedProduct = props => {
         width={"100%"}
       />
 
-      <div className="featured-products-slider--cards--card-body primary-font">
+      <div className="featured-products-slider--cards--card-body secondary-font">
         <Link to="/products" onClick={() => props.filterGallery(sku)}>
           <h3>{text}</h3>
           <p className="featured-products-slider--cards--card-text secondary-font">
