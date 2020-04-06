@@ -110,7 +110,7 @@ export class Cart extends Component {
       cartProducts
     } = this.props;
     let checkForDozen = cartProducts.filter(
-      product => product.name === "Amaretti"
+      product => product.name === "Amaretti" || product.name === "Pastaschio"
     );
     return productQuantity >= 12 || checkForDozen.length >= 1 ? false : true;
   };

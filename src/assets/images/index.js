@@ -25,7 +25,7 @@ import walnutChocolateChip from "./cookies/walnutChocolateChip.png";
 
 // biscotti
 import biscotti from "./featured/biscotti.png";
-import amertti from "./biscotti/amertti/amertti.png";
+import Amaretti from "./biscotti/amaretti/amaretti.png";
 import pastaschio from "./biscotti/pastaschio/pastaschio.png";
 
 import logo from "./logo.JPG";
@@ -37,7 +37,7 @@ export {
   mars,
   miniegg,
   reese,
-  amertti,
+  Amaretti,
   pastaschio,
   bananaBread,
   cookieButter,

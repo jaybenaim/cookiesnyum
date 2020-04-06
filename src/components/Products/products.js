@@ -6,7 +6,7 @@ import {
   mars,
   miniegg,
   reese,
-  amertti,
+  Amaretti,
   pastaschio,
   bananaBread,
   cookieButter,
@@ -53,12 +53,12 @@ const PRODUCTS = [
     image: reese
   },
   {
-    name: "amertti",
+    name: "Amaretti",
 
-    image: amertti
+    image: Amaretti
   },
   {
-    name: "pastaschio",
+    name: "Pastaschio",
 
     image: pastaschio
   },
@@ -81,11 +81,6 @@ const PRODUCTS = [
     name: "Nutella Godess",
 
     image: nutella
-  },
-  {
-    name: "Nutella",
-
-    image: nutellaGodess
   },
   {
     name: "Banana Bread",

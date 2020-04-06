@@ -14,6 +14,7 @@ class Item extends Component {
       ? description
       : description.slice(0, 25) + "...";
   };
+
   render() {
     let { item, name, quantity, sku, description, price } = this.props;
     const image = PRODUCTS.filter(product => {
@@ -24,10 +25,9 @@ class Item extends Component {
         <Link
           to={{
             pathname: `/products/${sku}`,
-            state: { item, quantity }
+            state: { item, quantity, description }
           }}
           className="show-product-btn"
-          onClick={() => this.forceUpdate()}
         >
           <img
             className="item--card--img"
@@ -48,7 +48,7 @@ class Item extends Component {
             <h3 className="item--card-body--name">{name}</h3>
           </Link>
           <p className="item--card-body--description">
-            {this.shortDescription(description)}
+            {this.shortDescription(description.default)}
           </p>
           {/* <p className="item--card-body--price">{formatPrice(price, "CAD")}</p> */}
           <div className="item--card-body--add-to-cart">

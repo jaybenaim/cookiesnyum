@@ -11,6 +11,8 @@ import Slider from "react-slick";
 import { getProducts } from "../../../redux/actions/productActions";
 import { Preloader } from "react-materialize";
 import { filterGallery } from "../../../redux/actions/galleryActions";
+import CookieDescription from "./CookieDescription";
+
 const ProductShow = props => {
   const {
     item,
@@ -72,7 +74,9 @@ const ProductShow = props => {
           <p className="product-show--card-body--price">
             {formatPrice(price, "CAD")}
           </p>
-          <p className="product-show--card-body--description">{description}</p>
+          <p className="product-show--card-body--description">
+            <CookieDescription item={item} description={description} />
+          </p>
           <div className="product-show--card-body--add-to-cart-btn">
             <span>
               <AddCartButton
