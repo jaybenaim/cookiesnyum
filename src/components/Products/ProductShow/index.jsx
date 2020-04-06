@@ -34,7 +34,7 @@ const ProductShow = props => {
     <RelatedProductsSlider key={i} product={product} width={80} height={80} />
   ));
   const formattedSku = sku.replace("-", "");
-  const slides = relatedProducts.length > 3 ? 3 : relatedProducts.length;
+  const slides = relatedProducts.length > 4 ? 4 : relatedProducts.length;
   const settings = {
     arrows: true,
     dots: true,

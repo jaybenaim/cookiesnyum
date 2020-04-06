@@ -191,7 +191,10 @@ export class Cart extends Component {
             <div className="sub">{subTotalTextLabel}</div>
             <div className="sub-price">
               <p className="sub-price__val">
-                {`${formatPrice(cartTotal.totalPrice, currencySymbol)}`}
+                <strong>
+                  {currencySymbol}
+                  {`${formatPrice(cartTotal.totalPrice, currencySymbol)}`}
+                </strong>
               </p>
             </div>
             <div onClick={this.clickCheckout} className="continue-btn">

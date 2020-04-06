@@ -50,12 +50,11 @@
     grid-row: 2;
   }
   .item--card-body--add-to-cart {
+    grid-column: 1 / span 3;
     grid-row: 4;
     position: relative;
   }
-  .item--card-body--add-to-cart {
-    grid-column: 1 / span 3;
-  }
+
   .item--card-body--add-to-cart button {
     background: transparent;
     font-weight: 900;
@@ -96,6 +95,15 @@
     grid-column: 1 / span 3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .item--card-body--add-to-cart {
+    grid-column: 1 / span 3;
+    font-size: 1.7em;
+  }
+  .item--card-body--add-to-cart button svg {
+    color: #f6406f;
+    height: 1.3em;
+    width: 1.3em;
   }
   .show-product-btn {
     grid-column: 1 / span 3;

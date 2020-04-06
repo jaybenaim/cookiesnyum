@@ -49,9 +49,9 @@ const App = ({ errors, history }) => {
   const cartOptions = {
     currencySymbol: "CAD",
     checkoutTextLabel: "Confirm",
-    subTotalTextLabel: "Total",
+    subTotalTextLabel: "Sub Total",
     cartTextLabel: "Cart",
-    quantityTextLabel: "Quantity"
+    quantityTextLabel: "QTY"
   };
 
   errors.response && errors.response.status && history.push("/404");

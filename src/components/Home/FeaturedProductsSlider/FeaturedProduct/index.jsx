@@ -9,13 +9,13 @@ const FeaturedProduct = props => {
   const getPrice = sku => {
     switch (sku) {
       case "cookies":
-        return "From $34.12";
+        return "From $2.85 / each";
       case "scone":
-        return "From $30.00";
+        return "From $3.50 / each";
       case "biscotti":
-        return "From $30.00";
+        return "From $30.00 / dozen";
       default:
-        return "From $30.00";
+        return "From $3.50 / each";
     }
   };
   return (

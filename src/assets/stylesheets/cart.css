@@ -171,6 +171,7 @@
 
 .shelf-item__details .title {
   margin: 0;
+  text-transform: capitalize;
 }
 
 .shelf-item__details .desc {

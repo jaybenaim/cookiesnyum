@@ -13,9 +13,10 @@
   }
   .product-show--card--img {
     grid-column: 2;
-    height: 12em;
-    width: 12em;
+    height: 20em;
+    width: 20em;
     margin: 0 auto;
+    object-fit: contain;
   }
   .product-show--card-body {
     grid-column: 2;
@@ -92,10 +93,10 @@
   }
   .product-show--card--img {
     grid-column: 2;
-    height: 22em;
-    width: 22em;
+    height: 30em;
+    width: 30em;
     margin: 0 auto;
-    margin-bottom: 10%;
+    object-fit: contain;
   }
   .product-show--card-body {
     grid-column: 2;
@@ -131,20 +132,44 @@
     width: 200px;
   }
   .product-show--card-body--related-products {
-    grid-column: 1 / span 3;
-    grid-row: 3;
-  }
-  .related-product {
+    grid-column: 1 / span 4;
+    grid-row: 5;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    text-transform: capitalize;
   }
   .product-show--card-body--related-products h3 {
     text-align: center;
-    margin-top: 40%;
+    margin-top: 25%;
+    margin-bottom: 4%;
+  }
+  .product-show--card-body--related-products .related-product {
+    display: flex;
+    color: #000;
+    text-transform: capitalize;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4%;
+  }
+  .product-show--card-body--related-products .related-product img {
+    margin: 0 auto;
+    height: 8em;
+    width: 8em;
+    margin-bottom: 4%;
+    object-fit: contain;
   }
   .product-show--card-body--related-products .slick-dots {
-    margin-left: -36%;
+    margin-top: 2%;
+    margin-left: -30%;
+  }
+  .product-show--card-body--related-products .related-product a strong {
+    padding-bottom: 25%;
+    position: relative;
+    top: 5%;
+  }
+  .product-show--card-body--related-products .slick-dots li button::before {
+    height: 2em;
+    width: 4em;
   }
 }

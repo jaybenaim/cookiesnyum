@@ -19,6 +19,7 @@
   }
   .business-info-grid img {
     height: 600px;
+    object-fit: contain;
   }
   .info-content {
     font-size: 2em;
