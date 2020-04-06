@@ -74,9 +74,10 @@ export class Cart extends Component {
   addProduct = product => {
     const { cartProducts, updateCart } = this.props;
     let productAlreadyInCart = false;
+
     cartProducts &&
       cartProducts.forEach(cp => {
-        if (cp.id === product.id) {
+        if (cp._id === product._id) {
           cp.quantity += product.quantity;
           productAlreadyInCart = true;
         }
@@ -137,7 +138,7 @@ export class Cart extends Component {
             product={product}
             removeProduct={removeProduct}
             currencySymbol={currencySymbol}
-            key={product._id}
+            key={`${product.sku} ${Math.random() * 12000}`}
             quantityTextLabel={quantityTextLabel}
           />
         );
