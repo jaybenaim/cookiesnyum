@@ -32,7 +32,6 @@ const Home = ({ fade }) => {
               <section className="info">
                 <Info />
               </section>
-              {window.innerWidth > 400 && <hr />}
             </>
           )}
         </div>

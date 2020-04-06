@@ -1,5 +1,5 @@
 import React from "react";
-import { everythingCookie } from "../../../assets/images";
+import multiCookie from "../../../assets/images/footerImg/multiCookie.JPG";
 import instagram from "../../../assets/images/instagram.png";
 import pinkPhone from "../../../assets/images/pinkPhone.png";
 import { connect } from "react-redux";
@@ -41,8 +41,8 @@ const Info = () => {
         </div>
       </div>
       <img
-        src={everythingCookie}
-        alt="profile of owner"
+        src={multiCookie}
+        alt="profile of owners"
         height="100%"
         width="100%"
       />
