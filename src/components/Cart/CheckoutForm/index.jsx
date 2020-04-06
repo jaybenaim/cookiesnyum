@@ -67,17 +67,6 @@ const CheckoutForm = ({
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
 
-  // console.log(firstAvailableDateForPickup.toDateString());
-  const handleDisabledDays = () => {
-    // get every day in between
-    // let disableListDate = [firstAvailableDateForPickup.toDateString()];
-    // if (now.includes(date.toDateString())) {
-    //   return true;
-    // } else {
-    //   return false;
-    // }
-    return firstAvailableDateForPickup.toDateString();
-  };
   return (
     <div className="checkout-form">
       <ConfirmationModal checkoutData={checkoutData} />

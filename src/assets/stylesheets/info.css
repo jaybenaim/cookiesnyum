@@ -23,6 +23,11 @@
   }
   .info-content {
     font-size: 2em;
+    background: url(../images/boxCentered.png);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 80%;
+    z-index: 3;
   }
   .info-content .primary-font {
     font-size: 1.8em;
