@@ -13,7 +13,6 @@ import {
   doubleDolceDelight,
   everythingCookie,
   ferrero,
-  nutella,
   nutellaGodess,
   oreo,
   oreoBdayCake,
@@ -69,7 +68,6 @@ const PRODUCTS = [
   },
   {
     name: "Oreo",
-
     image: oreo
   },
   {
@@ -80,7 +78,7 @@ const PRODUCTS = [
   {
     name: "Nutella Godess",
 
-    image: nutella
+    image: nutellaGodess
   },
   {
     name: "Banana Bread",

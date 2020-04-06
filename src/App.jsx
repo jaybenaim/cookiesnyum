@@ -55,6 +55,7 @@ const App = ({ errors, history }) => {
   };
 
   errors.response && errors.response.status && history.push("/404");
+
   return (
     <React.Fragment>
       {errors.response && errors.response.status ? (

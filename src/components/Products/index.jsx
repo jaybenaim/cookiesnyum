@@ -28,6 +28,7 @@ const Products = props => {
   useEffect(() => {
     setIsLoading(true);
     props.getProducts();
+    // eslint-disable-next-line
   }, []);
   setTimeout(() => {
     products.length > 0 && setIsLoading(false);

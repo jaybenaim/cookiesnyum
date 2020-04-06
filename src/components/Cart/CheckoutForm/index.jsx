@@ -198,7 +198,9 @@ const CheckoutForm = ({
             <div class="input-field col s4">
               <DatePicker
                 id="date"
-                options={{ defaultDate: date }}
+                options={{
+                  defaultDate: date
+                }}
                 value={date}
                 onChange={e => handleSetDate(e)}
               />
