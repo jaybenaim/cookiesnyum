@@ -13,6 +13,7 @@ import {
 import { formatPrice } from "../../helpers/";
 import storage from "../../redux/storage";
 import { withRouter } from "react-router-dom";
+import { Button } from "react-materialize";
 
 export class Cart extends Component {
   static propTypes = {
@@ -103,6 +104,16 @@ export class Cart extends Component {
     window.location.href = "/dolcenadaa/checkout";
   };
 
+  checkDisabled = () => {
+    const {
+      cartTotal: { productQuantity },
+      cartProducts
+    } = this.props;
+    let checkForDozen = cartProducts.filter(
+      product => product.name === "Amaretti"
+    );
+    return productQuantity >= 12 || checkForDozen.length >= 1 ? false : true;
+  };
   render() {
     const {
       cartTotal,
@@ -138,6 +149,7 @@ export class Cart extends Component {
       classes.push("float-open");
     }
 
+    const confirmDisabled = this.checkDisabled();
     return (
       <div className={classes.join(" ")}>
         {this.state.isOpen && (
@@ -189,17 +201,31 @@ export class Cart extends Component {
 
           <div className="float-cart__footer">
             <div className="sub">{subTotalTextLabel}</div>
-            <div className="sub-price">
-              <p className="sub-price__val">
-                <strong>
-                  {currencySymbol}
-                  {`${formatPrice(cartTotal.totalPrice, currencySymbol)}`}
-                </strong>
-              </p>
+            <div className="sub-totals">
+              <div className="sub-price">
+                <p className="sub-price__val">
+                  <strong>{currencySymbol} </strong>
+                  {` ${formatPrice(cartTotal.totalPrice, currencySymbol)}`}
+                </p>
+              </div>
+              <div className="sub-quantity">
+                <p>
+                  <strong>Total Quantity </strong>
+                  {cartTotal.productQuantity}
+                </p>
+              </div>
             </div>
-            <div onClick={this.clickCheckout} className="continue-btn">
-              {checkoutTextLabel}
-            </div>
+
+            <Button
+              node="button"
+              onClick={this.clickCheckout}
+              className="continue-btn"
+              disabled={confirmDisabled}
+            >
+              {confirmDisabled
+                ? "Need a minimum of 12 items"
+                : checkoutTextLabel}
+            </Button>
           </div>
         </div>
       </div>
