@@ -1,5 +1,8 @@
 ﻿import React from "react";
 import styles from "./footer.module.css";
+import { connect } from "react-redux";
+import { Link, withRouter } from "react-router-dom";
+import instagram from "../../assets/images/instagram.png";
 import "../../assets/stylesheets/footer.css";
 
 const Footer = () => {
@@ -8,12 +11,24 @@ const Footer = () => {
       <div className="container">
         <h5 className={styles.title}>dolcenadaa</h5>
         <ul className={styles.description}>
-          <li>Info</li>
-          <li>Contact</li>
-          <li>Instagram</li>
+          <li>
+            <Link to="/#info">Info</Link>
+          </li>
+          <li>
+            <Link to="/#info">Contact</Link>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/dolcenadaa/">
+              Instagram @dolcenadaa
+            </a>
+          </li>
         </ul>
       </div>
     </footer>
   );
 };
-export default Footer;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default withRouter(connect(mapStateToProps, {})(Footer));

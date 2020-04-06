@@ -18,19 +18,21 @@ const Home = ({ fade }) => {
                 <FeaturedSlider />
                 <br />
               </section>
-              {window.innerHeight > 400 && <hr />}
+              {window.innerWidth > 400 && <hr />}
               <section className="featured-products-slider">
                 <FeaturedProductsSlider featuredProducts={featuredProducts} />
               </section>
-              {window.innerHeight > 400 && <hr />}
+              {window.innerWidth > 400 && <hr />}
 
               <section className="about-us">
                 <AboutUs />
               </section>
-              <hr />
+              {window.innerWidth > 400 && <hr />}
+
               <section className="info">
                 <Info />
               </section>
+              {window.innerWidth > 400 && <hr />}
             </>
           )}
         </div>

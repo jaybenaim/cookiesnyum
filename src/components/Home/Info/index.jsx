@@ -2,11 +2,13 @@ import React from "react";
 import { everythingCookie } from "../../../assets/images";
 import instagram from "../../../assets/images/instagram.png";
 import pinkPhone from "../../../assets/images/pinkPhone.png";
+import { connect } from "react-redux";
+import { Link, withRouter } from "react-router-dom";
 import "../../../assets/stylesheets/info.css";
 
 const Info = () => {
   return (
-    <div className="business-info-grid">
+    <div id="info" className="business-info-grid">
       <div className="info-content">
         <h3 className="primary-font">Business Info</h3>
         <div className="secondary-font">
@@ -48,4 +50,8 @@ const Info = () => {
   );
 };
 
-export default Info;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default withRouter(connect(mapStateToProps, {})(Info));

@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import ConfirmationModal from "./ConfirmationModal";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
-import { Input } from "@material-ui/core";
 import {
   TextInput,
   Button,
@@ -216,12 +215,10 @@ const CheckoutForm = ({
                 id="date"
                 options={{
                   defaultDate: date,
-                  defaultValue: firstAvailableDateForPickup.toDateString(),
-                  onChange: e => handleSetDate(e),
+                  onChange: value => handleSetDate(value),
                   minDate: firstAvailableDateForPickup
                 }}
                 value={firstAvailableDateForPickup.toDateString()}
-                onChange={e => handleSetDate(e)}
                 children={
                   <span
                     class="helper-text"

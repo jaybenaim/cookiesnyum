@@ -5,7 +5,9 @@
 .description {
   color: #fff;
 }
-
+.description li a {
+  color: #fff;
+}
 .footerlink,
 .footerlink:hover {
   color: #fff;
