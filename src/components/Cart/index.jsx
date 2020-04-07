@@ -102,7 +102,7 @@ export class Cart extends Component {
   };
 
   clickCheckout = () => {
-    window.location.href = "/dolcenadaa/checkout";
+    window.location.href = "/dolcenada/checkout";
   };
 
   checkDisabled = () => {

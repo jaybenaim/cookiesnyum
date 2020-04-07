@@ -44,7 +44,7 @@ class Login extends Component {
         <div className="container login-container">
           <div style={{ marginTop: "4rem" }} className="row">
             <div className="col s8 offset-s2">
-              <a href="/dolcenadaa" className="btn-flat waves-effect">
+              <a href="/dolcenada" className="btn-flat waves-effect">
                 <i className="material-icons left">keyboard_backspace</i> Back
                 to home
               </a>

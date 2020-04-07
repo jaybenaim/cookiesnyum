@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="/dolcenadaa">
+    <BrowserRouter basename="/dolcenada">
       <App />
     </BrowserRouter>
   </Provider>,

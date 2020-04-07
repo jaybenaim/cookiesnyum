@@ -48,11 +48,11 @@ const Products = props => {
     <div className="products-container">
       <div className="products-container--products-nav-container">
         <div className="products--nav">
-          <a href="/dolcenadaa/">Home</a> /
-          <a href="/dolcenadaa/products"> Products</a> <br />
+          <a href="/dolcenada/">Home</a> /
+          <a href="/dolcenada/products"> Products</a> <br />
           {filter && (
             <a
-              href="/dolcenadaa/products"
+              href="/dolcenada/products"
               onClick={() => props.filterGallery(filter)}
             >
               / {filter}

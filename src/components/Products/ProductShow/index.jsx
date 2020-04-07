@@ -49,8 +49,8 @@ const ProductShow = props => {
   return (
     <div className="product-show-container">
       <div className="products--nav">
-        <a href="/dolcenadaa/">Home /</a>
-        <a href="/dolcenadaa/products"> Products /</a>{" "}
+        <a href="/dolcenada/">Home /</a>
+        <a href="/dolcenada/products"> Products /</a>{" "}
         <Link
           to={{
             pathname: "/products"
@@ -59,7 +59,7 @@ const ProductShow = props => {
         >
           {formattedSku}
         </Link>
-        <a href={`/dolcenadaa/products/${sku}`}> / {name}</a>
+        <a href={`/dolcenada/products/${sku}`}> / {name}</a>
       </div>
 
       <div className=" product-show--card">

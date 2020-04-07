@@ -19,7 +19,7 @@ const Auth = props => {
   return !isAuthenticated ? (
     <div className="auth-content">
       <a
-        href="/dolcenadaa/login"
+        href="/dolcenada/login"
         id="login"
         className="btn btn-large  waves-effect waves-light hoverable auth-link"
       >
@@ -27,7 +27,7 @@ const Auth = props => {
       </a>
 
       <a
-        href="/dolcenadaa/register"
+        href="/dolcenada/register"
         id="register"
         className="btn btn-large waves-effect waves-light hoverable accent-3 auth-link"
       >

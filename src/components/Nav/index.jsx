@@ -36,7 +36,7 @@ const Nav = props => {
         preventScrolling: true
       }}
     >
-      <NavItem href="/dolcenadaa"> Home </NavItem>
+      <NavItem href="/dolcenada"> Home </NavItem>
 
       <Dropdown
         id="Dropdown_6"
@@ -93,7 +93,7 @@ const Nav = props => {
         </Link>
       </Dropdown>
 
-      <NavItem href="/dolcenadaa" className="sidenav-logo">
+      <NavItem href="/dolcenada" className="sidenav-logo">
         {" "}
         <img
           src={logo}

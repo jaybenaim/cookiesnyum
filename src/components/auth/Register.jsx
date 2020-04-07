@@ -46,7 +46,7 @@ class Register extends Component {
         <div className="container register-container">
           <div className="row">
             <div className="col s8 offset-s2">
-              <a href="/dolcenadaa" className="btn-flat waves-effect">
+              <a href="/dolcenada" className="btn-flat waves-effect">
                 <i className="material-icons left">keyboard_backspace</i> Back
                 to home
               </a>
@@ -55,8 +55,7 @@ class Register extends Component {
                   <b>Register</b> below
                 </h4>
                 <p className="grey-text text-darken-1">
-                  Already have an account?{" "}
-                  <a href="/dolcenadaa/login">Log in</a>
+                  Already have an account? <a href="/dolcenada/login">Log in</a>
                 </p>
               </div>
               {loading && (
