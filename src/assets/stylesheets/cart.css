@@ -53,6 +53,7 @@
   cursor: pointer;
   top: -4px;
 }
+
 @media (max-width: 450px) {
   .bag--float-cart-closed {
     left: -70px;
@@ -91,7 +92,7 @@
   position: relative;
   bottom: -30px;
   right: -45px;
-  height: 2em;
+  height: 1.85em;
   width: 2em;
   font-size: 1.2em;
   padding-top: 6px;

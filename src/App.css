@@ -1,5 +1,6 @@
 ﻿#root > div > div {
   z-index: 999999 !important;
+  overflow-x: hidden;
 }
 html {
   position: relative;

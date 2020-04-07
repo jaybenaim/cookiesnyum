@@ -25,6 +25,7 @@
     grid-column: 2;
     width: 200%;
     margin-left: 15%;
+    margin-bottom: 5%;
   }
 }
 @media (min-width: 451px) {

@@ -44,6 +44,7 @@ nav {
 }
 .sidenav {
   z-index: 99999999;
+  overflow: hidden;
 }
 .sidenav-overlay {
   z-index: 999999;
@@ -74,4 +75,13 @@ nav {
   bottom: 35%;
   width: 100%;
   margin: 0 16%;
+}
+.sidenav li a,
+.sidenav--dropdown-trigger {
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 2%;
+}
+.sidenav--dropdown-trigger {
+  margin-left: 10%;
 }

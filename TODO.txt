@@ -9,3 +9,5 @@ add products description
 deploy to goDaddy
 - get domain 
 - publish 
+
+footer styleing for mobile 

@@ -1,9 +1,16 @@
 import React from "react";
-import { Icon, Navbar, NavItem } from "react-materialize";
 import { logo } from "../../assets/images";
 import "../../assets/stylesheets/nav.css";
+import { Link, withRouter } from "react-router-dom";
 import Auth from "../Auth";
-const Nav = () => {
+import { filterGallery } from "../../redux/actions/galleryActions";
+import { Icon, Navbar, NavItem, Divider, Dropdown } from "react-materialize";
+import { connect } from "react-redux";
+
+const Nav = props => {
+  const handleOpen = filter => {
+    props.filterGallery(filter);
+  };
   return (
     <Navbar
       alignLinks="right"
@@ -24,16 +31,68 @@ const Nav = () => {
         draggable: true,
         edge: "left",
         inDuration: 250,
-        onCloseEnd: null,
-        onCloseStart: null,
-        onOpenEnd: null,
-        onOpenStart: null,
+
         outDuration: 200,
         preventScrolling: true
       }}
     >
       <NavItem href="/dolcenadaa"> Home </NavItem>
-      <NavItem href="/dolcenadaa/products">Products</NavItem>
+
+      <Dropdown
+        id="Dropdown_6"
+        options={{
+          alignment: "left",
+          autoTrigger: true,
+          closeOnClick: true,
+          constrainWidth: false,
+          container: false,
+          coverTrigger: false,
+          hover: false,
+          inDuration: 150,
+          outDuration: 250
+        }}
+        trigger={
+          <div className="sidenav--dropdown-trigger">
+            Products<Icon>arrow_drop_down</Icon>
+          </div>
+        }
+      >
+        <Link
+          to="products"
+          className="sidenav-close"
+          onClick={() => handleOpen("cookie")}
+        >
+          Cookies
+        </Link>
+
+        <Divider />
+        <Link
+          to="products"
+          className="sidenav-close"
+          onClick={() => handleOpen("scone")}
+        >
+          Scones
+        </Link>
+        <Divider />
+
+        <Link
+          to="products"
+          className="sidenav-close"
+          onClick={() => handleOpen("biscotti")}
+        >
+          Biscotti
+        </Link>
+        <Divider />
+
+        <Link
+          to="products"
+          className="sidenav-close"
+          onClick={() => handleOpen("all")}
+        >
+          All Products
+        </Link>
+      </Dropdown>
+
       <NavItem href="/dolcenadaa" className="sidenav-logo">
         {" "}
         <img
@@ -49,4 +108,8 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+const mapStateToProps = state => {
+  return {};
+};
+
+export default withRouter(connect(mapStateToProps, { filterGallery })(Nav));

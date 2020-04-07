@@ -19,6 +19,9 @@
   }
 }
 
+[alt="profile of owners"] {
+  object-fit: cover;
+}
 @media (min-width: 451px) {
   [alt="instagram-link"] {
     margin-top: 4%;
