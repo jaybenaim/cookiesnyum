@@ -35,7 +35,9 @@ const FeaturedSlider = props => {
             width={50}
           ></img>
           <div className="text-box secondary-font">
-            <h3>Assortment of Stuffed Cookies, Scones and Biscotti</h3>
+            <h3 className="primary-font">
+              Assortment of Stuffed Cookies, Scones and Biscotti
+            </h3>
             <p>Our products are uniquely hand crafted and simply delicious </p>
             <Link className="featured-products-link btn" to="/products">
               {" "}
@@ -46,7 +48,7 @@ const FeaturedSlider = props => {
         <div className="featured-slide  ">
           <img src={dozen} alt="chocolate-cookie " height={40} width={40}></img>
           <div className="text-box secondary-font">
-            <h3>By The Dozen</h3>
+            <h3 className="primary-font">By The Dozen</h3>
             <p>
               Create your box with any amount of stuffed cookies, scones, or
               biscotti.
@@ -60,7 +62,7 @@ const FeaturedSlider = props => {
         <div className="featured-slide ">
           <img src={easter} alt="chocolate-cookie" height={40} width={40}></img>
           <div className="text-box secondary-font">
-            <h3>Happy Easter!</h3>
+            <h3 className="primary-font">Happy Easter!</h3>
             <p>Check out our Mini Egg Easter Feature</p>
             <Link
               className="featured-products-link btn"

@@ -7,6 +7,9 @@
     z-index: 99;
     padding: 4%;
   }
+  .featured-slide .text-box p {
+    font-size: 1.2em;
+  }
   .featured-products-link {
     z-index: 99;
     margin-top: 10%;
@@ -22,7 +25,7 @@
     text-transform: uppercase;
   }
   .featured-slide h3 {
-    font-family: "Baloo 2", cursive;
+    font-size: 2.2em;
   }
   .featured-slider .slick-dots {
     position: relative;
@@ -40,7 +43,7 @@
   }
 
   .featured-slide h3 {
-    font-size: 1.8em;
+    font-size: 2em;
   }
   .featured-slide img {
     width: 100%;
@@ -55,6 +58,8 @@
   }
   .featured-slide p {
     padding: 2% 5% 2% 1%;
+    font-size: 1.4em;
+    margin-bottom: 40px;
   }
   .featured-slide .btn {
     background: #f6406f;

@@ -1,33 +1,11 @@
-set show nav with redux and use onMouseEnter to hide or display navbar 
-hover show nav-link desktop 
+fix fonts 
+- navbar 
+- main promotions h3 
 
+add products description 
+- biscotti 
+- pastaschio 
 
-login logo
-
-1. style product show 
-2. create buy now component 
-3. action for buy 
-USE TV FOR MONITOR 
-
-
-use external stylesheet for inline styles 
-
-change checkout link to use browserRouter <Link /> instead of <a> 
-
-
-clean up checkout compoenet 
-    remove sendEmail from compoennt 
-    check handleCheckOut if useEffect needed 
-    
-blank out first 7 days for datepicker 
-if signed in save cart to profile 
-
-addToCart move to product/Item.js
-
-
-replace console.log errors with error function in redux (in catch) 
-
-/products page 
-- fix nav to show only one name on a line 
-
-cart minimum 12 items or amertti biscotti which is min dozen 
+deploy to goDaddy
+- get domain 
+- publish 
