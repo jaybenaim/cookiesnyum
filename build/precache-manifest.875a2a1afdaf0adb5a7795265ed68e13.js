@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "262deed9c717ffc6e8dad16d2e0e2c02",
+    "revision": "7a7ccaf52969f02136cb1f746ce8ef58",
     "url": "/dolcenadaa/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/css/2.0d4493d6.chunk.css"
   },
   {
-    "revision": "2deab504e2c8f57f2153",
-    "url": "/dolcenadaa/static/css/main.08ead348.chunk.css"
+    "revision": "69bf424fbd1f23e91d1e",
+    "url": "/dolcenadaa/static/css/main.7803d677.chunk.css"
   },
   {
     "revision": "b43a3c35bcb2b12b4ca5",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dolcenadaa/static/js/2.d15bbb7c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2deab504e2c8f57f2153",
-    "url": "/dolcenadaa/static/js/main.0f8cbe25.chunk.js"
+    "revision": "69bf424fbd1f23e91d1e",
+    "url": "/dolcenadaa/static/js/main.3f1d4320.chunk.js"
   },
   {
     "revision": "09b1ed9f15cf7a4a0879",
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fd7962331b3943daf8706dd12241f539",
     "url": "/dolcenadaa/static/media/blueberry.fd796233.png"
+  },
+  {
+    "revision": "0d33c5f69c46b7c9aa71e93065e98b47",
+    "url": "/dolcenadaa/static/media/boxCentered.0d33c5f6.png"
   },
   {
     "revision": "2db80bb01252000db0c46f3256f9fc37",

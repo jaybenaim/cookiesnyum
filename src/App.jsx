@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./App.css";
 import {
@@ -38,13 +38,13 @@ if (localStorage.jwtToken) {
   }
 }
 
-//TODO Web Template Studio: Adrsd routes for your new pages here.
 const App = ({ errors, history }) => {
   const [checkoutForm, showCheckoutForm] = useState(false);
 
   const handleCheckoutCart = data => {
     showCheckoutForm(!checkoutForm);
   };
+  //TODO Web Template Studio: Adrsd routes for your new pages here.
 
   const cartOptions = {
     currencySymbol: "CAD",
@@ -54,11 +54,13 @@ const App = ({ errors, history }) => {
     quantityTextLabel: "QTY"
   };
 
-  errors.response && errors.response.status && history.push("/404");
+  useEffect(() => {
+    errors && errors.isAxiosError && history.push("/404");
+  }, [errors]);
 
   return (
     <React.Fragment>
-      {errors.response && errors.response.status ? (
+      {errors.length >= 1 ? (
         ""
       ) : (
         <>

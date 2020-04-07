@@ -12,7 +12,8 @@ const Products = props => {
   let {
     gallery,
     gallery: { filter },
-    products
+    products,
+    errors
   } = props;
 
   if (!gallery) {
@@ -28,6 +29,7 @@ const Products = props => {
   useEffect(() => {
     setIsLoading(true);
     props.getProducts();
+
     // eslint-disable-next-line
   }, []);
   setTimeout(() => {
