@@ -56,6 +56,7 @@ const App = ({ errors, history }) => {
 
   useEffect(() => {
     errors && errors.isAxiosError && history.push("/404");
+    // eslint-disable-next-line
   }, [errors]);
 
   return (

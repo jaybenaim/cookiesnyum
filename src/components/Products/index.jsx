@@ -12,8 +12,7 @@ const Products = props => {
   let {
     gallery,
     gallery: { filter },
-    products,
-    errors
+    products
   } = props;
 
   if (!gallery) {
