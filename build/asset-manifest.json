@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dolcenadaa/static/css/main.6ffb9af4.chunk.css",
-    "main.js": "/dolcenadaa/static/js/main.bf814847.chunk.js",
-    "main.js.map": "/dolcenadaa/static/js/main.bf814847.chunk.js.map",
+    "main.css": "/dolcenadaa/static/css/main.2bc85e62.chunk.css",
+    "main.js": "/dolcenadaa/static/js/main.212fde74.chunk.js",
+    "main.js.map": "/dolcenadaa/static/js/main.212fde74.chunk.js.map",
     "runtime-main.js": "/dolcenadaa/static/js/runtime-main.0baa157b.js",
     "runtime-main.js.map": "/dolcenadaa/static/js/runtime-main.0baa157b.js.map",
     "static/css/2.0d4493d6.chunk.css": "/dolcenadaa/static/css/2.0d4493d6.chunk.css",
-    "static/js/2.d15bbb7c.chunk.js": "/dolcenadaa/static/js/2.d15bbb7c.chunk.js",
-    "static/js/2.d15bbb7c.chunk.js.map": "/dolcenadaa/static/js/2.d15bbb7c.chunk.js.map",
+    "static/js/2.67dc0648.chunk.js": "/dolcenadaa/static/js/2.67dc0648.chunk.js",
+    "static/js/2.67dc0648.chunk.js.map": "/dolcenadaa/static/js/2.67dc0648.chunk.js.map",
     "index.html": "/dolcenadaa/index.html",
-    "precache-manifest.ad5b11141d20e4a4102d6d4f6d2492ea.js": "/dolcenadaa/precache-manifest.ad5b11141d20e4a4102d6d4f6d2492ea.js",
+    "precache-manifest.ab473dfda75d6676ad477cd7b50690ef.js": "/dolcenadaa/precache-manifest.ab473dfda75d6676ad477cd7b50690ef.js",
     "service-worker.js": "/dolcenadaa/service-worker.js",
     "static/css/2.0d4493d6.chunk.css.map": "/dolcenadaa/static/css/2.0d4493d6.chunk.css.map",
-    "static/css/main.6ffb9af4.chunk.css.map": "/dolcenadaa/static/css/main.6ffb9af4.chunk.css.map",
-    "static/js/2.d15bbb7c.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.d15bbb7c.chunk.js.LICENSE.txt",
+    "static/css/main.2bc85e62.chunk.css.map": "/dolcenadaa/static/css/main.2bc85e62.chunk.css.map",
+    "static/js/2.67dc0648.chunk.js.LICENSE.txt": "/dolcenadaa/static/js/2.67dc0648.chunk.js.LICENSE.txt",
     "static/media/amaretti.png": "/dolcenadaa/static/media/amaretti.fac9e2fe.png",
     "static/media/assorted.jpg": "/dolcenadaa/static/media/assorted.3291cbec.jpg",
     "static/media/bananaBread.png": "/dolcenadaa/static/media/bananaBread.56e57287.png",
@@ -52,8 +52,8 @@
   "entrypoints": [
     "static/js/runtime-main.0baa157b.js",
     "static/css/2.0d4493d6.chunk.css",
-    "static/js/2.d15bbb7c.chunk.js",
-    "static/css/main.6ffb9af4.chunk.css",
-    "static/js/main.bf814847.chunk.js"
+    "static/js/2.67dc0648.chunk.js",
+    "static/css/main.2bc85e62.chunk.css",
+    "static/js/main.212fde74.chunk.js"
   ]
 }
