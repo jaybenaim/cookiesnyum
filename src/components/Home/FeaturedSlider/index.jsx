@@ -27,7 +27,7 @@ const FeaturedSlider = props => {
   return (
     <>
       <Slider {...settings} id="featured">
-        <div className={`featured-slide ${dropMainContent}`}>
+        <div className={`featured-slide ${dropMainContent} fade-in`}>
           <img
             src={assorted}
             alt="chocolate-cookie"
