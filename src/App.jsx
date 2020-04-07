@@ -46,7 +46,6 @@ const App = props => {
   const handleCheckoutCart = data => {
     showCheckoutForm(!checkoutForm);
   };
-  //TODO Web Template Studio: Adrsd routes for your new pages here.
 
   const cartOptions = {
     currencySymbol: "CAD",
