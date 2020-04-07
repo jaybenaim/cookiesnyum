@@ -10,9 +10,12 @@ deploy to goDaddy
 - get domain 
 - publish 
 
-footer styleing for mobile 
+footer styling for mobile 
 
 
 increase qty button 
 -in cart on item 
 -(in <Item> in <Products> )
+
+searchbar 
+- 
