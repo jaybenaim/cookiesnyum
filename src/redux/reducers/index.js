@@ -6,6 +6,7 @@ import checkoutReducers from "./checkoutReducers";
 import galleryReducers from "./galleryReducers";
 import productReducers from "./productReducers";
 import navbarReducers from "./navbarReducers";
+import wakeupReducers from "./wakeupReducers";
 
 export default combineReducers({
   auth: authReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
   checkout: checkoutReducers,
   gallery: galleryReducers,
   products: productReducers,
-  navbar: navbarReducers
+  navbar: navbarReducers,
+  wakeup: wakeupReducers
 });
