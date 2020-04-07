@@ -136,6 +136,7 @@ body {
   .notfound .notfound-404 {
     height: 122px;
     line-height: 122px;
+    margin-bottom: 20px;
   }
   .notfound .notfound-404 h1 {
     font-size: 122px;

@@ -11,3 +11,8 @@ deploy to goDaddy
 - publish 
 
 footer styleing for mobile 
+
+
+increase qty button 
+-in cart on item 
+-(in <Item> in <Products> )

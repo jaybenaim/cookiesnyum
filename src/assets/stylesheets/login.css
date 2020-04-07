@@ -10,3 +10,12 @@
     padding: 0 4%;
   }
 }
+
+.login-container .btn {
+  background: rgb(246, 64, 111) !important;
+  color: white !important;
+}
+#register {
+  background: rgb(246, 64, 111) !important;
+  color: white !important;
+}
