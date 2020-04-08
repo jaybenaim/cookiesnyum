@@ -24,7 +24,7 @@
   .item--card--img {
     grid-column: 1;
     object-fit: contain;
-    zoom: 1.2;
+    zoom: 1.1;
   }
   .item--card-body {
     grid-column: 2;
@@ -54,6 +54,7 @@
     grid-column: 1 / span 3;
     grid-row: 4;
     position: relative;
+    width: 110%;
   }
 
   .item--card-body--add-to-cart button {

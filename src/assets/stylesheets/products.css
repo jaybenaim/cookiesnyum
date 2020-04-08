@@ -1,4 +1,7 @@
 @media (max-width: 450px) {
+  .products-container {
+    overflow-x: hidden;
+  }
   .products-container--products-nav-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

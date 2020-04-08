@@ -1,18 +1,18 @@
 ﻿#root > div > div {
   z-index: 999999 !important;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 html {
   position: relative;
   min-height: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 body {
   margin-bottom: 140px !important; /* Height of the footer */
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 footer {
