@@ -36,9 +36,14 @@ const Nav = props => {
         preventScrolling: true
       }}
     >
-      <NavItem href="/dolcenada"> Home </NavItem>
+      <Link to="/" className="sidenav-close">
+        {" "}
+        Home{" "}
+      </Link>
       {window.innerWidth >= 451 ? (
-        <Link to="/products">Products</Link>
+        <Link to="/products" className="sidenav-close">
+          Products
+        </Link>
       ) : (
         <Dropdown
           id="Dropdown_6"

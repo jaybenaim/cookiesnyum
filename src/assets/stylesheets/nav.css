@@ -7,6 +7,13 @@
     position: relative;
     z-index: 2;
   }
+  .sidenav--dropdown-trigger {
+    margin-left: 10%;
+  }
+  .sidenav--dropdown-trigger .material-icons {
+    position: relative;
+    top: 7px;
+  }
 }
 @media (min-width: 451px) {
   .sidenav-trigger {
@@ -43,7 +50,7 @@
     font-weight: 500;
     margin-top: 2%;
   }
-  .sidenav--dropdown-trigger {
+  .sidenav--dropdown-trigger a {
     margin-left: 0;
   }
 }
