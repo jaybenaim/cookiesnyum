@@ -34,19 +34,15 @@
   }
 }
 @media (min-width: 451px) {
-  .featured-slide--hidden-nav-trigger {
-    width: 100%;
-    min-height: 140px;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
+  .featured-slide {
+    min-width: 100%;
   }
 
   .featured-slide h3 {
     font-size: 2em;
   }
   .featured-slide img {
-    width: 100%;
+    min-width: 100%;
     min-height: 600px;
     object-fit: cover;
   }

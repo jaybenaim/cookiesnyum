@@ -21,18 +21,16 @@ const FeaturedSlider = props => {
     cssEase: "linear",
     pauseOnDotsHover: true
   };
-  let {
-    navbar: { dropMainContent }
-  } = props;
+
   return (
     <>
       <Slider {...settings} id="featured">
-        <div className={`featured-slide ${dropMainContent} fade-in`}>
+        <div className={`featured-slide  fade-in`}>
           <img
             src={assorted}
             alt="chocolate-cookie"
             height={50}
-            width={50}
+            width={"100%"}
           ></img>
           <div className="text-box secondary-font">
             <h3 className="primary-font">

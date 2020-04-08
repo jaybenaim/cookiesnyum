@@ -38,6 +38,14 @@
   #register {
     display: none;
   }
+  .sidenav li a,
+  .sidenav--dropdown-trigger {
+    font-weight: 500;
+    margin-top: 2%;
+  }
+  .sidenav--dropdown-trigger {
+    margin-left: 0;
+  }
 }
 nav {
   background: #f6406f !important;
@@ -78,10 +86,6 @@ nav {
 }
 .sidenav li a,
 .sidenav--dropdown-trigger {
-  font-size: 2em;
   font-weight: 500;
   margin-top: 2%;
-}
-.sidenav--dropdown-trigger {
-  margin-left: 10%;
 }

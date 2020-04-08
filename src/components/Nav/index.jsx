@@ -37,62 +37,64 @@ const Nav = props => {
       }}
     >
       <NavItem href="/dolcenada"> Home </NavItem>
-
-      <Dropdown
-        id="Dropdown_6"
-        options={{
-          alignment: "left",
-          autoTrigger: true,
-          closeOnClick: true,
-          constrainWidth: false,
-          container: false,
-          coverTrigger: false,
-          hover: false,
-          inDuration: 150,
-          outDuration: 250
-        }}
-        trigger={
-          <div className="sidenav--dropdown-trigger">
-            Products<Icon>arrow_drop_down</Icon>
-          </div>
-        }
-      >
-        <Link
-          to="products"
-          className="sidenav-close"
-          onClick={() => handleOpen("cookie")}
+      {window.innerWidth >= 451 ? (
+        <Link to="/products">Products</Link>
+      ) : (
+        <Dropdown
+          id="Dropdown_6"
+          options={{
+            alignment: "left",
+            autoTrigger: true,
+            closeOnClick: true,
+            constrainWidth: false,
+            container: false,
+            coverTrigger: false,
+            hover: false,
+            inDuration: 150,
+            outDuration: 250
+          }}
+          trigger={
+            <div className="sidenav--dropdown-trigger">
+              Products<Icon>arrow_drop_down</Icon>
+            </div>
+          }
         >
-          Cookies
-        </Link>
+          <Link
+            to="products"
+            className="sidenav-close"
+            onClick={() => handleOpen("cookie")}
+          >
+            Cookies
+          </Link>
 
-        <Divider />
-        <Link
-          to="products"
-          className="sidenav-close"
-          onClick={() => handleOpen("scone")}
-        >
-          Scones
-        </Link>
-        <Divider />
+          <Divider />
+          <Link
+            to="products"
+            className="sidenav-close"
+            onClick={() => handleOpen("scone")}
+          >
+            Scones
+          </Link>
+          <Divider />
 
-        <Link
-          to="products"
-          className="sidenav-close"
-          onClick={() => handleOpen("biscotti")}
-        >
-          Biscotti
-        </Link>
-        <Divider />
+          <Link
+            to="products"
+            className="sidenav-close"
+            onClick={() => handleOpen("biscotti")}
+          >
+            Biscotti
+          </Link>
+          <Divider />
 
-        <Link
-          to="products"
-          className="sidenav-close"
-          onClick={() => handleOpen("all")}
-        >
-          All Products
-        </Link>
-      </Dropdown>
-
+          <Link
+            to="products"
+            className="sidenav-close"
+            onClick={() => handleOpen("all")}
+          >
+            All Products
+          </Link>
+        </Dropdown>
+      )}
       <NavItem href="/dolcenada" className="sidenav-logo">
         {" "}
         <img
