@@ -1,6 +1,6 @@
 @media (max-width: 450px) {
   .products-container {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
   .products-container--products-nav-container {
     display: grid;
