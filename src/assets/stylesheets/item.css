@@ -1,3 +1,16 @@
+@media (max-width: 376px) {
+  .item--card-body--add-to-cart .add-to-cart-btn button {
+    display: flex;
+    flex-direction: row;
+    margin-left: -20%;
+  }
+  .item--card-body {
+    margin-left: -10%;
+  }
+  .item--card-body--description {
+    margin-left: 2%;
+  }
+}
 @media (max-width: 450px) {
   .products--nav {
     margin: 20%;
@@ -158,4 +171,7 @@
 
 .products--nav a {
   text-transform: capitalize;
+}
+.item--card {
+  overflow: hidden;
 }
