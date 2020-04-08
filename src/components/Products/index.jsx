@@ -44,14 +44,18 @@ const Products = props => {
     <div className="products-container">
       <div className="products-container--products-nav-container">
         <div className="products--nav">
-          <a href="/dolcenada/">Home</a> /
-          <a href="/dolcenada/products"> Products</a> <br />
+          <a href="/dolcenada/">Home /</a>
+          <a href="/dolcenada/products">
+            {" "}
+            Products {filter && <span>/</span>}{" "}
+          </a>{" "}
+          <br />
           {filter && (
             <a
               href="/dolcenada/products"
               onClick={() => props.filterGallery(filter)}
             >
-              / {filter}
+              {filter}
             </a>
           )}
         </div>

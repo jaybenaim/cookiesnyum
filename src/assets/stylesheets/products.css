@@ -7,9 +7,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding: 1% 2%;
   }
-  .products--nav {
+  .products-container--products-nav-container .products--nav {
     grid-column: 1;
-    width: 50%;
+    width: 52%;
   }
 }
 @media (min-width: 450px) {
