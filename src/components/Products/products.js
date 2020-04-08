@@ -22,7 +22,8 @@ import {
   cookiesAndCream,
   snickers,
   caramilk,
-  monsterMash
+  monsterMash,
+  chocolateChip
 } from "../../assets/images";
 const PRODUCTS = [
   {
@@ -121,6 +122,10 @@ const PRODUCTS = [
   {
     name: "Monster Mash",
     image: monsterMash
+  },
+  {
+    name: "Chocolate Chip",
+    image: chocolateChip
   }
 ];
 

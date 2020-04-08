@@ -25,6 +25,7 @@ import monsterMash from "./cookies/monsterMash/monsterMash.png";
 import caramilk from "./cookies/caramilk/caramilk.png";
 import snickers from "./cookies/snickers/snickers.png";
 import cookiesAndCream from "./cookies/cookiesAndCream/cookiesAndCream.png";
+import chocolateChip from "./cookies/chocolateChip/chocolateChip.png";
 
 // biscotti
 import biscotti from "./featured/biscotti.png";
@@ -60,5 +61,6 @@ export {
   cookiesAndCream,
   snickers,
   caramilk,
-  monsterMash
+  monsterMash,
+  chocolateChip
 };

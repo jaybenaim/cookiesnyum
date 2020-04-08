@@ -6,7 +6,6 @@ import { addProduct } from "../../../redux/actions/cartActions";
 import { setCurrentProduct } from "../../../redux/actions/productActions";
 import { formatPrice } from "../../../helpers/index";
 import "../../../assets/stylesheets/item.css";
-import PRODUCTS from "../products";
 class Item extends Component {
   shortDescription = description => {
     return !description
@@ -17,15 +16,7 @@ class Item extends Component {
   };
 
   render() {
-    let { item, name, quantity, sku, description, price } = this.props;
-    const getImage = PRODUCTS.filter(product => {
-      return product.name === name && product.image;
-    });
-
-    const image = getImage[0]["image"];
-    let newItem = item;
-    newItem._id = "";
-    newItem.image = image;
+    let { item, name, quantity, sku, description, price, image } = this.props;
 
     return (
       <div className="item--card ">
@@ -35,7 +26,7 @@ class Item extends Component {
             state: { item, quantity, description, image }
           }}
           className="show-product-btn"
-          onClick={() => this.props.setCurrentProduct(newItem)}
+          onClick={() => this.props.setCurrentProduct(item)}
         >
           <img
             className="item--card--img"

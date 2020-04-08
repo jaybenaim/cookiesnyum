@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import GalleryFilter from "./GalleryFilter";
 import { filterGallery } from "../../redux/actions/galleryActions";
 import { Preloader } from "react-materialize";
+import PRODUCTS from "./products";
 
 const Products = props => {
   let {
@@ -33,9 +34,19 @@ const Products = props => {
   }, 300);
 
   const productElements = products.map((item, i) => {
+    // Get product image
+    const getImage = PRODUCTS.filter(product => {
+      return product.name === item.name && product.image;
+    });
+    // Set product image
+    const image = getImage[0]["image"];
+    let newItem = item;
+    newItem._id = "";
+    newItem.image = image;
+    // render each product
     return (
       item.class.includes(filter) && (
-        <Item {...item} item={item} key={i} filter={filter} />
+        <Item {...newItem} item={item} key={i} filter={filter} />
       )
     );
   });
