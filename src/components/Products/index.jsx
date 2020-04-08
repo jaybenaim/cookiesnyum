@@ -5,7 +5,6 @@ import Item from "./Item";
 import { connect } from "react-redux";
 import GalleryFilter from "./GalleryFilter";
 import { filterGallery } from "../../redux/actions/galleryActions";
-import { getProducts } from "../../redux/actions/productActions";
 import { Preloader } from "react-materialize";
 
 const Products = props => {
@@ -27,13 +26,11 @@ const Products = props => {
   // Component did mount (empty array sets method to run once)
   useEffect(() => {
     setIsLoading(true);
-    props.getProducts();
-
     // eslint-disable-next-line
   }, []);
   setTimeout(() => {
     products.length > 0 && setIsLoading(false);
-  }, 1000);
+  }, 300);
 
   const productElements = products.map((item, i) => {
     return (
@@ -74,6 +71,6 @@ const mapStateToProps = state => ({
   gallery: state.gallery,
   products: state.products.products
 });
-export default connect(mapStateToProps, { filterGallery, getProducts })(
+export default connect(mapStateToProps, { filterGallery })(
   withRouter(Products)
 );

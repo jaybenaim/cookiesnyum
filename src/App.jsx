@@ -18,7 +18,7 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
 import Nav from "./components/Nav";
 import Cart from "./components/Cart";
-import { wakeupDB } from "./redux/actions/wakeupActions";
+import { getProducts } from "./redux/actions/productActions";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -57,7 +57,8 @@ const App = props => {
 
   useEffect(() => {
     errors && errors.isAxiosError && history.push("/404");
-    props.wakeupDB();
+    // props.wakeupDB();
+    props.getProducts();
     // eslint-disable-next-line
   }, [errors]);
 
@@ -111,4 +112,4 @@ const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
-export default withRouter(connect(mapStateToProps, { wakeupDB })(App));
+export default withRouter(connect(mapStateToProps, { getProducts })(App));
