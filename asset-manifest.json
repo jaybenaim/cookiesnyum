@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab6cdced.chunk.css",
-    "main.js": "/static/js/main.d296f1bf.chunk.js",
-    "main.js.map": "/static/js/main.d296f1bf.chunk.js.map",
+    "main.css": "/static/css/main.ceab79e3.chunk.css",
+    "main.js": "/static/js/main.8e34199f.chunk.js",
+    "main.js.map": "/static/js/main.8e34199f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c4b2b71d.js",
     "runtime-main.js.map": "/static/js/runtime-main.c4b2b71d.js.map",
     "static/css/2.94f0bb04.chunk.css": "/static/css/2.94f0bb04.chunk.css",
     "static/js/2.758c5324.chunk.js": "/static/js/2.758c5324.chunk.js",
     "static/js/2.758c5324.chunk.js.map": "/static/js/2.758c5324.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3d0b05b7f6a7bd800d828b79d0093c0d.js": "/precache-manifest.3d0b05b7f6a7bd800d828b79d0093c0d.js",
+    "precache-manifest.30c03619836223f6bea5017d7616da61.js": "/precache-manifest.30c03619836223f6bea5017d7616da61.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.94f0bb04.chunk.css.map": "/static/css/2.94f0bb04.chunk.css.map",
-    "static/css/main.ab6cdced.chunk.css.map": "/static/css/main.ab6cdced.chunk.css.map",
+    "static/css/main.ceab79e3.chunk.css.map": "/static/css/main.ceab79e3.chunk.css.map",
     "static/js/2.758c5324.chunk.js.LICENSE.txt": "/static/js/2.758c5324.chunk.js.LICENSE.txt",
     "static/media/amaretti.png": "/static/media/amaretti.fac9e2fe.png",
     "static/media/assorted.jpg": "/static/media/assorted.3291cbec.jpg",
@@ -33,7 +33,7 @@
     "static/media/instagram.png": "/static/media/instagram.e01d8c49.png",
     "static/media/logo.JPG": "/static/media/logo.cdc73365.JPG",
     "static/media/mars.png": "/static/media/mars.712c801e.png",
-    "static/media/miniegg.png": "/static/media/miniegg.2b73f965.png",
+    "static/media/miniegg.png": "/static/media/miniegg.51f55d6e.png",
     "static/media/multiCookie.JPG": "/static/media/multiCookie.3892bf86.JPG",
     "static/media/nutella.png": "/static/media/nutella.ad7f57cd.png",
     "static/media/nutellaGodess.png": "/static/media/nutellaGodess.632683e4.png",
@@ -41,7 +41,7 @@
     "static/media/oreoBdayCake.png": "/static/media/oreoBdayCake.aa018ba6.png",
     "static/media/pastaschio.png": "/static/media/pastaschio.7de5aa72.png",
     "static/media/profile.png": "/static/media/profile.1184d4c9.png",
-    "static/media/reese.png": "/static/media/reese.d027f80c.png",
+    "static/media/reese.png": "/static/media/reese.454c0e28.png",
     "static/media/scones.png": "/static/media/scones.852574ad.png",
     "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg",
     "static/media/storytime.png": "/static/media/storytime.2ac058dc.png",
@@ -53,7 +53,7 @@
     "static/js/runtime-main.c4b2b71d.js",
     "static/css/2.94f0bb04.chunk.css",
     "static/js/2.758c5324.chunk.js",
-    "static/css/main.ab6cdced.chunk.css",
-    "static/js/main.d296f1bf.chunk.js"
+    "static/css/main.ceab79e3.chunk.css",
+    "static/js/main.8e34199f.chunk.js"
   ]
 }
