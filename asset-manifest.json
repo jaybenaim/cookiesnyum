@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4fb5e611.chunk.css",
-    "main.js": "/static/js/main.7c29b47d.chunk.js",
-    "main.js.map": "/static/js/main.7c29b47d.chunk.js.map",
+    "main.js": "/static/js/main.5623af12.chunk.js",
+    "main.js.map": "/static/js/main.5623af12.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c4b2b71d.js",
     "runtime-main.js.map": "/static/js/runtime-main.c4b2b71d.js.map",
     "static/css/2.94f0bb04.chunk.css": "/static/css/2.94f0bb04.chunk.css",
-    "static/js/2.6298dfbd.chunk.js": "/static/js/2.6298dfbd.chunk.js",
-    "static/js/2.6298dfbd.chunk.js.map": "/static/js/2.6298dfbd.chunk.js.map",
+    "static/js/2.a5d1ebda.chunk.js": "/static/js/2.a5d1ebda.chunk.js",
+    "static/js/2.a5d1ebda.chunk.js.map": "/static/js/2.a5d1ebda.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.062374bf01a15d1944293f5cdd875279.js": "/precache-manifest.062374bf01a15d1944293f5cdd875279.js",
+    "precache-manifest.48156395ed927b115fe52f008e4d2be7.js": "/precache-manifest.48156395ed927b115fe52f008e4d2be7.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.94f0bb04.chunk.css.map": "/static/css/2.94f0bb04.chunk.css.map",
     "static/css/main.4fb5e611.chunk.css.map": "/static/css/main.4fb5e611.chunk.css.map",
-    "static/js/2.6298dfbd.chunk.js.LICENSE.txt": "/static/js/2.6298dfbd.chunk.js.LICENSE.txt",
+    "static/js/2.a5d1ebda.chunk.js.LICENSE.txt": "/static/js/2.a5d1ebda.chunk.js.LICENSE.txt",
     "static/media/amaretti.png": "/static/media/amaretti.738f05a9.png",
     "static/media/assorted.jpg": "/static/media/assorted.3291cbec.jpg",
     "static/media/bananaBread.png": "/static/media/bananaBread.23775410.png",
@@ -22,6 +22,7 @@
     "static/media/info.css": "/static/media/boxCentered.0d33c5f6.png",
     "static/media/caramilk.png": "/static/media/caramilk.5e5cf7f5.png",
     "static/media/chocolate.png": "/static/media/chocolate.abfb633f.png",
+    "static/media/chocolateChip.png": "/static/media/chocolateChip.a2fd3c82.png",
     "static/media/cinnamonbun.png": "/static/media/cinnamonbun.b81e3dcc.png",
     "static/media/cookieButter.png": "/static/media/cookieButter.20734a0f.png",
     "static/media/cookies.png": "/static/media/cookies.f0e4c7c4.png",
@@ -55,8 +56,8 @@
   "entrypoints": [
     "static/js/runtime-main.c4b2b71d.js",
     "static/css/2.94f0bb04.chunk.css",
-    "static/js/2.6298dfbd.chunk.js",
+    "static/js/2.a5d1ebda.chunk.js",
     "static/css/main.4fb5e611.chunk.css",
-    "static/js/main.7c29b47d.chunk.js"
+    "static/js/main.5623af12.chunk.js"
   ]
 }
