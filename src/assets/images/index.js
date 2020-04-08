@@ -15,7 +15,6 @@ import cookieButter from "./cookies/cookieButter/cookieButter.png";
 import doubleDolceDelight from "./cookies/doubleDolceDelight/doubleDolceDelight.png";
 import everythingCookie from "./cookies/everythingCookie/everythingCookie.png";
 import ferrero from "./cookies/ferrero/ferrero.png";
-import nutella from "./cookies/nutella/nutella.png";
 import nutellaGodess from "./cookies/nutellaGodess/nutellaGodess.png";
 import oreo from "./cookies/oreo/oreo.png";
 import oreoBdayCake from "./cookies/oreoBdayCake/oreoBdayCake.png";
@@ -44,7 +43,6 @@ export {
   doubleDolceDelight,
   everythingCookie,
   ferrero,
-  nutella,
   nutellaGodess,
   oreo,
   oreoBdayCake,
