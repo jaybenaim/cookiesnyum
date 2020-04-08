@@ -19,3 +19,5 @@ increase qty button
 
 searchbar 
 - 
+
+change setAwake to fetch products instead 

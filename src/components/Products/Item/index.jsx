@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { AddCartButton } from "../../Cart/AddCartButton";
 import { addProduct } from "../../../redux/actions/cartActions";
+import { setCurrentProduct } from "../../../redux/actions/productActions";
 import { formatPrice } from "../../../helpers/index";
 import "../../../assets/stylesheets/item.css";
 import PRODUCTS from "../products";
@@ -22,6 +23,9 @@ class Item extends Component {
     });
 
     const image = getImage[0]["image"];
+    let newItem = item;
+    newItem._id = "";
+    newItem.image = image;
 
     return (
       <div className="item--card ">
@@ -31,6 +35,7 @@ class Item extends Component {
             state: { item, quantity, description, image }
           }}
           className="show-product-btn"
+          onClick={() => this.props.setCurrentProduct(newItem)}
         >
           <img
             className="item--card--img"
@@ -44,7 +49,7 @@ class Item extends Component {
           <Link
             to={{
               pathname: `/products/${sku}`,
-              state: { item, quantity }
+              state: { item, quantity, description, image }
             }}
             className="show-product-btn"
           >
@@ -69,4 +74,6 @@ class Item extends Component {
 const mapStateToProps = state => ({
   gallery: state.gallery
 });
-export default withRouter(connect(mapStateToProps, { addProduct })(Item));
+export default withRouter(
+  connect(mapStateToProps, { addProduct, setCurrentProduct })(Item)
+);

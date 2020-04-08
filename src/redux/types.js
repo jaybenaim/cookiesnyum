@@ -14,3 +14,4 @@ export const SET_PRODUCTS = "SET_PRODUCTS";
 export const TOGGLE_NAVBAR = "TOGGLE_NAVBAR";
 export const WAKEUP_DB = "WAKEUP_DB";
 export const SET_AWAKE = "SET_AWAKE";
+export const SET_CURRENT_PRODUCT = "SET_CURRENT_PRODUCT";

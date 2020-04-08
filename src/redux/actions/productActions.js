@@ -1,4 +1,4 @@
-import { SET_PRODUCTS, GET_ERRORS } from "../types";
+import { SET_PRODUCTS, GET_ERRORS, SET_CURRENT_PRODUCT } from "../types";
 import backend from "../../api/backend";
 
 export const getProducts = () => dispatch => {
@@ -19,5 +19,12 @@ export const setProducts = products => {
   return {
     type: SET_PRODUCTS,
     payload: products
+  };
+};
+
+export const setCurrentProduct = product => {
+  return {
+    type: SET_CURRENT_PRODUCT,
+    payload: product
   };
 };

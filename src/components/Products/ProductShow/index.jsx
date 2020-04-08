@@ -20,6 +20,9 @@ const ProductShow = props => {
     image
   } = props.location.state;
   const { products } = props;
+  // const { products, currentProduct: item } = props;
+
+  // const { name, price, sku, description, image } = item;
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -47,6 +50,7 @@ const ProductShow = props => {
     focusOnSelect: false,
     swipe: true
   };
+
   return (
     <div className="product-show-container">
       <div className="products--nav">
@@ -112,9 +116,8 @@ const ProductShow = props => {
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth,
-  errors: state.errors,
-  products: state.products.products
+  products: state.products.products,
+  currentProduct: state.products.currentProduct
 });
 export default withRouter(
   connect(mapStateToProps, {
