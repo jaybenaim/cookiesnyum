@@ -18,7 +18,11 @@ import {
   oreoBdayCake,
   storytime,
   strawberryPoptart,
-  walnutChocolateChip
+  walnutChocolateChip,
+  cookiesAndCream,
+  snickers,
+  caramilk,
+  monsterMash
 } from "../../assets/images";
 const PRODUCTS = [
   {
@@ -43,27 +47,22 @@ const PRODUCTS = [
   },
   {
     name: "mini egg",
-
     image: miniegg
   },
   {
     name: "PB Cup",
-
     image: reese
   },
   {
     name: "Amaretti",
-
     image: Amaretti
   },
   {
     name: "Pastaschio",
-
     image: pastaschio
   },
   {
     name: "Walnut Chocolate Chip",
-
     image: walnutChocolateChip
   },
   {
@@ -72,12 +71,10 @@ const PRODUCTS = [
   },
   {
     name: "Oreo Bday Cake",
-
     image: oreoBdayCake
   },
   {
     name: "Nutella Godess",
-
     image: nutellaGodess
   },
   {
@@ -87,33 +84,43 @@ const PRODUCTS = [
   },
   {
     name: "Double Dolce Delight",
-
     image: doubleDolceDelight
   },
   {
     name: "Strawberry Poptart",
-
     image: strawberryPoptart
   },
   {
     name: "Story Time",
-
     image: storytime
   },
   {
     name: "Ferrero",
-
     image: ferrero
   },
   {
     name: "Everything Cookie",
-
     image: everythingCookie
   },
   {
     name: "Cookie Butter",
-
     image: cookieButter
+  },
+  {
+    name: "Cookies and Cream",
+    image: cookiesAndCream
+  },
+  {
+    name: "Snickers",
+    image: snickers
+  },
+  {
+    name: "Caramilk",
+    image: caramilk
+  },
+  {
+    name: "Monster Mash",
+    image: monsterMash
   }
 ];
 

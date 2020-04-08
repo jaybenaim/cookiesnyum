@@ -21,6 +21,10 @@ import oreoBdayCake from "./cookies/oreoBdayCake/oreoBdayCake.png";
 import storytime from "./cookies/storytime/storytime.png";
 import strawberryPoptart from "./cookies/strawberryPoptart.png";
 import walnutChocolateChip from "./cookies/walnutChocolateChip.png";
+import monsterMash from "./cookies/monsterMash/monsterMash.png";
+import caramilk from "./cookies/caramilk/caramilk.png";
+import snickers from "./cookies/snickers/snickers.png";
+import cookiesAndCream from "./cookies/cookiesAndCream/cookiesAndCream.png";
 
 // biscotti
 import biscotti from "./featured/biscotti.png";
@@ -52,5 +56,9 @@ export {
   scones,
   cookies,
   biscotti,
-  logo
+  logo,
+  cookiesAndCream,
+  snickers,
+  caramilk,
+  monsterMash
 };
