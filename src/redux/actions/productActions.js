@@ -5,7 +5,6 @@ export const getProducts = () => dispatch => {
   backend
     .get("/products")
     .then(res => {
-      console.log(res.data);
       dispatch(setProducts(res.data));
     })
     .catch(err => {

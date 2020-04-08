@@ -78,6 +78,7 @@
   .products--nav {
     grid-column: 1 / span 3;
     padding-bottom: 5%;
+    margin-top: 25%;
   }
   .products--nav a {
     color: #000;

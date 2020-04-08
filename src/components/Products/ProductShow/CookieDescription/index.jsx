@@ -6,7 +6,6 @@ const CookieDescription = props => {
     description,
     description: { dough, mixin, stuffing, topping }
   } = props;
-  console.log(description.default);
   const itemIsCookie = item.sku.includes("cookie");
   const getOtherDescription = () => {
     return <li>{description.default}</li>;

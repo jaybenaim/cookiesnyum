@@ -17,21 +17,24 @@ class Item extends Component {
 
   render() {
     let { item, name, quantity, sku, description, price } = this.props;
-    const image = PRODUCTS.filter(product => {
+    const getImage = PRODUCTS.filter(product => {
       return product.name === name && product.image;
     });
+
+    const image = getImage[0]["image"];
+
     return (
       <div className="item--card ">
         <Link
           to={{
             pathname: `/products/${sku}`,
-            state: { item, quantity, description }
+            state: { item, quantity, description, image }
           }}
           className="show-product-btn"
         >
           <img
             className="item--card--img"
-            src={image[0]["image"]}
+            src={image}
             alt={name}
             height={200}
             width={200}
@@ -66,4 +69,4 @@ class Item extends Component {
 const mapStateToProps = state => ({
   gallery: state.gallery
 });
-export default connect(mapStateToProps, { addProduct })(withRouter(Item));
+export default withRouter(connect(mapStateToProps, { addProduct })(Item));

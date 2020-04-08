@@ -16,7 +16,8 @@ import CookieDescription from "./CookieDescription";
 const ProductShow = props => {
   const {
     item,
-    item: { name, price, image, sku, description }
+    item: { name, price, sku, description },
+    image
   } = props.location.state;
   const { products } = props;
   const [isLoading, setIsLoading] = useState(false);
@@ -115,8 +116,10 @@ const mapStateToProps = state => ({
   errors: state.errors,
   products: state.products.products
 });
-export default connect(mapStateToProps, {
-  addProduct,
-  getProducts,
-  filterGallery
-})(withRouter(ProductShow));
+export default withRouter(
+  connect(mapStateToProps, {
+    addProduct,
+    getProducts,
+    filterGallery
+  })(ProductShow)
+);

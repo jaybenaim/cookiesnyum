@@ -1,16 +1,17 @@
 import React from "react";
+import PRODUCTS from "../products";
+import { withRouter } from "react-router-dom";
 
-const RelatedProductsSlider = ({
-  product: { _id, name, image },
-  width,
-  height
-}) => {
+const RelatedProductsSlider = ({ product: { name }, width, height }) => {
+  const image = PRODUCTS.filter(product => {
+    return product.name === name && product.image;
+  });
   return (
     <div className="related-product">
-      <img src={image} alt={name} width={width} height={height} />
+      <img src={image[0]["image"]} alt={name} width={width} height={height} />
       <strong>{name}</strong>
     </div>
   );
 };
 
-export default RelatedProductsSlider;
+export default withRouter(RelatedProductsSlider);

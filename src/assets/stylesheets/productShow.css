@@ -85,6 +85,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding: 5% 10%;
   }
+  .product-show-container .products--nav {
+    margin-top: 5%;
+  }
   .product-show--card {
     grid-column: 1 / span 3;
     min-width: 100%;
@@ -97,6 +100,8 @@
     width: 30em;
     margin: 0 auto;
     object-fit: contain;
+    margin-top: -10%;
+    zoom: 1.2;
   }
   .product-show--card-body {
     grid-column: 2;
