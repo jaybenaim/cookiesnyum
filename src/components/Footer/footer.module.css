@@ -18,8 +18,3 @@
 .footerlink:hover {
   color: #fff;
 }
-@media (max-width: 450px) {
-  footer {
-    max-width: 100%;
-  }
-}

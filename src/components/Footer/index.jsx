@@ -24,8 +24,8 @@ const Footer = () => {
     </footer>
   );
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 export default withRouter(connect(mapStateToProps, {})(Footer));
