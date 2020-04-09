@@ -4,16 +4,15 @@ import "../../../assets/stylesheets/addCartButton.css";
 import { connect } from "react-redux";
 import { addProduct } from "../../../redux/actions/cartActions";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
-
 export class AddCartButton extends Component {
   static propTypes = {
     product: PropTypes.object.isRequired,
     styles: PropTypes.object,
-    addLabel: PropTypes.string
+    addLabel: PropTypes.string,
   };
 
   static defaultProps = {
-    addLabel: "Add to Cart"
+    addLabel: "Add to Cart",
   };
 
   addProductToCart = (event, product) => {
@@ -28,7 +27,7 @@ export class AddCartButton extends Component {
       <p className="add-to-cart-btn">
         <button
           style={{ ...styles }}
-          onClick={event => this.addProductToCart(event, product)}
+          onClick={(event) => this.addProductToCart(event, product)}
         >
           <AddCircleOutlineIcon /> {addLabel}
         </button>
@@ -37,8 +36,8 @@ export class AddCartButton extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return { addProduct: product => dispatch(addProduct(product)) };
+const mapDispatchToProps = (dispatch) => {
+  return { addProduct: (product) => dispatch(addProduct(product)) };
 };
 
 export default connect(null, mapDispatchToProps)(AddCartButton);

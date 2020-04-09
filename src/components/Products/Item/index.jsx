@@ -7,7 +7,7 @@ import { setCurrentProduct } from "../../../redux/actions/productActions";
 import { formatPrice } from "../../../helpers/index";
 import "../../../assets/stylesheets/item.css";
 class Item extends Component {
-  shortDescription = description => {
+  shortDescription = (description) => {
     return !description
       ? ""
       : description.length <= 25
@@ -23,13 +23,13 @@ class Item extends Component {
         <Link
           to={{
             pathname: `/products/${sku}`,
-            state: { item, quantity, description, image }
+            state: { item, quantity, description, image },
           }}
           className="show-product-btn"
           onClick={() => this.props.setCurrentProduct(item)}
         >
           <img
-            className="item--card--img"
+            className={`item--card--img ${sku.replace("-", "")}`}
             src={image}
             alt={name}
             height={200}
@@ -40,7 +40,7 @@ class Item extends Component {
           <Link
             to={{
               pathname: `/products/${sku}`,
-              state: { item, quantity, description, image }
+              state: { item, quantity, description, image },
             }}
             className="show-product-btn"
           >
@@ -62,8 +62,8 @@ class Item extends Component {
     );
   }
 }
-const mapStateToProps = state => ({
-  gallery: state.gallery
+const mapStateToProps = (state) => ({
+  gallery: state.gallery,
 });
 export default withRouter(
   connect(mapStateToProps, { addProduct, setCurrentProduct })(Item)

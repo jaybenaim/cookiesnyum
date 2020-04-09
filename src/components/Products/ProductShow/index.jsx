@@ -13,11 +13,11 @@ import { Preloader } from "react-materialize";
 import { filterGallery } from "../../../redux/actions/galleryActions";
 import CookieDescription from "./CookieDescription";
 
-const ProductShow = props => {
+const ProductShow = (props) => {
   const {
     item,
     item: { name, price, sku, description },
-    image
+    image,
   } = props.location.state;
   const { products } = props;
   // const { products, currentProduct: item } = props;
@@ -48,7 +48,7 @@ const ProductShow = props => {
     slidesToShow: slides,
     slidesToScroll: slides,
     focusOnSelect: false,
-    swipe: true
+    swipe: true,
   };
 
   return (
@@ -58,7 +58,7 @@ const ProductShow = props => {
         <a href="/dolcenada/products"> Products /</a>{" "}
         <Link
           to={{
-            pathname: "/products"
+            pathname: "/products",
           }}
           onClick={() => props.filterGallery(formattedSku)}
         >
@@ -69,21 +69,20 @@ const ProductShow = props => {
 
       <div className=" product-show--card">
         <img
-          className="product-show--card--img"
+          className={`product-show--card--img ${sku.replace("-", "")}`}
           src={image}
           alt={name}
           height={120}
           width={120}
         />
         <div className="product-show--card-body secondary-font">
-          <h3 className="product-show--card-body--name">{name}</h3>
+          <h3 className="product-show--card-body--name ">{name}</h3>
           <p className="product-show--card-body--price">
             {formatPrice(price, "CAD")}
           </p>
-          <p className="product-show--card-body--description">
-            <CookieDescription item={item} description={description} />
-          </p>
-          <div className="product-show--card-body--add-to-cart-btn">
+          {/* Insert Quantity Component */}
+
+          <div className="product-show--card-body--add-to-cart-btn ">
             <span>
               <AddCartButton
                 product={item}
@@ -92,37 +91,40 @@ const ProductShow = props => {
               />
             </span>
           </div>
-          <div className="product-show--card-body--related-products">
-            <h3>Related Products</h3>
-            {isLoading ? (
-              <div>
-                <Preloader active color="green" />
-              </div>
-            ) : (
-              <Link
-                to={{
-                  pathname: "/products"
-                }}
-                onClick={() => props.filterGallery(formattedSku)}
-              >
-                <Slider {...settings}>{RelatedProductsElements}</Slider>
-              </Link>
-            )}
-          </div>
+          <p className="product-show--card-body--description">
+            <CookieDescription item={item} description={description} />
+          </p>
         </div>
+      </div>
+      <div className="product-show--card-body--related-products">
+        <h3 className="primary-font">Related Products</h3>
+        {isLoading ? (
+          <div>
+            <Preloader active color="green" />
+          </div>
+        ) : (
+          <Link
+            to={{
+              pathname: "/products",
+            }}
+            onClick={() => props.filterGallery(formattedSku)}
+          >
+            <Slider {...settings}>{RelatedProductsElements}</Slider>
+          </Link>
+        )}
       </div>
     </div>
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   products: state.products.products,
-  currentProduct: state.products.currentProduct
+  currentProduct: state.products.currentProduct,
 });
 export default withRouter(
   connect(mapStateToProps, {
     addProduct,
     getProducts,
-    filterGallery
+    filterGallery,
   })(ProductShow)
 );
