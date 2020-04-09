@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d5ad25837b2b58f58e360788380ec40c",
+    "revision": "05cb667ac830cc3d4e5d73585b9de810",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.94f0bb04.chunk.css"
   },
   {
-    "revision": "8ee2be8d6e8102d3164b",
+    "revision": "f70046dac5ef05d09af9",
     "url": "/static/css/main.c6edbcdb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.7a4f1454.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8ee2be8d6e8102d3164b",
-    "url": "/static/js/main.3d8eda43.chunk.js"
+    "revision": "f70046dac5ef05d09af9",
+    "url": "/static/js/main.74ecdf16.chunk.js"
   },
   {
     "revision": "1d34a7c3a2afae821ef9",
@@ -36,16 +36,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/assorted.3291cbec.jpg"
   },
   {
-    "revision": "23775410053742c1abeb211610dcb60f",
-    "url": "/static/media/bananaBread.23775410.png"
+    "revision": "56e572873c0722687877461c67da969c",
+    "url": "/static/media/bananaBread.56e57287.png"
   },
   {
     "revision": "239a7a10ed4636a9533b37163d4f512d",
     "url": "/static/media/biscotti.239a7a10.png"
   },
   {
-    "revision": "f94fe61c1d15e8b3c240563e43c47354",
-    "url": "/static/media/blueberry.f94fe61c.png"
+    "revision": "d5f2887fe9cd9dbfa892fe99dd44cefb",
+    "url": "/static/media/blueberry.d5f2887f.png"
   },
   {
     "revision": "4821b84c323df1f8d932a317dfd62a58",
@@ -56,40 +56,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/boxCentered1.97101570.png"
   },
   {
-    "revision": "5e5cf7f54e5115f783a9bef3d8ad7194",
-    "url": "/static/media/caramilk.5e5cf7f5.png"
+    "revision": "d0b436ac7866701f70ad06fb8ca1a9ca",
+    "url": "/static/media/caramilk.d0b436ac.png"
   },
   {
-    "revision": "abfb633f38219a6f77fbf46a03590211",
-    "url": "/static/media/chocolate.abfb633f.png"
+    "revision": "c2531194e6cf0672afff90a25fa93254",
+    "url": "/static/media/chocolate.c2531194.png"
   },
   {
-    "revision": "a2fd3c82774f32dd739b30c195013af9",
-    "url": "/static/media/chocolateChip.a2fd3c82.png"
+    "revision": "bd4c5c504a39b9b5e80c86a7eaebfa04",
+    "url": "/static/media/chocolateChip.bd4c5c50.png"
   },
   {
     "revision": "b81e3dcc3cbfc0888465d9e5f19cf375",
     "url": "/static/media/cinnamonbun.b81e3dcc.png"
   },
   {
-    "revision": "20734a0faacda47f8fd5ea5c796c51f4",
-    "url": "/static/media/cookieButter.20734a0f.png"
+    "revision": "e383d778ce55f026a7e2f50de0991752",
+    "url": "/static/media/cookieButter.e383d778.png"
   },
   {
     "revision": "f0e4c7c48d45e557971dd8b861273006",
     "url": "/static/media/cookies.f0e4c7c4.png"
   },
   {
-    "revision": "757620023b3588cdbdeb0626ed38bfaa",
-    "url": "/static/media/cookiesAndCream.75762002.png"
+    "revision": "1f91657dda578511a08d739f2f5e85ad",
+    "url": "/static/media/cookiesAndCream.1f91657d.png"
   },
   {
-    "revision": "77f609313995af47d9893a538015e351",
-    "url": "/static/media/cranberryorange.77f60931.png"
+    "revision": "187543b0a87588734379dc9512c8fc37",
+    "url": "/static/media/cranberryorange.187543b0.png"
   },
   {
-    "revision": "3ed77cfe9c80c9eb0dfc1cf8a56543d0",
-    "url": "/static/media/doubleDolceDelight.3ed77cfe.png"
+    "revision": "01de30fae79be457b775fa7b6b75854b",
+    "url": "/static/media/doubleDolceDelight.01de30fa.png"
   },
   {
     "revision": "2d7a5cac12f138fcedc440224d6a3777",
@@ -100,12 +100,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/easter.f00e8dfd.JPG"
   },
   {
-    "revision": "c162cfc5bb5305be230c96f0b0bffe19",
-    "url": "/static/media/everythingCookie.c162cfc5.png"
+    "revision": "e355476c682e48a5a9fc2d9cd6d0142e",
+    "url": "/static/media/everythingCookie.e355476c.png"
   },
   {
-    "revision": "c019a14292ccd031b92e06b756d93366",
-    "url": "/static/media/ferrero.c019a142.png"
+    "revision": "fe76112c934a777e143fd0a0c5e58c66",
+    "url": "/static/media/ferrero.fe76112c.png"
   },
   {
     "revision": "7463496eb216f2f2c909bcd74ce5ca87",
@@ -120,12 +120,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/mars.9577d041.png"
   },
   {
-    "revision": "d3a69ee9cc8e4839855bd7e9f665dd2b",
-    "url": "/static/media/miniegg.d3a69ee9.png"
+    "revision": "51f55d6eb03364897bd2825d8ebdc337",
+    "url": "/static/media/miniegg.51f55d6e.png"
   },
   {
-    "revision": "8616460a7703be1ed049c76a36a327a3",
-    "url": "/static/media/monsterMash.8616460a.png"
+    "revision": "fe1bc4b1c4f4efa43f9f2bfc325860fd",
+    "url": "/static/media/monsterMash.fe1bc4b1.png"
   },
   {
     "revision": "73a624c8f911500bfe78e973615b9b65",
@@ -136,12 +136,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/nutellaGodess.fc513fe6.png"
   },
   {
-    "revision": "e43a0cf362e167f2b07ad52eda14fa60",
-    "url": "/static/media/oreo.e43a0cf3.png"
+    "revision": "bf4a3e7cd8b00a0f36fdf2d1c068c92d",
+    "url": "/static/media/oreo.bf4a3e7c.png"
   },
   {
-    "revision": "6e30ef3d35bf0893142b370b68fef275",
-    "url": "/static/media/oreoBdayCake.6e30ef3d.png"
+    "revision": "69076bfd22de7c2de99bf6cab8bf7969",
+    "url": "/static/media/oreoBdayCake.69076bfd.png"
   },
   {
     "revision": "2440a9e0dbcbe7761666069724cd3296",
@@ -152,8 +152,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/profile.1184d4c9.png"
   },
   {
-    "revision": "2ee4bd08c1efb241452ae50455fe98e0",
-    "url": "/static/media/reese.2ee4bd08.png"
+    "revision": "e07b0298f8db3e7a95dbc780d23a5db8",
+    "url": "/static/media/reese.e07b0298.png"
   },
   {
     "revision": "852574ad8d757dadbaf32e295eec29b3",
@@ -176,16 +176,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "aec2dd9b222b6053dc1077a3a4ce082f",
-    "url": "/static/media/snickers.aec2dd9b.png"
+    "revision": "a0d26b46a0d436eae11a8c0c63138274",
+    "url": "/static/media/snickers.a0d26b46.png"
   },
   {
-    "revision": "87121737878ccb0ba133220b4c5c87f3",
-    "url": "/static/media/storytime.87121737.png"
+    "revision": "2ac058dc0f0890c3434c27a595947c68",
+    "url": "/static/media/storytime.2ac058dc.png"
   },
   {
-    "revision": "2b67a22f4ef84f0e280cc5cb4c4a54c1",
-    "url": "/static/media/strawberryPoptart.2b67a22f.png"
+    "revision": "2eccd51daec8a4d80e89325e826c2c90",
+    "url": "/static/media/strawberryPoptart.2eccd51d.png"
   },
   {
     "revision": "4aa1e3b0fc46b146331c5a9530b7dd3c",
