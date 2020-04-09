@@ -1,10 +1,10 @@
 import React from "react";
 
-const CookieDescription = props => {
+const CookieDescription = (props) => {
   const {
     item,
     description,
-    description: { dough, mixin, stuffing, topping }
+    description: { dough, mixin, stuffing, topping },
   } = props;
   const itemIsCookie = item.sku.includes("cookie");
   const getOtherDescription = () => {
@@ -22,7 +22,7 @@ const CookieDescription = props => {
               {dough}
             </li>
             <li>
-              <strong>Mixin: </strong> {mixin}
+              <strong>Mix - Ins: </strong> {mixin}
             </li>
             <li>
               <strong>Stuffing: </strong>

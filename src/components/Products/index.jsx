@@ -8,16 +8,16 @@ import { filterGallery } from "../../redux/actions/galleryActions";
 import { Preloader } from "react-materialize";
 import PRODUCTS from "./products";
 
-const Products = props => {
+const Products = (props) => {
   let {
     gallery,
     gallery: { filter },
-    products
+    products,
   } = props;
 
   if (!gallery) {
     const {
-      gallery: { filter: linkFilter }
+      gallery: { filter: linkFilter },
     } = props.location.state;
     gallery.filter = linkFilter;
   }
@@ -35,7 +35,7 @@ const Products = props => {
 
   const productElements = products.map((item, i) => {
     // Get product image
-    const getImage = PRODUCTS.filter(product => {
+    const getImage = PRODUCTS.filter((product) => {
       return product.name === item.name && product.image;
     });
     // Set product image
@@ -79,12 +79,12 @@ const Products = props => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
   cart: state.cart,
   gallery: state.gallery,
-  products: state.products.products
+  products: state.products.products,
 });
 export default connect(mapStateToProps, { filterGallery })(
   withRouter(Products)
