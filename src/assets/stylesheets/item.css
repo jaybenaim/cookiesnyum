@@ -14,9 +14,9 @@
 }
 @media (max-width: 450px) {
   .products--nav {
-    margin: 20%;
+    margin: 5%;
     grid-column: 1;
-    width: 50%;
+    width: 60%;
   }
   .products--nav a {
     color: #000;

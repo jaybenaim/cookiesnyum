@@ -5,6 +5,9 @@
     padding: 2%;
   }
 
+  .product-show-container .products--nav {
+    padding: 0;
+  }
   .product-show--card {
     grid-column: 1 / span 3;
     min-width: 100%;
