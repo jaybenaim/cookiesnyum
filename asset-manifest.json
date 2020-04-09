@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.4fb5e611.chunk.css",
-    "main.js": "/static/js/main.5623af12.chunk.js",
-    "main.js.map": "/static/js/main.5623af12.chunk.js.map",
+    "main.css": "/static/css/main.c6edbcdb.chunk.css",
+    "main.js": "/static/js/main.3d8eda43.chunk.js",
+    "main.js.map": "/static/js/main.3d8eda43.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c4b2b71d.js",
     "runtime-main.js.map": "/static/js/runtime-main.c4b2b71d.js.map",
     "static/css/2.94f0bb04.chunk.css": "/static/css/2.94f0bb04.chunk.css",
-    "static/js/2.a5d1ebda.chunk.js": "/static/js/2.a5d1ebda.chunk.js",
-    "static/js/2.a5d1ebda.chunk.js.map": "/static/js/2.a5d1ebda.chunk.js.map",
+    "static/js/2.7a4f1454.chunk.js": "/static/js/2.7a4f1454.chunk.js",
+    "static/js/2.7a4f1454.chunk.js.map": "/static/js/2.7a4f1454.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.48156395ed927b115fe52f008e4d2be7.js": "/precache-manifest.48156395ed927b115fe52f008e4d2be7.js",
+    "precache-manifest.5c25883197d8bcc13d5196aa535c2ef3.js": "/precache-manifest.5c25883197d8bcc13d5196aa535c2ef3.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.94f0bb04.chunk.css.map": "/static/css/2.94f0bb04.chunk.css.map",
-    "static/css/main.4fb5e611.chunk.css.map": "/static/css/main.4fb5e611.chunk.css.map",
-    "static/js/2.a5d1ebda.chunk.js.LICENSE.txt": "/static/js/2.a5d1ebda.chunk.js.LICENSE.txt",
+    "static/css/main.c6edbcdb.chunk.css.map": "/static/css/main.c6edbcdb.chunk.css.map",
+    "static/js/2.7a4f1454.chunk.js.LICENSE.txt": "/static/js/2.7a4f1454.chunk.js.LICENSE.txt",
     "static/media/amaretti.png": "/static/media/amaretti.738f05a9.png",
     "static/media/assorted.jpg": "/static/media/assorted.3291cbec.jpg",
     "static/media/bananaBread.png": "/static/media/bananaBread.23775410.png",
     "static/media/biscotti.png": "/static/media/biscotti.239a7a10.png",
     "static/media/blueberry.png": "/static/media/blueberry.f94fe61c.png",
-    "static/media/info.css": "/static/media/boxCentered.0d33c5f6.png",
+    "static/media/boxCentered.png": "/static/media/boxCentered.4821b84c.png",
+    "static/media/boxCentered1.png": "/static/media/boxCentered1.97101570.png",
     "static/media/caramilk.png": "/static/media/caramilk.5e5cf7f5.png",
     "static/media/chocolate.png": "/static/media/chocolate.abfb633f.png",
     "static/media/chocolateChip.png": "/static/media/chocolateChip.a2fd3c82.png",
@@ -56,8 +57,8 @@
   "entrypoints": [
     "static/js/runtime-main.c4b2b71d.js",
     "static/css/2.94f0bb04.chunk.css",
-    "static/js/2.a5d1ebda.chunk.js",
-    "static/css/main.4fb5e611.chunk.css",
-    "static/js/main.5623af12.chunk.js"
+    "static/js/2.7a4f1454.chunk.js",
+    "static/css/main.c6edbcdb.chunk.css",
+    "static/js/main.3d8eda43.chunk.js"
   ]
 }
