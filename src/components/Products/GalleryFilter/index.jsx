@@ -5,8 +5,8 @@ import { withRouter } from "react-router-dom";
 import { filterGallery } from "../../../redux/actions/galleryActions";
 
 import "../../../assets/stylesheets/galleryFilter.css";
-const GalleryFilter = props => {
-  const handleFilterClick = e => {
+const GalleryFilter = (props) => {
+  const handleFilterClick = (e) => {
     e.preventDefault();
     const { name } = e.target;
     props.filterGallery(name);
@@ -19,7 +19,7 @@ const GalleryFilter = props => {
         waves="light"
         className="all-filter-link"
         name="all"
-        onClick={e => handleFilterClick(e)}
+        onClick={(e) => handleFilterClick(e)}
       >
         All
       </Button>
@@ -28,7 +28,7 @@ const GalleryFilter = props => {
         waves="light"
         className="cookie-filter-link"
         name="cookie"
-        onClick={e => handleFilterClick(e)}
+        onClick={(e) => handleFilterClick(e)}
       >
         Cookies
       </Button>
@@ -37,7 +37,7 @@ const GalleryFilter = props => {
         waves="light"
         className="scone-filter-link"
         name="scone"
-        onClick={e => handleFilterClick(e)}
+        onClick={(e) => handleFilterClick(e)}
       >
         Scones
       </Button>
@@ -46,7 +46,7 @@ const GalleryFilter = props => {
         waves="light"
         className="biscotti-filter-link"
         name="biscotti"
-        onClick={e => handleFilterClick(e)}
+        onClick={(e) => handleFilterClick(e)}
       >
         Biscotti
       </Button>
@@ -55,18 +55,27 @@ const GalleryFilter = props => {
         waves="light"
         className="featured-filter-link"
         name="featured"
-        onClick={e => handleFilterClick(e)}
+        onClick={(e) => handleFilterClick(e)}
       >
         Featured
+      </Button>
+      <Button
+        node="button"
+        waves="light"
+        className="boxes-filter-link"
+        name="box"
+        onClick={(e) => handleFilterClick(e)}
+      >
+        Boxes
       </Button>
     </div>
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   errors: state.errors,
   cart: state.cart,
-  gallery: state.gallery
+  gallery: state.gallery,
 });
 export default withRouter(
   connect(mapStateToProps, { filterGallery })(GalleryFilter)
