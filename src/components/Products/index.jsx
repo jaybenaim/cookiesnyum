@@ -39,7 +39,7 @@ const Products = (props) => {
       return product.name === item.name && product.image;
     });
     // Set product image
-    const image = getImage[0]["image"];
+    const image = getImage.length >= 1 ? getImage[0]["image"] : "";
     let newItem = item;
     newItem._id = "";
     newItem.image = image;
