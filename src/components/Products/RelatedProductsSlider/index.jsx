@@ -7,7 +7,7 @@ const RelatedProductsSlider = ({ product: { name }, width, height }) => {
     return product.name === name && product.image;
   });
   const image = getImage.length >= 1 ? getImage[0]["image"] : "";
-  console.log(image);
+
   return (
     <div className="related-product">
       <img src={image} alt={name} width={width} height={height} />

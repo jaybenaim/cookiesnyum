@@ -66,7 +66,7 @@ const GalleryFilter = (props) => {
         name="boxes"
         onClick={(e) => handleFilterClick(e)}
       >
-        Featured
+        Boxes
       </Button>
     </div>
   );
