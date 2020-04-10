@@ -68,7 +68,7 @@
     flex-direction: row;
     max-height: 60px;
     min-width: 200px;
-    margin-left: -5%;
+    margin-left: -15%;
   }
 
   .item--card-body--add-to-cart button {
