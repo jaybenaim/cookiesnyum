@@ -2,7 +2,7 @@ import React from "react";
 import PRODUCTS from "../products";
 import { withRouter } from "react-router-dom";
 
-const RelatedProductsSlider = ({ product: { name }, width, height }) => {
+const RelatedProductsSlider = ({ product: { name, sku }, width, height }) => {
   const getImage = PRODUCTS.filter((product) => {
     return product.name === name && product.image;
   });
@@ -10,7 +10,13 @@ const RelatedProductsSlider = ({ product: { name }, width, height }) => {
 
   return (
     <div className="related-product">
-      <img src={image} alt={name} width={width} height={height} />
+      <img
+        className={sku.replace("-", "")}
+        src={image}
+        alt={name}
+        width={width}
+        height={height}
+      />
       <strong className="primary-font">{name}</strong>
     </div>
   );

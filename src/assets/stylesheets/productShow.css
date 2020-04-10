@@ -95,6 +95,7 @@
     margin: 0 auto;
     object-fit: cover;
   }
+
   .product-show--card-body--related-products .related-product a strong {
     padding-bottom: 25%;
     position: relative;
@@ -133,6 +134,7 @@
   .cookie {
     object-fit: cover;
   }
+
   .product-show--card-body {
     grid-row: 1;
     grid-column: 2;
@@ -232,4 +234,7 @@
     height: 2em;
     width: 4em;
   }
+}
+.scone {
+  object-fit: contain !important;
 }

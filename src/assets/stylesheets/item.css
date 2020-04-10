@@ -174,3 +174,6 @@
 .item--card {
   overflow: hidden;
 }
+.products-container {
+  overflow-x: hidden !important;
+}
