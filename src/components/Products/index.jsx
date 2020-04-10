@@ -41,7 +41,7 @@ const Products = (props) => {
     // Set product image
     const image = getImage.length >= 1 ? getImage[0]["image"] : "";
     let newItem = item;
-    newItem._id = "";
+
     newItem.image = image;
     // render each product
     return (
