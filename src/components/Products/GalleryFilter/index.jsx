@@ -63,7 +63,7 @@ const GalleryFilter = (props) => {
         node="button"
         waves="light"
         className="boxes-filter-link"
-        name="boxes"
+        name="box"
         onClick={(e) => handleFilterClick(e)}
       >
         Boxes
