@@ -3,12 +3,14 @@ import PRODUCTS from "../products";
 import { withRouter } from "react-router-dom";
 
 const RelatedProductsSlider = ({ product: { name }, width, height }) => {
-  const image = PRODUCTS.filter((product) => {
+  const getImage = PRODUCTS.filter((product) => {
     return product.name === name && product.image;
   });
+  const image = getImage.length >= 1 ? getImage[0]["image"] : "";
+  console.log(image);
   return (
     <div className="related-product">
-      <img src={image[0]["image"]} alt={name} width={width} height={height} />
+      <img src={image} alt={name} width={width} height={height} />
       <strong className="primary-font">{name}</strong>
     </div>
   );
