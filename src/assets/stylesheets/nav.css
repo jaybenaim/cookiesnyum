@@ -25,6 +25,9 @@
   width: 100% !important;
 }
 @media (min-width: 989px) {
+  nav .nav-wrapper {
+    position: absolute !important;
+  }
   .auth-content a {
     width: 10px !important;
   }
@@ -57,7 +60,6 @@
 
 nav {
   background: #f6406f !important;
-  position: absolute;
   z-index: 2;
 }
 .brand-logo img {
