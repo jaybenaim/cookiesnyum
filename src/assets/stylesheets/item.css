@@ -40,16 +40,19 @@
   }
   .item--card--img {
     grid-column: 1;
+    grid-row: 2;
     object-fit: contain;
     zoom: 1.1;
-  }
-  .item--card-body {
-    grid-column: 2;
   }
 
   .item--card-body--name {
     grid-column: 1 / span 3;
+    grid-row: 1;
     color: #000;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
   }
   .item--card-body--price {
     grid-row: 3;
@@ -64,6 +67,7 @@
   .item--card-body--description {
     grid-column: 1 / span 3;
     grid-row: 2;
+    font-size: 1.3em;
   }
   .item--card-body--add-to-cart {
     grid-column: 1 / span 3;
@@ -128,8 +132,7 @@
   .show-product-btn {
     grid-column: 1 / span 3;
     grid-row: 1;
-    display: flex;
-    justify-content: center;
+    display: grid;
   }
   .item--card--img {
     margin-bottom: 12%;
@@ -139,10 +142,12 @@
     padding: 2%;
   }
   .item--card-body--name {
-    grid-column: 1 / span 2;
     text-transform: capitalize;
-    font-size: 1.3em;
+    grid-column: 1 / span 3;
+    grid-row: 2;
     color: #000;
+    display: flex;
+    justify-content: center;
   }
   .item--card-body--description {
     grid-column: 1 / span 3;
