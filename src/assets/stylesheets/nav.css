@@ -1,11 +1,11 @@
 @media (max-width: 450px) {
+  nav {
+    position: absolute;
+    z-index: 2;
+  }
   .brand-logo img {
     position: relative;
     z-index: 1;
-  }
-  nav {
-    position: relative;
-    z-index: 2;
   }
   .sidenav--dropdown-trigger {
     margin-left: 10%;
@@ -54,8 +54,16 @@
     margin-left: 0;
   }
 }
+
 nav {
   background: #f6406f !important;
+
+  position: absolute;
+  z-index: 2;
+}
+.brand-logo img {
+  position: relative;
+  z-index: 1;
 }
 .sidenav {
   z-index: 99999999;
@@ -64,9 +72,7 @@ nav {
 .sidenav-overlay {
   z-index: 999999;
 }
-.brand-logo {
-  z-index: 999999;
-}
+
 .auth-content {
   position: absolute;
   bottom: 10%;

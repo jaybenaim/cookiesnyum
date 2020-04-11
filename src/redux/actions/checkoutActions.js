@@ -1,26 +1,26 @@
 import { GET_ERRORS, SET_CHECKOUT_STATUS } from "../types";
-import backend from "../../api/backend";
+import local from "../../api/local";
 
 // Send message for checkout
-export const sendEmail = data => dispatch => {
-  backend
+export const sendEmail = (data) => (dispatch) => {
+  local
     .post("/email", data)
-    .then(res => {
+    .then((res) => {
       let message = "success";
       dispatch(setCheckoutStatus(message));
     })
-    .catch(err => {
+    .catch((err) => {
       dispatch({
         type: GET_ERRORS,
-        payload: err
+        payload: err,
       });
     });
 };
 
 // Set message status from checkout promise
-export const setCheckoutStatus = message => {
+export const setCheckoutStatus = (message) => {
   return {
     type: SET_CHECKOUT_STATUS,
-    payload: message
+    payload: message,
   };
 };

@@ -2,19 +2,31 @@
   footer ul {
     display: flex;
     flex-direction: row;
-    margin-top: 15%;
+    margin-top: 25%;
   }
-  footer ul li {
+  footer .container ul li {
     padding: 0 2%;
     color: #fff;
   }
-}
-@media (max-width: 450px) {
-  footer {
-    max-width: 100%;
+  .footer .container {
+    max-width: 50% !important;
+    margin-left: 0;
   }
-  .footer-container {
-    max-width: 50%;
+  footer .container ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20%;
+  }
+}
+@media (min-width: 451px) {
+  .footer .container {
+    max-width: 50% !important;
+    margin-left: 0;
+  }
+  footer .container ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20%;
   }
 }
 
@@ -24,5 +36,5 @@
   padding-bottom: 4rem;
   position: absolute;
   bottom: 0;
-  max-width: 100%;
+  min-width: 100%;
 }
