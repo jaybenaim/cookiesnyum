@@ -166,6 +166,9 @@
   .filter-container {
     grid-column: 1 / span 5 !important;
   }
+  .contain {
+    object-fit: contain !important;
+  }
 }
 .item--card-body--name {
   text-transform: capitalize;

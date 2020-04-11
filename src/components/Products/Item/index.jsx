@@ -16,10 +16,19 @@ class Item extends Component {
   };
 
   render() {
-    let { item, name, quantity, sku, description, price, image } = this.props;
+    let {
+      item,
+      name,
+      quantity,
+      sku,
+      description,
+      price,
+      image,
+      class: defaultClass,
+    } = this.props;
 
     return (
-      <div className="item--card ">
+      <div className={`item--card `}>
         <Link
           to={{
             pathname: `/products/${sku}`,
@@ -29,7 +38,7 @@ class Item extends Component {
           onClick={() => this.props.setCurrentProduct(item)}
         >
           <img
-            className={`item--card--img ${sku.replace("-", "")}`}
+            className={`item--card--img ${defaultClass}`}
             src={image}
             alt={name}
             height={200}

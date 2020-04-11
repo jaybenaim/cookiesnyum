@@ -130,7 +130,7 @@
     grid-column: 1;
     height: 35em;
     width: 30em;
-    object-fit: contain;
+    object-fit: cover;
     margin: 0 auto;
     margin-top: -5%;
     margin-bottom: -10%;
