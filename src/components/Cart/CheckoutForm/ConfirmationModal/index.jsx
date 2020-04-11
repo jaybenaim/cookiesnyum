@@ -6,15 +6,15 @@ import { sendEmail } from "../../../../redux/actions/checkoutActions";
 import SendIcon from "@material-ui/icons/Send";
 import ConfirmationModalContent from "./ConfirmationModalContent";
 
-const ConfirmationModal = props => {
+const ConfirmationModal = (props) => {
   const {
     checkoutData,
     auth: {
-      user: { name }
+      user: { name },
     },
     cart: {
-      data: { productQuantity, totalPrice }
-    }
+      data: { productQuantity, totalPrice },
+    },
   } = props;
   const handleSendEmail = () => {
     const {
@@ -23,7 +23,7 @@ const ConfirmationModal = props => {
       address: { addressNumber, city, province, street, postalCode },
       email: emailAddress,
       paymentMethod,
-      dateNeededBy
+      dateNeededBy,
     } = checkoutData;
 
     const productSkuLis = products.map((p, i) => `<li>${products[i]}</li>`);
@@ -65,8 +65,6 @@ const ConfirmationModal = props => {
             <div> 
           </div>
        <div> 
-
-
          </div> 
         </div>
       </div>
@@ -99,7 +97,7 @@ const ConfirmationModal = props => {
       name: name || "name",
       email: "jacob.benaim@icloud.com",
       message: `Error with the order contact - `,
-      html: emailBody
+      html: emailBody,
     };
     // @post to /email
     props.sendEmail(email);
@@ -111,7 +109,7 @@ const ConfirmationModal = props => {
         actions={[
           <Button flat modal="close" node="button" waves="green">
             Cancel
-          </Button>
+          </Button>,
         ]}
         bottomSheet={false}
         fixedFooter={false}
@@ -129,7 +127,7 @@ const ConfirmationModal = props => {
           opacity: 0.5,
           outDuration: 250,
           preventScrolling: true,
-          startingTop: "0%"
+          startingTop: "0%",
         }}
       >
         <div>
@@ -150,11 +148,11 @@ const ConfirmationModal = props => {
     </div>
   );
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
   cart: state.cart,
-  checkout: state.checkout
+  checkout: state.checkout,
 });
 
 export default withRouter(
