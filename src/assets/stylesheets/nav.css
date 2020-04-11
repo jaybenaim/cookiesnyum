@@ -1,3 +1,8 @@
+.auth-content {
+  position: absolute;
+  top: 1.15%;
+  width: 80%;
+}
 @media (max-width: 450px) {
   nav {
     position: absolute;
@@ -13,6 +18,11 @@
   .sidenav--dropdown-trigger .material-icons {
     position: relative;
     top: 7px;
+  }
+  .auth-content {
+    position: absolute;
+    top: 70%;
+    width: 100%;
   }
 }
 @media (min-width: 451px) {
@@ -81,11 +91,6 @@ nav {
   z-index: 999999;
 }
 
-.auth-content {
-  position: absolute;
-  top: 1.15%;
-  width: 80%;
-}
 .auth-link {
   width: 100%;
   color: #fff;

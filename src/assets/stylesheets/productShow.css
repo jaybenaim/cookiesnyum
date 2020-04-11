@@ -9,6 +9,7 @@
 
   .product-show-container .products--nav {
     padding: 0;
+    margin-top: 50%;
   }
   .product-show--card {
     grid-column: 1 / span 3;
@@ -21,7 +22,7 @@
     height: 30em;
     width: 28em;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
     margin-top: -5%;
     margin-bottom: -10%;
   }
@@ -36,6 +37,7 @@
     text-transform: capitalize;
     font-weight: 700;
     font-size: 2em;
+    margin-top: 10%;
   }
   .product-show--card-body--price {
     grid-row: 2;
