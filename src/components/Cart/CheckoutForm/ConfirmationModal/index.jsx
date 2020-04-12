@@ -19,13 +19,16 @@ const ConfirmationModal = (props) => {
   const handleSendEmail = () => {
     const {
       name: { firstName, lastName },
-      order: { products },
+
       address: { addressNumber, city, province, street, postalCode },
       email: emailAddress,
       paymentMethod,
       dateNeededBy,
-    } = checkoutData;
+    } = checkoutData.form;
 
+    const {
+      order: { products },
+    } = checkoutData;
     const productSkuLis = products.map((p, i) => `<li>${products[i]}</li>`);
     const allProductSkus = productSkuLis.join("");
 
@@ -94,8 +97,8 @@ const ConfirmationModal = (props) => {
 </html>`;
     const email = {
       //@props TODO: create onchange
-      name: name || "name",
-      email: "jacob.benaim@icloud.com",
+      name: firstName,
+      email: emailAddress,
       message: `Error with the order contact - `,
       html: emailBody,
     };
@@ -115,11 +118,10 @@ const ConfirmationModal = (props) => {
         fixedFooter={false}
         header="Confirm Order"
         id="confirmModal"
-        open={false}
+        open={true}
         options={{
           dismissible: true,
           endingTop: "",
-          inDuration: 250,
           onCloseEnd: null,
           onCloseStart: null,
           onOpenEnd: null,
@@ -138,6 +140,7 @@ const ConfirmationModal = (props) => {
             node="button"
             waves="light"
             type="submit"
+            modal="close"
             onClick={() => handleSendEmail()}
           >
             Submit

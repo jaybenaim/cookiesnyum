@@ -8,7 +8,7 @@ import {
   Button,
   Icon,
   Dropdown,
-  DatePicker
+  DatePicker,
 } from "react-materialize";
 
 import "../../../assets/stylesheets/checkoutForm.css";
@@ -16,8 +16,8 @@ import "../../../assets/stylesheets/checkoutForm.css";
 const CheckoutForm = ({
   cart: { products },
   auth: {
-    user: { name }
-  }
+    user: { name },
+  },
 }) => {
   const [firstName, setFirstName] = useState(name || "");
   const [lastName, setLastName] = useState("");
@@ -34,11 +34,10 @@ const CheckoutForm = ({
   now.setDate(now.getDate() + numWeeks * 7);
   let firstAvailableDateForPickup = now;
   const [date, setDate] = useState(firstAvailableDateForPickup.toDateString());
-
-  const checkoutData = {
+  const form = {
     name: {
       firstName,
-      lastName
+      lastName,
     },
     email,
     address: {
@@ -46,18 +45,21 @@ const CheckoutForm = ({
       street,
       city,
       province,
-      postalCode
+      postalCode,
     },
     paymentMethod,
     dateNeededBy: date,
+  };
+  const checkoutData = {
+    form,
     order: {
       products: products.map(
-        product => `${product.sku}${product.name}-${product.quantity}`
-      )
-    }
+        (product) => `${product.sku}${product.name}-${product.quantity}`
+      ),
+    },
   };
 
-  const handleSetPaymentMethod = value => {
+  const handleSetPaymentMethod = (value) => {
     setPaymentMethod(value);
   };
 
@@ -66,10 +68,32 @@ const CheckoutForm = ({
     const seperatedDate = stringValue.split(" ");
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
+  const [validatedForm, setValidatedForm] = useState(false);
+  const [validatedError, setValidationError] = useState("");
+  const validateForm = (form) => {
+    const errors = [];
+
+    if (email.length === 0) {
+      setValidationError("Email required");
+      errors.push("Email required");
+    }
+    if (firstName.length === 0) {
+      errors.push("First name required");
+    }
+    if (paymentMethod.length === 0) {
+      errors.push("Missing payment method");
+    }
+    errors.length === 0 ? setValidatedForm(true) : alert(errors);
+  };
 
   return (
     <div className="checkout-form">
-      <ConfirmationModal checkoutData={checkoutData} />
+      {validatedForm && (
+        <ConfirmationModal
+          checkoutData={checkoutData}
+          validatedForm={validatedForm}
+        />
+      )}
       <div className="row">
         <h4>Full Name</h4>
       </div>
@@ -83,7 +107,9 @@ const CheckoutForm = ({
                 className="validate"
                 defaultValue={name || ""}
                 label="First Name"
-                onChange={e => setFirstName(e.target.value)}
+                validate
+                error={validatedError}
+                onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
             <div className="input-field col s6">
@@ -91,7 +117,7 @@ const CheckoutForm = ({
                 id="lastName"
                 type="text"
                 label="Last Name"
-                onChange={e => setLastName(e.target.value)}
+                onChange={(e) => setLastName(e.target.value)}
               />
             </div>
           </div>
@@ -102,7 +128,8 @@ const CheckoutForm = ({
                 id="email"
                 label="Email"
                 validate
-                onChange={e => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
+                error={validatedError}
               />
             </div>
           </div>
@@ -115,7 +142,7 @@ const CheckoutForm = ({
                 id="addressNumber"
                 type="text"
                 label="#"
-                onChange={e => setAddressNumber(e.target.value)}
+                onChange={(e) => setAddressNumber(e.target.value)}
               />
             </div>
           </div>
@@ -125,7 +152,7 @@ const CheckoutForm = ({
                 id="street"
                 type="text"
                 label="Street"
-                onChange={e => setStreet(e.target.value)}
+                onChange={(e) => setStreet(e.target.value)}
               />
             </div>
           </div>
@@ -135,7 +162,7 @@ const CheckoutForm = ({
                 id="city"
                 type="text"
                 label="City"
-                onChange={e => setCity(e.target.value)}
+                onChange={(e) => setCity(e.target.value)}
               />
             </div>
 
@@ -144,7 +171,7 @@ const CheckoutForm = ({
                 id="province"
                 type="text"
                 label="Province"
-                onChange={e => setProvince(e.target.value)}
+                onChange={(e) => setProvince(e.target.value)}
               />
             </div>
           </div>
@@ -154,7 +181,7 @@ const CheckoutForm = ({
                 id="postalCode"
                 type="text"
                 label="Postal Code"
-                onChange={e => setPostalCode(e.target.value)}
+                onChange={(e) => setPostalCode(e.target.value)}
               />
             </div>
             <div className="input-field col s6"></div>
@@ -172,7 +199,7 @@ const CheckoutForm = ({
                     label="Payment Method"
                     name="paymentMethod"
                     value={paymentMethod}
-                    onCloseStart={e => handleSetPaymentMethod(e.target.value)}
+                    onCloseStart={(e) => handleSetPaymentMethod(e.target.value)}
                   />
 
                   <Icon down-arrow className="down-arrow">
@@ -183,13 +210,13 @@ const CheckoutForm = ({
             >
               <span
                 className="checkout-form--payment-method--dropdown-a"
-                onClick={e => handleSetPaymentMethod("E-transfer")}
+                onClick={(e) => handleSetPaymentMethod("E-transfer")}
               >
                 E-transfer
               </span>
               <span
                 className="checkout-form--payment-method--dropdown-a"
-                onClick={e => handleSetPaymentMethod("Cash")}
+                onClick={(e) => handleSetPaymentMethod("Cash")}
               >
                 Cash
               </span>
@@ -204,8 +231,8 @@ const CheckoutForm = ({
                 id="date"
                 options={{
                   defaultDate: date,
-                  onChange: value => handleSetDate(value),
-                  minDate: firstAvailableDateForPickup
+                  onChange: (value) => handleSetDate(value),
+                  minDate: firstAvailableDateForPickup,
                 }}
                 value={firstAvailableDateForPickup.toDateString()}
                 children={
@@ -220,34 +247,48 @@ const CheckoutForm = ({
               />
             </div>
 
-            <div class="input-field col s8"></div>
+            <div className="input-field col s8"></div>
           </div>
-          <div className="row">
+          <div className="row"></div>
+          {/* <div className="row">
             <div className="col s12 checkout-form--submit">
-              {/* onClick show confirmation form  */}
+        
               <Button
                 node="button"
                 waves="light"
-                type="submit"
-                className="modal-trigger"
-                href="#confirmModal"
+                // type="submit"
+                // className="modal-trigger"
+                // href="#confirmModal"
               >
                 Go to Confirmation
                 <ArrowRightAltIcon />
               </Button>
             </div>
-          </div>
+          </div> */}
         </form>
       </div>
+
+      {/* onClick show confirmation form  */}
+      <Button
+        node="button"
+        waves="light"
+        // type="submit"
+        className="modal-trigger"
+        href="#confirmModal"
+        onClick={() => validateForm(form)}
+      >
+        Go to Confirmation
+        <ArrowRightAltIcon />
+      </Button>
     </div>
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
   cart: state.cart,
-  checkout: state.checkout
+  checkout: state.checkout,
 });
 
 export default connect(mapStateToProps, {})(withRouter(CheckoutForm));

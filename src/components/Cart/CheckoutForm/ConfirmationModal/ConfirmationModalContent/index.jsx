@@ -8,30 +8,32 @@ class ConfirmationModalContent extends Component {
   render() {
     const {
       checkoutData: {
-        name: { firstName, lastName },
+        form: {
+          name: { firstName, lastName },
 
-        address: { addressNumber, city, province, street, postalCode },
-        email: emailAddress,
-        paymentMethod,
-        dateNeededBy
+          address: { addressNumber, city, province, street, postalCode },
+          email: emailAddress,
+          paymentMethod,
+          dateNeededBy,
+        },
       },
       cart: {
         data: { productQuantity, totalPrice },
-        products
-      }
+        products,
+      },
     } = this.props;
-    const productNames = products.map(product => (
+    const productNames = products.map((product) => (
       <li>
         <Link
           to={{
             pathname: `/products/${product.sku}`,
-            state: { item: product, quantity: product.quantity }
+            state: { item: product, quantity: product.quantity },
           }}
           className="show-product-btn"
           onClick={() => this.forceUpdate()}
         >
           <img src={product.image} alt={product.name} height={40} width={40} />{" "}
-          Name: {product.name} - ${product.price} - QTY: {product.quantity}
+          {product.name} - ${product.price} - QTY: {product.quantity}
         </Link>
       </li>
     ));
@@ -52,7 +54,7 @@ class ConfirmationModalContent extends Component {
             <strong>Address:</strong>
             <div>
               <div>
-                #{addressNumber} {street},
+                {addressNumber} {street},
               </div>
               <div>
                 {city}, {province}
@@ -92,11 +94,11 @@ class ConfirmationModalContent extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
   cart: state.cart,
-  checkout: state.checkout
+  checkout: state.checkout,
 });
 
 export default withRouter(
