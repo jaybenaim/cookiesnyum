@@ -7,6 +7,10 @@
   }
   .register-container .row .col {
     margin: 0;
-    padding: 0 4%;
+    padding: 2% 4%;
   }
+}
+
+.register-container .row .col {
+  padding: 2% 4%;
 }

@@ -35,18 +35,7 @@ class Login extends Component {
     };
     this.props.loginUser(userData);
   };
-  getErrorElements = () => {
-    const { errors } = this.props;
-    if (errors.response) {
-      const keys = Object.keys(errors.response.data);
-      return (
-        errors.response &&
-        keys.map((key) => <li>{errors.response.data[key]}</li>)
-      );
-    }
-  };
 
-  componentDidUpdate() {}
   render() {
     const { errors } = this.state;
     const {
@@ -77,7 +66,6 @@ class Login extends Component {
                   </div>
                 </div>
               )}
-              <ul>{this.getErrorElements()}</ul>
 
               <form onSubmit={this.onSubmit}>
                 <div className="input-field col s12">
@@ -85,7 +73,6 @@ class Login extends Component {
                     email
                     id="email"
                     label="Email"
-                    // className={`validate ${""}`}
                     className={classnames("validate", {
                       invalid: errors.email || errors.emailnotfound,
                     })}

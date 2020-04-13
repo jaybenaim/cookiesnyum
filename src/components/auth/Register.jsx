@@ -5,41 +5,42 @@ import { connect } from "react-redux";
 import { registerUser } from "../../redux/actions/authActions";
 import classnames from "classnames";
 import "../../assets/stylesheets/register.css";
-
+import { TextInput } from "react-materialize";
 class Register extends Component {
   state = {
     name: "",
     email: "",
     password: "",
     password2: "",
-    errors: {}
+    errors: {},
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
-  onChange = e => {
+  onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
     const newUser = {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
-      password2: this.state.password2
+      password2: this.state.password2,
     };
     this.props.registerUser(newUser, this.props.history);
   };
+
   render() {
     const { errors } = this.state;
     const {
       fade,
-      auth: { loading }
+      auth: { loading },
     } = this.props;
     return (
       fade !== "fade-background" && (
@@ -65,62 +66,63 @@ class Register extends Component {
                   </div>
                 </div>
               )}
-              <form noValidate onSubmit={this.onSubmit}>
+
+              <form onSubmit={this.onSubmit}>
                 <div className="input-field col s12">
-                  <input
-                    onChange={this.onChange}
+                  <TextInput
+                    id="name"
+                    label="Name"
+                    className={classnames("validate", {
+                      invalid: errors.name,
+                    })}
+                    validate
                     value={this.state.name}
                     error={errors.name}
-                    id="name"
-                    type="text"
-                    className={classnames("", {
-                      invalid: errors.name
-                    })}
+                    onChange={this.onChange}
                   />
-                  <label htmlFor="name">Name</label>
-                  <span className="red-text">{errors.name}</span>
                 </div>
                 <div className="input-field col s12">
-                  <input
-                    onChange={this.onChange}
-                    value={this.state.email}
-                    error={errors.email}
+                  <TextInput
+                    email
                     id="email"
-                    type="email"
-                    className={classnames("", {
-                      invalid: errors.email
+                    label="Email"
+                    className={classnames("validate", {
+                      invalid: errors.email,
                     })}
+                    value={this.state.email}
+                    validate
+                    error={errors.email}
+                    onChange={this.onChange}
                   />
-                  <label htmlFor="email">Email</label>
-                  <span className="red-text">{errors.email}</span>
                 </div>
                 <div className="input-field col s12">
-                  <input
-                    onChange={this.onChange}
+                  <TextInput
+                    password
+                    id="password"
+                    label="password"
+                    className={classnames("validate", {
+                      invalid: errors.password,
+                    })}
+                    validate
                     value={this.state.password}
                     error={errors.password}
-                    id="password"
-                    type="password"
-                    className={classnames("", {
-                      invalid: errors.password
-                    })}
+                    onChange={this.onChange}
                   />
-                  <label htmlFor="password">Password</label>
-                  <span className="red-text">{errors.password}</span>
                 </div>
                 <div className="input-field col s12">
-                  <input
-                    onChange={this.onChange}
+                  <TextInput
+                    password
+                    id="password2"
+                    label="confirm password"
+                    className={classnames("validate", {
+                      invalid: errors.password2,
+                    })}
+                    validate
                     value={this.state.password2}
                     error={errors.password2}
-                    id="password2"
-                    type="password"
-                    className={classnames("", {
-                      invalid: errors.password2
-                    })}
+                    validate
+                    onChange={this.onChange}
                   />
-                  <label htmlFor="password2">Confirm Password</label>
-                  <span className="red-text">{errors.password2}</span>
                 </div>
                 <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                   <button
@@ -128,7 +130,7 @@ class Register extends Component {
                       width: "150px",
                       borderRadius: "3px",
                       letterSpacing: "1.5px",
-                      marginTop: "1rem"
+                      marginTop: "1rem",
                     }}
                     type="submit"
                     id="register"
@@ -148,10 +150,10 @@ class Register extends Component {
 Register.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 export default connect(mapStateToProps, { registerUser })(withRouter(Register));
