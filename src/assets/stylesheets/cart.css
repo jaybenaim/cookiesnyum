@@ -280,6 +280,23 @@
   .float-cart__content::-webkit-scrollbar-thumb {
     border-radius: 4px;
   }
+  .shelf-item--quantity-buttons {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    display: flex;
+    flex-direction: row;
+  }
+  .shelf-item--quantity-buttons input {
+    display: none;
+  }
+  .shelf-item--quantity-buttons .input-field {
+    font-size: 1.3em;
+    display: none;
+  }
+  .shelf-item--quantity-buttons button {
+    background-color: transparent;
+  }
 }
 
 .float-cart__content {

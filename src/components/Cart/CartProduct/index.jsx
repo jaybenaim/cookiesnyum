@@ -31,18 +31,20 @@ class CartProduct extends Component {
   };
 
   handleQty = (action) => {
-    if (action === "decrease") {
+    action === "decrease" &&
       this.setState((prevState) => {
         return prevState.qty >= 1 && { qty: prevState.qty - 1 };
       });
-    }
-    if (action === "increase") {
+
+    action === "increase" &&
       this.setState((prevState) => {
         return { qty: prevState.qty + 1 };
       });
-    }
   };
-
+  handleQtyChange = (e) => {
+    e.preventDefault();
+    this.setState({ qty: Number(e.target.value) });
+  };
   componentDidUpdate() {
     let { cartProducts, product } = this.props;
     const { qty } = this.state;
@@ -52,10 +54,6 @@ class CartProduct extends Component {
     updatedCart.push(newProduct);
     this.props.updateCart(updatedCart);
   }
-  handleQtyChange = (e) => {
-    e.preventDefault();
-    this.setState({ qty: Number(e.target.value) });
-  };
 
   render() {
     const {

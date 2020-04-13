@@ -7,6 +7,8 @@ import { setCurrentProduct } from "../../../redux/actions/productActions";
 import { formatPrice } from "../../../helpers/index";
 import "../../../assets/stylesheets/item.css";
 import Quantity from "./Quantity";
+import { updateCart } from "../../../redux/actions/cartActions";
+
 class Item extends Component {
   state = {
     qty: 0,
@@ -33,6 +35,7 @@ class Item extends Component {
     e.preventDefault();
     this.setState({ qty: Number(e.target.value) });
   };
+
   render() {
     let {
       item,
@@ -103,7 +106,8 @@ class Item extends Component {
 }
 const mapStateToProps = (state) => ({
   gallery: state.gallery,
+  cartProducts: state.cart.products,
 });
 export default withRouter(
-  connect(mapStateToProps, { addProduct, setCurrentProduct })(Item)
+  connect(mapStateToProps, { addProduct, setCurrentProduct, updateCart })(Item)
 );

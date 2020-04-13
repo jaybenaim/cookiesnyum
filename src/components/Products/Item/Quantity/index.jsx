@@ -17,7 +17,7 @@ const Quantity = (props) => {
 
       <TextInput
         id={`TextInput-${id}`}
-        label={qtyLabel === 0 ? "12" : qtyLabel}
+        label={qtyLabel === 0 ? "1" : `${qtyLabel}`}
         type="number"
         name="qty"
         onChange={(e) => props.handleQtyChange(e)}
