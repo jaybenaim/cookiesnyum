@@ -4,11 +4,11 @@ import { connect } from "react-redux";
 import { filterGallery } from "../../../../redux/actions/galleryActions";
 import "../../../../assets/stylesheets/featuredProduct.css";
 
-const FeaturedProduct = props => {
+const FeaturedProduct = (props) => {
   const { src, alt, sku, text } = props;
-  const getPrice = sku => {
+  const getPrice = (sku) => {
     switch (sku) {
-      case "cookies":
+      case "cookie":
         return "From $2.85 / each";
       case "scone":
         return "From $3.50 / each";
@@ -29,7 +29,10 @@ const FeaturedProduct = props => {
       />
 
       <div className="featured-products-slider--cards--card-body secondary-font">
-        <Link to="/products" onClick={() => props.filterGallery(sku)}>
+        <Link
+          to="/products"
+          onClick={() => props.filterGallery(sku.replace("-", ""))}
+        >
           <h3>{text}</h3>
           <p className="featured-products-slider--cards--card-text secondary-font">
             {getPrice(sku)}
@@ -41,10 +44,10 @@ const FeaturedProduct = props => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
-  gallery: state.gallery
+  gallery: state.gallery,
 });
 
 export default withRouter(

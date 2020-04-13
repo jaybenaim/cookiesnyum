@@ -4,20 +4,20 @@ export const featuredProducts = [
     text: "Stuffed Cookies",
     src: cookies,
     alt: "cookies",
-    sku: "cookies"
+    sku: "cookie",
   },
   {
     text: "Flavoured Scones",
     src: scones,
     alt: "scones",
-    sku: "scone"
+    sku: "scone",
   },
   {
     text: "Hand Crafted Biscotti",
     src: biscotti,
     alt: "biscotti",
-    sku: "biscotti"
-  }
+    sku: "biscotti",
+  },
 ];
 
 export const settings = {
@@ -33,8 +33,8 @@ export const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        dots: false
-      }
-    }
-  ]
+        dots: false,
+      },
+    },
+  ],
 };
