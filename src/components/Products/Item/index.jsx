@@ -5,8 +5,8 @@ import { AddCartButton } from "../../Cart/AddCartButton";
 import { addProduct } from "../../../redux/actions/cartActions";
 import { setCurrentProduct } from "../../../redux/actions/productActions";
 import { formatPrice } from "../../../helpers/index";
-import { Button, Icon, TextInput } from "react-materialize";
 import "../../../assets/stylesheets/item.css";
+import Quantity from "./Quantity";
 class Item extends Component {
   state = {
     qty: 0,
@@ -57,7 +57,7 @@ class Item extends Component {
         <Link
           to={{
             pathname: `/products/${sku}`,
-            state: { item, quantity, description, image },
+            state: { id, item, quantity, description, image },
           }}
           className="show-product-btn"
           onClick={() => this.props.setCurrentProduct(item)}
@@ -85,30 +85,12 @@ class Item extends Component {
           </p>
           {/* <p className="item--card-body--price">{formatPrice(price, "CAD")}</p> */}
           <div className="item--card-body--quantity-buttons">
-            <button
-              className="item--card-body--quantity-buttons--decrease"
-              name="qty"
-              onClick={(e) => this.handleQty("decrease")}
-            >
-              <Icon>remove</Icon>
-            </button>
-
-            <TextInput
-              id={`TextInput-${id}`}
-              label={this.state.qty}
-              type="number"
-              name="qty"
-              ß
-              onChange={(e) => this.handleQtyChange(e)}
+            <Quantity
+              id={item._id}
+              qtyLabel={this.state.qty}
+              handleQty={this.handleQty}
+              handleQtyChange={this.handleQtyChange}
             />
-
-            <button
-              className="item--card-body--quantity-buttons--increase"
-              name="qty"
-              onClick={() => this.handleQty("increase")}
-            >
-              <Icon> add</Icon>
-            </button>
           </div>
 
           <div className="item--card-body--add-to-cart">

@@ -9,14 +9,14 @@ import RelatedProductsSlider from "../RelatedProductsSlider";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
 import { getProducts } from "../../../redux/actions/productActions";
-import { Preloader } from "react-materialize";
+import { Preloader, Icon, TextInput } from "react-materialize";
 import { filterGallery } from "../../../redux/actions/galleryActions";
 import CookieDescription from "./CookieDescription";
 
 const ProductShow = (props) => {
   const {
     item,
-    item: { name, price, sku, description },
+    item: { id, name, price, sku, description },
     image,
   } = props.location.state;
   const { products } = props;
@@ -81,6 +81,8 @@ const ProductShow = (props) => {
             {formatPrice(price, "CAD")}
           </p>
           {/* Insert Quantity Component */}
+
+          {/* TODO CREATE COMPONENT  */}
 
           <div className="product-show--card-body--add-to-cart-btn ">
             <span>
