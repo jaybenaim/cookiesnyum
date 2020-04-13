@@ -25,6 +25,9 @@
   }
   .top img {
     width: 100%;
+    object-fit: contain;
+    border: 1px solid transparent;
+    border-radius: 15%;
   }
   .bottom {
     grid-column: 1 / span 2;
