@@ -11,7 +11,7 @@ import { updateCart } from "../../../redux/actions/cartActions";
 
 class Item extends Component {
   state = {
-    qty: 0,
+    qty: 1,
   };
   shortDescription = (description) => {
     return !description
