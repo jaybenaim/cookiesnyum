@@ -80,6 +80,7 @@ class Item extends Component {
           </p>
           {/* <p className="item--card-body--price">{formatPrice(price, "CAD")}</p> */}
           <div className="item--card-body--quantity-buttons">
+            <p className="item--card-body-qty-label">Quantity:</p>
             <Quantity
               id={item._id}
               qtyLabel={this.state.qty}

@@ -49,9 +49,39 @@
     grid-column: 1 / span 4;
     margin-top: 10%;
   }
+
+  .product-show--card-body-qty-label {
+    grid-column: 2;
+    grid-row: 2;
+    position: absolute;
+  }
   .product-show--card-body--quantity-buttons {
+    grid-column: 3;
     display: flex;
     flex-direction: row;
+  }
+
+  .product-show--card-body .input-field label {
+    font-size: 1.8em;
+    margin-left: 40%;
+    margin-top: 0%;
+  }
+  .product-show--card-body .input-field .label-icon {
+    font-size: 1.8em;
+    margin-left: 40%;
+    margin-top: 7%;
+  }
+  .product-show--card-body--quantity-buttons .increase {
+    margin-left: 40%;
+  }
+  .product-show--card-body--quantity-buttons .decrease {
+    margin-left: 10%;
+    padding-left: 5%;
+  }
+  .product-show--card-body--quantity-buttons button {
+    background-color: transparent;
+    height: 10%;
+    margin-top: 40%;
   }
   .product-show--card-body--description .product-description ul li strong {
     font-weight: 900;

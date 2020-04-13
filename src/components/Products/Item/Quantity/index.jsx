@@ -8,7 +8,7 @@ const Quantity = (props) => {
   return (
     <>
       <button
-        className="item--card-body--quantity-buttons--decrease"
+        className="decrease"
         name="qty"
         onClick={(e) => props.handleQty("decrease")}
       >
@@ -17,14 +17,14 @@ const Quantity = (props) => {
 
       <TextInput
         id={`TextInput-${id}`}
-        label={qtyLabel}
+        label={qtyLabel === 0 ? "12" : qtyLabel}
         type="number"
         name="qty"
         onChange={(e) => props.handleQtyChange(e)}
       />
 
       <button
-        className="item--card-body--quantity-buttons--increase"
+        className="increase"
         name="qty"
         onClick={() => props.handleQty("increase")}
       >

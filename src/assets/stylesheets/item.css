@@ -76,7 +76,15 @@
     padding-top: 20%;
     margin-top: 40%;
   }
-  .item--card-body--quantity-buttons .input-field {
+  .item--card-body-qty-label {
+    grid-column: 2;
+    grid-row: 2;
+    position: absolute;
+  }
+  .item--card-body--quantity-buttons .input-field label {
+    font-size: 1.3em;
+  }
+  .item--card-body--quantity-buttons .input-field .label-icon {
     font-size: 1.3em;
   }
   .item--card-body--quantity-buttons .input-field input[type="text"] + label {

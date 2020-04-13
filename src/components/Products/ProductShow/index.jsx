@@ -93,6 +93,7 @@ const ProductShow = (props) => {
           </p>
 
           <div className="product-show--card-body--quantity-buttons">
+            <p className="product-show--card-body-qty-label">Quantity:</p>
             <Quantity
               id={id}
               qtyLabel={qty}
