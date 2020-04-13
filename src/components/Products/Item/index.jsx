@@ -20,19 +20,14 @@ class Item extends Component {
   };
 
   handleQty = (action) => {
-    if (action === "decrease") {
+    action === "decrease" &&
       this.setState((prevState) => {
-        let qty = Number(prevState.qty);
-        if (qty >= 1) return { qty: (qty -= 1) };
+        return prevState.qty >= 1 && { qty: prevState.qty - 1 };
       });
-    }
-
-    if (action === "increase") {
+    action === "increase" &&
       this.setState((prevState) => {
-        let qty = Number(prevState.qty);
-        return { qty: (qty += 1) };
+        return { qty: prevState.qty + 1 };
       });
-    }
   };
   handleQtyChange = (e) => {
     e.preventDefault();

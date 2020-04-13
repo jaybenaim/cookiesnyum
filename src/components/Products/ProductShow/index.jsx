@@ -12,6 +12,7 @@ import { getProducts } from "../../../redux/actions/productActions";
 import { Preloader, Icon, TextInput } from "react-materialize";
 import { filterGallery } from "../../../redux/actions/galleryActions";
 import CookieDescription from "./CookieDescription";
+import Quantity from "../Item/Quantity";
 
 const ProductShow = (props) => {
   const {
@@ -50,6 +51,16 @@ const ProductShow = (props) => {
     focusOnSelect: false,
     swipe: true,
   };
+  const [qty, setQty] = useState(0);
+
+  const handleQty = (action) => {
+    action === "decrease" && qty >= 1 && setQty(qty - 1);
+    action === "increase" && setQty(qty + 1);
+  };
+  const handleQtyChange = (e) => {
+    e.preventDefault();
+    setQty(Number(e.target.value));
+  };
 
   return (
     <div className="product-show-container">
@@ -80,13 +91,20 @@ const ProductShow = (props) => {
           <p className="product-show--card-body--price">
             {formatPrice(price, "CAD")}
           </p>
-          {/* Insert Quantity Component */}
 
-          {/* TODO CREATE COMPONENT  */}
+          <div className="product-show--card-body--quantity-buttons">
+            <Quantity
+              id={id}
+              qtyLabel={qty}
+              handleQty={handleQty}
+              handleQtyChange={handleQtyChange}
+            />
+          </div>
 
           <div className="product-show--card-body--add-to-cart-btn ">
             <span>
               <AddCartButton
+                qty={qty}
                 product={item}
                 addLabel={"Add to Cart"}
                 addProduct={props.addProduct}

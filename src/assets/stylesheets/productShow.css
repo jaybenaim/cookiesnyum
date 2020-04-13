@@ -49,6 +49,10 @@
     grid-column: 1 / span 4;
     margin-top: 10%;
   }
+  .product-show--card-body--quantity-buttons {
+    display: flex;
+    flex-direction: row;
+  }
   .product-show--card-body--description .product-description ul li strong {
     font-weight: 900;
     font-size: 1.2em;
