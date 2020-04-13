@@ -5,30 +5,30 @@ const initialState = {
   productToAdd: null,
   data: {
     productQuantity: 0,
-    totalPrice: 0
-  }
+    totalPrice: 0,
+  },
 };
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case LOAD_CART:
       return {
         ...state,
-        products: action.payload
+        products: action.payload,
       };
     case ADD_PRODUCT:
       return {
         ...state,
-        productToAdd: Object.assign({}, action.payload)
+        productToAdd: Object.assign({}, action.payload),
       };
     case UPDATE_CART:
       return {
         ...state,
-        data: action.payload
+        data: action.payload,
       };
     case REMOVE_PRODUCT:
       return {
         ...state,
-        productToRemove: Object.assign({}, action.payload)
+        productToRemove: Object.assign({}, action.payload),
       };
     default:
       return state;

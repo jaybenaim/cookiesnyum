@@ -22,14 +22,6 @@ class CartProduct extends Component {
     qty: this.props.product.quantity,
   };
 
-  handleMouseOver = () => {
-    this.setState({ isMouseOver: true });
-  };
-
-  handleMouseOut = () => {
-    this.setState({ isMouseOver: false });
-  };
-
   handleQty = (action) => {
     action === "decrease" &&
       this.setState((prevState) => {
@@ -65,16 +57,10 @@ class CartProduct extends Component {
     const { qty } = this.state;
     const classes = ["shelf-item"];
 
-    if (!!this.state.isMouseOver) {
-      classes.push("shelf-item--mouseover");
-    }
-
     return (
       <div className={classes.join(" ")}>
         <div
           className="shelf-item__del"
-          onMouseOver={() => this.handleMouseOver()}
-          onMouseOut={() => this.handleMouseOut()}
           onClick={() => removeProduct(product)}
         />
         <Thumb

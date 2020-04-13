@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import {
   loadCart,
   removeProduct,
-  updateCart
+  updateCart,
 } from "../../redux/actions/cartActions";
 import { formatPrice } from "../../helpers/";
 import storage from "../../redux/storage";
@@ -28,7 +28,7 @@ export class Cart extends Component {
     checkoutTextLabel: PropTypes.string,
     cartTextLabel: PropTypes.string,
     subTotalTextLabel: PropTypes.string,
-    quantityTextLabel: PropTypes.string
+    quantityTextLabel: PropTypes.string,
   };
 
   static defaultProps = {
@@ -36,11 +36,11 @@ export class Cart extends Component {
     checkoutTextLabel: "Checkout",
     cartTextLabel: "Your Cart",
     subTotalTextLabel: "Sub Total",
-    quantityTextLabel: "Quantity"
+    quantityTextLabel: "Quantity",
   };
 
   state = {
-    isOpen: false
+    isOpen: false,
   };
 
   UNSAFE_componentWillMount() {
@@ -71,12 +71,12 @@ export class Cart extends Component {
     this.setState({ isOpen: false });
   };
 
-  addProduct = product => {
+  addProduct = (product) => {
     const { cartProducts, updateCart } = this.props;
     let productAlreadyInCart = false;
 
     cartProducts &&
-      cartProducts.forEach(cp => {
+      cartProducts.forEach((cp) => {
         if (cp._id === product._id) {
           cp.quantity += product.quantity;
           productAlreadyInCart = true;
@@ -91,10 +91,10 @@ export class Cart extends Component {
     this.openFloatCart();
   };
 
-  removeProduct = product => {
+  removeProduct = (product) => {
     const { cartProducts, updateCart } = this.props;
 
-    const index = cartProducts.findIndex(p => p.id === product.id);
+    const index = cartProducts.findIndex((p) => p._id === product._id);
     if (index >= 0) {
       cartProducts.splice(index, 1);
       updateCart(cartProducts);
@@ -108,10 +108,10 @@ export class Cart extends Component {
   checkDisabled = () => {
     const {
       cartTotal: { productQuantity },
-      cartProducts
+      cartProducts,
     } = this.props;
     let checkForDozen = cartProducts.filter(
-      product => product.name === "Amaretti" || product.name === "Pastaschio"
+      (product) => product.name === "Amaretti" || product.name === "Pastaschio"
     );
     return productQuantity >= 12 || checkForDozen.length >= 1 ? false : true;
   };
@@ -126,13 +126,13 @@ export class Cart extends Component {
       subTotalTextLabel,
       quantityTextLabel,
       checkoutStatus,
-      checkoutForm
+      checkoutForm,
     } = this.props;
     const { isOpen } = this.state;
     const checkoutFormData = { cartProducts, cartTotal };
     const products =
       cartProducts &&
-      cartProducts.map(product => {
+      cartProducts.map((product) => {
         return (
           <CartProduct
             product={product}
@@ -234,21 +234,21 @@ export class Cart extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     cartProducts: state.cart.products,
     productToAdd: state.cart.productToAdd,
     productToRemove: state.cart.productToRemove,
     cartTotal: state.cart.data,
-    checkoutStatus: state.checkout.checkoutStatus
+    checkoutStatus: state.checkout.checkoutStatus,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    loadCart: products => dispatch(loadCart(products)),
-    updateCart: products => dispatch(updateCart(products)),
-    removeProduct: product => dispatch(removeProduct(product))
+    loadCart: (products) => dispatch(loadCart(products)),
+    updateCart: (products) => dispatch(updateCart(products)),
+    removeProduct: (product) => dispatch(removeProduct(product)),
   };
 };
 
