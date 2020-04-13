@@ -3,7 +3,9 @@ const initialState = {};
 export default function (state = initialState, action) {
   switch (action.type) {
     case GET_ERRORS:
-      return action.payload.response.data;
+      return action.payload.response
+        ? action.payload.response.data
+        : action.payload;
     default:
       return state;
   }
