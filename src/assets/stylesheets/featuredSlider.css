@@ -30,7 +30,8 @@
   .featured-slider .slick-dots {
     position: relative;
     left: 30%;
-    bottom: 10%;
+    margin-top: -40%;
+    padding-bottom: 30%;
   }
 }
 @media (min-width: 451px) {
