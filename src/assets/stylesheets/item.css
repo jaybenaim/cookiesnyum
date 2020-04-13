@@ -69,6 +69,22 @@
     grid-row: 2;
     font-size: 1.3em;
   }
+  .item--card-body--quantity-buttons {
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20%;
+    margin-top: 40%;
+  }
+  .item--card-body--quantity-buttons .input-field {
+    font-size: 1.3em;
+  }
+  .item--card-body--quantity-buttons .input-field input[type="text"] + label {
+    font-size: 4em;
+  }
+  .item--card-body--quantity-buttons button {
+    background-color: transparent;
+  }
   .item--card-body--add-to-cart {
     grid-column: 1 / span 3;
     display: flex;
