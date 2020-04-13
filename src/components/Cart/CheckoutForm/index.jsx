@@ -74,9 +74,7 @@ const CheckoutForm = ({
 
   const validateForm = () => {
     const errors = [];
-
     if (email.length === 0) {
-      setValidationError("Email required");
       errors.push("Email required");
     }
     if (firstName.length === 0) {
@@ -85,7 +83,13 @@ const CheckoutForm = ({
     if (paymentMethod.length === 0) {
       errors.push("Missing payment method");
     }
-    errors.length === 0 ? setValidatedForm(true) : alert(errors);
+    errors.length === 0
+      ? setValidatedForm(true)
+      : setValidationError("invalid");
+
+    setTimeout(() => {
+      setValidationError("");
+    }, 5000);
   };
 
   return (
@@ -106,11 +110,11 @@ const CheckoutForm = ({
               <TextInput
                 id="firstName"
                 type="text"
-                className="validate"
+                className={`validate ${validatedError}`}
                 defaultValue={name || ""}
                 label="First Name"
                 validate
-                error={validatedError}
+                error={"Name required"}
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
@@ -129,9 +133,10 @@ const CheckoutForm = ({
                 email
                 id="email"
                 label="Email"
+                className={`validate ${validatedError}`}
+                error={"Email required"}
                 validate
                 onChange={(e) => setEmail(e.target.value)}
-                error={validatedError}
               />
             </div>
           </div>
@@ -201,6 +206,8 @@ const CheckoutForm = ({
                     label="Payment Method"
                     name="paymentMethod"
                     value={paymentMethod}
+                    className={`validate ${validatedError}`}
+                    error={"Payment Method required"}
                     onCloseStart={(e) => handleSetPaymentMethod(e.target.value)}
                   />
 
