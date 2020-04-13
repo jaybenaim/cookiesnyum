@@ -40,7 +40,6 @@ if (localStorage.jwtToken) {
 }
 
 const App = (props) => {
-  const { errors, history } = props;
   const [checkoutForm, showCheckoutForm] = useState(false);
 
   const handleCheckoutCart = (data) => {

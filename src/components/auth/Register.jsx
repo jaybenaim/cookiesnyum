@@ -120,7 +120,6 @@ class Register extends Component {
                     validate
                     value={this.state.password2}
                     error={errors.password2}
-                    validate
                     onChange={this.onChange}
                   />
                 </div>

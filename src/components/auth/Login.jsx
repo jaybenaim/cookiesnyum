@@ -5,7 +5,6 @@ import { loginUser } from "../../redux/actions/authActions";
 import classnames from "classnames";
 import "../../assets/stylesheets/login.css";
 import { TextInput } from "react-materialize";
-import { light } from "@material-ui/core/styles/createPalette";
 
 class Login extends Component {
   state = {
