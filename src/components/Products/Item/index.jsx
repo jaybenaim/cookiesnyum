@@ -78,7 +78,6 @@ class Item extends Component {
           <p className="item--card-body--description">
             {this.shortDescription(description.default)}
           </p>
-          {/* <p className="item--card-body--price">{formatPrice(price, "CAD")}</p> */}
           <div className="item--card-body--quantity-buttons">
             <p className="item--card-body-qty-label">Quantity:</p>
             <Quantity

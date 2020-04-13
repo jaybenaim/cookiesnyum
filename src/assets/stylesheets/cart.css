@@ -69,6 +69,32 @@
     left: 180%;
     top: 80%;
   }
+
+  .shelf-item--quantity-buttons {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+  }
+  .shelf-item--quantity-buttons .increase {
+    margin-left: -10%;
+  }
+  .shelf-item--quantity-buttons input {
+    display: none;
+  }
+  .shelf-item--quantity-buttons .input-field {
+    font-size: 1.3em;
+    display: none;
+  }
+  .shelf-item--quantity-buttons button {
+    background-color: transparent;
+  }
+
+  .item--card-body--quantity-buttons .input-field .label-icon {
+    font-size: 1.3em;
+    display: none;
+  }
 }
 .bag__quantity,
 .bag__quantity-expanded {
