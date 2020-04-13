@@ -1,3 +1,5 @@
+.validate-error {
+}
 @media (max-width: 450px) {
   .checkout-form #addressNumber {
     width: 20%;

@@ -4,12 +4,14 @@ import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/authActions";
 import classnames from "classnames";
 import "../../assets/stylesheets/login.css";
+import { TextInput } from "react-materialize";
+import { light } from "@material-ui/core/styles/createPalette";
 
 class Login extends Component {
   state = {
     email: "",
     password: "",
-    errors: {}
+    errors: {},
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -18,26 +20,38 @@ class Login extends Component {
     }
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
-  onChange = e => {
+  onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
     const userData = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     };
     this.props.loginUser(userData);
   };
+  getErrorElements = () => {
+    const { errors } = this.props;
+    if (errors.response) {
+      const keys = Object.keys(errors.response.data);
+      return (
+        errors.response &&
+        keys.map((key) => <li>{errors.response.data[key]}</li>)
+      );
+    }
+  };
+
+  componentDidUpdate() {}
   render() {
     const { errors } = this.state;
     const {
       fade,
-      auth: { loading }
+      auth: { loading },
     } = this.props;
     return (
       fade !== "fade-background" && (
@@ -63,36 +77,42 @@ class Login extends Component {
                   </div>
                 </div>
               )}
-              <form noValidate onSubmit={this.onSubmit}>
+              <ul>{this.getErrorElements()}</ul>
+
+              <form onSubmit={this.onSubmit}>
                 <div className="input-field col s12">
-                  <input
-                    onChange={this.onChange}
+                  <TextInput
+                    email
+                    id="email"
+                    label="Email"
+                    // className={`validate ${""}`}
+                    className={classnames("validate", {
+                      invalid: errors.email || errors.emailnotfound,
+                    })}
                     value={this.state.email}
                     error={errors.email}
-                    id="email"
-                    type="email"
-                    className={classnames("", {
-                      invalid: errors.email || errors.emailnotfound
-                    })}
+                    validate
+                    onChange={this.onChange}
                   />
-                  <label htmlFor="email">Email</label>
+
                   <span className="red-text">
                     {errors.email}
                     {errors.emailnotfound}
                   </span>
                 </div>{" "}
                 <div className="input-field col s12">
-                  <input
-                    onChange={this.onChange}
-                    value={this.state.password}
-                    error={errors.password}
-                    className={classnames("", {
-                      invalid: errors.password || errors.passwordincorrect
-                    })}
+                  <TextInput
+                    password
                     id="password"
-                    type="password"
+                    label="Password"
+                    className={classnames("validate", {
+                      invalid: errors.password || errors.passwordincorrect,
+                    })}
+                    error={errors.password}
+                    value={this.state.password}
+                    validate
+                    onChange={this.onChange}
                   />
-                  <label htmlFor="password">Password</label>
                   <span className="red-text">
                     {errors.password}
                     {errors.passwordincorrect}
@@ -105,7 +125,7 @@ class Login extends Component {
                       borderRadius: "3px",
                       letterSpacing: "1.5px",
                       marginTop: "1rem",
-                      background: "#f6406f"
+                      background: "#f6406f",
                     }}
                     type="submit"
                     className="btn btn-large waves-effect waves-light hoverable blue accent-3 "
@@ -124,10 +144,10 @@ class Login extends Component {
 Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 export default connect(mapStateToProps, { loginUser })(Login);

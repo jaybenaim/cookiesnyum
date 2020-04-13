@@ -9,7 +9,7 @@ import {
   Products,
   ProductShow,
   ErrorPage,
-  CheckoutForm
+  CheckoutForm,
 } from "./components";
 import { connect } from "react-redux";
 import store from "./redux/store";
@@ -39,11 +39,11 @@ if (localStorage.jwtToken) {
   }
 }
 
-const App = props => {
+const App = (props) => {
   const { errors, history } = props;
   const [checkoutForm, showCheckoutForm] = useState(false);
 
-  const handleCheckoutCart = data => {
+  const handleCheckoutCart = (data) => {
     showCheckoutForm(!checkoutForm);
   };
 
@@ -52,19 +52,21 @@ const App = props => {
     checkoutTextLabel: "Confirm",
     subTotalTextLabel: "Sub Total",
     cartTextLabel: "Cart",
-    quantityTextLabel: "QTY"
+    quantityTextLabel: "QTY",
   };
 
+  // TODO: /// add error handler for component send to 404 for failed render
+  // errors && errors.isAxiosError && history.push("/404");
+
   useEffect(() => {
-    errors && errors.isAxiosError && history.push("/404");
-    // props.wakeupDB();
     props.getProducts();
     // eslint-disable-next-line
-  }, [errors]);
+  }, []);
 
+  const location = window.location.href;
   return (
     <React.Fragment>
-      {errors.length >= 1 ? (
+      {location.includes("/404") ? (
         ""
       ) : (
         <>
@@ -78,29 +80,33 @@ const App = props => {
       )}
       <Switch>
         <>
-          <Route exact path="/" render={props => <Home {...props} />} />
+          <Route exact path="/" render={(props) => <Home {...props} />} />
           <Route
             exact
             path="/register"
-            render={props => <Register {...props} />}
+            render={(props) => <Register {...props} />}
           />
-          <Route exact path="/login" render={props => <Login {...props} />} />
+          <Route exact path="/login" render={(props) => <Login {...props} />} />
           <Route
             exact
             path="/products"
-            render={props => <Products {...props} />}
+            render={(props) => <Products {...props} />}
           />
           <Route
             exact
             path="/products/:name"
-            render={props => <ProductShow {...props} />}
+            render={(props) => <ProductShow {...props} />}
           />
           <Route
             exact
             path="/checkout"
-            render={props => <CheckoutForm {...props} />}
+            render={(props) => <CheckoutForm {...props} />}
           />
-          <Route exact path="/404" render={props => <ErrorPage {...props} />} />
+          <Route
+            exact
+            path="/404"
+            render={(props) => <ErrorPage {...props} />}
+          />
         </>
       </Switch>
       <Footer />
@@ -108,8 +114,8 @@ const App = props => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 export default withRouter(connect(mapStateToProps, { getProducts })(App));
