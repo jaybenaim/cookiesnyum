@@ -89,7 +89,7 @@ const CheckoutForm = ({
 
     setTimeout(() => {
       setValidationError("");
-    }, 5000);
+    }, 7000);
   };
 
   return (
