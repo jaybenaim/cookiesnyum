@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.371a024d.chunk.css",
-    "main.js": "/static/js/main.6249ebe1.chunk.js",
-    "main.js.map": "/static/js/main.6249ebe1.chunk.js.map",
+    "main.css": "/static/css/main.c98919ac.chunk.css",
+    "main.js": "/static/js/main.ebc57437.chunk.js",
+    "main.js.map": "/static/js/main.ebc57437.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c4b2b71d.js",
     "runtime-main.js.map": "/static/js/runtime-main.c4b2b71d.js.map",
     "static/css/2.94f0bb04.chunk.css": "/static/css/2.94f0bb04.chunk.css",
-    "static/js/2.bdae7095.chunk.js": "/static/js/2.bdae7095.chunk.js",
-    "static/js/2.bdae7095.chunk.js.map": "/static/js/2.bdae7095.chunk.js.map",
+    "static/js/2.a69aeea6.chunk.js": "/static/js/2.a69aeea6.chunk.js",
+    "static/js/2.a69aeea6.chunk.js.map": "/static/js/2.a69aeea6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d2e599de5ee049c74159b1075f02f5bb.js": "/precache-manifest.d2e599de5ee049c74159b1075f02f5bb.js",
+    "precache-manifest.8ce9ca1d2945d2fa2c699119d63933ba.js": "/precache-manifest.8ce9ca1d2945d2fa2c699119d63933ba.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.94f0bb04.chunk.css.map": "/static/css/2.94f0bb04.chunk.css.map",
-    "static/css/main.371a024d.chunk.css.map": "/static/css/main.371a024d.chunk.css.map",
-    "static/js/2.bdae7095.chunk.js.LICENSE.txt": "/static/js/2.bdae7095.chunk.js.LICENSE.txt",
+    "static/css/main.c98919ac.chunk.css.map": "/static/css/main.c98919ac.chunk.css.map",
+    "static/js/2.a69aeea6.chunk.js.LICENSE.txt": "/static/js/2.a69aeea6.chunk.js.LICENSE.txt",
     "static/media/amaretti.png": "/static/media/amaretti.d1f9986c.png",
     "static/media/assorted.jpg": "/static/media/assorted.3291cbec.jpg",
     "static/media/bananaBread.png": "/static/media/bananaBread.56e57287.png",
@@ -25,6 +25,7 @@
     "static/media/chocolate.png": "/static/media/chocolate.c2531194.png",
     "static/media/chocolateChip.png": "/static/media/chocolateChip.bd4c5c50.png",
     "static/media/cinnamonbun.png": "/static/media/cinnamonbun.b81e3dcc.png",
+    "static/media/cookieBox.JPG": "/static/media/cookieBox.a5cddee2.JPG",
     "static/media/cookieButter.png": "/static/media/cookieButter.e383d778.png",
     "static/media/cookies.png": "/static/media/cookies.f0e4c7c4.png",
     "static/media/cookiesAndCream.png": "/static/media/cookiesAndCream.1f91657d.png",
@@ -57,8 +58,8 @@
   "entrypoints": [
     "static/js/runtime-main.c4b2b71d.js",
     "static/css/2.94f0bb04.chunk.css",
-    "static/js/2.bdae7095.chunk.js",
-    "static/css/main.371a024d.chunk.css",
-    "static/js/main.6249ebe1.chunk.js"
+    "static/js/2.a69aeea6.chunk.js",
+    "static/css/main.c98919ac.chunk.css",
+    "static/js/main.ebc57437.chunk.js"
   ]
 }
