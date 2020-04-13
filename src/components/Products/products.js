@@ -23,110 +23,115 @@ import {
   snickers,
   caramilk,
   monsterMash,
-  chocolateChip
+  chocolateChip,
+  cookieBox,
 } from "../../assets/images";
 const PRODUCTS = [
   {
     name: "blueberry",
-    image: blueberry
+    image: blueberry,
   },
   {
     name: "chocolate",
-    image: chocolate
+    image: chocolate,
   },
   {
     name: "cinnamon bun",
-    image: cinnamonbun
+    image: cinnamonbun,
   },
   {
     name: "cranberry orange",
-    image: cranberryorange
+    image: cranberryorange,
   },
   {
     name: "mars",
-    image: mars
+    image: mars,
   },
   {
     name: "mini egg",
-    image: miniegg
+    image: miniegg,
   },
   {
     name: "PB Cup",
-    image: reese
+    image: reese,
   },
   {
     name: "Amaretti",
-    image: Amaretti
+    image: Amaretti,
   },
   {
     name: "Pastaschio",
-    image: pastaschio
+    image: pastaschio,
   },
   {
     name: "Walnut Chocolate Chip",
-    image: walnutChocolateChip
+    image: walnutChocolateChip,
   },
   {
     name: "Oreo",
-    image: oreo
+    image: oreo,
   },
   {
     name: "Oreo Bday Cake",
-    image: oreoBdayCake
+    image: oreoBdayCake,
   },
   {
     name: "Nutella Godess",
-    image: nutellaGodess
+    image: nutellaGodess,
   },
   {
     name: "Banana Bread",
 
-    image: bananaBread
+    image: bananaBread,
   },
   {
     name: "Double Dolce Delight",
-    image: doubleDolceDelight
+    image: doubleDolceDelight,
   },
   {
     name: "Strawberry Poptart",
-    image: strawberryPoptart
+    image: strawberryPoptart,
   },
   {
     name: "Story Time",
-    image: storytime
+    image: storytime,
   },
   {
     name: "Ferrero",
-    image: ferrero
+    image: ferrero,
   },
   {
     name: "Everything Cookie",
-    image: everythingCookie
+    image: everythingCookie,
   },
   {
     name: "Cookie Butter",
-    image: cookieButter
+    image: cookieButter,
   },
   {
     name: "Cookies and Cream",
-    image: cookiesAndCream
+    image: cookiesAndCream,
   },
   {
     name: "Snickers",
-    image: snickers
+    image: snickers,
   },
   {
     name: "Caramilk",
-    image: caramilk
+    image: caramilk,
   },
   {
     name: "Monster Mash",
-    image: monsterMash
+    image: monsterMash,
   },
   {
     name: "Chocolate Chip",
-    image: chocolateChip
-  }
+    image: chocolateChip,
+  },
+  {
+    name: "Assorted Cookies",
+    image: cookieBox,
+  },
 ];
 
 export default PRODUCTS;

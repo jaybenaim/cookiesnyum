@@ -228,6 +228,9 @@
   .contain {
     object-fit: contain !important;
   }
+  .cover {
+    object-fit: cover !important;
+  }
 }
 .item--card-body--name {
   text-transform: capitalize;

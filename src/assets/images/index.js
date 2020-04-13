@@ -32,6 +32,9 @@ import biscotti from "./featured/biscotti.png";
 import Amaretti from "./biscotti/amaretti/amaretti.png";
 import pastaschio from "./biscotti/pastaschio/pastaschio.png";
 
+// boxes
+import cookieBox from "./boxes/cookieBox.JPG";
+
 import logo from "./logo.JPG";
 export {
   blueberry,
@@ -62,5 +65,6 @@ export {
   snickers,
   caramilk,
   monsterMash,
-  chocolateChip
+  chocolateChip,
+  cookieBox,
 };
