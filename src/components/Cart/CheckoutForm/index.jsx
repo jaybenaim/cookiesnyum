@@ -68,9 +68,11 @@ const CheckoutForm = ({
     const seperatedDate = stringValue.split(" ");
     setDate(`${seperatedDate[0]}, ${seperatedDate[1]} ${seperatedDate[2]}`);
   };
+
   const [validatedForm, setValidatedForm] = useState(false);
   const [validatedError, setValidationError] = useState("");
-  const validateForm = (form) => {
+
+  const validateForm = () => {
     const errors = [];
 
     if (email.length === 0) {
@@ -250,21 +252,6 @@ const CheckoutForm = ({
             <div className="input-field col s8"></div>
           </div>
           <div className="row"></div>
-          {/* <div className="row">
-            <div className="col s12 checkout-form--submit">
-        
-              <Button
-                node="button"
-                waves="light"
-                // type="submit"
-                // className="modal-trigger"
-                // href="#confirmModal"
-              >
-                Go to Confirmation
-                <ArrowRightAltIcon />
-              </Button>
-            </div>
-          </div> */}
         </form>
       </div>
 
@@ -272,7 +259,7 @@ const CheckoutForm = ({
       <Button
         node="button"
         waves="light"
-        // type="submit"
+        type="submit"
         className="modal-trigger"
         href="#confirmModal"
         onClick={() => validateForm(form)}

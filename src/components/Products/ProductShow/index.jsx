@@ -9,7 +9,7 @@ import RelatedProductsSlider from "../RelatedProductsSlider";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
 import { getProducts } from "../../../redux/actions/productActions";
-import { Preloader, Icon, TextInput } from "react-materialize";
+import { Preloader } from "react-materialize";
 import { filterGallery } from "../../../redux/actions/galleryActions";
 import CookieDescription from "./CookieDescription";
 import Quantity from "../Item/Quantity";

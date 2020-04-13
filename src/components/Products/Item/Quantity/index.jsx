@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Icon, TextInput } from "react-materialize";
-import { Link, withRouter } from "react-router-dom";
+import { Icon, TextInput } from "react-materialize";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 const Quantity = (props) => {

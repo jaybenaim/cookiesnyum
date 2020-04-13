@@ -70,7 +70,7 @@ class CartProduct extends Component {
         />
         <div className="shelf-item__details">
           <p className="title">{product.name}</p>
-          <p className="desc">
+          <div className="desc">
             {quantityTextLabel}: {qty}
             <div className="shelf-item--quantity-buttons">
               <Quantity
@@ -80,7 +80,7 @@ class CartProduct extends Component {
                 handleQtyChange={this.handleQtyChange}
               />
             </div>
-          </p>
+          </div>
         </div>
         <div className="shelf-item__price">
           <p>{formatPrice(product.price, currencySymbol)}</p>

@@ -9,9 +9,6 @@ import ConfirmationModalContent from "./ConfirmationModalContent";
 const ConfirmationModal = (props) => {
   const {
     checkoutData,
-    auth: {
-      user: { name },
-    },
     cart: {
       data: { productQuantity, totalPrice },
     },
@@ -152,7 +149,6 @@ const ConfirmationModal = (props) => {
   );
 };
 const mapStateToProps = (state) => ({
-  auth: state.auth,
   errors: state.errors,
   cart: state.cart,
   checkout: state.checkout,
