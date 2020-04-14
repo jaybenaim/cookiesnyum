@@ -87,7 +87,9 @@ const ProductShow = (props) => {
           width={120}
         />
         <div className="product-show--card-body secondary-font">
-          <h3 className="product-show--card-body--name ">{name}</h3>
+          <h3 className="product-show--card-body--name ">
+            {name} {sku.replace("-", "")}
+          </h3>
           <p className="product-show--card-body--price">
             {formatPrice(price, "CAD")}
           </p>

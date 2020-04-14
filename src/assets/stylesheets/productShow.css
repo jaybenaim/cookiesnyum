@@ -201,12 +201,25 @@
     grid-column: 1;
     display: flex;
     flex-direction: row;
-    margin-top: -70%;
+    max-width: 100%;
+    margin-top: 5%;
   }
-
+  .product-show--card-body--quantity-buttons button,
+  .product-show--card-body--quantity-buttons .input-field {
+    position: relative;
+    left: -30%;
+    height: 80px;
+    top: 5%;
+  }
+  .product-show--card-body-qty-label {
+    position: relative;
+    top: -10%;
+    min-width: 80px;
+  }
   .product-show--card-body .input-field label {
     font-size: 1.8em;
-    margin-top: 0%;
+    margin-top: -50%;
+    margin-left: 10%;
   }
 
   .product-show--card-body--quantity-buttons .increase {
@@ -252,13 +265,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: -15%;
     margin-bottom: 10%;
     overflow: hidden;
   }
   .product-show--card-body--related-products h3 {
     text-align: center;
-    margin-top: 25%;
+    margin-top: 10%;
     margin-bottom: 2%;
   }
   .product-show--card-body--related-products .related-product {
