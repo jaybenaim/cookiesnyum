@@ -42,7 +42,6 @@
     grid-column: 1;
     grid-row: 2;
     object-fit: contain;
-    zoom: 1.1;
   }
   [alt="Assorted Cookies"] {
     object-fit: contain;
