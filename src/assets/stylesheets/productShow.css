@@ -211,11 +211,11 @@
     position: relative;
     left: -30%;
     height: 80px;
-    top: 10%;
+    top: 15%;
   }
   .product-show--card-body-qty-label {
     position: relative;
-    top: -10%;
+    top: -5%;
     min-width: 80px;
   }
   .product-show--card-body .input-field label {
