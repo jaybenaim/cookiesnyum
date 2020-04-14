@@ -194,6 +194,7 @@
     grid-column: 1 / span 3;
     font-size: 1.3em;
     width: 200px;
+    margin-top: 3%;
   }
   .product-show--card-body--description {
     grid-column: 1 / span 4;
