@@ -7,34 +7,29 @@ import Info from "./Info";
 import { withRouter } from "react-router-dom";
 import { featuredProducts } from "./FeaturedProductsSlider/featuredProductsSliderConfig";
 
-const Home = ({ fade }) => {
+const Home = () => {
   return (
     <>
       <main id="mainContent">
-        <div className={fade}>
-          {fade !== "fade-background" && (
-            <>
-              <section className="featured-slider">
-                <FeaturedSlider />
-                <br />
-              </section>
-              {window.innerWidth > 400 && <hr />}
-              <section className="featured-products-slider">
-                <FeaturedProductsSlider featuredProducts={featuredProducts} />
-              </section>
-              {window.innerWidth > 400 && <hr />}
+        <div>TEST HELLO</div>
+        <section className="featured-slider">
+          <FeaturedSlider />
+          <br />
+        </section>
+        {window.innerWidth > 400 && <hr />}
+        <section className="featured-products-slider">
+          <FeaturedProductsSlider featuredProducts={featuredProducts} />
+        </section>
+        {window.innerWidth > 400 && <hr />}
 
-              <section className="about-us">
-                <AboutUs />
-              </section>
-              {window.innerWidth > 400 && <hr />}
+        <section className="about-us">
+          <AboutUs />
+        </section>
+        {window.innerWidth > 400 && <hr />}
 
-              <section className="info">
-                <Info />
-              </section>
-            </>
-          )}
-        </div>
+        <section className="info">
+          <Info />
+        </section>
       </main>
     </>
   );
