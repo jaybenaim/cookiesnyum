@@ -163,6 +163,8 @@
   .item--card-body--add-to-cart {
     grid-column: 1 / span 3;
     font-size: 1.9em;
+    text-align: center;
+    margin-left: -2%;
   }
   .item--card-body--add-to-cart button svg {
     color: #f6406f;
@@ -194,6 +196,7 @@
   .item--card-body--description {
     grid-column: 1 / span 3;
     text-transform: capitalize;
+    text-align: center;
   }
   .item--card-body--price {
     grid-column: 2;
@@ -208,6 +211,7 @@
     flex-direction: row;
     height: 50%;
     margin-bottom: -40%;
+    margin-left: 5%;
   }
   .item--card-body--quantity-buttons .input-field {
     top: -150%;
