@@ -19,16 +19,16 @@
     position: relative;
     top: 7px;
   }
-  .auth-content {
-    position: absolute;
-    top: 70%;
-    width: 100%;
-  }
 }
 @media (min-width: 451px) {
   .sidenav-trigger {
     margin-left: -55px;
   }
+}
+.auth-content {
+  position: absolute;
+  top: 70%;
+  width: 100%;
 }
 .auth-content a {
   padding-top: 5%;

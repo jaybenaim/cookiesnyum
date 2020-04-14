@@ -138,6 +138,7 @@ const ConfirmationModal = (props) => {
             waves="light"
             type="submit"
             modal="close"
+            className="submit-email"
             onClick={() => handleSendEmail()}
           >
             Submit

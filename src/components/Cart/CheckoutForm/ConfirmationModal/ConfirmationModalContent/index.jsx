@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { sendEmail } from "../../../../../redux/actions/checkoutActions";
 import { connect } from "react-redux";
+import { formatPrice } from "../../../../../helpers/index";
 import "../../../../../assets/stylesheets/confirmationModalContent.css";
 
 class ConfirmationModalContent extends Component {
@@ -24,17 +25,14 @@ class ConfirmationModalContent extends Component {
     } = this.props;
     const productNames = products.map((product) => (
       <li>
-        <Link
-          to={{
-            pathname: `/products/${product.sku}`,
-            state: { item: product, quantity: product.quantity },
-          }}
-          className="show-product-btn"
-          onClick={() => this.forceUpdate()}
-        >
-          <img src={product.image} alt={product.name} height={40} width={40} />{" "}
-          {product.name} - ${product.price} - QTY: {product.quantity}
-        </Link>
+        <img src={product.image} alt={product.name} height={40} width={40} />{" "}
+        <span className="product-label">
+          {product.name} {product.sku.replace("-", "")}
+        </span>
+        <span className="product-price">
+          {formatPrice(Number(product.price) * Number(product.quantity), "CAD")}
+        </span>
+        <span className="product-qty">QTY: {product.quantity}</span>
       </li>
     ));
 
@@ -50,23 +48,21 @@ class ConfirmationModalContent extends Component {
           <div>
             <strong>Email:</strong> <span>{emailAddress}</span>
           </div>
-          <div className="confirmation-modal-content--name-container--address">
-            <strong>Address:</strong>
-            <div>
-              <div>
-                {addressNumber} {street},
-              </div>
-              <div>
-                {city}, {province}
-              </div>
-              <div>{postalCode}</div>
-            </div>
-          </div>
-          <hr />
         </div>
-        <div className="confirmation-modal-content--order-details">
-          <h4>Order Details:</h4>
+        <div className="confirmation-modal-content--name-container--address">
+          <strong>Address:</strong>
+          <div>
+            <div>
+              {addressNumber} {street},
+            </div>
+            <div>
+              {city}, {province}
+            </div>
+            <div>{postalCode}</div>
+          </div>
+        </div>
 
+        <div className="confirmation-modal-content--order-details">
           <div className="confirmation-modal-content--order-details-need-by-date">
             <strong>Need By Date:</strong>
             <div>{dateNeededBy}</div>
@@ -82,8 +78,7 @@ class ConfirmationModalContent extends Component {
           <h3>Your Order:</h3>
           <ol>{productNames}</ol>
           <div className="confirmation-modal-content--products--qty">
-            <strong> Total Items: </strong>
-            {productQuantity}
+            <strong> Total Items:&nbsp; </strong> {` ${productQuantity}`}
           </div>
           <div className="confirmation-modal-content--products--subTotal">
             <strong>Sub Total:</strong> <strong>CAD</strong> ${totalPrice}
