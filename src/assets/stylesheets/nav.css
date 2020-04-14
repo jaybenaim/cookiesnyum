@@ -51,6 +51,11 @@
   .hide-on-med-and-down .auth-content--name {
     display: none;
   }
+  .hide-on-med-and-down .sidenav-close {
+    font-size: 16.5px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
 }
 
 @media (min-width: 989px) {
