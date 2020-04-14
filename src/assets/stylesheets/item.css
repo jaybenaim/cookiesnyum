@@ -177,6 +177,8 @@
     display: grid;
   }
   .item--card--img {
+    grid-column: 1 / span 3;
+    margin: 0 auto;
     margin-bottom: 12%;
     object-fit: contain;
   }
