@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+
+import OrderSentModal from "./OrderSentModal";
 import ConfirmationModal from "./ConfirmationModal";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import {
@@ -18,6 +20,7 @@ const CheckoutForm = ({
   auth: {
     user: { name },
   },
+  checkout: { checkoutStatus },
 }) => {
   const [firstName, setFirstName] = useState(name || "");
   const [lastName, setLastName] = useState("");
@@ -100,6 +103,7 @@ const CheckoutForm = ({
           validatedForm={validatedForm}
         />
       )}
+      {checkoutStatus === "success" && <OrderSentModal />}
       <div className="row">
         <h4>Full Name</h4>
       </div>

@@ -60,7 +60,7 @@ const PRODUCTS = [
     image: Amaretti,
   },
   {
-    name: "Pastaschio",
+    name: "Pistachio",
     image: pastaschio,
   },
   {

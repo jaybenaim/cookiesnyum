@@ -187,7 +187,7 @@ export class Cart extends Component {
           </div>
 
           <div className="float-cart__shelf-container">
-            {checkoutStatus === "success" ? <div>Message sent</div> : products}
+            {checkoutStatus === "success" ? <div>Order Placed</div> : products}
             {checkoutForm && <CheckoutForm data={checkoutFormData} />}
             {cartProducts === undefined ||
               (cartProducts.length === 0 && (
