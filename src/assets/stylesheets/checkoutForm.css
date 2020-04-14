@@ -1,6 +1,16 @@
-.validate-error {
+.checkout-form {
+  width: 100%;
+  padding: 10%;
+  padding-top: 10%;
 }
+
 @media (max-width: 450px) {
+  .checkout-form {
+    width: 100%;
+    padding: 10%;
+    padding-top: 30%;
+  }
+
   .checkout-form #addressNumber {
     width: 20%;
   }
@@ -34,9 +44,4 @@
     right: 82%;
     top: 74.1%;
   }
-}
-.checkout-form {
-  width: 100%;
-  padding: 10%;
-  padding-top: 10%;
 }
