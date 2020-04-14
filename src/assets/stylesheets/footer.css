@@ -26,15 +26,22 @@
   footer .container ul {
     display: flex;
     flex-direction: row;
-    margin-top: 5%;
+    margin-top: 10%;
+  }
+  footer .container ul li {
+    padding: 2%;
   }
 }
 
 .footer {
   background-color: #f6406f;
+  color: white;
   padding-top: 2rem;
   padding-bottom: 4rem;
   position: absolute;
   bottom: 0;
   min-width: 100%;
+}
+footer .container ul li a {
+  color: white;
 }
