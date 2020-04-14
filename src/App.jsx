@@ -48,7 +48,7 @@ const App = (props) => {
 
   const cartOptions = {
     currencySymbol: "CAD",
-    checkoutTextLabel: "Confirm",
+    checkoutTextLabel: "Checkout",
     subTotalTextLabel: "Sub Total",
     cartTextLabel: "Cart",
     quantityTextLabel: "QTY",
