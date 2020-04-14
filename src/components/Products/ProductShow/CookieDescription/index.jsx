@@ -19,17 +19,17 @@ const CookieDescription = (props) => {
           <>
             <li>
               <strong>Dough: </strong>
-              {dough}
+              {dough || "N/A"}
             </li>
             <li>
-              <strong>Mix - Ins: </strong> {mixin}
+              <strong>Mix - Ins: </strong> {mixin || "N/A"}
             </li>
             <li>
               <strong>Stuffing: </strong>
-              {stuffing}
+              {stuffing || "N/A"}
             </li>
             <li>
-              <strong>Toppings: </strong> {topping}
+              <strong>Toppings: </strong> {topping || "N/A"}
             </li>
           </>
         )}
