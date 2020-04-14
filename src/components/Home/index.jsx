@@ -11,7 +11,6 @@ const Home = () => {
   return (
     <>
       <main id="mainContent">
-        <div>TEST HELLO</div>
         <section className="featured-slider">
           <FeaturedSlider />
           <br />
