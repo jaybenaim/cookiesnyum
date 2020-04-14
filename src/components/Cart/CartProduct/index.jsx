@@ -83,7 +83,7 @@ class CartProduct extends Component {
           </div>
         </div>
         <div className="shelf-item__price">
-          <p>{formatPrice(product.price, currencySymbol)}</p>
+          <p>{formatPrice(product.price * product.quantity, currencySymbol)}</p>
         </div>
       </div>
     );
