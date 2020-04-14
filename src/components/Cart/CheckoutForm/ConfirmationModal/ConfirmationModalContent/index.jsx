@@ -45,7 +45,7 @@ class ConfirmationModalContent extends Component {
           <div className="confirmation-modal-content--name-container--lastName">
             <strong>Last Name:</strong> <span>{lastName}</span>
           </div>
-          <div>
+          <div className="confirmation-modal-content--name-container--email">
             <strong>Email:</strong> <span>{emailAddress}</span>
           </div>
         </div>
