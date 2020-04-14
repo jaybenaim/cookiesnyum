@@ -8,6 +8,11 @@
   top: 80%;
   width: 100%;
 }
+.sidenav #logout {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+}
 .hide-on-med-and-down #login {
   position: absolute;
   top: -0.33%;
@@ -17,6 +22,10 @@
   padding-left: 0 !important;
   padding-top: 37px !important;
 }
+.hide-on-med-and-down #logout {
+  box-shadow: none;
+}
+
 @media (max-width: 450px) {
   nav {
     position: absolute;
@@ -38,6 +47,9 @@
   .sidenav-trigger {
     margin-left: -55px;
     margin-right: 2px;
+  }
+  .hide-on-med-and-down .auth-content--name {
+    display: none;
   }
 }
 

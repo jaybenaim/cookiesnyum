@@ -2,16 +2,16 @@ import React from "react";
 import { logoutUser } from "../../redux/actions/authActions";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-const Auth = props => {
+const Auth = (props) => {
   const {
     auth: {
       user: { name },
-      isAuthenticated
+      isAuthenticated,
     },
-    logoutUser: handleLogoutUser
+    logoutUser: handleLogoutUser,
   } = props;
 
-  const onLogoutClick = e => {
+  const onLogoutClick = (e) => {
     e.preventDefault();
     handleLogoutUser();
   };
@@ -38,16 +38,16 @@ const Auth = props => {
     <div className="auth-content">
       <button
         id="logout"
-        onClick={e => onLogoutClick(e)}
+        onClick={(e) => onLogoutClick(e)}
         className="btn btn-large waves-effect waves-light hoverable  accent-3 auth-link"
       >
-        Logout, {name}?
+        Logout <span className="auth-content--name"> {name}?</span>
       </button>
     </div>
   );
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 export default withRouter(connect(mapStateToProps, { logoutUser })(Auth));
