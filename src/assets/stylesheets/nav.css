@@ -56,6 +56,9 @@
     font-weight: 300;
     letter-spacing: 0.5px;
   }
+  nav .nav-wrapper {
+    height: 0;
+  }
 }
 
 @media (min-width: 989px) {

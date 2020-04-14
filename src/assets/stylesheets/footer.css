@@ -2,20 +2,18 @@
   footer ul {
     display: flex;
     flex-direction: row;
-    margin-top: 25%;
+    margin-top: 20%;
   }
   footer .container ul li {
     padding: 0 2%;
     color: #fff;
   }
+  footer .container ul li {
+    padding: 4%;
+  }
   .footer .container {
     max-width: 50% !important;
     margin-left: 0;
-  }
-  footer .container ul {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20%;
   }
 }
 @media (min-width: 451px) {
@@ -26,10 +24,10 @@
   footer .container ul {
     display: flex;
     flex-direction: row;
-    margin-top: 10%;
+    margin-top: 5%;
   }
   footer .container ul li {
-    padding: 2%;
+    padding: 0 8%;
   }
 }
 
@@ -41,7 +39,9 @@
   position: absolute;
   bottom: 0;
   min-width: 100%;
+  overflow: hidden;
 }
+
 footer .container ul li a {
   color: white;
 }

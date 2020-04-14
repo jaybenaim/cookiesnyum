@@ -190,7 +190,7 @@
   }
   .product-show--card-body--price {
     grid-row: 2;
-    grid-column: 1;
+    grid-column: 1 / span 3;
     font-size: 1.3em;
     width: 200px;
   }
