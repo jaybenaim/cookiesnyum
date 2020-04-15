@@ -56,9 +56,7 @@ const CheckoutForm = ({
   const checkoutData = {
     form,
     order: {
-      products: products.map(
-        (product) => `${product.sku}${product.name}-${product.quantity}`
-      ),
+      products,
     },
   };
 

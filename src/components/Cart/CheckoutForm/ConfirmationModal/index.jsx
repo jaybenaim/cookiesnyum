@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../../../redux/actions/checkoutActions";
 import SendIcon from "@material-ui/icons/Send";
 import ConfirmationModalContent from "./ConfirmationModalContent";
+import { formatPrice } from "../../../../helpers";
 
 const ConfirmationModal = (props) => {
   const {
@@ -26,7 +27,13 @@ const ConfirmationModal = (props) => {
     const {
       order: { products },
     } = checkoutData;
-    const productSkuLis = products.map((p, i) => `<li>${products[i]}</li>`);
+    const productSkuLis = products.map((p, i) => {
+      return `<li style="text-transform: capitalize">
+                ${p.name} ${p.sku.replace("-", "")}<br/>
+                Qty: ${p.quantity}<br/>
+                Total Price: ${formatPrice(p.price * p.quantity, "CAD")}
+              </li>`;
+    });
     const allProductSkus = productSkuLis.join("");
 
     const emailBody = `<!DOCTYPE html><html lang="en"><head>
@@ -36,7 +43,7 @@ const ConfirmationModal = (props) => {
   </head>
   <body>
     <div>
-      <div className="email-template" style="">
+      <div>
         <h1 style="grid-column: 1 / span 3;margin: 0 auto;margin-top: 10%;">
           Order
         </h1>
@@ -51,10 +58,6 @@ const ConfirmationModal = (props) => {
             <p>
               <strong>Email:</strong> <span >${emailAddress}</span>
             </p>
-            <p>
-              <strong>Payment Method:</strong> <span>${paymentMethod}</span>
-            </p>
-          
             <div> 
               <strong>Address:</strong> 
                 <div>
@@ -78,28 +81,27 @@ const ConfirmationModal = (props) => {
               </div>
         </div> 
         <h3>Product Skus</h3> 
-      <ul> 
+      <ol> 
         ${allProductSkus}
-      </ul>
-      <div> 
+      </ol>
+
+      <div style="margin-top: 5%"> 
+        Payment Method: <span>${paymentMethod}</span><br /> 
         Total Items: <strong>${productQuantity} </strong>
       </div>
       <div> 
-        Total Charge to customer: <strong>$${totalPrice}</strong>
+        SUB TOTAL: <strong>CAD: ${formatPrice(totalPrice, "CAD")}</strong>
       </div> 
     </div>
-   
-
   </body>
 </html>`;
     const email = {
-      //@props TODO: create onchange
       name: firstName,
       email: emailAddress,
       message: `Error with the order contact - `,
       html: emailBody,
     };
-    // @post to /email
+    // POST to api/email
     props.sendEmail(email);
   };
 
@@ -119,10 +121,6 @@ const ConfirmationModal = (props) => {
         options={{
           dismissible: true,
           endingTop: "",
-          onCloseEnd: null,
-          onCloseStart: null,
-          onOpenEnd: null,
-          onOpenStart: null,
           opacity: 0.5,
           outDuration: 250,
           preventScrolling: true,

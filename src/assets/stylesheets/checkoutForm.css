@@ -25,6 +25,14 @@
     font-size: 2em;
     margin-top: -2%;
   }
+  .MuiSvgIcon-root {
+    position: relative;
+    left: 3px;
+    top: -1px;
+  }
+  .checkout-form .datepicker {
+    width: 110% !important;
+  }
 }
 @media (min-width: 451px) {
   #addressNumber {
