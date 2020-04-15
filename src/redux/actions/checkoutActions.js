@@ -1,9 +1,9 @@
 import { GET_ERRORS, SET_CHECKOUT_STATUS } from "../types";
-import backend from "../../api/backend";
+import local from "../../api/local";
 
 // Send message for checkout
 export const sendEmail = (data) => (dispatch) => {
-  backend
+  local
     .post("/email", data)
     .then((res) => {
       let message = "success";
