@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../assets/stylesheets/errorPage.css";
+
 const ErrorPage = () => {
   return (
     <div id="notfound">
