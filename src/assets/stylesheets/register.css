@@ -10,7 +10,7 @@
     padding: 2% 4%;
   }
 }
-
-.register-container .row .col {
-  padding: 2% 4%;
+.signup-page-signup-btn {
+  background: #f6406f !important;
+  color: white !important;
 }

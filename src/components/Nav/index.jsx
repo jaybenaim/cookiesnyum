@@ -7,19 +7,19 @@ import { filterGallery } from "../../redux/actions/galleryActions";
 import { Icon, Navbar } from "react-materialize";
 import { connect } from "react-redux";
 
-const Nav = props => {
+const Nav = (props) => {
   return (
     <Navbar
       alignLinks="right"
       brand={
-        <a className="brand-logo" href="/">
+        <Link className="brand-logo" to="/">
           <img
             src={logo}
             alt="logo cookie with a bite"
             height={140}
             width={140}
           />
-        </a>
+        </Link>
       }
       centerChildren
       id="mobile-nav"
@@ -30,7 +30,7 @@ const Nav = props => {
         inDuration: 250,
 
         outDuration: 200,
-        preventScrolling: true
+        preventScrolling: true,
       }}
     >
       <Link to="/" className="sidenav-close">
@@ -56,7 +56,7 @@ const Nav = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {};
 };
 

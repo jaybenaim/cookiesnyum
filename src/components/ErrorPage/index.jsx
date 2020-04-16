@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../assets/stylesheets/errorPage.css";
 const ErrorPage = () => {
   return (
@@ -9,9 +10,9 @@ const ErrorPage = () => {
         </div>
         <h2>Oops, The Page you are looking for can't be found!</h2>
 
-        <a href="/dolcenada">
+        <Link to="/">
           <span class="arrow"></span>Return To Homepage
-        </a>
+        </Link>
       </div>
       {/* <!-- This templates was made by Colorlib (https://colorlib.com) --> */}
     </div>

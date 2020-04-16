@@ -11,10 +11,6 @@
   }
 }
 
-.login-container .row .col {
-  margin: 0;
-  padding: 2% 4%;
-}
 .login-container .btn {
   background: rgb(246, 64, 111) !important;
   color: white !important;

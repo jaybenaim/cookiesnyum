@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../redux/actions/authActions";
@@ -47,16 +47,16 @@ class Register extends Component {
         <div className="container register-container">
           <div className="row">
             <div className="col s8 offset-s2">
-              <a href="/dolcenada" className="btn-flat waves-effect">
+              <Link to="/" className="btn-flat waves-effect">
                 <i className="material-icons left">keyboard_backspace</i> Back
                 to home
-              </a>
+              </Link>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <h4>
                   <b>Register</b> below
                 </h4>
                 <p className="grey-text text-darken-1">
-                  Already have an account? <a href="/dolcenada/login">Log in</a>
+                  Already have an account? <Link to="/login">Log in</Link>
                 </p>
               </div>
               {loading && (
@@ -99,7 +99,7 @@ class Register extends Component {
                   <TextInput
                     password
                     id="password"
-                    label="password"
+                    label="Password"
                     className={classnames("validate", {
                       invalid: errors.password,
                     })}
@@ -113,7 +113,7 @@ class Register extends Component {
                   <TextInput
                     password
                     id="password2"
-                    label="confirm password"
+                    label="Confirm password"
                     className={classnames("validate", {
                       invalid: errors.password2,
                     })}
@@ -132,8 +132,7 @@ class Register extends Component {
                       marginTop: "1rem",
                     }}
                     type="submit"
-                    id="register"
-                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                    className="btn btn-large waves-effect waves-light hoverable  accent-3 signup-page-signup-btn"
                   >
                     Sign up
                   </button>

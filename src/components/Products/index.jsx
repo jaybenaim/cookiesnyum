@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "../../assets/stylesheets/products.css";
 import Item from "./Item";
 import { connect } from "react-redux";
@@ -56,19 +56,13 @@ const Products = (props) => {
     <div className="products-container">
       <div className="products-container--products-nav-container">
         <div className="products--nav">
-          <a href="/dolcenada/">Home /</a>
-          <a href="/dolcenada/products">
-            {" "}
-            Products {filter && <span>/</span>}{" "}
-          </a>{" "}
+          <Link to="/">Home /</Link>
+          <Link to="/products"> Products {filter && <span>/</span>} </Link>{" "}
           <br />
           {filter && (
-            <a
-              href="/dolcenada/products"
-              onClick={() => props.filterGallery(filter)}
-            >
+            <Link to="/products" onClick={() => props.filterGallery(filter)}>
               {filter}
-            </a>
+            </Link>
           )}
         </div>
       </div>
