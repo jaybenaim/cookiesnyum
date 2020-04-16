@@ -54,7 +54,7 @@ class Item extends Component {
       <div className={`item--card `}>
         <Link
           to={{
-            pathname: `/products/${sku}`,
+            pathname: `/products/${sku}${name}`,
             state: { id, item, quantity, description, image },
           }}
           className="show-product-btn"

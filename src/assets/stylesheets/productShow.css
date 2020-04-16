@@ -151,7 +151,7 @@
     grid-template-columns: 1fr 1fr;
   }
   .product-show-container .products--nav {
-    margin: 5%;
+    margin: 7%;
   }
   .product-show--card {
     grid-column: 1 / span 4;
@@ -159,7 +159,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
-    margin-top: -5%;
+    margin-top: -10%;
   }
   .product-show--card--img {
     grid-column: 1;

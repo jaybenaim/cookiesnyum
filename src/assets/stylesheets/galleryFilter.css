@@ -36,8 +36,9 @@
     grid-column: 1 / span 3;
     display: flex;
     justify-content: center;
-    padding-bottom: 4%;
+    padding-bottom: 2%;
     padding-top: 2%;
+    margin-top: -5%;
   }
   .filter-container button {
     margin-left: 2%;

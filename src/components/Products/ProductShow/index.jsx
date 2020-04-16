@@ -17,7 +17,7 @@ import Quantity from "../Item/Quantity";
 const ProductShow = (props) => {
   const {
     item,
-    item: { id, name, price, sku, description },
+    item: { id, name, price, sku, description, class: itemClass },
     image,
   } = props.location.state;
   const { products } = props;
@@ -66,7 +66,7 @@ const ProductShow = (props) => {
     <div className="product-show-container">
       <div className="products--nav">
         <Link to="/">Home /</Link>
-        <Link href="/products"> Products /</Link>{" "}
+        <Link to="/products"> Products /</Link>{" "}
         <Link
           to={{
             pathname: "/products",
@@ -75,12 +75,15 @@ const ProductShow = (props) => {
         >
           {formattedSku}
         </Link>
-        <Link to={`/dolcenada/products/${sku}-${name}`}> / {name}</Link>
+        <Link to={`/dolcenada/products/${sku}${name}`}> / {name}</Link>
       </div>
 
-      <div className=" product-show--card">
+      <div className="product-show--card">
         <img
-          className={`product-show--card--img ${sku.replace("-", "")}`}
+          className={`product-show--card--img ${sku.replace(
+            "-",
+            ""
+          )} ${itemClass}`}
           src={image}
           alt={name}
           height={120}

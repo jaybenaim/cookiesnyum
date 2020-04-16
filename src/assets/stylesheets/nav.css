@@ -2,6 +2,7 @@
   background: #f6406f !important;
   color: white;
 }
+
 .sidenav #login {
   position: absolute;
   top: 70%;
@@ -29,6 +30,7 @@
   padding-left: 0 !important;
   padding-top: 37px !important;
   box-shadow: none;
+  padding: 2px;
 }
 .hide-on-med-and-down #login:hover {
   background: rgba(0, 0, 0, 0.1) !important;
@@ -39,6 +41,10 @@
 .hide-on-med-and-down li {
   margin-right: 20px;
   max-width: 90px;
+}
+.hide-on-med-and-down .sidenav-close:hover {
+  color: white;
+  text-decoration: none;
 }
 @media (max-width: 450px) {
   nav {
@@ -121,19 +127,6 @@ nav {
   z-index: 999999;
 }
 
-/* .auth-link {
-  width: 100%;
-  color: #fff;
-  border-radius: 3px;
-  letter-spacing: "1.5px";
-  margin-top: "1rem";
-  background: "#f6406f";
-  background: #f6406f !important;
-  color: white !important;
-} */
-/* #login {
-  margin-bottom: 4%;
-} */
 .sidenav-logo {
   position: absolute;
   bottom: 45%;
@@ -144,4 +137,8 @@ nav {
 .sidenav--dropdown-trigger {
   font-weight: 500;
   margin-top: 2%;
+}
+
+.hide-on-med-and-down .sidenav-close {
+  text-align: center;
 }
