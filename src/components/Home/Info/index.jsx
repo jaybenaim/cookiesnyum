@@ -16,11 +16,7 @@ const Info = () => {
         <h3 className="primary-font">Business Info</h3>
         <div className="secondary-font">
           <p>Based in Vaughan, ON</p>
-          <p>
-            <strong>
-              Please give at least 7 days notice for any order placed
-            </strong>
-          </p>
+
           <em>Rushed orders available for additional charge</em>
         </div>
         <div className="info-content--image-grid secondary-font">

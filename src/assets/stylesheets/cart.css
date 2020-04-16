@@ -258,8 +258,8 @@
   text-transform: uppercase;
   background-color: #f6406f !important;
   text-align: center;
-  padding: 2% 2% 5.5% 2% !important;
-  margin-top: 20px;
+  padding: 2% 2% 10% 2% !important;
+  margin-top: 10px;
   cursor: pointer;
   color: white !important;
   transition: background-color 0.2s;
