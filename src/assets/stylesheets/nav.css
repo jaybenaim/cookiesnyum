@@ -1,12 +1,18 @@
+#login {
+  background: #f6406f !important;
+  color: white;
+}
 .sidenav #login {
   position: absolute;
   top: 70%;
   width: 100%;
+  padding-top: 12px;
 }
 .sidenav #register {
   position: absolute;
   top: 80%;
   width: 100%;
+  padding-top: 12px;
 }
 .sidenav #logout {
   position: absolute;
