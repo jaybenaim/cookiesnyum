@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../../../../redux/actions/checkoutActions";
 import { connect } from "react-redux";
 import { formatPrice } from "../../../../../helpers/index";

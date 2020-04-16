@@ -14,18 +14,26 @@
   width: 100%;
 }
 .hide-on-med-and-down #login {
+  color: white;
   position: absolute;
-  top: -0.33%;
-  right: -6%;
+  margin-top: -1.6%;
+  right: -3%;
   width: 92px;
   height: 80px;
   padding-left: 0 !important;
   padding-top: 37px !important;
+  box-shadow: none;
+}
+.hide-on-med-and-down #login:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 .hide-on-med-and-down #logout {
   box-shadow: none;
 }
-
+.hide-on-med-and-down li {
+  margin-right: 20px;
+  max-width: 90px;
+}
 @media (max-width: 450px) {
   nav {
     position: absolute;
@@ -55,6 +63,7 @@
     font-size: 16.5px;
     font-weight: 300;
     letter-spacing: 0.5px;
+    margin-left: -25%;
   }
   nav .nav-wrapper {
     height: 0;
@@ -67,17 +76,10 @@
     min-width: 90%;
   }
 
-  .auth-link {
+  /* .auth-link {
     background: transparent;
-    padding: 0;
-  }
-  #login {
-    position: absolute;
-    padding: 1% !important;
-    padding-top: 3.5% !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-  }
+  } */
+
   #register {
     display: none;
   }
@@ -113,7 +115,7 @@ nav {
   z-index: 999999;
 }
 
-.auth-link {
+/* .auth-link {
   width: 100%;
   color: #fff;
   border-radius: 3px;
@@ -122,10 +124,10 @@ nav {
   background: "#f6406f";
   background: #f6406f !important;
   color: white !important;
-}
-#login {
+} */
+/* #login {
   margin-bottom: 4%;
-}
+} */
 .sidenav-logo {
   position: absolute;
   bottom: 45%;
