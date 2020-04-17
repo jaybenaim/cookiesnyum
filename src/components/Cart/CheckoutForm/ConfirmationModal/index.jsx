@@ -17,10 +17,11 @@ const ConfirmationModal = (props) => {
   const handleSendEmail = () => {
     const {
       name: { firstName, lastName },
-
-      address: { addressNumber, city, province, street, postalCode },
+      address: { addressNumber, suite, city, province, street, postalCode },
       email: emailAddress,
+      phone,
       paymentMethod,
+      deliveryMethod,
       dateNeededBy,
     } = checkoutData.form;
 
@@ -58,10 +59,15 @@ const ConfirmationModal = (props) => {
             <p>
               <strong>Email:</strong> <span >${emailAddress}</span>
             </p>
+            <p>
+              <strong>Phone:</strong> <span >${phone}</span>
+            </p>
             <div> 
               <strong>Address:</strong> 
                 <div>
-                  <div>${addressNumber} ${street},</div>
+                  <div>${addressNumber} ${street} ${
+      suite && <span>Suite:{suite}</span>
+    },</div>
                   <div>${city}, ${province}</div>
                   <div>${postalCode}</div>
                 </div>
@@ -87,6 +93,7 @@ const ConfirmationModal = (props) => {
 
       <div style="margin-top: 5%"> 
         Payment Method: <span>${paymentMethod}</span><br /> 
+        Delivery Method: <span>${deliveryMethod}</span><br /> 
         Total Items: <strong>${productQuantity} </strong>
       </div>
       <div> 

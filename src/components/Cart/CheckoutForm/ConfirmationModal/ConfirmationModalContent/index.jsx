@@ -11,10 +11,11 @@ class ConfirmationModalContent extends Component {
       checkoutData: {
         form: {
           name: { firstName, lastName },
-
-          address: { addressNumber, city, province, street, postalCode },
+          address: { addressNumber, suite, city, province, street, postalCode },
           email: emailAddress,
+          phone,
           paymentMethod,
+          deliveryMethod,
           dateNeededBy,
         },
       },
@@ -48,17 +49,21 @@ class ConfirmationModalContent extends Component {
           <div className="confirmation-modal-content--name-container--email">
             <strong>Email:</strong> <span>{emailAddress}</span>
           </div>
+          <div className="confirmation-modal-content--name-container--phone">
+            <strong>Phone:</strong> <span>{phone}</span>
+          </div>
         </div>
+
         <div className="confirmation-modal-content--name-container--address">
           <strong>Address:</strong>
+          <br />
           <div>
             <div>
-              {addressNumber} {street},
+              {addressNumber} {street} {suite && <div>Suite/Apt: {suite}</div>}
+              ,&nbsp;
+              {city},&nbsp; {province.toUpperCase()}, &nbsp;
+              {postalCode.toUpperCase()}
             </div>
-            <div>
-              {city}, {province}
-            </div>
-            <div>{postalCode}</div>
           </div>
         </div>
 
@@ -72,6 +77,11 @@ class ConfirmationModalContent extends Component {
             <strong>Payment Method:</strong>
             <p>{paymentMethod}</p>
           </div>
+
+          <div className="confirmation-modal-content--order-details-delivery-method">
+            <strong>Delivery Method:</strong>
+            <p>{deliveryMethod}</p>
+          </div>
         </div>
 
         <div className="confirmation-modal-content--products">
@@ -81,7 +91,8 @@ class ConfirmationModalContent extends Component {
             <strong> Total Items:&nbsp; </strong> {` ${productQuantity}`}
           </div>
           <div className="confirmation-modal-content--products--subTotal">
-            <strong>Sub Total:</strong> <strong>CAD</strong> ${totalPrice}
+            <strong>Sub Total:</strong> <strong>CAD</strong>
+            {formatPrice(totalPrice, "CAD")}
           </div>
         </div>
       </div>

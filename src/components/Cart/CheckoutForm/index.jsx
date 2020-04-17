@@ -29,7 +29,7 @@ const CheckoutForm = ({
   const [email, setEmail] = useState("");
   const [addressNumber, setAddressNumber] = useState("");
   const [tel, setTel] = useState("");
-  const [suiteNumber, setSuite] = useState("");
+  const [suite, setSuite] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [province, setProvince] = useState("");
@@ -48,8 +48,10 @@ const CheckoutForm = ({
       lastName,
     },
     email,
+    phone: tel,
     address: {
       addressNumber,
+      suite,
       street,
       city,
       province,
