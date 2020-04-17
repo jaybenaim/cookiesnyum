@@ -78,35 +78,30 @@ const App = (props) => {
         </>
       )}
       <Switch>
-        <>
-          <Route exact path="/" render={(props) => <Home {...props} />} />
-          <Route
-            exact
-            path="/register"
-            render={(props) => <Register {...props} />}
-          />
-          <Route exact path="/login" render={(props) => <Login {...props} />} />
-          <Route
-            exact
-            path="/products"
-            render={(props) => <Products {...props} />}
-          />
-          <Route
-            exact
-            path="/products/:name"
-            render={(props) => <ProductShow {...props} />}
-          />
-          <Route
-            exact
-            path="/checkout"
-            render={(props) => <CheckoutForm {...props} />}
-          />
-          <Route
-            exact
-            path="/404"
-            render={(props) => <ErrorPage {...props} />}
-          />
-        </>
+        <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route
+          exact
+          path="/register"
+          render={(props) => <Register {...props} />}
+        />
+        <Route exact path="/login" render={(props) => <Login {...props} />} />
+        <Route
+          exact
+          path="/products"
+          render={(props) => <Products {...props} />}
+        />
+        <Route
+          exact
+          path="/products/:name"
+          render={(props) => <ProductShow {...props} />}
+        />
+        <Route
+          exact
+          path="/checkout"
+          render={(props) => <CheckoutForm {...props} />}
+        />
+        <Route exact path="/404" render={(props) => <ErrorPage {...props} />} />
+        <Route path="*" component={ErrorPage} />
       </Switch>
       <Footer />
     </React.Fragment>

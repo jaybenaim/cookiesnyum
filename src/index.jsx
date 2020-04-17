@@ -6,13 +6,16 @@ import registerServiceWorker from "./registerServiceWorker";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { unregister } from "./registerServiceWorker";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter basename="/dolcenada">
-      <App />
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")
