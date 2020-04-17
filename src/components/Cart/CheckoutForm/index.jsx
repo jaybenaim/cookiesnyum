@@ -14,6 +14,7 @@ import {
 } from "react-materialize";
 
 import "../../../assets/stylesheets/checkoutForm.css";
+import DeliveryMethod from "./DeliveryMethod";
 
 const CheckoutForm = ({
   cart: { products },
@@ -31,6 +32,7 @@ const CheckoutForm = ({
   const [province, setProvince] = useState("");
   const [postalCode, setPostalCode] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
+  const [deliveryMethod, setDeliveryMethod] = useState("Delivery");
 
   let numWeeks = 1;
   let now = new Date();
@@ -51,6 +53,7 @@ const CheckoutForm = ({
       postalCode,
     },
     paymentMethod,
+    deliveryMethod,
     dateNeededBy: date,
   };
   const checkoutData = {
@@ -63,7 +66,11 @@ const CheckoutForm = ({
   const handleSetPaymentMethod = (value) => {
     setPaymentMethod(value);
   };
+  const handleSetDeliveryMethod = (value) => {
+    console.log(value);
 
+    setDeliveryMethod(value);
+  };
   const handleSetDate = (e, value) => {
     const stringValue = String(value);
     const seperatedDate = stringValue.split(" ");
@@ -82,15 +89,19 @@ const CheckoutForm = ({
       errors.push("First name required");
     }
     if (paymentMethod.length === 0) {
-      errors.push("Missing payment method");
+      errors.push("Payment Method required");
     }
+    if (deliveryMethod.length === 0) {
+      errors.push("Delivery Method required");
+    }
+
     errors.length === 0
       ? setValidatedForm(true)
       : setValidationError("invalid");
 
     setTimeout(() => {
       setValidationError("");
-    }, 7000);
+    }, 10000);
   };
 
   return (
@@ -196,12 +207,27 @@ const CheckoutForm = ({
             <div className="input-field col s6"></div>
           </div>
           <div className="row">
+            <h3>Delivery Method</h3>
+          </div>
+          <div className="row">
+            <div className="input-field col s6">
+              <DeliveryMethod
+                deliveryMethod={deliveryMethod}
+                validatedError={validatedError}
+                handleSetDeliveryMethod={handleSetDeliveryMethod}
+                setDeliveryMethod={setDeliveryMethod}
+              />
+            </div>
+            <div className="input-field col s6"></div>
+          </div>
+
+          <div className="row">
             <h3>Payment Method</h3>
           </div>
           <div className="row">
             <Dropdown
               trigger={
-                <div class="input-field col s4">
+                <div class="input-field col s12 m12">
                   <TextInput
                     type="text"
                     id="paymentMethod"
@@ -232,7 +258,9 @@ const CheckoutForm = ({
                 Cash
               </span>
             </Dropdown>
+            <div className="input-field col s6"></div>
           </div>
+
           <div className="row">
             <h3>When do you need it by?</h3>
           </div>
