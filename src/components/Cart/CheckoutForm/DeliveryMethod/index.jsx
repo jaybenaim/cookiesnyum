@@ -27,16 +27,16 @@ class DeliveryMethod extends Component {
         onChange={(e) => handleSetDeliveryMethod(e.target.value)}
       >
         <option
-          value="Delivery"
-          className="checkout-form--delivery-method--dropdown-delivery"
-        >
-          Delivery
-        </option>
-        <option
           value="Pick up"
           className="checkout-form--delivery-method--dropdown-pickup"
         >
           Pick Up
+        </option>
+        <option
+          value="Delivery**"
+          className="checkout-form--delivery-method--dropdown-delivery"
+        >
+          Delivery **
         </option>
       </Select>
     );

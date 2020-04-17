@@ -5,13 +5,7 @@ import { withRouter } from "react-router-dom";
 import OrderSentModal from "./OrderSentModal";
 import ConfirmationModal from "./ConfirmationModal";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
-import {
-  TextInput,
-  Button,
-  Icon,
-  Dropdown,
-  DatePicker,
-} from "react-materialize";
+import { TextInput, Button, DatePicker } from "react-materialize";
 
 import "../../../assets/stylesheets/checkoutForm.css";
 import DeliveryMethod from "./DeliveryMethod";
@@ -35,7 +29,7 @@ const CheckoutForm = ({
   const [province, setProvince] = useState("");
   const [postalCode, setPostalCode] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("Cash");
-  const [deliveryMethod, setDeliveryMethod] = useState("Delivery");
+  const [deliveryMethod, setDeliveryMethod] = useState("Pick up");
 
   let numWeeks = 1;
   let now = new Date();
@@ -294,6 +288,7 @@ const CheckoutForm = ({
         <ArrowRightAltIcon />
       </Button>
       {validatedError && <div>Please fill out all fields</div>}
+      <div className="fine-print">** Extra charges apply</div>
     </div>
   );
 };
