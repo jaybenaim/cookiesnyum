@@ -219,7 +219,7 @@ export class Cart extends Component {
             <Link to="/checkout">
               <Button
                 node="button"
-                // onClick={this.clickCheckout}
+                onClick={() => this.closeFloatCart()}
                 className="continue-btn"
                 disabled={confirmDisabled}
               >
