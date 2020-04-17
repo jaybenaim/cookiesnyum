@@ -43,11 +43,11 @@ const Products = (props) => {
     let newItem = item;
 
     newItem.image = image;
-    newItem.quantity = 0;
+
     // render each product
     return (
       item.class.includes(filter) && (
-        <Item {...newItem} item={item} key={i} filter={filter} id={i} />
+        <Item {...newItem} item={newItem} key={i} filter={filter} id={i} />
       )
     );
   });
