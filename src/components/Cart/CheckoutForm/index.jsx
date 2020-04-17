@@ -15,6 +15,7 @@ import {
 
 import "../../../assets/stylesheets/checkoutForm.css";
 import DeliveryMethod from "./DeliveryMethod";
+import PaymentMethod from "./PaymentMethod";
 
 const CheckoutForm = ({
   cart: { products },
@@ -36,7 +37,7 @@ const CheckoutForm = ({
 
   let numWeeks = 1;
   let now = new Date();
-  now.setDate(now.getDate() + numWeeks * 7);
+  now.setDate(now.getDate() + numWeeks * 4);
   let firstAvailableDateForPickup = now;
   const [date, setDate] = useState(firstAvailableDateForPickup.toDateString());
   const form = {
@@ -67,10 +68,9 @@ const CheckoutForm = ({
     setPaymentMethod(value);
   };
   const handleSetDeliveryMethod = (value) => {
-    console.log(value);
-
     setDeliveryMethod(value);
   };
+
   const handleSetDate = (e, value) => {
     const stringValue = String(value);
     const seperatedDate = stringValue.split(" ");
@@ -206,60 +206,6 @@ const CheckoutForm = ({
             </div>
             <div className="input-field col s6"></div>
           </div>
-          <div className="row">
-            <h3>Delivery Method</h3>
-          </div>
-          <div className="row">
-            <div className="input-field col s6">
-              <DeliveryMethod
-                deliveryMethod={deliveryMethod}
-                validatedError={validatedError}
-                handleSetDeliveryMethod={handleSetDeliveryMethod}
-                setDeliveryMethod={setDeliveryMethod}
-              />
-            </div>
-            <div className="input-field col s6"></div>
-          </div>
-
-          <div className="row">
-            <h3>Payment Method</h3>
-          </div>
-          <div className="row">
-            <Dropdown
-              trigger={
-                <div class="input-field col s12 m12">
-                  <TextInput
-                    type="text"
-                    id="paymentMethod"
-                    label="Payment Method"
-                    name="paymentMethod"
-                    value={paymentMethod}
-                    className={`validate ${validatedError}`}
-                    error={"Payment Method required"}
-                    onCloseStart={(e) => handleSetPaymentMethod(e.target.value)}
-                  />
-
-                  <Icon down-arrow className="down-arrow">
-                    arrow_downward
-                  </Icon>
-                </div>
-              }
-            >
-              <span
-                className="checkout-form--payment-method--dropdown-a"
-                onClick={(e) => handleSetPaymentMethod("E-transfer")}
-              >
-                E-transfer
-              </span>
-              <span
-                className="checkout-form--payment-method--dropdown-a"
-                onClick={(e) => handleSetPaymentMethod("Cash")}
-              >
-                Cash
-              </span>
-            </Dropdown>
-            <div className="input-field col s6"></div>
-          </div>
 
           <div className="row">
             <h3>When do you need it by?</h3>
@@ -268,6 +214,7 @@ const CheckoutForm = ({
             <div class="input-field col s4">
               <DatePicker
                 id="date"
+                label={`Date for ${deliveryMethod}`}
                 options={{
                   defaultDate: date,
                   onChange: (value) => handleSetDate(value),
@@ -280,7 +227,7 @@ const CheckoutForm = ({
                     data-error="wrong"
                     data-success="right"
                   >
-                    Min 7 day waiting period
+                    Min 72 hour waiting period
                   </span>
                 }
               />
@@ -289,6 +236,29 @@ const CheckoutForm = ({
             <div className="input-field col s8"></div>
           </div>
           <div className="row"></div>
+
+          <div className="row">
+            <h3>Payment Details</h3>
+          </div>
+
+          <div className="row">
+            <div className=" col s6">
+              <DeliveryMethod
+                deliveryMethod={deliveryMethod}
+                validatedError={validatedError}
+                handleSetDeliveryMethod={handleSetDeliveryMethod}
+                setDeliveryMethod={setDeliveryMethod}
+              />
+            </div>
+            <div className=" col s6">
+              <PaymentMethod
+                paymentMethod={paymentMethod}
+                validatedError={validatedError}
+                handleSetPaymentMethod={handleSetPaymentMethod}
+                setPaymentMethod={setPaymentMethod}
+              />
+            </div>
+          </div>
         </form>
       </div>
 
