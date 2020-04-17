@@ -135,6 +135,7 @@ export class Cart extends Component {
       cartProducts.map((product) => {
         return (
           <CartProduct
+            isOpen={isOpen}
             product={product}
             removeProduct={removeProduct}
             currencySymbol={currencySymbol}

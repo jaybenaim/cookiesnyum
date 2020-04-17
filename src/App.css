@@ -2,6 +2,7 @@
   z-index: 999999 !important;
   overflow-x: hidden;
 }
+
 html {
   position: relative;
   min-height: 100%;
@@ -34,7 +35,7 @@ button {
 /* Override Bootstrap Styling */
 
 .btn-primary {
-  background-color: #025fce !important;
+  background-color: #f6406f !important;
 }
 .btn::before {
   background-color: #f6406f !important;
@@ -44,7 +45,12 @@ button:active {
   outline: none !important;
   box-shadow: none !important;
 }
-
+/* Safari styles  */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  button {
+    background: transparent;
+  }
+}
 /* helpers */
 
 .hide {
