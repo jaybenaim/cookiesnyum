@@ -12,7 +12,7 @@ import {
 } from "../../redux/actions/cartActions";
 import { formatPrice } from "../../helpers/";
 import storage from "../../redux/storage";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-materialize";
 
 export class Cart extends Component {
@@ -102,7 +102,7 @@ export class Cart extends Component {
   };
 
   clickCheckout = () => {
-    window.location.href = "/dolcenada/checkout";
+    window.location.href = "/checkout";
   };
 
   checkDisabled = () => {
@@ -216,17 +216,18 @@ export class Cart extends Component {
                 </p>
               </div>
             </div>
-
-            <Button
-              node="button"
-              onClick={this.clickCheckout}
-              className="continue-btn"
-              disabled={confirmDisabled}
-            >
-              {confirmDisabled
-                ? "Need a minimum of 12 items"
-                : checkoutTextLabel}
-            </Button>
+            <Link to="/checkout">
+              <Button
+                node="button"
+                // onClick={this.clickCheckout}
+                className="continue-btn"
+                disabled={confirmDisabled}
+              >
+                {confirmDisabled
+                  ? "Need a minimum of 12 items"
+                  : checkoutTextLabel}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
