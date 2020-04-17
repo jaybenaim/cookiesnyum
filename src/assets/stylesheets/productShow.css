@@ -144,6 +144,9 @@
     height: 2em;
     width: 4em;
   }
+  [alt="Strawberry Poptart"] {
+    margin-left: -5%;
+  }
 }
 @media (min-width: 451px) {
   .product-show-container {
@@ -304,6 +307,16 @@
   .product-show--card-body--related-products .slick-dots li button::before {
     height: 2em;
     width: 4em;
+  }
+  [alt="mars"] {
+    object-fit: cover;
+    margin-left: 0%;
+    width: 90%;
+  }
+  [alt="Nutella Godess"] {
+    object-fit: cover;
+    margin-top: 3%;
+    width: 90%;
   }
 }
 .scone {

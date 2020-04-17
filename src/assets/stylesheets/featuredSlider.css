@@ -2,6 +2,7 @@
   .featured-slide img {
     width: 100%;
     min-height: 470px;
+    object-fit: cover;
   }
   .featured-slide .text-box {
     z-index: 99;

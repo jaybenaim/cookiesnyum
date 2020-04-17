@@ -8,7 +8,6 @@ import {
   reese,
   Amaretti,
   pastaschio,
-  bananaBread,
   cookieButter,
   doubleDolceDelight,
   everythingCookie,
@@ -26,6 +25,7 @@ import {
   chocolateChip,
   cookieBox,
   skor,
+  banana,
 } from "../../assets/images";
 const PRODUCTS = [
   {
@@ -83,7 +83,7 @@ const PRODUCTS = [
   {
     name: "Banana Bread",
 
-    image: bananaBread,
+    image: banana,
   },
   {
     name: "Double Dolce Delight",

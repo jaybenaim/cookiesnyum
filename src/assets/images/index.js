@@ -10,7 +10,8 @@ import cookies from "./featured/cookies.png";
 import mars from "./cookies/mars/mars.png";
 import miniegg from "./cookies/miniegg/miniegg.png";
 import reese from "./cookies/reese/reese.png";
-import bananaBread from "./cookies/bananaBread/bananaBread.png";
+import banana from "./cookies/bananaBread/banana.png";
+
 import cookieButter from "./cookies/cookieButter/cookieButter.png";
 import doubleDolceDelight from "./cookies/doubleDolceDelight/doubleDolceDelight.png";
 import everythingCookie from "./cookies/everythingCookie/everythingCookie.png";
@@ -47,7 +48,6 @@ export {
   reese,
   Amaretti,
   pastaschio,
-  bananaBread,
   cookieButter,
   doubleDolceDelight,
   everythingCookie,
@@ -69,4 +69,5 @@ export {
   chocolateChip,
   cookieBox,
   skor,
+  banana,
 };

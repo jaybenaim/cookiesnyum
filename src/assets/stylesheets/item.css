@@ -28,9 +28,9 @@
     display: grid !important;
     border: none !important;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 6%;
+
     margin-top: 10%;
-    padding: 2%;
+    padding: 2% 4%;
     margin-bottom: 16%;
   }
   .item--card-body {
@@ -42,11 +42,47 @@
     grid-column: 1;
     grid-row: 2;
     object-fit: contain;
+    margin-left: -2%;
   }
   [alt="Assorted Cookies"] {
     object-fit: contain;
     padding: 0 10%;
     padding-right: 15%;
+  }
+  [alt="Walnut Chocolate Chip"] {
+    object-fit: cover;
+    margin-left: -7%;
+  }
+  [alt="mars"] {
+    object-fit: cover;
+    margin-left: -12%;
+  }
+  [alt="Banana Bread"] {
+    object-fit: cover;
+    margin-left: -8%;
+  }
+  [alt="Oreo Bday Cake"] {
+    margin-left: -6%;
+  }
+  [alt="Monster Mash"] {
+    object-fit: cover;
+    margin-left: -9%;
+  }
+  [alt="Caramilk"] {
+    object-fit: cover;
+  }
+  [alt="Snickers"] {
+    object-fit: cover;
+    margin-left: -7%;
+    margin-top: 5%;
+  }
+  [alt="Cookies and Cream"] {
+    object-fit: cover;
+    margin-left: -3%;
+  }
+  [alt="Story Time"] {
+    object-fit: cover;
+    margin-left: -3%;
   }
   .item--card-body--name {
     grid-column: 1 / span 3;
@@ -55,6 +91,7 @@
     margin: 0 auto;
     text-align: center;
     font-size: 2em;
+    margin-left: -2%;
   }
   .item--card-body--price {
     grid-row: 3;
@@ -245,6 +282,7 @@
 }
 .item--card-body--name {
   text-transform: capitalize;
+  text-align: center !important;
 }
 
 .products--nav a {
@@ -255,4 +293,7 @@
 }
 .products-container {
   overflow-x: hidden !important;
+}
+.cover {
+  object-fit: cover;
 }
