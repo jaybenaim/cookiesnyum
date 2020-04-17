@@ -28,11 +28,13 @@ const CheckoutForm = ({
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [addressNumber, setAddressNumber] = useState("");
+  const [tel, setTel] = useState("");
+  const [suiteNumber, setSuite] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [province, setProvince] = useState("");
   const [postalCode, setPostalCode] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState("Cash");
   const [deliveryMethod, setDeliveryMethod] = useState("Delivery");
 
   let numWeeks = 1;
@@ -88,11 +90,8 @@ const CheckoutForm = ({
     if (firstName.length === 0) {
       errors.push("First name required");
     }
-    if (paymentMethod.length === 0) {
-      errors.push("Payment Method required");
-    }
-    if (deliveryMethod.length === 0) {
-      errors.push("Delivery Method required");
+    if (tel.length <= 0) {
+      errors.push("Phone Number required");
     }
 
     errors.length === 0
@@ -101,7 +100,7 @@ const CheckoutForm = ({
 
     setTimeout(() => {
       setValidationError("");
-    }, 10000);
+    }, 15000);
   };
 
   return (
@@ -154,15 +153,36 @@ const CheckoutForm = ({
             </div>
           </div>
           <div className="row">
+            <div className="input-field col s12">
+              <TextInput
+                tel
+                id="phone"
+                label="Phone Number"
+                className={`validate ${validatedError}`}
+                error={"Phone Number required"}
+                validate
+                onChange={(e) => setTel(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="row">
             <h4>Address</h4>
           </div>
           <div className="row">
-            <div className="input-field col s3">
+            <div className="input-field col s6">
               <TextInput
                 id="addressNumber"
                 type="text"
                 label="#"
                 onChange={(e) => setAddressNumber(e.target.value)}
+              />
+            </div>
+            <div className="input-field col s6">
+              <TextInput
+                id="suite"
+                type="text"
+                label="suite / apt"
+                onChange={(e) => setSuite(e.target.value)}
               />
             </div>
           </div>
@@ -206,7 +226,6 @@ const CheckoutForm = ({
             </div>
             <div className="input-field col s6"></div>
           </div>
-
           <div className="row">
             <h3>When do you need it by?</h3>
           </div>
@@ -236,11 +255,9 @@ const CheckoutForm = ({
             <div className="input-field col s8"></div>
           </div>
           <div className="row"></div>
-
           <div className="row">
             <h3>Payment Details</h3>
           </div>
-
           <div className="row">
             <div className=" col s6">
               <DeliveryMethod
@@ -274,6 +291,7 @@ const CheckoutForm = ({
         Go to Confirmation
         <ArrowRightAltIcon />
       </Button>
+      {validatedError && <div>Please fill out all fields</div>}
     </div>
   );
 };

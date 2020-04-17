@@ -17,10 +17,7 @@ class PaymentMethod extends Component {
         name="paymentMethod"
         value={paymentMethod}
         multiple={false}
-        error={"Payment Method required"}
         options={{
-          classes: `validate ${validatedError}`,
-          error: "Payment Method required",
           dropdownOptions: {
             alignment: "left",
             autoTrigger: false,
