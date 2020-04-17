@@ -31,6 +31,7 @@ import chocolateChip from "./cookies/chocolateChip/chocolateChip.png";
 import biscotti from "./featured/biscotti.png";
 import Amaretti from "./biscotti/amaretti/amaretti.png";
 import pastaschio from "./biscotti/pastaschio/pastaschio.png";
+import skor from "./biscotti/skor/skor.png";
 
 // boxes
 import cookieBox from "./boxes/cookieBox.JPG";
@@ -67,4 +68,5 @@ export {
   monsterMash,
   chocolateChip,
   cookieBox,
+  skor,
 };

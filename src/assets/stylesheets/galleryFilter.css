@@ -1,11 +1,11 @@
 @media (max-width: 450px) {
   .filter-container {
     width: 100%;
-    padding: 0 7%;
+    padding: 0 3%;
     grid-column: 1 / span 3;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    margin-top: 7%;
+    margin-top: 3%;
   }
   .filter-container .all-filter-link,
   .filter-container .cookie-filter-link,

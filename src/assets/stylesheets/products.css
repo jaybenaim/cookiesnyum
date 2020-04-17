@@ -9,7 +9,7 @@
   }
   .products-container--products-nav-container .products--nav {
     grid-column: 1;
-    width: 52%;
+    width: 60%;
   }
 }
 @media (min-width: 450px) {
