@@ -19,6 +19,7 @@ import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
 import Nav from "./components/Nav";
 import Cart from "./components/Cart";
 import { getProducts } from "./redux/actions/productActions";
+import Admin from "./components/Admin";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -63,7 +64,7 @@ const App = (props) => {
 
   return (
     <React.Fragment>
-      {location.includes("/404") ? (
+      {location.includes("/404") || location.includes("/admin") ? (
         ""
       ) : (
         <>
@@ -75,8 +76,10 @@ const App = (props) => {
           />
         </>
       )}
+
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route exact path="/admin" render={(props) => <Admin {...props} />} />
         <Route
           exact
           path="/register"
@@ -101,7 +104,12 @@ const App = (props) => {
         <Route exact path="/404" render={(props) => <ErrorPage {...props} />} />
         <Route path="*" component={ErrorPage} />
       </Switch>
-      <Footer />
+
+      {location.includes("/404") || location.includes("/admin") ? (
+        ""
+      ) : (
+        <Footer />
+      )}
     </React.Fragment>
   );
 };

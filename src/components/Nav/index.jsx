@@ -8,6 +8,9 @@ import { Icon, Navbar } from "react-materialize";
 import { connect } from "react-redux";
 
 const Nav = (props) => {
+  const {
+    user: { role },
+  } = props;
   return (
     <Navbar
       alignLinks="right"
@@ -40,7 +43,11 @@ const Nav = (props) => {
       <Link to="/products" className="sidenav-close">
         Products
       </Link>
-
+      {role === "admin" && (
+        <Link to="/admin" className="sidenav-close">
+          Admin
+        </Link>
+      )}
       <Link to="/" className="sidenav-logo sidenav-close">
         {" "}
         <img
@@ -57,7 +64,9 @@ const Nav = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    user: state.auth.user,
+  };
 };
 
 export default withRouter(connect(mapStateToProps, { filterGallery })(Nav));
