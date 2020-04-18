@@ -263,7 +263,7 @@ const CheckoutForm = (props) => {
           <div className="row">
             <h3>Payment Details</h3>
           </div>
-          <div className="row">
+          <div className="row" id="paymentDetails">
             <div className=" col s6">
               <DeliveryMethod
                 deliveryMethod={deliveryMethod}
