@@ -1,0 +1,901 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App App renders 1`] = `
+Array [
+  <nav
+    className=""
+  >
+    <div
+      className="nav-wrapper container"
+    >
+      <a
+        className="brand-logo brand-logo"
+        href="#/dolcenada/"
+        onClick={[Function]}
+      >
+        <img
+          alt="logo cookie with a bite"
+          height={140}
+          src="logo.JPG"
+          width={140}
+        />
+      </a>
+      <a
+        className="sidenav-trigger"
+        data-target="mobile-nav"
+        href="#!"
+      >
+        <i
+          className="material-icons"
+        >
+          menu
+        </i>
+      </a>
+      <ul
+        className="hide-on-med-and-down right"
+      >
+        <li>
+          <a
+            className="sidenav-close"
+            href="#/dolcenada/"
+            onClick={[Function]}
+          >
+             
+            Home
+             
+          </a>
+        </li>
+        <li>
+          <a
+            className="sidenav-close"
+            href="#/dolcenada/products"
+            onClick={[Function]}
+          >
+            Products
+          </a>
+        </li>
+        <li>
+          <a
+            className="sidenav-logo sidenav-close"
+            href="#/dolcenada/"
+            onClick={[Function]}
+          >
+             
+            <img
+              alt="logo cookie with a bite"
+              height={140}
+              src="logo.JPG"
+              width={140}
+            />
+          </a>
+        </li>
+        <li>
+          <div
+            className="auth-content"
+          >
+            <a
+              className="btn btn-large  waves-effect waves-light hoverable auth-link sidenav-close"
+              href="#/dolcenada/login"
+              id="login"
+              onClick={[Function]}
+            >
+              Log In
+            </a>
+            <a
+              className="btn btn-large waves-effect waves-light hoverable accent-3 auth-link sidenav-close"
+              href="#/dolcenada/register"
+              id="register"
+              onClick={[Function]}
+            >
+              Register
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <ul
+    className="sidenav right"
+    id="mobile-nav"
+  >
+    <li>
+      <a
+        className="sidenav-close"
+        href="#/dolcenada/"
+        onClick={[Function]}
+      >
+         
+        Home
+         
+      </a>
+    </li>
+    <li>
+      <a
+        className="sidenav-close"
+        href="#/dolcenada/products"
+        onClick={[Function]}
+      >
+        Products
+      </a>
+    </li>
+    <li>
+      <a
+        className="sidenav-logo sidenav-close"
+        href="#/dolcenada/"
+        onClick={[Function]}
+      >
+         
+        <img
+          alt="logo cookie with a bite"
+          height={140}
+          src="logo.JPG"
+          width={140}
+        />
+      </a>
+    </li>
+    <li>
+      <div
+        className="auth-content"
+      >
+        <a
+          className="btn btn-large  waves-effect waves-light hoverable auth-link sidenav-close"
+          href="#/dolcenada/login"
+          id="login"
+          onClick={[Function]}
+        >
+          Log In
+        </a>
+        <a
+          className="btn btn-large waves-effect waves-light hoverable accent-3 auth-link sidenav-close"
+          href="#/dolcenada/register"
+          id="register"
+          onClick={[Function]}
+        >
+          Register
+        </a>
+      </div>
+    </li>
+  </ul>,
+  <div
+    className="float"
+  >
+    <span
+      className="bag bag--float-cart-closed"
+      onClick={[Function]}
+    >
+      <span
+        className="bag__quantity"
+      >
+        0
+      </span>
+    </span>
+    <div
+      className="float-cart__content"
+    >
+      <div
+        className="float-cart__header"
+      >
+        <span
+          className="bag"
+        >
+          <span
+            className="bag__quantity"
+          >
+            0
+          </span>
+        </span>
+        <span
+          className="header-title"
+        >
+          Cart
+        </span>
+      </div>
+      <div
+        className="float-cart__shelf-container"
+      >
+        <p
+          className="shelf-empty"
+        >
+          Your cart is empty. 
+          <br />
+          <span
+            onClick={[Function]}
+          >
+            Continue Shopping
+          </span>
+        </p>
+      </div>
+      <div
+        className="float-cart__footer"
+      >
+        <div
+          className="sub"
+        >
+          Sub Total
+        </div>
+        <div
+          className="sub-totals"
+        >
+          <div
+            className="sub-price"
+          >
+            <p
+              className="sub-price__val"
+            >
+              <strong>
+                CAD
+                 
+              </strong>
+               $0.00
+            </p>
+          </div>
+          <div
+            className="sub-quantity"
+          >
+            <p>
+              <strong>
+                Total Quantity 
+              </strong>
+              0
+            </p>
+          </div>
+        </div>
+        <a
+          href="#/dolcenada/checkout"
+          onClick={[Function]}
+        >
+          <button
+            className="btn disabled continue-btn"
+            disabled={true}
+            onClick={[Function]}
+          >
+            Need a minimum of 12 items
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>,
+  <main
+    id="mainContent"
+  >
+    <section
+      className="featured-slider"
+    >
+      <div
+        className="slick-slider slick-initialized"
+        dir="ltr"
+      >
+        <button
+          className="slick-arrow slick-prev"
+          data-role="none"
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="button"
+        >
+           
+          Previous
+        </button>
+        <div
+          className="slick-list"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={null}
+          onMouseMove={null}
+          onMouseUp={[Function]}
+          onTouchCancel={null}
+          onTouchEnd={[Function]}
+          onTouchMove={null}
+          onTouchStart={[Function]}
+          style={Object {}}
+        >
+          <div
+            className="slick-track"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              aria-hidden={false}
+              className="slick-slide slick-active slick-current"
+              data-index={0}
+              onClick={[Function]}
+              style={
+                Object {
+                  "WebkitTransition": "opacity 500ms linear, visibility 500ms linear",
+                  "left": -0,
+                  "opacity": 1,
+                  "outline": "none",
+                  "position": "relative",
+                  "transition": "opacity 500ms linear, visibility 500ms linear",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  className="featured-slide  fade-in"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    alt="chocolate-cookie"
+                    height={50}
+                    src="assorted.jpg"
+                    width="100%"
+                  />
+                  <div
+                    className="text-box secondary-font"
+                  >
+                    <h3
+                      className="primary-font"
+                    >
+                      Assortment of Stuffed Cookies, Scones and Biscotti
+                    </h3>
+                    <p>
+                      Our products are uniquely hand crafted and simply delicious 
+                    </p>
+                    <a
+                      className="featured-products-link btn"
+                      href="#/dolcenada/products"
+                      onClick={[Function]}
+                    >
+                       
+                      See All Of Our Products
+                       
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide"
+              data-index={1}
+              onClick={[Function]}
+              style={
+                Object {
+                  "WebkitTransition": "opacity 500ms linear, visibility 500ms linear",
+                  "left": -0,
+                  "opacity": 0,
+                  "outline": "none",
+                  "position": "relative",
+                  "transition": "opacity 500ms linear, visibility 500ms linear",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  className="featured-slide  "
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    alt="chocolate-cookie "
+                    height={40}
+                    src="dozen.jpg"
+                    width={40}
+                  />
+                  <div
+                    className="text-box secondary-font"
+                  >
+                    <h3
+                      className="primary-font"
+                    >
+                      By The Dozen
+                    </h3>
+                    <p>
+                      Create your box with any amount of stuffed cookies, scones, or biscotti.
+                    </p>
+                    <a
+                      className="featured-products-link btn"
+                      href="#/dolcenada/products"
+                      onClick={[Function]}
+                    >
+                       
+                      See Our Featured Products
+                       
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide"
+              data-index={2}
+              onClick={[Function]}
+              style={
+                Object {
+                  "WebkitTransition": "opacity 500ms linear, visibility 500ms linear",
+                  "left": -0,
+                  "opacity": 0,
+                  "outline": "none",
+                  "position": "relative",
+                  "transition": "opacity 500ms linear, visibility 500ms linear",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  className="featured-slide "
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    alt="chocolate-cookie"
+                    height={40}
+                    src="easter.JPG"
+                    width={40}
+                  />
+                  <div
+                    className="text-box secondary-font"
+                  >
+                    <h3
+                      className="primary-font"
+                    >
+                      Happy Easter!
+                    </h3>
+                    <p>
+                      Check out our Mini Egg Easter Feature
+                    </p>
+                    <a
+                      className="featured-products-link btn"
+                      href="#/dolcenada/products"
+                      onClick={[Function]}
+                    >
+                       
+                      See Our Featured Items
+                       
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          className="slick-arrow slick-next"
+          data-role="none"
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="button"
+        >
+           
+          Next
+        </button>
+        <ul
+          className="slick-dots"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <li
+            className="slick-active"
+          >
+            <button
+              onClick={[Function]}
+            >
+              1
+            </button>
+          </li>
+          <li
+            className=""
+          >
+            <button
+              onClick={[Function]}
+            >
+              2
+            </button>
+          </li>
+          <li
+            className=""
+          >
+            <button
+              onClick={[Function]}
+            >
+              3
+            </button>
+          </li>
+        </ul>
+      </div>
+      <br />
+    </section>
+    <hr />
+    <section
+      className="featured-products-slider"
+    >
+      <div
+        className="featured-products-slider"
+      >
+        <h3
+          className="primary-font"
+        >
+          What We Offer
+        </h3>
+        <div
+          className="slick-slider slick-initialized"
+        >
+          
+          <div
+            className="slick-list"
+          >
+            <div
+              className="slick-track"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                  "WebkitTransition": "",
+                  "msTransform": "translateX(0px)",
+                  "opacity": 1,
+                  "transform": "translate3d(0px, 0px, 0px)",
+                  "transition": "",
+                }
+              }
+            >
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active slick-current"
+                data-index={0}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="featured-products-slider--cards"
+                  >
+                    <img
+                      alt="cookies"
+                      className="card-img"
+                      height={420}
+                      src="cookies.png"
+                      width="100%"
+                    />
+                    <div
+                      className="featured-products-slider--cards--card-body secondary-font"
+                    >
+                      <a
+                        href="#/dolcenada/products"
+                        onClick={[Function]}
+                      >
+                        <h3>
+                          Stuffed Cookies
+                        </h3>
+                        <p
+                          className="featured-products-slider--cards--card-text secondary-font"
+                        >
+                          From $2.85 / each
+                          <br />
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={1}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="featured-products-slider--cards"
+                  >
+                    <img
+                      alt="scones"
+                      className="card-img"
+                      height={420}
+                      src="scones.png"
+                      width="100%"
+                    />
+                    <div
+                      className="featured-products-slider--cards--card-body secondary-font"
+                    >
+                      <a
+                        href="#/dolcenada/products"
+                        onClick={[Function]}
+                      >
+                        <h3>
+                          Flavoured Scones
+                        </h3>
+                        <p
+                          className="featured-products-slider--cards--card-text secondary-font"
+                        >
+                          From $3.50 / each
+                          <br />
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-hidden={false}
+                className="slick-slide slick-active"
+                data-index={2}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "outline": "none",
+                    "width": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div>
+                  <div
+                    className="featured-products-slider--cards"
+                  >
+                    <img
+                      alt="biscotti"
+                      className="card-img"
+                      height={420}
+                      src="biscotti.png"
+                      width="100%"
+                    />
+                    <div
+                      className="featured-products-slider--cards--card-body secondary-font"
+                    >
+                      <a
+                        href="#/dolcenada/products"
+                        onClick={[Function]}
+                      >
+                        <h3>
+                          Hand Crafted Biscotti
+                        </h3>
+                        <p
+                          className="featured-products-slider--cards--card-text secondary-font"
+                        >
+                          From $30.00 / dozen
+                          <br />
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section
+      className="about-us"
+    >
+      <div
+        className="about-us-grid desktop-grid mobile-grid"
+      >
+        <div
+          className="right-side top"
+        >
+          <img
+            alt="profile"
+            height={330}
+            src="profile.png"
+            width="100%"
+          />
+        </div>
+        <div
+          className="left-side bottom secondary-font"
+        >
+          <h3>
+            Your favourite dolce girls 
+            <br />
+            Nada + Ashley
+          </h3>
+          <p>
+            <span>
+              DolceNadaa Began in early 2020 with mother daughter duo Nada & Ashley Aceto. Baking has always been a passion of ours since I can remember! Our favourite thing to make together was warm gooey chocolate chip cookies and then it came to us...stuffed cookies! We figured that everyone loves cookies and they somehow always manage to bring you back to your childhood, so we wanted to give our customers that experience.
+            </span>
+            <button
+              className="btn"
+              disabled={false}
+              onClick={[Function]}
+            >
+              Show More
+            </button>
+          </p>
+          <img
+            alt="slogan"
+            height={80}
+            src="xoxo.png"
+            width="40%"
+          />
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section
+      className="info"
+    >
+      <div
+        className="business-info-grid"
+        id="info"
+      >
+        <div
+          className="info-content"
+        >
+          <h3
+            className="primary-font"
+          >
+            Contact Us
+          </h3>
+          <div
+            className="secondary-font"
+          >
+            <p>
+              Based in Vaughan, ON
+            </p>
+            <em>
+              Rushed orders available for additional charge
+            </em>
+          </div>
+          <div
+            className="info-content--image-grid secondary-font"
+          >
+            <img
+              alt="chocolate scone with melted chocolate inside showing"
+              className="info-content--left-image"
+              height="120px"
+              src="boxCentered1.png"
+              width="120px"
+            />
+            <div
+              className="info-content--hours"
+            >
+              <strong>
+                Hours:
+              </strong>
+              <p>
+                Monday - Friday 
+                <br />
+                9am - 6pm
+              </p>
+              <div
+                className="info-content--phone"
+              >
+                <strong>
+                  Phone:
+                </strong>
+                <a
+                  href="tel:4162743820"
+                >
+                  <img
+                    alt="phone"
+                    className="phone-icon"
+                    src="pinkPhone.png"
+                  />
+                  416 274 3820
+                </a>
+              </div>
+            </div>
+            <img
+              alt="double dolce cookie melted in two halves dripping caramel"
+              className="info-content--right-image"
+              height="140px"
+              src="boxCentered.png"
+              width="150px"
+            />
+          </div>
+          <div
+            className="social-icons"
+          >
+            <a
+              href="https://www.instagram.com/dolcenadaa/"
+            >
+              <img
+                alt="instagram-link"
+                src="instagram.png"
+              />
+              <span>
+                Follow us on Instagram @dolcenadaa
+              </span>
+               
+            </a>
+          </div>
+        </div>
+        <img
+          alt="profile of owners"
+          height="100%"
+          src="multiCookie.JPG"
+          width="100%"
+        />
+      </div>
+    </section>
+  </main>,
+  <footer
+    className="footer"
+  >
+    <div
+      className="container"
+    >
+      <h5>
+        Dolcenadaa
+      </h5>
+      <ul>
+        <li>
+          <a
+            href="#/dolcenada/#info"
+            onClick={[Function]}
+          >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            href="#/dolcenada/products"
+            onClick={[Function]}
+          >
+            Products
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/dolcenadaa/"
+          >
+            @dolcenadaa
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>,
+]
+`;

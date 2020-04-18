@@ -9,7 +9,7 @@ import Slider from "react-slick";
 import { Link, withRouter } from "react-router-dom";
 import { toggleNavbar } from "../../../redux/actions/navbarActions";
 import { connect } from "react-redux";
-const FeaturedSlider = props => {
+const FeaturedSlider = (props) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -19,7 +19,7 @@ const FeaturedSlider = props => {
     slidesToScroll: 1,
     fade: true,
     cssEase: "linear",
-    pauseOnDotsHover: true
+    pauseOnDotsHover: true,
   };
 
   return (
@@ -66,7 +66,7 @@ const FeaturedSlider = props => {
               className="featured-products-link btn"
               to={{
                 pathname: "/products",
-                state: { gallery: { filter: "featured" } }
+                state: { gallery: { filter: "featured" } },
               }}
             >
               {" "}
@@ -78,10 +78,10 @@ const FeaturedSlider = props => {
     </>
   );
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
-  navbar: state.navbar
+  navbar: state.navbar,
 });
 export default withRouter(
   connect(mapStateToProps, { toggleNavbar })(FeaturedSlider)

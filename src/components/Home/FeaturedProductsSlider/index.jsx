@@ -2,11 +2,12 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import "../../../assets/stylesheets/featuredProductsSlider.css";
 import Slider from "react-slick";
+
 import { connect } from "react-redux";
 import { featuredProducts, settings } from "./featuredProductsSliderConfig";
 import FeaturedProduct from "./FeaturedProduct";
 
-const FeaturedProductsSlider = props => {
+const FeaturedProductsSlider = (props) => {
   const featuredProductElements = featuredProducts.map((product, i) => (
     <FeaturedProduct key={i} {...product} />
   ));
@@ -20,8 +21,8 @@ const FeaturedProductsSlider = props => {
     </>
   );
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 export default withRouter(connect(mapStateToProps, {})(FeaturedProductsSlider));

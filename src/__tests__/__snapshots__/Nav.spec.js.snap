@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav should be primary color 1`] = `
+Array [
+  <nav
+    className=""
+  >
+    <div
+      className="nav-wrapper container"
+    >
+      <a
+        className="brand-logo brand-logo"
+        href="#/dolcenada/"
+        onClick={[Function]}
+      >
+        <img
+          alt="logo cookie with a bite"
+          height={140}
+          src="logo.JPG"
+          width={140}
+        />
+      </a>
+      <a
+        className="sidenav-trigger"
+        data-target="mobile-nav"
+        href="#!"
+      >
+        <i
+          className="material-icons"
+        >
+          menu
+        </i>
+      </a>
+      <ul
+        className="hide-on-med-and-down right"
+      >
+        <li>
+          <a
+            className="sidenav-close"
+            href="#/dolcenada/"
+            onClick={[Function]}
+          >
+             
+            Home
+             
+          </a>
+        </li>
+        <li>
+          <a
+            className="sidenav-close"
+            href="#/dolcenada/products"
+            onClick={[Function]}
+          >
+            Products
+          </a>
+        </li>
+        <li>
+          <a
+            className="sidenav-logo sidenav-close"
+            href="#/dolcenada/"
+            onClick={[Function]}
+          >
+             
+            <img
+              alt="logo cookie with a bite"
+              height={140}
+              src="logo.JPG"
+              width={140}
+            />
+          </a>
+        </li>
+        <li>
+          <div
+            className="auth-content"
+          >
+            <a
+              className="btn btn-large  waves-effect waves-light hoverable auth-link sidenav-close"
+              href="#/dolcenada/login"
+              id="login"
+              onClick={[Function]}
+            >
+              Log In
+            </a>
+            <a
+              className="btn btn-large waves-effect waves-light hoverable accent-3 auth-link sidenav-close"
+              href="#/dolcenada/register"
+              id="register"
+              onClick={[Function]}
+            >
+              Register
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <ul
+    className="sidenav right"
+    id="mobile-nav"
+  >
+    <li>
+      <a
+        className="sidenav-close"
+        href="#/dolcenada/"
+        onClick={[Function]}
+      >
+         
+        Home
+         
+      </a>
+    </li>
+    <li>
+      <a
+        className="sidenav-close"
+        href="#/dolcenada/products"
+        onClick={[Function]}
+      >
+        Products
+      </a>
+    </li>
+    <li>
+      <a
+        className="sidenav-logo sidenav-close"
+        href="#/dolcenada/"
+        onClick={[Function]}
+      >
+         
+        <img
+          alt="logo cookie with a bite"
+          height={140}
+          src="logo.JPG"
+          width={140}
+        />
+      </a>
+    </li>
+    <li>
+      <div
+        className="auth-content"
+      >
+        <a
+          className="btn btn-large  waves-effect waves-light hoverable auth-link sidenav-close"
+          href="#/dolcenada/login"
+          id="login"
+          onClick={[Function]}
+        >
+          Log In
+        </a>
+        <a
+          className="btn btn-large waves-effect waves-light hoverable accent-3 auth-link sidenav-close"
+          href="#/dolcenada/register"
+          id="register"
+          onClick={[Function]}
+        >
+          Register
+        </a>
+      </div>
+    </li>
+  </ul>,
+]
+`;
