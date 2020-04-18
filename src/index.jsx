@@ -7,12 +7,15 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import { unregister } from "./registerServiceWorker";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { createBrowserHistory } from "history";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+const customHistory = createBrowserHistory();
+
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="/dolcenada">
+    <BrowserRouter basename="/dolcenada" history={customHistory}>
       <ErrorBoundary>
         <App />
       </ErrorBoundary>
