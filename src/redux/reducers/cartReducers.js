@@ -1,4 +1,10 @@
-import { LOAD_CART, ADD_PRODUCT, UPDATE_CART, REMOVE_PRODUCT } from "../types";
+import {
+  LOAD_CART,
+  ADD_PRODUCT,
+  UPDATE_CART,
+  REMOVE_PRODUCT,
+  CLEAR_CART,
+} from "../types";
 
 const initialState = {
   products: [],
@@ -29,6 +35,12 @@ export default function (state = initialState, action) {
       return {
         ...state,
         productToRemove: Object.assign({}, action.payload),
+      };
+    case CLEAR_CART:
+      return {
+        ...state,
+        products: initialState.products,
+        data: initialState.data,
       };
     default:
       return state;

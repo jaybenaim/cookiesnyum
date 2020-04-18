@@ -1,23 +1,29 @@
-import { LOAD_CART, ADD_PRODUCT, UPDATE_CART, REMOVE_PRODUCT } from "../types";
+import {
+  LOAD_CART,
+  ADD_PRODUCT,
+  UPDATE_CART,
+  REMOVE_PRODUCT,
+  CLEAR_CART,
+} from "../types";
 
 import storage from "../storage";
 
-export const loadCart = products => ({
+export const loadCart = (products) => ({
   type: LOAD_CART,
-  payload: products
+  payload: products,
 });
 
-export const addProduct = product => ({
+export const addProduct = (product) => ({
   type: ADD_PRODUCT,
-  payload: product
+  payload: product,
 });
 
-export const removeProduct = product => ({
+export const removeProduct = (product) => ({
   type: REMOVE_PRODUCT,
-  payload: product
+  payload: product,
 });
 
-export const updateCart = cartProducts => {
+export const updateCart = (cartProducts) => {
   let productQuantity = cartProducts.reduce((sum, p) => {
     sum += p.quantity;
     return sum;
@@ -30,7 +36,7 @@ export const updateCart = cartProducts => {
 
   let cartTotal = {
     productQuantity,
-    totalPrice
+    totalPrice,
   };
 
   // we persist the cartProducts to localStorage
@@ -38,6 +44,16 @@ export const updateCart = cartProducts => {
 
   return {
     type: UPDATE_CART,
-    payload: cartTotal
+    payload: cartTotal,
+  };
+};
+
+export const clearCart = () => {
+  const cartProducts = [];
+  // we persist the cartProducts to localStorage
+  storage().persist(JSON.stringify(cartProducts));
+
+  return {
+    type: CLEAR_CART,
   };
 };

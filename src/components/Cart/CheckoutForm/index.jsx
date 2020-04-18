@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
@@ -10,14 +10,17 @@ import { TextInput, Button, DatePicker } from "react-materialize";
 import "../../../assets/stylesheets/checkoutForm.css";
 import DeliveryMethod from "./DeliveryMethod";
 import PaymentMethod from "./PaymentMethod";
+import { clearCart } from "../../../redux/actions/cartActions";
 
-const CheckoutForm = ({
-  cart: { products },
-  auth: {
-    user: { name },
-  },
-  checkout: { checkoutStatus },
-}) => {
+const CheckoutForm = (props) => {
+  const {
+    cart: { products },
+    auth: {
+      user: { name },
+    },
+    checkout: { checkoutStatus },
+  } = props;
+
   const [firstName, setFirstName] = useState(name || "");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -31,6 +34,7 @@ const CheckoutForm = ({
   const [paymentMethod, setPaymentMethod] = useState("Cash");
   const [deliveryMethod, setDeliveryMethod] = useState("Pick up");
 
+  // Set date picker date
   let numWeeks = 1;
   let now = new Date();
   now.setDate(now.getDate() + numWeeks * 4);
@@ -98,6 +102,11 @@ const CheckoutForm = ({
       setValidationError("");
     }, 15000);
   };
+
+  useEffect(() => {
+    checkoutStatus === "success" && props.clearCart({});
+    // eslint-disable-next-line
+  }, [checkoutStatus]);
 
   return (
     <div className="checkout-form">
@@ -300,4 +309,6 @@ const mapStateToProps = (state) => ({
   checkout: state.checkout,
 });
 
-export default connect(mapStateToProps, {})(withRouter(CheckoutForm));
+export default connect(mapStateToProps, { clearCart })(
+  withRouter(CheckoutForm)
+);

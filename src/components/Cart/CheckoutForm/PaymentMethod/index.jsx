@@ -4,11 +4,7 @@ import { Select } from "react-materialize";
 
 class PaymentMethod extends Component {
   render() {
-    const {
-      paymentMethod,
-      validatedError,
-      handleSetPaymentMethod,
-    } = this.props;
+    const { paymentMethod, handleSetPaymentMethod } = this.props;
 
     return (
       <Select

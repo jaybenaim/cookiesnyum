@@ -13,10 +13,9 @@ const Info = () => {
   return (
     <div id="info" className="business-info-grid">
       <div className="info-content">
-        <h3 className="primary-font">Business Info</h3>
+        <h3 className="primary-font">Contact Us</h3>
         <div className="secondary-font">
           <p>Based in Vaughan, ON</p>
-
           <em>Rushed orders available for additional charge</em>
         </div>
         <div className="info-content--image-grid secondary-font">

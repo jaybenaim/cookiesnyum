@@ -2,20 +2,17 @@
 import ReactDOM from "react-dom";
 import App from "./App";
 import { HashRouter } from "react-router-dom";
-import registerServiceWorker from "./registerServiceWorker";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+// import registerServiceWorker from "./registerServiceWorker";
 import { unregister } from "./registerServiceWorker";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { createBrowserHistory } from "history";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const customHistory = createBrowserHistory();
-
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter basename="/dolcenada" history={customHistory}>
+    <HashRouter basename="/dolcenada">
       <ErrorBoundary>
         <App />
       </ErrorBoundary>

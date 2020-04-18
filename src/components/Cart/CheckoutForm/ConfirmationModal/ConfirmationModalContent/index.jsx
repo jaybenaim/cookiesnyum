@@ -24,8 +24,8 @@ class ConfirmationModalContent extends Component {
         products,
       },
     } = this.props;
-    const productNames = products.map((product) => (
-      <li>
+    const productNames = products.map((product, i) => (
+      <li key={i}>
         <img src={product.image} alt={product.name} height={40} width={40} />{" "}
         <span className="product-label">
           {product.name} {product.sku.replace("-", "")}
