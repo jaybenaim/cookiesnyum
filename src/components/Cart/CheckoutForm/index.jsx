@@ -80,29 +80,41 @@ const CheckoutForm = (props) => {
   };
 
   const [validatedForm, setValidatedForm] = useState(false);
-  const [validatedError, setValidationError] = useState("");
+  const [validationError, setValidationError] = useState("");
+  const [validatedError, setValidatedError] = useState({});
 
   const validateForm = () => {
-    const errors = [];
-    if (email.length === 0) {
-      errors.push("Email required");
-    }
-    if (firstName.length === 0) {
-      errors.push("First name required");
-    }
-    if (tel.length <= 0) {
-      errors.push("Phone Number required");
+    const errors = {};
+
+    if (firstName.length === 0) errors.firstName = "First name required";
+    if (email.length === 0) errors.email = "Email required";
+    if (tel.length === 0) errors.phone = "Phone Number required";
+
+    if (deliveryMethod === "Delivery**") {
+      if (street.length <= 0) errors.street = "Street required";
+      if (city.length <= 0) errors.city = "City required";
+      if (province.length <= 0) errors.province = "Province required";
+      if (postalCode.length <= 0) errors.postalCode = "Postal Code required";
+      if (postalCode.length > 6) errors.postalCode = "Postal Code invalid";
     }
 
-    errors.length === 0
-      ? setValidatedForm(true)
-      : setValidationError("invalid");
+    if (errors.length === 0) {
+      setValidatedForm(true);
+    } else {
+      setValidationError("invalid");
 
-    setTimeout(() => {
-      setValidationError("");
-    }, 15000);
+      setValidatedError(errors);
+    }
+
+    // setTimeout(() => {
+    //   setValidationError("");
+    // }, 15000);
   };
-
+  const getValidClass = (input) => {
+    if (validatedError[input]) {
+      return "invalid";
+    } else "";
+  };
   useEffect(() => {
     checkoutStatus === "success" && props.clearCart({});
     // eslint-disable-next-line
@@ -127,11 +139,10 @@ const CheckoutForm = (props) => {
               <TextInput
                 id="firstName"
                 type="text"
-                className={`validate ${validatedError}`}
                 defaultValue={name || ""}
                 label="First Name"
-                validate
-                error={"Name required"}
+                className={`validate ${getValidClass("firstName")}`}
+                error={validatedError["firstName"]}
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
@@ -150,9 +161,8 @@ const CheckoutForm = (props) => {
                 email
                 id="email"
                 label="Email"
-                className={`validate ${validatedError}`}
-                error={"Email required"}
-                validate
+                className={`validate ${getValidClass("email")}`}
+                error={validatedError["email"]}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -160,12 +170,11 @@ const CheckoutForm = (props) => {
           <div className="row">
             <div className="input-field col s12">
               <TextInput
-                tel
+                type="tel"
                 id="phone"
                 label="Phone Number"
-                className={`validate ${validatedError}`}
-                error={"Phone Number required"}
-                validate
+                className={`validate ${getValidClass("phone")}`}
+                error={validatedError["phone"]}
                 onChange={(e) => setTel(e.target.value)}
               />
             </div>
@@ -197,6 +206,8 @@ const CheckoutForm = (props) => {
                 id="street"
                 type="text"
                 label="Street"
+                className={`validate ${getValidClass("street")}`}
+                error={validatedError["street"]}
                 onChange={(e) => setStreet(e.target.value)}
               />
             </div>
@@ -207,6 +218,8 @@ const CheckoutForm = (props) => {
                 id="city"
                 type="text"
                 label="City"
+                className={`validate ${getValidClass("city")}`}
+                error={validatedError["city"]}
                 onChange={(e) => setCity(e.target.value)}
               />
             </div>
@@ -216,6 +229,8 @@ const CheckoutForm = (props) => {
                 id="province"
                 type="text"
                 label="Province"
+                className={`validate ${getValidClass("province")}`}
+                error={validatedError["province"]}
                 onChange={(e) => setProvince(e.target.value)}
               />
             </div>
@@ -226,6 +241,8 @@ const CheckoutForm = (props) => {
                 id="postalCode"
                 type="text"
                 label="Postal Code"
+                className={`validate ${getValidClass("postalCode")}`}
+                error={validatedError["postalCode"]}
                 onChange={(e) => setPostalCode(e.target.value)}
               />
             </div>
@@ -235,19 +252,19 @@ const CheckoutForm = (props) => {
             <h3>When do you need it by?</h3>
           </div>
           <div className="row">
-            <div class="input-field col s4">
+            <div className="input-field col s4">
               <DatePicker
                 id="date"
                 label={`Date for ${deliveryMethod}`}
                 options={{
-                  defaultDate: date,
+                  defaultDate: firstAvailableDateForPickup.toDateString(),
                   onChange: (value) => handleSetDate(value),
                   minDate: firstAvailableDateForPickup,
                 }}
-                value={firstAvailableDateForPickup.toDateString()}
+                defaultValue={firstAvailableDateForPickup.toDateString()}
                 children={
                   <span
-                    class="helper-text"
+                    className="helper-text"
                     data-error="wrong"
                     data-success="right"
                   >
