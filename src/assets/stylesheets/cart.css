@@ -276,10 +276,11 @@
 
 @media screen and (min-width: 640px) {
   .bag--float-cart-closed {
-    left: -120px;
+    left: -18%;
   }
   .float {
-    width: 25%;
+    width: 30%;
+    right: -30%;
   }
   .float-cart__content::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -327,6 +328,7 @@
   }
   .sub-quantity {
     margin-left: 60%;
+    font-size: 1.2em;
   }
 }
 

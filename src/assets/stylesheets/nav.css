@@ -24,6 +24,9 @@
   top: 80%;
   width: 100%;
 }
+.hide-on-med-and-down {
+  margin-right: -8%;
+}
 .hide-on-med-and-down #login {
   color: white;
   position: absolute;
