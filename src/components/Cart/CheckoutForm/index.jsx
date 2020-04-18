@@ -180,74 +180,100 @@ const CheckoutForm = (props) => {
             </div>
           </div>
           <div className="row">
-            <h4>Address</h4>
+            <h3>Payment Details</h3>
           </div>
-          <div className="row">
-            <div className="input-field col s6">
-              <TextInput
-                id="addressNumber"
-                type="text"
-                label="#"
-                onChange={(e) => setAddressNumber(e.target.value)}
+          <div className="row" id="paymentDetails">
+            <div className=" col s6">
+              <DeliveryMethod
+                deliveryMethod={deliveryMethod}
+                validatedError={validatedError}
+                handleSetDeliveryMethod={handleSetDeliveryMethod}
+                setDeliveryMethod={setDeliveryMethod}
               />
             </div>
-            <div className="input-field col s6">
-              <TextInput
-                id="suite"
-                type="text"
-                label="suite / apt"
-                onChange={(e) => setSuite(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="input-field col s12">
-              <TextInput
-                id="street"
-                type="text"
-                label="Street"
-                className={`validate ${getValidClass("street")}`}
-                error={validatedError["street"]}
-                onChange={(e) => setStreet(e.target.value)}
+            <div className=" col s6">
+              <PaymentMethod
+                paymentMethod={paymentMethod}
+                validatedError={validatedError}
+                handleSetPaymentMethod={handleSetPaymentMethod}
+                setPaymentMethod={setPaymentMethod}
               />
             </div>
           </div>
-          <div className="row">
-            <div className="input-field col s6">
-              <TextInput
-                id="city"
-                type="text"
-                label="City"
-                className={`validate ${getValidClass("city")}`}
-                error={validatedError["city"]}
-                onChange={(e) => setCity(e.target.value)}
-              />
-            </div>
 
-            <div className="input-field col s6">
-              <TextInput
-                id="province"
-                type="text"
-                label="Province"
-                className={`validate ${getValidClass("province")}`}
-                error={validatedError["province"]}
-                onChange={(e) => setProvince(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="input-field col s6">
-              <TextInput
-                id="postalCode"
-                type="text"
-                label="Postal Code"
-                className={`validate ${getValidClass("postalCode")}`}
-                error={validatedError["postalCode"]}
-                onChange={(e) => setPostalCode(e.target.value)}
-              />
-            </div>
-            <div className="input-field col s6"></div>
-          </div>
+          {deliveryMethod === "Delivery**" && (
+            <>
+              <div className="row">
+                <h4>Address</h4>
+              </div>
+              <div className="row">
+                <div className="input-field col s6">
+                  <TextInput
+                    id="addressNumber"
+                    type="text"
+                    label="#"
+                    onChange={(e) => setAddressNumber(e.target.value)}
+                  />
+                </div>
+                <div className="input-field col s6">
+                  <TextInput
+                    id="suite"
+                    type="text"
+                    label="suite / apt"
+                    onChange={(e) => setSuite(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="input-field col s12">
+                  <TextInput
+                    id="street"
+                    type="text"
+                    label="Street"
+                    className={`validate ${getValidClass("street")}`}
+                    error={validatedError["street"]}
+                    onChange={(e) => setStreet(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="input-field col s6">
+                  <TextInput
+                    id="city"
+                    type="text"
+                    label="City"
+                    className={`validate ${getValidClass("city")}`}
+                    error={validatedError["city"]}
+                    onChange={(e) => setCity(e.target.value)}
+                  />
+                </div>
+
+                <div className="input-field col s6">
+                  <TextInput
+                    id="province"
+                    type="text"
+                    label="Province"
+                    className={`validate ${getValidClass("province")}`}
+                    error={validatedError["province"]}
+                    onChange={(e) => setProvince(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="input-field col s6">
+                  <TextInput
+                    id="postalCode"
+                    type="text"
+                    label="Postal Code"
+                    className={`validate ${getValidClass("postalCode")}`}
+                    error={validatedError["postalCode"]}
+                    onChange={(e) => setPostalCode(e.target.value)}
+                  />
+                </div>
+                <div className="input-field col s6"></div>
+              </div>
+            </>
+          )}
           <div className="row">
             <h3>When do you need it by?</h3>
           </div>
@@ -277,27 +303,6 @@ const CheckoutForm = (props) => {
             <div className="input-field col s8"></div>
           </div>
           <div className="row"></div>
-          <div className="row">
-            <h3>Payment Details</h3>
-          </div>
-          <div className="row" id="paymentDetails">
-            <div className=" col s6">
-              <DeliveryMethod
-                deliveryMethod={deliveryMethod}
-                validatedError={validatedError}
-                handleSetDeliveryMethod={handleSetDeliveryMethod}
-                setDeliveryMethod={setDeliveryMethod}
-              />
-            </div>
-            <div className=" col s6">
-              <PaymentMethod
-                paymentMethod={paymentMethod}
-                validatedError={validatedError}
-                handleSetPaymentMethod={handleSetPaymentMethod}
-                setPaymentMethod={setPaymentMethod}
-              />
-            </div>
-          </div>
         </form>
       </div>
 
