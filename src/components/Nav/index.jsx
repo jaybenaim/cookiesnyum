@@ -28,7 +28,6 @@ const Nav = (props) => {
         draggable: true,
         edge: "left",
         inDuration: 250,
-
         outDuration: 200,
         preventScrolling: true,
       }}
