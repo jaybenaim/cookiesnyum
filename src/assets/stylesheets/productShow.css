@@ -72,10 +72,10 @@
     margin-top: 7%;
   }
   .product-show--card-body--quantity-buttons .increase {
-    margin-left: 40%;
+    margin-left: 30%;
   }
   .product-show--card-body--quantity-buttons .decrease {
-    margin-left: 10%;
+    margin-left: 30%;
     padding-left: 5%;
   }
   .product-show--card-body--quantity-buttons button {
