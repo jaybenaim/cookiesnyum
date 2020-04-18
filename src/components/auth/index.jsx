@@ -21,7 +21,7 @@ const Auth = (props) => {
       <Link
         to="/login"
         id="login"
-        className="btn btn-large  waves-effect waves-light hoverable auth-link"
+        className="btn btn-large  waves-effect waves-light hoverable auth-link sidenav-close"
       >
         Log In
       </Link>
@@ -29,7 +29,7 @@ const Auth = (props) => {
       <Link
         to="/register"
         id="register"
-        className="btn btn-large waves-effect waves-light hoverable accent-3 auth-link"
+        className="btn btn-large waves-effect waves-light hoverable accent-3 auth-link sidenav-close"
       >
         Register
       </Link>
@@ -39,7 +39,7 @@ const Auth = (props) => {
       <button
         id="logout"
         onClick={(e) => onLogoutClick(e)}
-        className="btn btn-large waves-effect waves-light hoverable  accent-3 auth-link"
+        className="btn btn-large waves-effect waves-light hoverable  accent-3 auth-link sidenav-close"
       >
         Logout <span className="auth-content--name"> {name}?</span>
       </button>

@@ -16,6 +16,8 @@
   padding-top: 12px;
 }
 .sidenav #logout {
+  background: #f6406f !important;
+  color: white;
   position: absolute;
   top: 80%;
   width: 100%;
