@@ -61,14 +61,6 @@ const App = (props) => {
 
   let location = window.location.href;
 
-  // when user clicks refresh
-  if (window.performance) {
-    if (performance.navigation.type == 1) {
-      location = location;
-    } else {
-    }
-  }
-
   return (
     <React.Fragment>
       {location.includes("/404") ? (
