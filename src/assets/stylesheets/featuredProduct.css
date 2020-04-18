@@ -31,6 +31,9 @@
   .featured-products-slider--cards--card-text {
     font-size: 1.35em;
   }
+  .slick-arrow {
+    overflow: hidden;
+  }
   .featured-products-slider .slick-prev {
     grid-column: 1;
     padding: 10%;
