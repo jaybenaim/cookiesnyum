@@ -28,6 +28,10 @@
   .featured-products-slider--cards--card-body a {
     color: #000;
   }
+  .featured-products-slider--cards--card-body a:hover {
+    color: #000;
+    text-decoration: none;
+  }
   .featured-products-slider--cards--card-text {
     font-size: 1.35em;
   }
