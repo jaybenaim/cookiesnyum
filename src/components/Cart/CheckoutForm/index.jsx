@@ -296,7 +296,9 @@ const CheckoutForm = (props) => {
         Go to Confirmation
         <ArrowRightAltIcon />
       </Button>
-      {validatedError && <div>Please fill out all fields</div>}
+      {validatedError && (
+        <div className="validate-submit-error">Please fill out all fields</div>
+      )}
       <div className="fine-print">** Extra charges apply</div>
     </div>
   );
