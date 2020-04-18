@@ -24,9 +24,7 @@
   top: 80%;
   width: 100%;
 }
-.hide-on-med-and-down {
-  margin-right: -8%;
-}
+
 .hide-on-med-and-down #login {
   color: white;
   position: absolute;
@@ -68,6 +66,12 @@
   .sidenav--dropdown-trigger .material-icons {
     position: relative;
     top: 7px;
+  }
+  .sidenav #login {
+    padding-top: 15px;
+  }
+  .sidenav #register {
+    padding-top: 15px;
   }
 }
 @media (min-width: 451px) {
