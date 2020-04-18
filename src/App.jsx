@@ -54,15 +54,21 @@ const App = (props) => {
     quantityTextLabel: "QTY",
   };
 
-  // TODO: /// add error handler for component send to 404 for failed render
-  // errors && errors.isAxiosError && history.push("/404");
-
   useEffect(() => {
     props.getProducts();
     // eslint-disable-next-line
   }, []);
 
-  const location = window.location.href;
+  let location = window.location.href;
+
+  // when user clicks refresh
+  if (window.performance) {
+    if (performance.navigation.type == 1) {
+      location = location;
+    } else {
+    }
+  }
+
   return (
     <React.Fragment>
       {location.includes("/404") ? (
