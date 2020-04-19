@@ -20,6 +20,7 @@ import Nav from "./components/Nav";
 import Cart from "./components/Cart";
 import { getProducts } from "./redux/actions/productActions";
 import Admin from "./components/Admin";
+import Faq from "./components/Faq";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -101,6 +102,7 @@ const App = (props) => {
           path="/checkout"
           render={(props) => <CheckoutForm {...props} />}
         />
+        <Route exact path="/faq" render={(props) => <Faq {...props} />} />
         <Route exact path="/404" render={(props) => <ErrorPage {...props} />} />
         <Route path="*" component={ErrorPage} />
       </Switch>
