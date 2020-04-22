@@ -1,0 +1,7 @@
+@media (max-width: 450px) {
+}
+@media (min-width: 450px) {
+}
+.autocomplete-content {
+  text-transform: capitalize;
+}
