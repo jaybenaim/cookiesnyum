@@ -8,7 +8,7 @@ const Admin = ({ user: { role } }) => {
     if (role === "admin") {
       window.location.href = "https://dolcenadaa.herokuapp.com/admin/login";
     } else {
-      window.location.href = "/404";
+      window.location.href = "https://dolcenada.ca/#/404";
     }
   }, []);
   return <div className="container"></div>;

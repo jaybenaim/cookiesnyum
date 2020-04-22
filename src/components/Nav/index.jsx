@@ -6,6 +6,7 @@ import Auth from "../Auth";
 import { filterGallery } from "../../redux/actions/galleryActions";
 import { Icon, Navbar } from "react-materialize";
 import { connect } from "react-redux";
+import Search from "../Search";
 
 const Nav = (props) => {
   const {
@@ -57,7 +58,7 @@ const Nav = (props) => {
           width={140}
         />
       </Link>
-
+      <Search />
       <Auth />
     </Navbar>
   );
