@@ -41,6 +41,7 @@ const ProductShow = (props) => {
   const RelatedProductsElements = relatedProducts.map((product, i) => (
     <RelatedProductsSlider key={i} product={product} width={80} height={80} />
   ));
+  // const formattedSku = sku.replace("-", "");
   const formattedSku = sku.replace("-", "");
   const slides = relatedProducts.length > 4 ? 4 : relatedProducts.length;
   const settings = {
@@ -75,7 +76,7 @@ const ProductShow = (props) => {
         >
           {formattedSku}
         </Link>
-        <Link to={`/dolcenada/products/${sku}${name}`}> / {name}</Link>
+        <Link to={`/products/${name}`}> / {name}</Link>
       </div>
 
       <div className="product-show--card">
