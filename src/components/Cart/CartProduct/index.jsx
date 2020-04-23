@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Thumb from "../Thumb";
 import { formatPrice } from "../../../helpers";
 
-import Quantity from "../../Products/Item/Quantity";
+import Quantity from "../../Gallery/Item/Quantity";
 
 import { updateCart } from "../../../redux/actions/cartActions";
 import { withRouter } from "react-router-dom";

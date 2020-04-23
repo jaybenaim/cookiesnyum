@@ -3,8 +3,8 @@ import Footer from "./Footer";
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
 import Home from "./Home";
-import Products from "./Products";
-import ProductShow from "./Products/ProductShow";
+import Gallery from "./Gallery";
+import ProductShow from "./Gallery/ProductShow";
 import ErrorPage from "./ErrorPage";
 import CheckoutForm from "./Cart/CheckoutForm";
 export {
@@ -13,8 +13,8 @@ export {
   Register,
   Login,
   Home,
-  Products,
+  Gallery,
   ProductShow,
   ErrorPage,
-  CheckoutForm
+  CheckoutForm,
 };

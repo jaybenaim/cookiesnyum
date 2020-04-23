@@ -6,7 +6,7 @@ import {
   Register,
   Login,
   Home,
-  Products,
+  Gallery,
   ProductShow,
   ErrorPage,
   CheckoutForm,
@@ -90,7 +90,7 @@ const App = (props) => {
         <Route
           exact
           path="/gallery"
-          render={(props) => <Products {...props} />}
+          render={(props) => <Gallery {...props} />}
         />
         <Route
           exact
