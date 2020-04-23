@@ -89,7 +89,7 @@ const App = (props) => {
         <Route exact path="/login" render={(props) => <Login {...props} />} />
         <Route
           exact
-          path="/products"
+          path="/gallery"
           render={(props) => <Products {...props} />}
         />
         <Route

@@ -41,15 +41,7 @@ const GalleryFilter = (props) => {
       >
         Scones
       </Button>
-      <Button
-        node="button"
-        waves="light"
-        className="biscotti-filter-link"
-        name="biscotti"
-        onClick={(e) => handleFilterClick(e)}
-      >
-        Biscotti
-      </Button>
+
       <Button
         node="button"
         waves="light"

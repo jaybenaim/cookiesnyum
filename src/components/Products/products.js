@@ -6,8 +6,6 @@ import {
   mars,
   miniegg,
   reese,
-  Amaretti,
-  pastaschio,
   cookieButter,
   doubleDolceDelight,
   everythingCookie,
@@ -24,9 +22,9 @@ import {
   monsterMash,
   chocolateChip,
   cookieBox,
-  skor,
   banana,
 } from "../../assets/images";
+
 const PRODUCTS = [
   {
     name: "blueberry",
@@ -56,14 +54,7 @@ const PRODUCTS = [
     name: "PB Cup",
     image: reese,
   },
-  {
-    name: "Amaretti",
-    image: Amaretti,
-  },
-  {
-    name: "Pistachio",
-    image: pastaschio,
-  },
+
   {
     name: "Walnut Chocolate Chip",
     image: walnutChocolateChip,
@@ -132,10 +123,6 @@ const PRODUCTS = [
   {
     name: "Assorted Cookies",
     image: cookieBox,
-  },
-  {
-    name: "Skor",
-    image: skor,
   },
 ];
 
