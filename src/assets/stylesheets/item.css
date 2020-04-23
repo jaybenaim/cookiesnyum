@@ -28,7 +28,6 @@
     display: grid !important;
     border: none !important;
     grid-template-columns: 1fr 1fr 1fr;
-
     margin-top: 10%;
     padding: 2% 4%;
     margin-bottom: 16%;
@@ -85,11 +84,11 @@
     margin-left: -3%;
   }
   .item--card-body--name {
-    grid-column: 1 / span 3;
+    grid-column: 3;
     grid-row: 1;
     color: #000;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     font-size: 2em;
     margin-left: -2%;
   }
@@ -282,7 +281,6 @@
 }
 .item--card-body--name {
   text-transform: capitalize;
-  text-align: center !important;
 }
 
 .products--nav a {

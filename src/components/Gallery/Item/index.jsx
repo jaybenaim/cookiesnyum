@@ -67,8 +67,6 @@ class Item extends Component {
           className="show-product-btn"
           onClick={() => this.props.setCurrentProduct(item)}
         >
-          <h3 className="item--card-body--name secondary-font">{name}</h3>
-
           <img
             className={`item--card--img ${defaultClass}`}
             src={image}
@@ -84,7 +82,9 @@ class Item extends Component {
               state: { item, quantity, description, image },
             }}
             className="show-product-btn"
-          ></Link>
+          >
+            <h3 className="item--card-body--name secondary-font">{name}</h3>
+          </Link>
           <p className="item--card-body--description">
             {/* {this.shortDescription(description.default)} */}
             <p>{this.getPrice(price, description)}</p>
