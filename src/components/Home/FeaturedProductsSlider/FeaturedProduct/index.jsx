@@ -30,7 +30,7 @@ const FeaturedProduct = (props) => {
 
       <div className="featured-products-slider--cards--card-body secondary-font">
         <Link
-          to="/products"
+          to="/box"
           onClick={() => props.filterGallery(sku.replace("-", ""))}
         >
           <h3>{text}</h3>
