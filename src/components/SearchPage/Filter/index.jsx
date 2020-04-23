@@ -12,14 +12,22 @@ const Filter = (props) => {
           id="filter-name"
           label="Name"
           name="name"
-          value={props.value}
+          value="name"
           onChange={props.handleFilterChange}
         />
         <Checkbox
           id="filter-sku"
           label="Category"
           name="sku"
-          value={props.value}
+          value="sku"
+          onChange={props.handleFilterChange}
+        />
+        <h2>Description</h2>
+        <Checkbox
+          id="filter-description"
+          label="Dough"
+          name="description.dough"
+          value="description.dough"
           onChange={props.handleFilterChange}
         />
       </form>

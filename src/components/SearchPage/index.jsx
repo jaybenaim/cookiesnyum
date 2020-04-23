@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import { TextInput, Icon } from "react-materialize";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
@@ -6,6 +6,8 @@ import Filter from "./Filter";
 import local from "../../api/local";
 
 class SearchPage extends Component {
+  // TODO: create next page button for pagination if results over 5
+
   state = {
     query: "",
     filter: "name",
@@ -15,6 +17,7 @@ class SearchPage extends Component {
     page: 1,
     products: [],
   };
+
   handleChange = (e) => {
     this.setState({
       query: e.target.value,
@@ -33,7 +36,6 @@ class SearchPage extends Component {
     local
       .get(`products/search/0?search=${query}&filter=${filter}`)
       .then((res) => {
-        console.log(res);
         this.setState({ products: res.data });
       })
       .catch((err) => console.log(err));
@@ -42,7 +44,12 @@ class SearchPage extends Component {
     //   Display elements
     const { showResults, products } = this.state;
     const results = products.map((p) => (
-      <Link to={{ pathname: `/products/${p.name}`, state: { item: p } }}></Link>
+      <>
+        <Link to={{ pathname: `/products/${p.name}`, state: { item: p } }}>
+          {p.name}
+        </Link>
+        <br />
+      </>
     ));
     return (
       <>
