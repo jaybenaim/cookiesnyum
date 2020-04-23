@@ -12,20 +12,14 @@ export const featuredProducts = [
     alt: "scones",
     sku: "scone",
   },
-  {
-    text: "Hand Crafted Biscotti",
-    src: biscotti,
-    alt: "biscotti",
-    sku: "biscotti",
-  },
 ];
 
 export const settings = {
   arrows: true,
   speed: 300,
   dots: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToShow: 2,
+  slidesToScroll: 2,
   responsive: [
     {
       breakpoint: 450,
