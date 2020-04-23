@@ -1,7 +1,30 @@
+.faq-container h1 {
+  text-align: center;
+  padding: 5% 0;
+  font-size: 3.4em;
+}
+.faq-container .collapsible-header {
+  display: block;
+  text-align: center;
+}
+.collapsible-body {
+  width: 100%;
+  text-align: center;
+  background: rgba(246, 64, 111, 0.9);
+  color: white;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+}
+.brand-logo {
+  display: none !important;
+}
 @media (max-width: 450px) {
+  .faq-container {
+    padding-top: 20%;
+  }
 }
 @media (min-width: 451px) {
-}
-.faq-container {
-  margin-top: 40%;
+  .faq-container {
+    padding: 5% 0;
+  }
 }
