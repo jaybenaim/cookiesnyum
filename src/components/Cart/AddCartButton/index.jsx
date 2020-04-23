@@ -18,7 +18,6 @@ export class AddCartButton extends Component {
   addProductToCart = (event, product) => {
     const { qty } = this.props;
     product.quantity = qty;
-
     this.props.addProduct(product);
   };
 

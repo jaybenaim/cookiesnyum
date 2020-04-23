@@ -66,7 +66,7 @@ const ProductShow = (props) => {
     <div className="product-show-container">
       <div className="products--nav">
         <Link to="/">Home /</Link>
-        <Link to="/products"> Products /</Link>{" "}
+        <Link to="/gallery"> Gallery /</Link>{" "}
         <Link
           to={{
             pathname: "/products",

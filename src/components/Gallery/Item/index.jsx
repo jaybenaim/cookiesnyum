@@ -48,6 +48,7 @@ class Item extends Component {
       class: defaultClass,
       id,
     } = this.props;
+
     const { qty } = this.state;
 
     return (

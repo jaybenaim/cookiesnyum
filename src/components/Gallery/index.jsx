@@ -57,8 +57,7 @@ const Products = (props) => {
       <div className="products-container--products-nav-container">
         <div className="products--nav">
           <Link to="/">Home /</Link>
-          <Link to="/products"> Products {filter && <span>/</span>} </Link>{" "}
-          <br />
+          <Link to="/gallery"> Gallery {filter && <span>/</span>} </Link> <br />
           {filter && (
             <Link to="/products" onClick={() => props.filterGallery(filter)}>
               {filter}
