@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { AddCartButton } from "../../Cart/AddCartButton";
 import { addProduct } from "../../../redux/actions/cartActions";
 import { setCurrentProduct } from "../../../redux/actions/productActions";
+import { formatPrice } from "../../../helpers/index";
 import "../../../assets/stylesheets/item.css";
+import Quantity from "./Quantity";
 import { updateCart } from "../../../redux/actions/cartActions";
 
 class Item extends Component {
@@ -33,17 +36,6 @@ class Item extends Component {
     this.setState({ qty: Number(e.target.value) });
   };
 
-  getPrice = (price, description) => {
-    if (price === 2.85) {
-      return "Basic";
-    }
-    if (price === 3.35) {
-      return "Premium";
-    }
-    if (price === 3.5) {
-      return this.shortDescription(description.default);
-    }
-  };
   render() {
     let {
       item,
@@ -51,11 +43,12 @@ class Item extends Component {
       quantity,
       sku,
       description,
+      price,
       image,
       class: defaultClass,
       id,
-      price,
     } = this.props;
+    const { qty } = this.state;
 
     return (
       <div className={`item--card `}>
@@ -67,6 +60,8 @@ class Item extends Component {
           className="show-product-btn"
           onClick={() => this.props.setCurrentProduct(item)}
         >
+          <h3 className="item--card-body--name secondary-font">{name}</h3>
+
           <img
             className={`item--card--img ${defaultClass}`}
             src={image}
@@ -82,13 +77,28 @@ class Item extends Component {
               state: { item, quantity, description, image },
             }}
             className="show-product-btn"
-          >
-            <h3 className="item--card-body--name secondary-font">{name}</h3>
-          </Link>
+          ></Link>
           <p className="item--card-body--description">
-            {/* {this.shortDescription(description.default)} */}
-            <p>{this.getPrice(price, description)}</p>
+            {this.shortDescription(description.default)}
           </p>
+          <div className="item--card-body--quantity-buttons">
+            <p className="item--card-body-qty-label">Quantity:</p>
+            <Quantity
+              id={item._id}
+              qtyLabel={this.state.qty}
+              handleQty={this.handleQty}
+              handleQtyChange={this.handleQtyChange}
+            />
+          </div>
+
+          <div className="item--card-body--add-to-cart">
+            <AddCartButton
+              qty={qty}
+              product={item}
+              addLabel={formatPrice(price, "CAD")}
+              addProduct={this.props.addProduct}
+            />
+          </div>
         </div>
       </div>
     );

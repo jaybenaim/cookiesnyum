@@ -281,6 +281,7 @@
 }
 .item--card-body--name {
   text-transform: capitalize;
+  text-align: center !important;
 }
 
 .products--nav a {
