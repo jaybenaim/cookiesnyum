@@ -43,6 +43,9 @@ const Nav = (props) => {
       <Link to="/products" className="sidenav-close">
         Products
       </Link>
+      <Link to="/faq" className="sidenav-close">
+        FAQ
+      </Link>
       {role === "admin" && (
         <Link to="/admin" className="sidenav-close">
           Admin
