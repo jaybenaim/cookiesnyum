@@ -1,7 +1,8 @@
 import React from "react";
 import questions from "./questions";
-import { Collapsible, CollapsibleItem, Icon } from "react-materialize";
+import { Collapsible, CollapsibleItem } from "react-materialize";
 import "../../assets/stylesheets/faq.css";
+import { withRouter } from "react-router-dom";
 
 const Faq = () => {
   const questionElements = questions.map((question, i) => {
@@ -19,4 +20,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default withRouter(Faq);
