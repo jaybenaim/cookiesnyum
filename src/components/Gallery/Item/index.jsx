@@ -81,7 +81,8 @@ class Item extends Component {
           <p className="item--card-body--description">
             {this.shortDescription(description.default)}
           </p>
-          <div className="item--card-body--quantity-buttons">
+
+          {/* <div className="item--card-body--quantity-buttons">
             <p className="item--card-body-qty-label">Quantity:</p>
             <Quantity
               id={item._id}
@@ -91,14 +92,14 @@ class Item extends Component {
             />
           </div>
 
-          <div className="item--card-body--add-to-cart">
+        <div className="item--card-body--add-to-cart">
             <AddCartButton
               qty={qty}
               product={item}
               addLabel={formatPrice(price, "CAD")}
               addProduct={this.props.addProduct}
             />
-          </div>
+          </div>  */}
         </div>
       </div>
     );
