@@ -11,7 +11,6 @@ import mars from "./cookies/mars/mars.png";
 import miniegg from "./cookies/miniegg/miniegg.png";
 import reese from "./cookies/reese/reese.png";
 import banana from "./cookies/bananaBread/banana.png";
-
 import cookieButter from "./cookies/cookieButter/cookieButter.png";
 import doubleDolceDelight from "./cookies/doubleDolceDelight/doubleDolceDelight.png";
 import everythingCookie from "./cookies/everythingCookie/everythingCookie.png";
@@ -28,12 +27,6 @@ import snickers from "./cookies/snickers/snickers.png";
 import cookiesAndCream from "./cookies/cookiesAndCream/cookiesAndCream.png";
 import chocolateChip from "./cookies/chocolateChip/chocolateChip.png";
 
-// biscotti
-import biscotti from "./featured/biscotti.png";
-import Amaretti from "./biscotti/amaretti/amaretti.png";
-import pastaschio from "./biscotti/pastaschio/pastaschio.png";
-import skor from "./biscotti/skor/skor.png";
-
 // boxes
 import cookieBox from "./boxes/cookieBox.JPG";
 
@@ -46,8 +39,6 @@ export {
   mars,
   miniegg,
   reese,
-  Amaretti,
-  pastaschio,
   cookieButter,
   doubleDolceDelight,
   everythingCookie,
@@ -60,7 +51,6 @@ export {
   walnutChocolateChip,
   scones,
   cookies,
-  biscotti,
   logo,
   cookiesAndCream,
   snickers,
@@ -68,6 +58,5 @@ export {
   monsterMash,
   chocolateChip,
   cookieBox,
-  skor,
   banana,
 };
