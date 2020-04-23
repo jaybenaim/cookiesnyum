@@ -10,14 +10,16 @@ import {
   ProductShow,
   ErrorPage,
   CheckoutForm,
+  Nav,
+  Cart,
+  SearchPage,
 } from "./components";
 import { connect } from "react-redux";
 import store from "./redux/store";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
-import Nav from "./components/Nav";
-import Cart from "./components/Cart";
+
 import { getProducts } from "./redux/actions/productActions";
 import Admin from "./components/Admin";
 
@@ -100,6 +102,11 @@ const App = (props) => {
           exact
           path="/checkout"
           render={(props) => <CheckoutForm {...props} />}
+        />
+        <Route
+          exact
+          path="/search"
+          render={(props) => <SearchPage {...props} />}
         />
         <Route exact path="/404" render={(props) => <ErrorPage {...props} />} />
         <Route path="*" component={ErrorPage} />
