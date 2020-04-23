@@ -37,6 +37,8 @@ const Nav = (props) => {
         preventScrolling: true,
       }}
     >
+      <Search />
+
       <Link to="/" className="sidenav-close">
         {" "}
         Home{" "}
@@ -49,6 +51,7 @@ const Nav = (props) => {
           Admin
         </Link>
       )}
+
       <Link to="/" className="sidenav-logo sidenav-close">
         {" "}
         <img
@@ -58,7 +61,6 @@ const Nav = (props) => {
           width={140}
         />
       </Link>
-      <Search />
       <Auth />
     </Navbar>
   );

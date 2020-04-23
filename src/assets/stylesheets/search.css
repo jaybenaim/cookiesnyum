@@ -1,6 +1,9 @@
 @media (max-width: 450px) {
 }
-@media (min-width: 450px) {
+@media (min-width: 751px) {
+  .navbar--search {
+    display: none;
+  }
 }
 .autocomplete-content {
   text-transform: capitalize;

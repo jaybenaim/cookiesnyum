@@ -10,7 +10,6 @@ import { useEffect } from "react";
 const Search = (props) => {
   const {
     products: { products },
-    history,
   } = props;
 
   const data = () => {
@@ -22,7 +21,7 @@ const Search = (props) => {
         const image = products[i].image;
         const id = products[i]._id;
 
-        obj[name] = { image, id };
+        obj[name] = image;
       }
     }
 
