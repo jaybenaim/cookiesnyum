@@ -21,6 +21,7 @@ import Cart from "./components/Cart";
 import { getProducts } from "./redux/actions/productActions";
 import Admin from "./components/Admin";
 import Faq from "./components/Faq";
+import AddProductToDb from "./components/AddProductToDb";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -94,6 +95,11 @@ const App = (props) => {
         />
         <Route
           exact
+          path="/products/new"
+          render={(props) => <AddProductToDb {...props} />}
+        />
+        <Route
+          exact
           path="/products/:name"
           render={(props) => <ProductShow {...props} />}
         />
@@ -102,6 +108,7 @@ const App = (props) => {
           path="/checkout"
           render={(props) => <CheckoutForm {...props} />}
         />
+
         <Route exact path="/faq" render={(props) => <Faq {...props} />} />
         <Route exact path="/404" render={(props) => <ErrorPage {...props} />} />
         <Route path="*" component={ErrorPage} />
