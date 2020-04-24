@@ -2,10 +2,6 @@ import React from "react";
 
 const questions = [
   {
-    q: "How much for rushed orders?",
-    a: "Depending on the order size $10-$20",
-  },
-  {
     q: "How big are Dolce Nada cookies?",
     a:
       "We believe, the BIGGER the BETTER! Therefore, our handcrafted cookies range anywhere from 4oz-5oz",
@@ -69,11 +65,6 @@ const questions = [
     q: "Do you offer catering?",
     a:
       "We totally do! We cater weddings, small to mid-size events and all sorts of birthday parties! Email us @ dolcenadaa@gmail.com and someone from our special events team will reach out",
-  },
-  {
-    q: "Scone care… can I reheat my scones?",
-    a:
-      "YES, we recommend reheating our scones in the oven at 300 degrees for about 4-7 minuets for a soft and flaky Dolce Nada scone",
   },
 ];
 export default questions;
