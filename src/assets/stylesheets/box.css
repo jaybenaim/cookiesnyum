@@ -1,0 +1,12 @@
+@media (max-width: 450px) {
+}
+@media (min-width: 451px) {
+  .box-container {
+    margin-top: 10%;
+  }
+  .box-container {
+    min-height: 250px;
+  }
+  .box-container .item--card {
+  }
+}
