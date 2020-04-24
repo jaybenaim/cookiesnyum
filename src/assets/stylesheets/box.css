@@ -1,3 +1,16 @@
+.flavours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 8px;
+}
+.flavours--col-1 {
+  grid-column: 1;
+  margin-left: 25%;
+}
+.flavours--col-2 {
+  grid-column: 2;
+  margin-left: 10%;
+}
 @media (max-width: 450px) {
 }
 @media (min-width: 451px) {

@@ -3,9 +3,8 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { filterGallery } from "../../redux/actions/galleryActions";
 import BoxForm from "./BoxForm";
-import { Item } from "../../components";
+
 import Checkbox from "./CheckBox";
-import Choice from "./Choice";
 
 import "../../assets/stylesheets/box.css";
 
@@ -30,33 +29,71 @@ const Box = (props) => {
   };
 
   const displaySelectedFlavours = () => {
-    return flavours.map((flavour) => <li>{flavour}</li>);
+    return flavours.map((flavour, i) => <li key={i}>{flavour}</li>);
   };
   const getProducts = () => {
+    let classId;
+
     switch (box) {
       case "basic":
         let basicCookies = products.filter((p) => p.price === 2.85);
-        return basicCookies.map((p) => (
-          <Checkbox product={p} handleFlavour={handleFlavour} />
-        ));
+        return basicCookies.map((p, i) => {
+          if (i % 2 !== 0) {
+            classId = "flavours--col-2";
+          } else {
+            classId = "flavours--col-1";
+          }
+          return (
+            <Checkbox
+              product={p}
+              handleFlavour={handleFlavour}
+              key={i}
+              classId={classId}
+            />
+          );
+        });
       case "premium":
         let premiumCookies = products.filter((p) => p.price === 3.35);
-        return premiumCookies.map((p) => (
-          <Checkbox product={p} handleFlavour={handleFlavour} />
-        ));
+        return premiumCookies.map((p, i) => {
+          if (i % 2 !== 0) {
+            classId = "flavours--col-2";
+          } else {
+            classId = "flavours--col-1";
+          }
+          return (
+            <Checkbox
+              product={p}
+              handleFlavour={handleFlavour}
+              key={i}
+              classId={classId}
+            />
+          );
+        });
       case "mixed":
         let mixedElements = products.filter(
           (p) => p.price === 2.85 || p.price === 3.35
         );
-        return mixedElements.map((p) => (
-          <Checkbox product={p} handleFlavour={handleFlavour} />
-        ));
+        return mixedElements.map((p, i) => {
+          if (i % 2 !== 0) {
+            classId = "flavours--col-2";
+          } else {
+            classId = "flavours--col-1";
+          }
+          return (
+            <Checkbox
+              product={p}
+              handleFlavour={handleFlavour}
+              key={i}
+              classId={classId}
+            />
+          );
+        });
 
       case "surprise":
         return <div>Dolce will surprise you will the flavours</div>;
       default:
-        return basicCookies.map((p) => (
-          <Checkbox product={p} handleFlavour={handleFlavour} />
+        return basicCookies.map((p, i) => (
+          <Checkbox product={p} handleFlavour={handleFlavour} key={i} />
         ));
     }
   };
@@ -65,9 +102,9 @@ const Box = (props) => {
     <div className="box-container">
       <BoxForm filter={filter} handleChange={handleChange} box={box} />
       <h2>Selected Flavours</h2>
-      <ul>{displaySelectedFlavours()}</ul>
+      <ul className="">{displaySelectedFlavours()}</ul>
       <hr />
-      {getProducts()}
+      <div className="flavours">{getProducts()}</div>
     </div>
   );
 };

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "../../../assets/stylesheets/checkbox.css";
-import { Icon } from "react-materialize";
-import TextInput from "react-materialize/lib/TextInput";
 
 const Checkbox = (props) => {
   const {
     product: { name },
+    classId,
   } = props;
   const [checked, setChecked] = useState("");
 
@@ -15,14 +14,14 @@ const Checkbox = (props) => {
   };
 
   return (
-    <div className="box-option">
+    <div className={`box-option ${classId}`}>
       {/* TODO if selected flavours contains flavour check box */}
       <label>
         <input
           type="checkbox"
           checked={checked}
           name={name}
-          onClick={(e) => handleClick(e)}
+          onChange={(e) => handleClick(e)}
         />
         <span>{name}</span>
       </label>
