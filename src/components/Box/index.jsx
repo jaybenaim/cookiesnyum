@@ -3,8 +3,8 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { filterGallery } from "../../redux/actions/galleryActions";
 import BoxForm from "./BoxForm";
-
 import Checkbox from "./CheckBox";
+import SconeDropdown from "./SconeDropdown";
 
 import "../../assets/stylesheets/box.css";
 
@@ -49,77 +49,108 @@ const Box = (props) => {
   };
   const getProducts = () => {
     let classId;
+    if (filter === "scone") {
+      let scones = products.filter((p) => p.sku.replace("-", "") === "scone");
+      return scones.map((scone, i) => {
+        if (i % 2 !== 0) {
+          classId = "flavours--col-2";
+        } else {
+          classId = "flavours--col-1";
+        }
 
-    switch (box) {
-      case "basic":
-        let basicCookies = products.filter((p) => p.price === 2.85);
-        return basicCookies.map((p, i) => {
-          if (i % 2 !== 0) {
-            classId = "flavours--col-2";
-          } else {
-            classId = "flavours--col-1";
-          }
-          return (
-            <Checkbox
-              product={p}
-              handleFlavour={handleFlavour}
-              key={i}
-              classId={classId}
-              flavours={flavours}
-            />
-          );
-        });
-      case "premium":
-        let premiumCookies = products.filter((p) => p.price === 3.35);
-        return premiumCookies.map((p, i) => {
-          if (i % 2 !== 0) {
-            classId = "flavours--col-2";
-          } else {
-            classId = "flavours--col-1";
-          }
-          return (
-            <Checkbox
-              product={p}
-              handleFlavour={handleFlavour}
-              key={i}
-              classId={classId}
-              flavours={flavours}
-            />
-          );
-        });
-      case "mixed":
-        let mixedElements = products.filter(
-          (p) => p.price === 2.85 || p.price === 3.35
+        return (
+          <Checkbox
+            product={scone}
+            handleFlavour={handleFlavour}
+            key={i}
+            classId={classId}
+            flavours={flavours}
+          />
         );
-        return mixedElements.map((p, i) => {
-          if (i % 2 !== 0) {
-            classId = "flavours--col-2";
-          } else {
-            classId = "flavours--col-1";
-          }
-          return (
-            <Checkbox
-              product={p}
-              handleFlavour={handleFlavour}
-              key={i}
-              classId={classId}
-              flavours={flavours}
-            />
+      });
+    } else {
+      switch (box) {
+        case "basic":
+          let basicCookies = products.filter((p) => p.price === 2.85);
+          return basicCookies.map((p, i) => {
+            if (i % 2 !== 0) {
+              classId = "flavours--col-2";
+            } else {
+              classId = "flavours--col-1";
+            }
+            return (
+              <Checkbox
+                product={p}
+                handleFlavour={handleFlavour}
+                key={i}
+                classId={classId}
+                flavours={flavours}
+              />
+            );
+          });
+        case "premium":
+          let premiumCookies = products.filter((p) => p.price === 3.35);
+          return premiumCookies.map((p, i) => {
+            if (i % 2 !== 0) {
+              classId = "flavours--col-2";
+            } else {
+              classId = "flavours--col-1";
+            }
+            return (
+              <Checkbox
+                product={p}
+                handleFlavour={handleFlavour}
+                key={i}
+                classId={classId}
+                flavours={flavours}
+              />
+            );
+          });
+        case "mixed":
+          let mixedElements = products.filter(
+            (p) => p.price === 2.85 || p.price === 3.35
           );
-        });
+          return mixedElements.map((p, i) => {
+            if (i % 2 !== 0) {
+              classId = "flavours--col-2";
+            } else {
+              classId = "flavours--col-1";
+            }
+            return (
+              <Checkbox
+                product={p}
+                handleFlavour={handleFlavour}
+                key={i}
+                classId={classId}
+                flavours={flavours}
+              />
+            );
+          });
 
-      case "surprise":
-        return <div>Dolce will surprise you will the flavours</div>;
-      default:
-        return basicCookies.map((p, i) => (
-          <Checkbox product={p} handleFlavour={handleFlavour} key={i} />
-        ));
+        case "surprise":
+          return <div>Dolce will surprise you will the flavours</div>;
+        default:
+          return basicCookies.map((p, i) => (
+            <Checkbox product={p} handleFlavour={handleFlavour} key={i} />
+          ));
+      }
     }
   };
 
   return (
     <div className="box-container">
-      <BoxForm filter={filter} handleChange={handleChange} box={box} />
+      <h1 className="center primary-font">{filter.toUpperCase()}</h1>
+      {filter === "scone" ? (
+        <div className="scone-dropdown">
+          <SconeDropdown
+            filter={filter}
+            handleChange={handleChange}
+            box={box}
+          />
+        </div>
+      ) : (
+        <BoxForm filter={filter} handleChange={handleChange} box={box} />
+      )}
       <div className="box--image">
         {showImage && (
           <>
@@ -129,11 +160,11 @@ const Box = (props) => {
         )}
       </div>
       {flavours.length > 0 ? (
-        <h2>Selected Flavours</h2>
+        <h2 className="primary-font">Selected Flavours</h2>
       ) : (
-        <h2>Select Your Flavours</h2>
+        <h2 className="primary-font">Select Your Flavours</h2>
       )}
-      <ul className="selected-flavours">{displaySelectedFlavours()}</ul>
+      <ol className="selected-flavours">{displaySelectedFlavours()}</ol>
       <hr />
       <div className="flavours">{getProducts()}</div>
     </div>

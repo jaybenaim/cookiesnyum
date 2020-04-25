@@ -27,16 +27,16 @@ const BoxForm = (props) => {
         onChange={(e) => props.handleChange(e)}
       >
         <option value="basic" className="basic">
-          Basic
+          Basic (Dozen)
         </option>
         <option value="mixed" className="mixed">
           Mixed (6 Premium {"&"} 6 Basic)
         </option>
         <option value="surprise" className="surprise">
-          Surprise
+          Surprise (Dozen)
         </option>
         <option value="premium" className="premium">
-          Premium
+          Premium (Dozen)
         </option>
       </Select>
     </div>

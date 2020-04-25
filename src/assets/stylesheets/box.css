@@ -2,6 +2,10 @@
   position: absolute;
   z-index: 99999;
 }
+.scone-dropdown .input-field {
+  position: absolute;
+  z-index: 99999;
+}
 .flavours {
   display: grid;
   grid-template-columns: 1fr 1fr;
