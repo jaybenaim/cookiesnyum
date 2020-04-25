@@ -128,7 +128,11 @@ const Box = (props) => {
           </>
         )}
       </div>
-      <h2>Selected Flavours</h2>
+      {flavours.length > 0 ? (
+        <h2>Selected Flavours</h2>
+      ) : (
+        <h2>Select Your Flavours</h2>
+      )}
       <ul className="selected-flavours">{displaySelectedFlavours()}</ul>
       <hr />
       <div className="flavours">{getProducts()}</div>
