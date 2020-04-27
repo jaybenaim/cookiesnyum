@@ -10,6 +10,7 @@ import {
   ProductShow,
   ErrorPage,
   CheckoutForm,
+  Box,
 } from "./components";
 import { connect } from "react-redux";
 import store from "./redux/store";
@@ -102,6 +103,7 @@ const App = (props) => {
           path="/checkout"
           render={(props) => <CheckoutForm {...props} />}
         />
+        <Route exact path="/box" render={(props) => <Box {...props} />} />
         <Route exact path="/faq" render={(props) => <Faq {...props} />} />
         <Route exact path="/404" render={(props) => <ErrorPage {...props} />} />
         <Route path="*" component={ErrorPage} />

@@ -12,8 +12,6 @@ const FeaturedProduct = (props) => {
         return "From $2.85 / each";
       case "scone":
         return "From $3.50 / each";
-      case "biscotti":
-        return "From $30.00 / dozen";
       default:
         return "From $3.50 / each";
     }
@@ -30,7 +28,7 @@ const FeaturedProduct = (props) => {
 
       <div className="featured-products-slider--cards--card-body secondary-font">
         <Link
-          to="/products"
+          to="/box"
           onClick={() => props.filterGallery(sku.replace("-", ""))}
         >
           <h3>{text}</h3>

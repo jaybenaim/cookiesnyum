@@ -39,11 +39,7 @@ class Item extends Component {
   render() {
     let {
       item,
-      name,
-      quantity,
-      sku,
-      description,
-      price,
+      item: { name, quantity, sku, description, price },
       image,
       class: defaultClass,
       id,

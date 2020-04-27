@@ -1,7 +1,7 @@
 import { SET_PRODUCTS, SET_CURRENT_PRODUCT } from "../types";
 const initialState = {
   products: [],
-  currentProduct: []
+  currentProduct: [],
 };
 
 const handleProducts = (state = initialState, action) => {

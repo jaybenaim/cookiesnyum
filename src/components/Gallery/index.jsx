@@ -34,20 +34,9 @@ const Products = (props) => {
   }, 300);
 
   const productElements = products.map((item, i) => {
-    // Get product image
-    const getImage = PRODUCTS.filter((product) => {
-      return product.name === item.name && product.image;
-    });
-    // Set product image
-    const image = getImage.length >= 1 ? getImage[0]["image"] : "";
-    let newItem = item;
-
-    newItem.image = image;
-
-    // render each product
     return (
       item.class.includes(filter) && (
-        <Item {...newItem} item={newItem} key={i} filter={filter} id={i} />
+        <Item {...item} item={item} key={i} filter={filter} id={i} />
       )
     );
   });

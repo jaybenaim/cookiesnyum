@@ -1,0 +1,54 @@
+.box-container .input-field {
+  position: absolute;
+  z-index: 99999;
+}
+.scone-dropdown .input-field {
+  position: absolute;
+  z-index: 99999;
+}
+.flavours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 8px;
+}
+.flavours--col-1 {
+  grid-column: 1;
+  margin-left: 35%;
+}
+.flavours--col-2 {
+  grid-column: 2;
+  margin-left: 15%;
+}
+.box--image {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+}
+.box--image img {
+  object-fit: contain;
+}
+.box--image strong {
+  position: absolute;
+  left: 10%;
+}
+.box-container h2 {
+  display: flex;
+  justify-content: center;
+}
+.box-container .selected-flavours {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 3%;
+}
+
+@media (max-width: 450px) {
+  .box-container {
+    padding-top: 10%;
+  }
+}
+@media (min-width: 451px) {
+  .box-container {
+    margin-top: 10%;
+  }
+}

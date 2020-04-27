@@ -7,6 +7,9 @@ import Gallery from "./Gallery";
 import ProductShow from "./Gallery/ProductShow";
 import ErrorPage from "./ErrorPage";
 import CheckoutForm from "./Cart/CheckoutForm";
+import Box from "./Box";
+import Item from "./Gallery/Item";
+
 export {
   Nav,
   Footer,
@@ -17,4 +20,6 @@ export {
   ProductShow,
   ErrorPage,
   CheckoutForm,
+  Box,
+  Item,
 };
