@@ -1,6 +1,5 @@
-@media (max-width: 450px) {
-}
-@media (min-width: 451px) {
+.box-option {
+  text-transform: capitalize;
 }
 .box-option .checkbox {
   min-height: 10px;
@@ -14,4 +13,9 @@
   position: relative;
   color: #f6406f;
   font-weight: 600;
+}
+
+@media (max-width: 450px) {
+}
+@media (min-width: 451px) {
 }

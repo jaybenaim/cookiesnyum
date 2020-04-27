@@ -31,12 +31,15 @@ const Box = (props) => {
   };
   const handleFlavour = (e) => {
     const value = flavours.includes(e.target.name);
-    // show image
-    setShowImage(true);
-    handleImage(e.target.name);
-    setCurrentFlavour(name);
-    !value && setFlavours([...flavours, e.target.name]);
-    if (value) {
+
+    if (!value) {
+      setFlavours([...flavours, e.target.name]);
+      // show image
+      setShowImage(true);
+      handleImage(e.target.name);
+      setCurrentFlavour(name);
+    } else {
+      // Remove flavours from selected flavours
       const updatedFlavours = flavours.filter(
         (flavour) => flavour !== e.target.name
       );
@@ -47,7 +50,8 @@ const Box = (props) => {
   const displaySelectedFlavours = () => {
     return flavours.map((flavour, i) => <li key={i}>{flavour}</li>);
   };
-  const getProducts = () => {
+
+  const getOptions = () => {
     let classId;
     if (filter === "scone") {
       let scones = products.filter((p) => p.sku.replace("-", "") === "scone");
@@ -166,9 +170,9 @@ const Box = (props) => {
       ) : (
         <h2 className="primary-font">Select Your Flavours</h2>
       )}
-      <ol className="selected-flavours">{displaySelectedFlavours()}</ol>
+      <ul className="selected-flavours">{displaySelectedFlavours()}</ul>
       <hr />
-      <div className="flavours">{getProducts()}</div>
+      <div className="flavours">{getOptions()}</div>
     </div>
   );
 };

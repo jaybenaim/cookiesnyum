@@ -13,7 +13,7 @@ export const getProducts = () => (dispatch) => {
         });
 
         // Set product image
-        const image = getImage.length >= 1 ? getImage[0]["image"] : "";
+        const image = getImage.length >= 1 ? getImage[0]["image"] : item.image;
         let newItem = item;
         newItem.image = image;
         return newItem;
