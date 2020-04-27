@@ -139,7 +139,9 @@ const Box = (props) => {
 
   return (
     <div className="box-container">
-      <h1 className="center primary-font">{filter.toUpperCase()}</h1>
+      <h1 className="center primary-font">
+        {!filter ? "Cookie" : filter.toUpperCase()}
+      </h1>
       {filter === "scone" ? (
         <div className="scone-dropdown">
           <SconeDropdown
