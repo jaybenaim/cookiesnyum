@@ -45,14 +45,14 @@
   justify-content: center;
   margin-top: -2%;
 }
-.box-container .selected-flavours {
+.selected-flavours {
   display: grid;
   text-align: center;
   margin-top: 3%;
+  padding: 2% 4%;
   text-transform: capitalize;
   grid-template-columns: 1fr 1fr;
 }
-
 .selected-flavour {
   display: flex;
   flex-direction: row;

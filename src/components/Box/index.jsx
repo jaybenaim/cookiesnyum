@@ -30,6 +30,10 @@ const Box = (props) => {
     );
     return currentImage[0].image;
   };
+  const getProduct = (name) => {
+    const product = products.filter((product) => product.name === name);
+    return product[0];
+  };
   const handleImage = (name) => {
     setImage(getImage(name));
   };
@@ -50,13 +54,10 @@ const Box = (props) => {
 
   const displaySelectedFlavours = () => {
     return flavours.map((flavour, i) => (
-      <SelectedFlavour
-        key={i}
-        flavour={{ name: flavour, image: getImage(flavour) }}
-      />
+      <SelectedFlavour key={i} flavour={getProduct(flavour)} />
     ));
   };
-  const getProducts = () => {
+  const getOptions = () => {
     let classId;
     if (filter === "scone") {
       let scones = products.filter((p) => p.sku.replace("-", "") === "scone");
@@ -177,7 +178,7 @@ const Box = (props) => {
       )}
       <ul className="selected-flavours">{displaySelectedFlavours()}</ul>
       <hr />
-      <div className="flavours">{getProducts()}</div>
+      <div className="flavours">{getOptions()}</div>
     </div>
   );
 };
