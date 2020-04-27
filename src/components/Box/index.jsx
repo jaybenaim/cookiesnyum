@@ -7,6 +7,7 @@ import Checkbox from "./CheckBox";
 import SconeDropdown from "./SconeDropdown";
 
 import "../../assets/stylesheets/box.css";
+import SelectedFlavour from "./SelectedFlavour";
 
 const Box = (props) => {
   const { filter, products } = props;
@@ -23,35 +24,39 @@ const Box = (props) => {
     setFlavours([]);
     setBox(e.target.value);
   };
-  const handleImage = (name) => {
+  const getImage = (name) => {
     const currentImage = products.filter(
       (product) => product.name === name && product.image
     );
-    setImage(currentImage[0].image);
+    return currentImage[0].image;
   };
-  const handleFlavour = (e) => {
-    const value = flavours.includes(e.target.name);
+  const handleImage = (name) => {
+    setImage(getImage(name));
+  };
 
-    if (!value) {
-      setFlavours([...flavours, e.target.name]);
-      // show image
-      setShowImage(true);
-      handleImage(e.target.name);
-      setCurrentFlavour(name);
-    } else {
-      // Remove flavours from selected flavours
-      const updatedFlavours = flavours.filter(
-        (flavour) => flavour !== e.target.name
-      );
+  const handleFlavour = (e) => {
+    const name = e.target.name;
+    const value = flavours.includes(name);
+    // show image
+    setShowImage(true);
+    handleImage(name);
+    setCurrentFlavour(name);
+    !value && setFlavours([...flavours, name]);
+    if (value) {
+      const updatedFlavours = flavours.filter((flavour) => flavour !== name);
       setFlavours(updatedFlavours);
     }
   };
 
   const displaySelectedFlavours = () => {
-    return flavours.map((flavour, i) => <li key={i}>{flavour}</li>);
+    return flavours.map((flavour, i) => (
+      <SelectedFlavour
+        key={i}
+        flavour={{ name: flavour, image: getImage(flavour) }}
+      />
+    ));
   };
-
-  const getOptions = () => {
+  const getProducts = () => {
     let classId;
     if (filter === "scone") {
       let scones = products.filter((p) => p.sku.replace("-", "") === "scone");
@@ -172,7 +177,7 @@ const Box = (props) => {
       )}
       <ul className="selected-flavours">{displaySelectedFlavours()}</ul>
       <hr />
-      <div className="flavours">{getOptions()}</div>
+      <div className="flavours">{getProducts()}</div>
     </div>
   );
 };
