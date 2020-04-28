@@ -19,6 +19,11 @@ const Box = (props) => {
   const [image, setImage] = useState("");
   const [currentFlavour, setCurrentFlavour] = useState("");
 
+  // Form
+  const form = {
+    box,
+    flavours,
+  };
   // handle box selection
   const handleChange = (e) => {
     setFlavours([]);
@@ -54,7 +59,7 @@ const Box = (props) => {
 
   const displaySelectedFlavours = () => {
     return flavours.map((flavour, i) => (
-      <SelectedFlavour key={i} flavour={getProduct(flavour)} />
+      <SelectedFlavour key={i} flavour={getProduct(flavour)} form={form} />
     ));
   };
   const getOptions = () => {

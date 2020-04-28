@@ -1,5 +1,6 @@
 import React from "react";
-const SelectedFlavour = ({ flavour: { name, image } }) => {
+
+const SelectedFlavour = ({ flavour: { name, image }, form }) => {
   return (
     <li className="selected-flavour">
       <p>{name}</p>

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "../../../assets/stylesheets/checkbox.css";
 import { useEffect } from "react";
+import AddBoxToCart from "../AddBoxToCart";
 
 const Checkbox = (props) => {
   const {
     product: { name },
     classId,
     flavours,
+    form,
+    product,
   } = props;
   const [checked, setChecked] = useState("");
 
@@ -28,6 +31,7 @@ const Checkbox = (props) => {
           onChange={(e) => handleClick(e)}
         />
         <span>{name}</span>
+        <AddBoxToCart form={form} product={product} />
       </label>
     </div>
   );
