@@ -33,7 +33,7 @@ const Checkbox = (props) => {
         <span>{name}</span>
       </label>
       <div className="box--selected-flavour--qty">
-        <AddBoxToCart form={form} product={product} />
+        <AddBoxToCart product={product} />
       </div>
     </div>
   );

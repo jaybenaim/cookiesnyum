@@ -24,6 +24,10 @@ const Box = (props) => {
     box,
     flavours,
   };
+
+  const handleForm = () => {
+    return form;
+  };
   // handle box selection
   const handleChange = (e) => {
     setFlavours([]);

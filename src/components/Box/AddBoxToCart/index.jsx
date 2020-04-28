@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Quantity from "../../Gallery/Item/Quantity";
 import "../../../assets/stylesheets/addBoxToCart.css";
-const AddBoxToCart = ({ form, product: { _id: id }, product }) => {
+
+const AddBoxToCart = ({ product: { _id: id } }) => {
   const [qty, setQty] = useState(1);
 
   const handleQty = (action) => {
@@ -11,9 +12,6 @@ const AddBoxToCart = ({ form, product: { _id: id }, product }) => {
   const handleQtyChange = (e) => {
     e.preventDefault();
     setQty(Number(e.target.value));
-  };
-  const handleForm = () => {
-    return { form, product };
   };
 
   return (
