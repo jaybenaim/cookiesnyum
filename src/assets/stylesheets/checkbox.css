@@ -1,6 +1,9 @@
 .box-option {
   text-transform: capitalize;
 }
+.box-option label span {
+  color: #000;
+}
 .box-option .checkbox {
   min-height: 10px;
   min-width: 10px;

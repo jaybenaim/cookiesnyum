@@ -1,0 +1,25 @@
+.box--selected-flavour--qty {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.box--selected-flavour--qty [name="qty"] {
+  margin-left: 10%;
+}
+.box--selected-flavour--qty .input-field {
+  margin-left: 10%;
+  width: 50px;
+}
+.box--selected-flavour--qty .input-field input {
+  margin-top: -20%;
+}
+.box--selected-flavour--qty .input-field label {
+  margin-left: 20%;
+}
+.box--selected-flavour--qty .material-icons {
+  color: #444;
+}
+@media (max-width: 450px) {
+}
+@media (min-width: 451px) {
+}

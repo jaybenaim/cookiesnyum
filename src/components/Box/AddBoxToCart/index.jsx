@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Quantity from "../../Gallery/Item/Quantity";
-
+import "../../../assets/stylesheets/addBoxToCart.css";
 const AddBoxToCart = ({ form, product: { _id: id }, product }) => {
   const [qty, setQty] = useState(1);
 
@@ -17,15 +17,12 @@ const AddBoxToCart = ({ form, product: { _id: id }, product }) => {
   };
 
   return (
-    //   TODO : add AddToCart btn
-    // add handle increase / decrease
     <Quantity
       id={id}
       qtyLabel={qty}
       handleQty={handleQty}
       handleQtyChange={handleQtyChange}
     />
-    // <Quantity product={handleForm()} label={"none"} />
   );
 };
 

@@ -31,8 +31,10 @@ const Checkbox = (props) => {
           onChange={(e) => handleClick(e)}
         />
         <span>{name}</span>
-        <AddBoxToCart form={form} product={product} />
       </label>
+      <div className="box--selected-flavour--qty">
+        <AddBoxToCart form={form} product={product} />
+      </div>
     </div>
   );
 };
