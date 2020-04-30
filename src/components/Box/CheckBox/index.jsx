@@ -20,9 +20,9 @@ const Checkbox = (props) => {
   useEffect(() => {
     flavours.length <= 0 && setChecked("");
   }, [flavours]);
+
   return (
     <div className={`box-option ${classId}`}>
-      {/* TODO if selected flavours contains flavour check box */}
       <label>
         <input
           type="checkbox"
