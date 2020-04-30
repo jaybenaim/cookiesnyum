@@ -11,12 +11,17 @@ const Checkbox = (props) => {
     form,
     product,
   } = props;
+
+  // Hooks
   const [checked, setChecked] = useState("");
 
+  // Handlers
   const handleClick = (e) => {
     setChecked(!checked && "checked");
     props.handleFlavour(e);
   };
+
+  // Effects
   useEffect(() => {
     flavours.length <= 0 && setChecked("");
   }, [flavours]);
