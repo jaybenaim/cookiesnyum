@@ -1,4 +1,5 @@
 ﻿import React from "react";
+import ReactGA from "react-ga";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { HashRouter } from "react-router-dom";
@@ -10,6 +11,11 @@ import ErrorBoundary from "./components/ErrorBoundary";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+function initializeReactGA() {
+  ReactGA.initialize("UA-151372187-3");
+  ReactGA.pageview(window.location.hash);
+}
+initializeReactGA();
 ReactDOM.render(
   <Provider store={store}>
     <HashRouter basename="/dolcenada">
