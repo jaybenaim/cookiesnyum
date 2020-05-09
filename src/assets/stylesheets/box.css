@@ -1,6 +1,14 @@
+.box-container {
+  padding-bottom: 2%;
+}
+.box-container h1 {
+  margin-top: 15%;
+  margin-bottom: 0;
+}
 .box-container .input-field {
   position: absolute;
   z-index: 99999;
+  margin-top: -2%;
 }
 .scone-dropdown .input-field {
   position: absolute;
@@ -10,14 +18,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-right: 8px;
+  padding: 2% 0 5% 0;
 }
 .flavours--col-1 {
   grid-column: 1;
-  margin-left: 35%;
+  margin-left: 10%;
 }
 .flavours--col-2 {
   grid-column: 2;
-  margin-left: 15%;
+  margin-left: 20%;
 }
 .box--image {
   margin-top: 20%;
@@ -34,14 +43,33 @@
 .box-container h2 {
   display: flex;
   justify-content: center;
+  margin-top: -2%;
 }
-.box-container .selected-flavours {
-  display: flex;
+.selected-flavours {
+  display: grid;
   text-align: center;
-  flex-direction: column;
   margin-top: 3%;
+  padding: 2% 4%;
+  text-transform: capitalize;
+  grid-template-columns: 1fr 1fr;
 }
-
+.selected-flavour {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* Match image height */
+  max-height: 80px;
+}
+.selected-flavour img {
+  object-fit: contain;
+  max-width: 80px;
+}
+.selected-flavour p {
+  font-size: 1.2em;
+  padding: 20% 0;
+  width: 100%;
+  overflow: visible;
+}
 @media (max-width: 450px) {
   .box-container {
     padding-top: 10%;

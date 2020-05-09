@@ -63,11 +63,11 @@ class CartProduct extends Component {
           className="shelf-item__del"
           onClick={() => removeProduct(product)}
         />
-        <Thumb
+        {/* <Thumb
           classes="shelf-item__thumb"
           src={product.image || "https://via.placeholder.com/150"}
           alt={product.name}
-        />
+        /> */}
         <div className="shelf-item__details">
           <p className="title">{product.name}</p>
           <div className="desc">

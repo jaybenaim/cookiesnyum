@@ -1,12 +1,13 @@
-@media (max-width: 450px) {
+.box-option {
+  text-transform: capitalize;
 }
-@media (min-width: 451px) {
+.box-option label span {
+  color: #000;
 }
 .box-option .checkbox {
   min-height: 10px;
   min-width: 10px;
   border: 1px solid #000;
-  margin-left: 10%;
   margin-right: 5%;
 }
 .box-option .checkbox .material-icons {
@@ -14,4 +15,9 @@
   position: relative;
   color: #f6406f;
   font-weight: 600;
+}
+
+@media (max-width: 450px) {
+}
+@media (min-width: 451px) {
 }

@@ -7,6 +7,7 @@ import Checkbox from "./CheckBox";
 import SconeDropdown from "./SconeDropdown";
 
 import "../../assets/stylesheets/box.css";
+import SelectedFlavour from "./SelectedFlavour";
 
 const Box = (props) => {
   const { filter, products } = props;
@@ -18,36 +19,54 @@ const Box = (props) => {
   const [image, setImage] = useState("");
   const [currentFlavour, setCurrentFlavour] = useState("");
 
+  // Form
+  const form = {
+    box,
+    flavours,
+  };
+
+  const handleForm = () => {
+    return form;
+  };
   // handle box selection
   const handleChange = (e) => {
     setFlavours([]);
     setBox(e.target.value);
   };
-  const handleImage = (name) => {
+  const getImage = (name) => {
     const currentImage = products.filter(
       (product) => product.name === name && product.image
     );
-    setImage(currentImage[0].image);
+    return currentImage[0].image;
   };
+  const getProduct = (name) => {
+    const product = products.filter((product) => product.name === name);
+    return product[0];
+  };
+  const handleImage = (name) => {
+    setImage(getImage(name));
+  };
+
   const handleFlavour = (e) => {
-    const value = flavours.includes(e.target.name);
+    const name = e.target.name;
+    const value = flavours.includes(name);
     // show image
     setShowImage(true);
-    handleImage(e.target.name);
+    handleImage(name);
     setCurrentFlavour(name);
-    !value && setFlavours([...flavours, e.target.name]);
+    !value && setFlavours([...flavours, name]);
     if (value) {
-      const updatedFlavours = flavours.filter(
-        (flavour) => flavour !== e.target.name
-      );
+      const updatedFlavours = flavours.filter((flavour) => flavour !== name);
       setFlavours(updatedFlavours);
     }
   };
 
   const displaySelectedFlavours = () => {
-    return flavours.map((flavour, i) => <li key={i}>{flavour}</li>);
+    return flavours.map((flavour, i) => (
+      <SelectedFlavour key={i} flavour={getProduct(flavour)} form={form} />
+    ));
   };
-  const getProducts = () => {
+  const getOptions = () => {
     let classId;
     if (filter === "scone") {
       let scones = products.filter((p) => p.sku.replace("-", "") === "scone");
@@ -166,9 +185,9 @@ const Box = (props) => {
       ) : (
         <h2 className="primary-font">Select Your Flavours</h2>
       )}
-      <ol className="selected-flavours">{displaySelectedFlavours()}</ol>
+      <ul className="selected-flavours">{displaySelectedFlavours()}</ul>
       <hr />
-      <div className="flavours">{getProducts()}</div>
+      <div className="flavours">{getOptions()}</div>
     </div>
   );
 };
