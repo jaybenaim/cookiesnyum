@@ -17,12 +17,13 @@ export class AddCartButton extends Component {
 
   addProductToCart = (event, product) => {
     const { qty } = this.props;
-    product.quantity = qty;
+    product.quantity = qty / 2;
     this.props.addProduct(product);
   };
 
   render() {
     const { product, styles, addLabel } = this.props;
+
     return (
       <p className="add-to-cart-btn">
         <button

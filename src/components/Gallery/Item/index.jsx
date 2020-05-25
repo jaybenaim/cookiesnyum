@@ -46,13 +46,12 @@ class Item extends Component {
     } = this.props;
 
     const { qty } = this.state;
-
     return (
       <div className={`item--card `}>
         <Link
           to={{
             pathname: `/products/${sku}${name}`,
-            state: { id, item, quantity, description, image },
+            state: { id, item, qty, description, image },
           }}
           className="show-product-btn"
           onClick={() => this.props.setCurrentProduct(item)}
@@ -82,7 +81,7 @@ class Item extends Component {
             <p className="item--card-body-qty-label">Quantity:</p>
             <Quantity
               id={item._id}
-              qtyLabel={this.state.qty}
+              qtyLabel={qty}
               handleQty={this.handleQty}
               handleQtyChange={this.handleQtyChange}
             />
