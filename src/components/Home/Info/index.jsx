@@ -35,9 +35,9 @@ const Info = () => {
             <div className="info-content--phone">
               <strong>Phone:</strong>
 
-              <a href="tel:4162743820">
+              <a href="tel:6476404714">
                 <img src={pinkPhone} alt="phone" className="phone-icon" />
-                416 274 3820
+                647 xxx xxxx
               </a>
             </div>
           </div>
@@ -51,9 +51,9 @@ const Info = () => {
         </div>
 
         <div className="social-icons">
-          <a href="https://www.instagram.com/dolcenadaa/">
+          <a href="https://www.instagram.com/cookiesnyum/">
             <img src={instagram} alt="instagram-link"></img>
-            <span>Follow us on Instagram @dolcenadaa</span>{" "}
+            <span>Follow us on Instagram @cookiesnyum</span>{" "}
           </a>
         </div>
       </div>

@@ -14,16 +14,6 @@ const Nav = (props) => {
   return (
     <Navbar
       alignLinks="right"
-      brand={
-        <Link className="brand-logo" to="/">
-          <img
-            src={logo}
-            alt="logo cookie with a bite"
-            height={140}
-            width={140}
-          />
-        </Link>
-      }
       centerChildren
       id="mobile-nav"
       menuIcon={<Icon>menu</Icon>}
@@ -31,7 +21,6 @@ const Nav = (props) => {
         draggable: true,
         edge: "left",
         inDuration: 250,
-
         outDuration: 200,
         preventScrolling: true,
       }}
@@ -52,13 +41,7 @@ const Nav = (props) => {
         </Link>
       )}
       <Link to="/" className="sidenav-logo sidenav-close">
-        {" "}
-        <img
-          src={logo}
-          alt="logo cookie with a bite"
-          height={140}
-          width={140}
-        />
+        This is a demo.
       </Link>
 
       <Auth />

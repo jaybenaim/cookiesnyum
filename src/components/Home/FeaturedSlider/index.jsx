@@ -1,5 +1,4 @@
 import React from "react";
-import assorted from "../../../assets/images/promotions/assorted.jpg";
 import dozen from "../../../assets/images/promotions/dozen.jpg";
 import easter from "../../../assets/images/promotions/easter.JPG";
 import "../../../assets/stylesheets/featuredSlider.css";
@@ -9,7 +8,8 @@ import Slider from "react-slick";
 import { Link, withRouter } from "react-router-dom";
 import { toggleNavbar } from "../../../redux/actions/navbarActions";
 import { connect } from "react-redux";
-const FeaturedSlider = props => {
+
+const FeaturedSlider = (props) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -19,7 +19,7 @@ const FeaturedSlider = props => {
     slidesToScroll: 1,
     fade: true,
     cssEase: "linear",
-    pauseOnDotsHover: true
+    pauseOnDotsHover: true,
   };
 
   return (
@@ -27,7 +27,7 @@ const FeaturedSlider = props => {
       <Slider {...settings} id="featured">
         <div className={`featured-slide  fade-in`}>
           <img
-            src={assorted}
+            src={dozen}
             alt="chocolate-cookie"
             height={50}
             width={"100%"}
@@ -44,7 +44,12 @@ const FeaturedSlider = props => {
           </div>
         </div>
         <div className="featured-slide  ">
-          <img src={dozen} alt="chocolate-cookie " height={40} width={40}></img>
+          <img
+            src="https://via.placeholder.com/250"
+            alt="chocolate-cookie "
+            height={40}
+            width={40}
+          ></img>
           <div className="text-box secondary-font">
             <h3 className="primary-font">By The Dozen</h3>
             <p>
@@ -66,7 +71,7 @@ const FeaturedSlider = props => {
               className="featured-products-link btn"
               to={{
                 pathname: "/products",
-                state: { gallery: { filter: "featured" } }
+                state: { gallery: { filter: "featured" } },
               }}
             >
               {" "}
@@ -78,10 +83,10 @@ const FeaturedSlider = props => {
     </>
   );
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
-  navbar: state.navbar
+  navbar: state.navbar,
 });
 export default withRouter(
   connect(mapStateToProps, { toggleNavbar })(FeaturedSlider)

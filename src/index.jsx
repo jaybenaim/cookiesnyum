@@ -18,7 +18,7 @@ function initializeReactGA() {
 initializeReactGA();
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter basename="/dolcenada">
+    <HashRouter basename="/cookiesnyum">
       <ErrorBoundary>
         <App />
       </ErrorBoundary>

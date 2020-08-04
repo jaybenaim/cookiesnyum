@@ -6,16 +6,12 @@ import {
   mars,
   miniegg,
   reese,
-  cookieButter,
   doubleDolceDelight,
-  everythingCookie,
   ferrero,
   nutellaGodess,
   oreo,
   oreoBdayCake,
-  storytime,
   strawberryPoptart,
-  walnutChocolateChip,
   cookiesAndCream,
   snickers,
   caramilk,
@@ -56,10 +52,6 @@ const PRODUCTS = [
   },
 
   {
-    name: "Walnut Chocolate Chip",
-    image: walnutChocolateChip,
-  },
-  {
     name: "Oreo",
     image: oreo,
   },
@@ -84,22 +76,12 @@ const PRODUCTS = [
     name: "Strawberry Poptart",
     image: strawberryPoptart,
   },
-  {
-    name: "Story Time",
-    image: storytime,
-  },
+
   {
     name: "Ferrero",
     image: ferrero,
   },
-  {
-    name: "Everything Cookie",
-    image: everythingCookie,
-  },
-  {
-    name: "Cookie Butter",
-    image: cookieButter,
-  },
+
   {
     name: "Cookies and Cream",
     image: cookiesAndCream,

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <h5>Dolcenadaa</h5>
+        <h5>Cookies & Yum </h5>
         <ul>
           <li>
             <Link to="/#info">Contact</Link>
@@ -15,9 +15,8 @@ const Footer = () => {
           <li>
             <Link to="/products">Products</Link>
           </li>
-          <li>
-            <a href="https://www.instagram.com/dolcenadaa/">@dolcenadaa</a>
-          </li>
+
+          <li style={{ minWidth: "200px" }}>This is a demo.</li>
         </ul>
       </div>
     </footer>
