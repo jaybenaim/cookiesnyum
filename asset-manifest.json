@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.d73cfd3e.chunk.css",
-    "main.js": "/static/js/main.4a1ce315.chunk.js",
-    "main.js.map": "/static/js/main.4a1ce315.chunk.js.map",
+    "main.js": "/static/js/main.fc6d0ff1.chunk.js",
+    "main.js.map": "/static/js/main.fc6d0ff1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8c598e60.js",
     "runtime-main.js.map": "/static/js/runtime-main.8c598e60.js.map",
     "static/css/2.94f0bb04.chunk.css": "/static/css/2.94f0bb04.chunk.css",
-    "static/js/2.12377764.chunk.js": "/static/js/2.12377764.chunk.js",
-    "static/js/2.12377764.chunk.js.map": "/static/js/2.12377764.chunk.js.map",
+    "static/js/2.ed188893.chunk.js": "/static/js/2.ed188893.chunk.js",
+    "static/js/2.ed188893.chunk.js.map": "/static/js/2.ed188893.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c46c371855e1b2312bb013ef30a99315.js": "/precache-manifest.c46c371855e1b2312bb013ef30a99315.js",
+    "precache-manifest.d7ac3e2c1c7067284caa501cd6aaf26a.js": "/precache-manifest.d7ac3e2c1c7067284caa501cd6aaf26a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.94f0bb04.chunk.css.map": "/static/css/2.94f0bb04.chunk.css.map",
     "static/css/main.d73cfd3e.chunk.css.map": "/static/css/main.d73cfd3e.chunk.css.map",
-    "static/js/2.12377764.chunk.js.LICENSE.txt": "/static/js/2.12377764.chunk.js.LICENSE.txt",
+    "static/js/2.ed188893.chunk.js.LICENSE.txt": "/static/js/2.ed188893.chunk.js.LICENSE.txt",
     "static/media/banana.png": "/static/media/banana.a42e277e.png",
     "static/media/blueberry.png": "/static/media/blueberry.d5f2887f.png",
     "static/media/boxCentered.png": "/static/media/boxCentered.4821b84c.png",
@@ -35,6 +35,7 @@
     "static/media/mars.png": "/static/media/mars.9577d041.png",
     "static/media/miniegg.png": "/static/media/miniegg.51f55d6e.png",
     "static/media/monsterMash.png": "/static/media/monsterMash.fe1bc4b1.png",
+    "static/media/mov.mp4": "/static/media/mov.68f39f7e.mp4",
     "static/media/multiCookie.JPG": "/static/media/multiCookie.73a624c8.JPG",
     "static/media/nutellaGodess.png": "/static/media/nutellaGodess.fc513fe6.png",
     "static/media/oreo.png": "/static/media/oreo.bf4a3e7c.png",
@@ -43,14 +44,13 @@
     "static/media/scones.png": "/static/media/scones.852574ad.png",
     "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg",
     "static/media/snickers.png": "/static/media/snickers.a0d26b46.png",
-    "static/media/strawberryPoptart.png": "/static/media/strawberryPoptart.2eccd51d.png",
-    "static/media/xoxo.png": "/static/media/xoxo.b84bbb69.png"
+    "static/media/strawberryPoptart.png": "/static/media/strawberryPoptart.2eccd51d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8c598e60.js",
     "static/css/2.94f0bb04.chunk.css",
-    "static/js/2.12377764.chunk.js",
+    "static/js/2.ed188893.chunk.js",
     "static/css/main.d73cfd3e.chunk.css",
-    "static/js/main.4a1ce315.chunk.js"
+    "static/js/main.fc6d0ff1.chunk.js"
   ]
 }
