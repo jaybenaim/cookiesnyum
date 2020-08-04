@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../../assets/stylesheets/aboutUs.css";
-import xoxo from "../../../assets/images/xoxo.png";
+import video from "../../../assets/images/mov.mp4";
 import { Button } from "react-materialize";
 
 const AboutUs = () => {
@@ -9,11 +9,13 @@ const AboutUs = () => {
     <>
       <div className="about-us-grid desktop-grid mobile-grid">
         <div className="right-side top">
-          <img
-            src="https://via.placeholder.com/250"
+          <video
+            src={video}
             alt="profile"
             height={330}
             width={"100%"}
+            autoPlay
+            loop
           />
         </div>
         <div className="left-side bottom secondary-font">
